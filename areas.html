@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Island Area Guides | Keala M. Wall — Realtor</title>
+  <meta name="description" content="Community guides for every major area on Hawai'i Island — Kona, Waimea, Kohala, Hāmākua, Hilo, Puna, Ka'ū, and Volcano. Find the right fit for your lifestyle and budget.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    img { display: block; max-width: 100%; }
+
+    :root {
+      --cream:       #faf7f2;
+      --cream-2:     #f0e9d8;
+      --cream-3:     #e5dbc8;
+      --green-deep:  #1a2e20;
+      --green-mid:   #2d5235;
+      --green-sage:  #5a7e5d;
+      --green-light: #8aad8d;
+      --gold:        #a07828;
+      --gold-warm:   #c4982e;
+      --gold-light:  #e0b84a;
+      --text-dark:   #1c2b1e;
+      --text-body:   #3d4e3f;
+      --text-muted:  #6b7d6d;
+      --white:       #ffffff;
+    }
+
+    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text-dark); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; line-height: 1.15; color: var(--green-deep); }
+    a { color: inherit; text-decoration: none; }
+    p { line-height: 1.75; color: var(--text-body); }
+
+    /* ─── Nav ────────────────────────────────────────────────────── */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 68px; padding: 0 3rem; display: flex; align-items: center; justify-content: space-between; background: rgba(250, 247, 242, 0.97); border-bottom: 1px solid rgba(0,0,0,0.07); backdrop-filter: blur(8px); }
+    .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400; color: var(--green-deep); letter-spacing: 0.04em; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--green-deep); }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-phone { font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.02em; }
+    .nav-cta { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid currentColor; padding-bottom: 1px; transition: color 0.2s; }
+    .nav-cta:hover { color: var(--gold-warm); }
+    @media (max-width: 1000px) { .nav-links { display: none; } }
+    @media (max-width: 640px) { .nav-phone { display: none; } nav { padding: 0 1.5rem; } }
+
+    /* ─── Hero ───────────────────────────────────────────────────── */
+    .hero { position: relative; min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 9rem 2rem 5rem; overflow: hidden; background-color: var(--green-deep); }
+    .hero-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center 55%; opacity: 0.45; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(12,26,14,0.55) 0%, rgba(8,20,10,0.76) 100%); }
+    .hero-inner { position: relative; z-index: 2; max-width: 720px; }
+    .hero-eyebrow { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-warm); margin-bottom: 1.2rem; }
+    .hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 500; color: white; margin-bottom: 1.2rem; }
+    .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.82); max-width: 580px; margin: 0 auto; line-height: 1.7; }
+
+    /* ─── Shared ─────────────────────────────────────────────────── */
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    section { padding: 6rem 2.5rem; }
+    .eyebrow { display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+    .section-title { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 500; margin-bottom: 1.25rem; }
+    .section-lead { font-size: 1.05rem; color: var(--text-body); line-height: 1.75; max-width: 700px; margin-bottom: 3rem; }
+    .btn-primary { display: inline-block; background: var(--gold); color: white; padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--gold-warm); }
+    .btn-ghost { display: inline-block; border: 1.5px solid rgba(255,255,255,0.55); color: rgba(255,255,255,0.9); padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; transition: border-color 0.2s, color 0.2s; }
+    .btn-ghost:hover { border-color: white; color: white; }
+
+    /* ─── Map Nav Tiles ─────────────────────────────────────────── */
+    .area-nav { background: var(--green-deep); padding: 4rem 2.5rem; }
+    .area-nav-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 1.5rem; text-align: center; }
+    .area-nav-grid {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem;
+    }
+    .area-nav-tile {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 0.65rem 1.25rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.75);
+      transition: background 0.2s, color 0.2s;
+      cursor: pointer;
+    }
+    .area-nav-tile:hover { background: rgba(255,255,255,0.13); color: white; }
+
+    /* ─── Area Section Template ─────────────────────────────────── */
+    .area-section { padding: 6rem 2.5rem; }
+    .area-section:nth-child(odd) { background: var(--cream); }
+    .area-section:nth-child(even) { background: var(--cream-2); }
+    .area-header { margin-bottom: 3rem; }
+    .area-district { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
+    .area-name { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 500; color: var(--green-deep); margin-bottom: 0.4rem; }
+    .area-tagline { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; color: var(--text-muted); }
+    .area-body { display: grid; grid-template-columns: 1fr 320px; gap: 4rem; align-items: start; }
+    .area-content p + p { margin-top: 1rem; }
+    .area-content h4 { font-size: 1.05rem; font-weight: 600; color: var(--green-deep); margin-top: 1.5rem; margin-bottom: 0.4rem; }
+    .area-sidebar-card { background: white; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
+    .area-sidebar-card h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sidebar-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid var(--cream-2); }
+    .sidebar-row:last-child { border-bottom: none; }
+    .s-label { font-size: 0.8rem; color: var(--text-muted); line-height: 1.3; }
+    .s-value { font-size: 0.85rem; color: var(--text-dark); font-weight: 500; text-align: right; line-height: 1.3; }
+    .who-tags { display: flex; flex-direction: column; gap: 0.35rem; margin-top: 1.25rem; }
+    .who-tag { font-size: 0.78rem; color: var(--text-body); padding: 0.35rem 0.75rem; background: var(--cream-2); border-radius: 4px; line-height: 1.4; }
+    .who-tag::before { content: "→  "; color: var(--green-sage); font-weight: 700; }
+
+    /* ─── Dark area section (for Volcano/off-beat) ───────────────── */
+    .area-section.dark { background: var(--green-deep); }
+    .area-section.dark .area-district { color: var(--gold-warm); }
+    .area-section.dark .area-name { color: white; }
+    .area-section.dark .area-tagline { color: rgba(255,255,255,0.55); }
+    .area-section.dark .area-content p { color: rgba(255,255,255,0.72); }
+    .area-section.dark .area-content h4 { color: white; }
+    .area-section.dark .area-sidebar-card { background: rgba(255,255,255,0.07); box-shadow: none; border: 1px solid rgba(255,255,255,0.09); }
+    .area-section.dark .area-sidebar-card h4 { color: rgba(255,255,255,0.4); }
+    .area-section.dark .s-label { color: rgba(255,255,255,0.45); }
+    .area-section.dark .s-value { color: white; }
+    .area-section.dark .sidebar-row { border-bottom-color: rgba(255,255,255,0.06); }
+    .area-section.dark .who-tag { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.7); }
+
+    /* ─── CTA ────────────────────────────────────────────────────── */
+    .cta { position: relative; overflow: hidden; padding: 7rem 2.5rem; text-align: center; background-color: var(--green-mid); }
+    .cta-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; opacity: 0.3; }
+    .cta-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(14,28,16,0.65) 0%, rgba(8,18,10,0.82) 100%); }
+    .cta-inner { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
+    .cta .eyebrow { color: var(--gold-warm); margin-bottom: 1rem; }
+    .cta h2 { font-size: clamp(2rem, 5vw, 3rem); color: white; margin-bottom: 1rem; }
+    .cta-sub { font-size: 1rem; color: rgba(255,255,255,0.72); line-height: 1.7; margin-bottom: 2.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .contact-card { margin-top: 3rem; display: inline-block; border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; padding: 1.5rem 2.5rem; text-align: left; }
+    .contact-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; color: white; margin-bottom: 0.15rem; }
+    .contact-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-warm); margin-bottom: 1.25rem; }
+    .contact-lines { display: flex; flex-direction: column; gap: 0.5rem; }
+    .contact-line { display: flex; align-items: center; gap: 0.65rem; color: rgba(255,255,255,0.75); font-size: 0.88rem; transition: color 0.2s; }
+    .contact-line:hover { color: var(--gold-light); }
+    .contact-line svg { width: 13px; height: 13px; stroke: var(--gold-warm); fill: none; stroke-width: 2; stroke-linecap: round; flex-shrink: 0; }
+
+    footer { background: #0c1a0e; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 1.75rem 3rem; }
+    .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.5); letter-spacing: 0.04em; }
+    .footer-logo { height: 32px; width: auto; opacity: 0.75; filter: brightness(0) invert(1); }
+    .footer-legal { font-size: 0.72rem; color: rgba(255,255,255,0.2); margin: 0; }
+    footer a { color: rgba(255,255,255,0.55); transition: color 0.2s; }
+    footer a:hover { color: #c4982e; }
+
+    @media (max-width: 900px) {
+      .area-body { grid-template-columns: 1fr; gap: 2.5rem; }
+      .area-sidebar-card { max-width: 480px; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 4rem 1.5rem; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── Nav ──────────────────────────────────────────────────── -->
+  <nav>
+    <a class="nav-brand" href="index.html">Life, Land &amp; Legacy</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="land.html">Buy Land</a></li>
+      <li><a href="ranches.html">Ranches</a></li>
+      <li><a href="off-grid.html">Off-Grid</a></li>
+      <li><a href="relocation.html">Relocate</a></li>
+      <li><a href="areas.html" class="active">Areas</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:8085153081" class="nav-phone">808-515-3081</a>
+      <a href="index.html#contact" class="nav-cta">Talk Story</a>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ──────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Community Guides</span>
+      <h1>Find Your Place<br>on Hawai'i Island</h1>
+      <p class="hero-sub">Every corner of the Big Island has its own climate, character, and cost. This guide covers the communities people actually move to — and what life is really like in each one.</p>
+    </div>
+  </section>
+
+  <!-- ─── Quick Nav ─────────────────────────────────────────────── -->
+  <section class="area-nav">
+    <div class="wrap">
+      <div class="area-nav-title">Jump to an Area</div>
+      <div class="area-nav-grid">
+        <a href="#kona" class="area-nav-tile">Kailua-Kona &amp; Keauhou</a>
+        <a href="#south-kona" class="area-nav-tile">Holualoa &amp; South Kona</a>
+        <a href="#waimea" class="area-nav-tile">Waimea / Kamuela</a>
+        <a href="#kohala" class="area-nav-tile">Kohala Coast &amp; North Kohala</a>
+        <a href="#hamakua" class="area-nav-tile">Hāmākua Coast</a>
+        <a href="#hilo" class="area-nav-tile">Hilo</a>
+        <a href="#puna" class="area-nav-tile">Puna District</a>
+        <a href="#kau" class="area-nav-tile">Ka'ū &amp; Ocean View</a>
+        <a href="#volcano" class="area-nav-tile">Volcano Village</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── KONA ──────────────────────────────────────────────────── -->
+  <section class="area-section" id="kona">
+    <div class="wrap">
+      <div class="area-header">
+        <div class="area-district">West Side · Lava Zone 5–6</div>
+        <h2 class="area-name">Kailua-Kona &amp; Keauhou</h2>
+        <div class="area-tagline">The island's sunny, social, resort-facing hub</div>
+      </div>
+      <div class="area-body">
+        <div class="area-content">
+          <p>Kailua-Kona — or just "Kona" — is what most people picture when they imagine moving to Hawaii. Sun almost every day, world-class snorkeling and diving, Alii Drive running along the waterfront, and the greatest concentration of restaurants, shops, and services on the island. It is the most accessible and most recognizable place to live on the Big Island.</p>
+          <p>Kailua-Kona proper is a small town of around 22,000 people. It has everything you need day-to-day: KTA and Safeway grocery stores, Home Depot, medical facilities, a farmers market, and direct flights to the mainland via Kona International Airport (KOA). What it does not have is the density or anonymity of a mainland city — for many people, that's exactly the point.</p>
+          <h4>Keauhou</h4>
+          <p>Just south of Kailua-Kona, Keauhou is a quieter, more residential neighborhood with its own shopping center, boat harbor, and beach access. It attracts families and retirees who want to be close to Kona's amenities without being in the middle of the tourist corridor. Property prices are slightly lower than prime Kailua-Kona real estate, and the community feel is noticeably calmer.</p>
+          <h4>The Honest Trade-Off</h4>
+          <p>Kona's climate is exceptional — 10–20 inches of rainfall per year, trade winds that keep temperatures comfortable, and approximately 300 sunny days annually. But it's also the most expensive area on the island for both buying and renting. It can feel touristy during peak season. And getting anywhere on the north or east side of the island requires a 45-minute to 2-hour drive. If your work or family ties are on the Hilo side, living in Kona is not practical.</p>
+        </div>
+        <div>
+          <div class="area-sidebar-card">
+            <h4>Kona at a Glance</h4>
+            <div class="sidebar-row"><span class="s-label">Climate</span><span class="s-value">Dry, sunny, 75–85°F yr-round</span></div>
+            <div class="sidebar-row"><span class="s-label">Annual rainfall</span><span class="s-value">10–20 inches</span></div>
+            <div class="sidebar-row"><span class="s-label">Lava zone</span><span class="s-value">Zone 5–6 (moderate risk)</span></div>
+            <div class="sidebar-row"><span class="s-label">Median home price</span><span class="s-value">$700K–$1M+</span></div>
+            <div class="sidebar-row"><span class="s-label">1BR rent</span><span class="s-value">$1,600–$2,100/mo</span></div>
+            <div class="sidebar-row"><span class="s-label">Airport</span><span class="s-value">Kona Intl (KOA) — direct mainland flights</span></div>
+            <div class="sidebar-row"><span class="s-label">Services</span><span class="s-value">Best on the island</span></div>
+            <div class="who-tags">
+              <div class="who-tag">Professionals with remote income</div>
+              <div class="who-tag">Active retirees who want amenities</div>
+              <div class="who-tag">Families who need good services</div>
+              <div class="who-tag">Buyers who want a social community</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SOUTH KONA ────────────────────────────────────────────── -->
+  <section class="area-section" id="south-kona">
+    <div class="wrap">
+      <div class="area-header">
+        <div class="area-district">South Kona · Elevation 1,500–3,000 ft</div>
+        <h2 class="area-name">Holualoa, Captain Cook &amp; South Kona</h2>
+        <div class="area-tagline">Coffee country, cool breezes, and genuine character</div>
+      </div>
+      <div class="area-body">
+        <div class="area-content">
+          <p>South Kona is the coffee country corridor that runs from Holualoa south through Kealakekua, Captain Cook, Honaunau, and Hōnaunau. At elevations of 1,500–3,000 feet, the climate here is cooler than the Kona coast — afternoons bring clouds and occasional rain, which is exactly what Kona coffee trees need to produce their famous beans.</p>
+          <p>Holualoa is an artisan village perched above Kona town. It's known for its galleries, small farms, a laid-back community vibe, and some of the most beautiful coffee farm real estate on the island. Captain Cook and Kealakekua — just south — are more practical: affordable by Kona standards, close to the Kona coast (20–30 min), and home to a mix of local families and transplants seeking the farm lifestyle without full isolation.</p>
+          <h4>Kealakekua Bay</h4>
+          <p>South Kona is also home to Kealakekua Bay — one of the most pristine marine reserves in Hawaii, known for excellent snorkeling and the Captain Cook monument. Living near the bay means access to a world-class natural resource almost no tourists know about. This is where locals swim.</p>
+          <h4>The Honest Trade-Off</h4>
+          <p>South Kona roads are narrow and winding — the Belt Road is not a freeway. Properties here often have steep driveways and require confidence with a car. Rain and morning fog are common at higher elevations. But the combination of mild climate, lush landscape, agricultural community, and reasonable prices (relative to the coast) makes South Kona one of the most appealing places to live on the island for the right buyer.</p>
+        </div>
+        <div>
+          <div class="area-sidebar-card">
+            <h4>South Kona at a Glance</h4>
+            <div class="sidebar-row"><span class="s-label">Climate</span><span class="s-value">Cool mornings, warm afternoons, afternoon clouds</span></div>
+            <div class="sidebar-row"><span class="s-label">Annual rainfall</span><span class="s-value">30–60 inches (elevation-dependent)</span></div>
+            <div class="sidebar-row"><span class="s-label">Lava zone</span><span class="s-value">Zone 5–7 (low to moderate risk)</span></div>
+            <div class="sidebar-row"><span class="s-label">Median home price</span><span class="s-value">$450K–$800K</span></div>
+            <div class="sidebar-row"><span class="s-label">Drive to Kona</span><span class="s-value">20–40 minutes</span></div>
+            <div class="sidebar-row"><span class="s-label">Known for</span><span class="s-value">Kona coffee, Kealakekua Bay, artisan community</span></div>
+            <div class="who-tags">
+              <div class="who-tag">Buyers who want a coffee or small farm</div>
+              <div class="who-tag">Artists and creative types</div>
+              <div class="who-tag">Families wanting more land and calm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WAIMEA ────────────────────────────────────────────────── -->
+  <section class="area-section" id="waimea">
+    <div class="wrap">
+      <div class="area-header">
+        <div class="area-district">North · Elevation 2,500 ft · Lava Zone 7–8</div>
+        <h2 class="area-name">Waimea / Kamuela</h2>
+        <div class="area-tagline">Cool ranch country, excellent schools, strong community</div>
+      </div>
+      <div class="area-body">
+        <div class="area-content">
+          <p>Waimea — also called Kamuela, the postal name — sits at 2,500 feet elevation on the saddle between Mauna Kea and the Kohala Mountains. It has the best public schools on the island, a genuine downtown with excellent restaurants (Merriman's, Pueo's Osteria), a farmers market, and a strong community grounded in paniolo (Hawaiian cowboy) culture.</p>
+          <p>The climate surprises most first-time visitors. Waimea is cool — sometimes cold by Hawaii standards, with temperatures regularly dipping into the 50s at night and morning fog that burns off by midday. Rainfall varies dramatically: the east side of town (toward Hilo) gets significantly more rain than the drier west. Know which side of town a property is on before making assumptions about the microclimate.</p>
+          <h4>The Parker Ranch Legacy</h4>
+          <p>Waimea exists in the shadow of Parker Ranch — one of the largest cattle ranches in the United States, founded in the early 1800s by John Palmer Parker and spanning approximately 150,000 acres. The ranch shaped the town's economy, culture, and landscape for over 200 years. Properties adjacent to or within view of Parker Ranch land carry significant scenic value.</p>
+          <h4>Who Lives Here</h4>
+          <p>Waimea attracts a diverse mix: astronomers and scientists from the Mauna Kea observatories, ranching families with deep roots, professionals commuting to Kona or Hilo (each about 45 minutes away), and an active community of agricultural entrepreneurs. It is the Big Island's best example of a functional, full-service small town that happens to have extraordinary scenery.</p>
+        </div>
+        <div>
+          <div class="area-sidebar-card">
+            <h4>Waimea at a Glance</h4>
+            <div class="sidebar-row"><span class="s-label">Climate</span><span class="s-value">Cool, variable, 50–75°F</span></div>
+            <div class="sidebar-row"><span class="s-label">Annual rainfall</span><span class="s-value">25–50 in (east wetter)</span></div>
+            <div class="sidebar-row"><span class="s-label">Lava zone</span><span class="s-value">Zone 7–8 (low risk)</span></div>
+            <div class="sidebar-row"><span class="s-label">Median home price</span><span class="s-value">$650K–$900K</span></div>
+            <div class="sidebar-row"><span class="s-label">Schools</span><span class="s-value">Best rated on the island</span></div>
+            <div class="sidebar-row"><span class="s-label">Drive to Kona/Hilo</span><span class="s-value">~45 min each</span></div>
+            <div class="who-tags">
+              <div class="who-tag">Families who prioritize schools</div>
+              <div class="who-tag">Ranchers and agricultural buyers</div>
+              <div class="who-tag">Professionals who want small-town life</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── KOHALA ────────────────────────────────────────────────── -->
+  <section class="area-section" id="kohala">
+    <div class="wrap">
+      <div class="area-header">
+        <div class="area-district">North · Lava Zone 9 · Lowest Volcanic Risk</div>
+        <h2 class="area-name">Kohala Coast &amp; North Kohala</h2>
+        <div class="area-tagline">Resort luxury meets rural heritage on ancient volcanic land</div>
+      </div>
+      <div class="area-body">
+        <div class="area-content">
+          <p>The Kohala region splits into two very different worlds. South Kohala's coast is home to the island's major resort corridor — Mauna Kea Beach Hotel, Hapuna Beach Resort, Waikoloa Beach Resort — and the luxury residential communities that surround them. This is the most expensive real estate on the island, with ocean-view condo complexes, golf course communities, and beachfront homes commanding premium prices.</p>
+          <p>Inland and north, North Kohala is an entirely different experience. Small towns like Hāwī and Kapa'au retain genuine Hawaiian character — a few restaurants, a farmers market, art galleries, and a quiet pace of life that has resisted the resort development that transformed the coast. Properties here are significantly more affordable than the resort corridor, and the views — over the ocean and across the Kohala Mountain — are spectacular.</p>
+          <h4>Geologically Special</h4>
+          <p>Kohala Mountain is the oldest of the Big Island's five volcanoes — dormant for over 60,000 years. This means Kohala land carries Lava Zone 9: the lowest possible volcanic risk, the easiest to insure, and the easiest to finance. For buyers who want the Big Island lifestyle without volcanic risk, Kohala is the answer.</p>
+          <h4>The Honest Trade-Off</h4>
+          <p>North Kohala is genuinely remote — Waimea is 20 minutes away, Kona is 45–50 minutes, and Hilo is 90 minutes. The resort coast is more accessible but far more expensive. Internet and cell coverage can be spotty in rural North Kohala properties. And the dramatic variation in microclimate — from the parched coast to the lush uplands — means you need to know exactly where a property sits before making assumptions about its character.</p>
+        </div>
+        <div>
+          <div class="area-sidebar-card">
+            <h4>Kohala at a Glance</h4>
+            <div class="sidebar-row"><span class="s-label">Lava zone</span><span class="s-value">Zone 9 (lowest on island)</span></div>
+            <div class="sidebar-row"><span class="s-label">Rainfall</span><span class="s-value">5 in/yr (coast) to 150 in (upland)</span></div>
+            <div class="sidebar-row"><span class="s-label">Median home price</span><span class="s-value">$500K–$2M+ (coast)</span></div>
+            <div class="sidebar-row"><span class="s-label">N. Kohala price</span><span class="s-value">$400K–$900K (inland)</span></div>
+            <div class="sidebar-row"><span class="s-label">Known for</span><span class="s-value">Resorts, beaches, lowest lava risk</span></div>
+            <div class="sidebar-row"><span class="s-label">Drive to Waimea</span><span class="s-value">~20 min</span></div>
+            <div class="who-tags">
+              <div class="who-tag">Buyers who prioritize safety from volcanic risk</div>
+              <div class="who-tag">Resort community / luxury lifestyle buyers</div>
+              <div class="who-tag">Heritage ranch land buyers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HĀMĀKUA ───────────────────────────────────────────────── -->
+  <section class="area-section" id="hamakua">
+    <div class="wrap">
+      <div class="area-header">
+        <div class="area-district">Windward · Lava Zone 7–8 · Hāmākua District</div>
+        <h2 class="area-name">Hāmākua Coast</h2>
+        <div class="area-tagline">Dramatic sea cliffs, lush valleys, and extraordinary fertility</div>
+      </div>
+      <div class="area-body">
+        <div class="area-content">
+          <p>The Hāmākua Coast runs 50 miles along the island's windward northeast shore, from Waipiʻo Valley south toward Hilo. This is some of the most visually stunning terrain in all of Hawaiʻi — deep stream valleys, thousand-foot sea cliffs, waterfalls, and lush agricultural land with rich red volcanic soil that once supported the island's massive sugar industry.</p>
+          <p>The towns here — Honoka'a, Pa'auilo, Laupāhoehoe, Hakalau — are small, real, and deeply local. They're not tourist destinations. They're working communities with their own culture, their own farmers markets, and their own pace of life. Living on the Hāmākua Coast means being part of something that hasn't been homogenized.</p>
+          <h4>The Post-Sugar Opportunity</h4>
+          <p>When Honoka'a Sugar Company closed in 1994, it left behind some of the most fertile agricultural land in the state with no dominant industry to take sugar's place. That transition — still ongoing three decades later — has created opportunities for small farmers, orchardists, and rural buyers who want productive land at prices far below what similar quality land commands elsewhere on the island.</p>
+          <h4>Practical Realities</h4>
+          <p>The Hāmākua Coast gets 80–120 inches of rainfall per year — expect rain, lushness, and mud. Most properties use rainwater catchment. Roads can be steep and narrow, and some rural lots are accessed by private easements that require 4WD. The scenic beauty is exceptional, but so is the isolation — Hilo is 30–60 minutes south, and Kona is 2+ hours west. Cell service and internet connectivity require verification for specific properties.</p>
+        </div>
+        <div>
+          <div class="area-sidebar-card">
+            <h4>Hāmākua at a Glance</h4>
+            <div class="sidebar-row"><span class="s-label">Climate</span><span class="s-value">Lush, rainy, 70–80°F</span></div>
+            <div class="sidebar-row"><span class="s-label">Annual rainfall</span><span class="s-value">80–120 inches</span></div>
+            <div class="sidebar-row"><span class="s-label">Lava zone</span><span class="s-value">Zone 7–8 (low risk)</span></div>
+            <div class="sidebar-row"><span class="s-label">Water</span><span class="s-value">Mostly catchment</span></div>
+            <div class="sidebar-row"><span class="s-label">Median price</span><span class="s-value">$350K–$650K</span></div>
+            <div class="sidebar-row"><span class="s-label">Drive to Hilo</span><span class="s-value">30–60 minutes</span></div>
+            <div class="who-tags">
+              <div class="who-tag">Small farmers and orchardists</div>
+              <div class="who-tag">Buyers seeking scenic rural life</div>
+              <div class="who-tag">Nature lovers who embrace rain</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HILO ───────────────────────────────────────────────────── -->
+  <section class="area-section" id="hilo">
+    <div class="wrap">
+      <div class="area-header">
+        <div class="area-district">East Side · County Seat · Lava Zone 5–7</div>
+        <h2 class="area-name">Hilo</h2>
+        <div class="area-tagline">Authentic, affordable, deeply local — and yes, very rainy</div>
+      </div>
+      <div class="area-body">
+        <div class="area-content">
+          <p>Hilo is the county seat and the commercial hub of the Big Island's east side. It is not a tourist town — no resort corridor, no Alii Drive, no four-deep crowds at sunset. What Hilo has is a real city with full infrastructure: Walmart, Target, multiple hospitals, an airport (ITO), the University of Hawaiʻi at Hilo campus, and one of the best farmers markets in the entire state (Wednesday and Saturday at the Hilo Bayfront).</p>
+          <p>Hilo averages 130 inches of rain per year, which earns it the title of "America's wettest city." That rainfall is responsible for the extraordinary lushness of the east side — tropical flowers, towering trees, clear streams running through neighborhoods — and for real estate prices that are dramatically lower than the dry Kona side.</p>
+          <h4>The Value Proposition</h4>
+          <p>Median home prices in Hilo run $350,000–$550,000 — significantly less than Kona for comparable square footage. For buyers willing to embrace the rain (and most Hilo residents genuinely love it), the city offers a full-service life at Hawaii prices that are as close to "affordable" as the state gets. Many longtime Big Island residents choose Hilo precisely because they want a real community, real culture, and a real town — not a resort aesthetic.</p>
+          <h4>East-West Split</h4>
+          <p>Getting from Hilo to Kona takes 90 minutes via the Saddle Road (Highway 200) — the most direct route, which passes between Mauna Kea and Mauna Loa at 6,500 feet elevation. Saddle Road can be foggy, cold, and occasionally closed in winter. If your life requires regular trips between Hilo and Kona, plan for that reality.</p>
+        </div>
+        <div>
+          <div class="area-sidebar-card">
+            <h4>Hilo at a Glance</h4>
+            <div class="sidebar-row"><span class="s-label">Climate</span><span class="s-value">Rainy and lush, 70–80°F</span></div>
+            <div class="sidebar-row"><span class="s-label">Annual rainfall</span><span class="s-value">~130 inches</span></div>
+            <div class="sidebar-row"><span class="s-label">Lava zone</span><span class="s-value">Zone 5–7</span></div>
+            <div class="sidebar-row"><span class="s-label">Median home price</span><span class="s-value">$350K–$550K</span></div>
+            <div class="sidebar-row"><span class="s-label">1BR rent</span><span class="s-value">~$1,200–$1,600/mo</span></div>
+            <div class="sidebar-row"><span class="s-label">Airport</span><span class="s-value">Hilo Intl (ITO) — inter-island &amp; some mainland</span></div>
+            <div class="sidebar-row"><span class="s-label">Full services</span><span class="s-value">Yes — Walmart, Target, hospital, UH Hilo</span></div>
+            <div class="who-tags">
+              <div class="who-tag">Budget-conscious buyers who want services</div>
+              <div class="who-tag">Buyers tied to east side employment</div>
+              <div class="who-tag">People who appreciate authentic local culture</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PUNA ───────────────────────────────────────────────────── -->
+  <section class="area-section" id="puna">
+    <div class="wrap">
+      <div class="area-header">
+        <div class="area-district">East Side · Lava Zones 1–4 · Fast-Growing</div>
+        <h2 class="area-name">Puna District</h2>
+        <div class="area-tagline">Frontier living, off-grid community, and the island's lowest prices — with real volcanic risk</div>
+      </div>
+      <div class="area-body">
+        <div class="area-content">
+          <p>Puna is the fastest-growing district on the Big Island, and the most misunderstood by buyers from the mainland. It is lush, affordable, and home to one of the most active off-grid and alternative living communities in the United States. It is also directly adjacent to the most active volcanic rift zones on the island — and the 2018 Kīlauea eruption proved that this risk is not abstract.</p>
+          <p>The major Puna subdivisions — Hawaiian Paradise Park, Orchidland Estates, Hawaiian Acres, Leilani Estates, Lanipuna Gardens — were developed primarily in the 1960s and 70s as affordable residential land. Many lots are 3/4 of an acre to 1+ acre, off-grid, accessed by narrow roads through dense jungle vegetation. The lifestyle is genuinely different from anywhere else on the island.</p>
+          <h4>Lower Puna vs. Upper Puna</h4>
+          <p>Lower Puna (closer to the ocean and the East Rift Zone) sits in Lava Zones 1–2 — the highest volcanic risk on the island. This is where the 2018 eruption destroyed homes and where insurance is most limited and most expensive. Upper Puna (closer to Hilo, higher elevation) is in Zones 3–4 — still elevated risk, but with a meaningfully different historical track record. Know your specific zone, not just your district.</p>
+          <h4>The Puna Community</h4>
+          <p>Puna attracts buyers who want space, affordability, and a community of like-minded self-reliant people. The area has a strong aloha spirit and a culture of mutual support — neighbors share water during dry spells, help each other with permits, and maintain informal community infrastructure. For the right buyer, it is extraordinary value. For someone expecting mainland suburban convenience, it will be a difficult adjustment.</p>
+        </div>
+        <div>
+          <div class="area-sidebar-card">
+            <h4>Puna at a Glance</h4>
+            <div class="sidebar-row"><span class="s-label">Climate</span><span class="s-value">Warm, humid, very lush</span></div>
+            <div class="sidebar-row"><span class="s-label">Annual rainfall</span><span class="s-value">60–150 inches (varies)</span></div>
+            <div class="sidebar-row"><span class="s-label">Lava zone</span><span class="s-value">Zone 1–4 (high risk lower; moderate upper)</span></div>
+            <div class="sidebar-row"><span class="s-label">Median land price</span><span class="s-value">$50K–$150K (lots)</span></div>
+            <div class="sidebar-row"><span class="s-label">Median home price</span><span class="s-value">$250K–$500K</span></div>
+            <div class="sidebar-row"><span class="s-label">Drive to Hilo</span><span class="s-value">20–40 minutes</span></div>
+            <div class="sidebar-row"><span class="s-label">Water</span><span class="s-value">Mostly catchment</span></div>
+            <div class="who-tags">
+              <div class="who-tag">Off-grid lifestyle buyers</div>
+              <div class="who-tag">Buyers with lower budget and higher risk tolerance</div>
+              <div class="who-tag">Self-reliant, community-oriented people</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── KAʻŪ ──────────────────────────────────────────────────── -->
+  <section class="area-section" id="kau">
+    <div class="wrap">
+      <div class="area-header">
+        <div class="area-district">Southernmost District · Most Remote</div>
+        <h2 class="area-name">Ka'ū &amp; Ocean View</h2>
+        <div class="area-tagline">The Big Island's most remote frontier — raw, affordable, and self-reliant</div>
+      </div>
+      <div class="area-body">
+        <div class="area-content">
+          <p>Ka'ū is the southernmost district on the Big Island and the most isolated. From Ocean View Estates to Nā'ālehu and Pahala, Ka'ū covers a vast and largely empty stretch of coastline, upland ranch, and active lava field. It is the least-developed part of the island and, by a wide margin, the most affordable.</p>
+          <p>Ocean View Estates — a large subdivision in the Ka'ū District about an hour south of Kona — offers the lowest residential land prices on the island. Lots of 1–2 acres often sell for $20,000–$80,000. The trade-off is everything else: no county water, no utility power, limited cell service, sparse commercial infrastructure, and a 60–90 minute drive to Kona for basic services.</p>
+          <h4>Ka'ū Coffee</h4>
+          <p>Ka'ū's distinct contribution to the island's agricultural identity is Ka'ū coffee — grown on the slopes of Mauna Loa in the district's uplands. Over the past two decades, Ka'ū coffee has earned international recognition for quality rivaling Kona, at a fraction of the price per pound. Small Ka'ū coffee farms represent an opportunity for buyers interested in agriculture at significantly lower land costs than the Kona belt.</p>
+          <h4>Who This Is For</h4>
+          <p>Ka'ū is genuinely not for everyone — and that's not a criticism. It's a community of deeply self-reliant people who value space, silence, and the frontier quality of the landscape. For buyers with remote income, high tolerance for isolation, and a genuine interest in self-sufficient living, Ka'ū offers what no other part of the island does: real land at prices that are actually accessible.</p>
+        </div>
+        <div>
+          <div class="area-sidebar-card">
+            <h4>Ka'ū at a Glance</h4>
+            <div class="sidebar-row"><span class="s-label">Climate</span><span class="s-value">Dry coast; wetter uplands</span></div>
+            <div class="sidebar-row"><span class="s-label">Annual rainfall</span><span class="s-value">10–80 in (highly variable)</span></div>
+            <div class="sidebar-row"><span class="s-label">Lava zone</span><span class="s-value">Zone 2–6 depending on area</span></div>
+            <div class="sidebar-row"><span class="s-label">Land price</span><span class="s-value">$20K–$80K (Ocean View lots)</span></div>
+            <div class="sidebar-row"><span class="s-label">Median home</span><span class="s-value">$150K–$350K</span></div>
+            <div class="sidebar-row"><span class="s-label">Drive to Kona</span><span class="s-value">60–90 minutes</span></div>
+            <div class="sidebar-row"><span class="s-label">Services</span><span class="s-value">Very limited</span></div>
+            <div class="who-tags">
+              <div class="who-tag">Buyers who want the lowest possible land costs</div>
+              <div class="who-tag">Truly self-reliant off-grid lifestylers</div>
+              <div class="who-tag">Ka'ū coffee farm buyers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── VOLCANO ────────────────────────────────────────────────── -->
+  <section class="area-section dark" id="volcano">
+    <div class="wrap">
+      <div class="area-header">
+        <div class="area-district">Upland South · Elevation 3,700–4,000 ft</div>
+        <h2 class="area-name">Volcano Village</h2>
+        <div class="area-tagline">Rainforest, art, and the edge of the world's most active volcano</div>
+      </div>
+      <div class="area-body">
+        <div class="area-content">
+          <p>Volcano Village is unlike anywhere else in Hawai'i — or anywhere else on earth, for that matter. At 3,700–4,000 feet elevation, it sits at the edge of Hawaiʻi Volcanoes National Park, surrounded by native tree fern forest (ʻōhiʻā and hapu'u), wrapped in frequent mist, and bathed in a cool, quiet atmosphere that feels completely removed from the tropical Hawaii of the brochures.</p>
+          <p>The village itself is small — a few hundred permanent residents, a handful of restaurants and galleries, a general store, and a post office. It is definitively a community of people who chose to be there because of what it offers: proximity to one of the world's most active volcanic systems, access to the national park, an artistic and intellectual community, and a pace of life that simply doesn't exist anywhere closer to the coast.</p>
+          <h4>Living Near the Volcano</h4>
+          <p>Hawai'i Volcanoes National Park is steps from Volcano Village properties — residents have private, non-tourist access to the park's trails, steam vents, and lava viewing in ways that visitors simply don't experience. The park covers 335,000 acres and is a UNESCO World Heritage Site. For the right person, living adjacent to it is extraordinary.</p>
+          <p>Vog — volcanic smog generated by Kīlauea's ongoing eruption — is an occasional concern, particularly when trade winds shift. Residents learn to monitor vog conditions and manage accordingly. It is not a permanent or constant condition, but it is real and worth understanding before choosing to live here.</p>
+          <h4>Home Prices and Practical Realities</h4>
+          <p>Volcano Village homes are surprisingly varied — small rustic cottages, modern architectural builds, and B&amp;B operations all coexist. Prices range from $300,000–$700,000+ depending on size and condition. Most properties use catchment water and propane for heating. The nearest significant services are in Hilo (30 minutes) or Kona (90+ minutes).</p>
+        </div>
+        <div>
+          <div class="area-sidebar-card">
+            <h4>Volcano Village at a Glance</h4>
+            <div class="sidebar-row"><span class="s-label">Climate</span><span class="s-value">Cool, misty, 55–70°F year-round</span></div>
+            <div class="sidebar-row"><span class="s-label">Annual rainfall</span><span class="s-value">90–140 inches</span></div>
+            <div class="sidebar-row"><span class="s-label">Elevation</span><span class="s-value">~3,700–4,000 ft</span></div>
+            <div class="sidebar-row"><span class="s-label">Median home price</span><span class="s-value">$300K–$700K+</span></div>
+            <div class="sidebar-row"><span class="s-label">Water</span><span class="s-value">Catchment</span></div>
+            <div class="sidebar-row"><span class="s-label">National Park</span><span class="s-value">Walking distance</span></div>
+            <div class="sidebar-row"><span class="s-label">Drive to Hilo</span><span class="s-value">~30 minutes</span></div>
+            <div class="who-tags">
+              <div class="who-tag">Artists, writers, and researchers</div>
+              <div class="who-tag">Nature lovers who embrace cool and mist</div>
+              <div class="who-tag">Buyers who want unique, not typical</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ───────────────────────────────────────────────────── -->
+  <section class="cta" id="contact">
+    <div class="cta-bg"></div>
+    <div class="cta-overlay"></div>
+    <div class="cta-inner">
+      <span class="eyebrow">Let's Find Your Area</span>
+      <h2>Not Sure Which Area<br>Is Right for You?</h2>
+      <p class="cta-sub">Every buyer's situation is different — and the "right" area depends on your work, your lifestyle, your budget, and your long-term vision. Let's have a real conversation about it before you start your search.</p>
+      <div class="cta-buttons">
+        <a href="mailto:Keala@kealawall.com?subject=Area%20Guidance%20%E2%80%94%20Hawai%27i%20Island" class="btn-primary">Email Keala</a>
+        <a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener" class="btn-ghost">Search All Listings</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-name">Keala M. Wall</div>
+        <div class="contact-title">Hawai'i Island Realtor &nbsp;·&nbsp; eXp Realty</div>
+        <div class="contact-lines">
+          <a href="mailto:Keala@kealawall.com" class="contact-line">
+            <svg viewBox="0 0 16 16"><rect x="1" y="3" width="14" height="10" rx="1.5"/><polyline points="1,3 8,9.5 15,3"/></svg>
+            Keala@kealawall.com
+          </a>
+          <a href="tel:8085153081" class="contact-line">
+            <svg viewBox="0 0 16 16"><path d="M3.5 1.5c-.8 0-1.5.7-1.5 1.5 0 5.8 4.7 10.5 10.5 10.5.8 0 1.5-.7 1.5-1.5V10l-3-1-1 1.5C8 10 6 8 5.5 6L7 5l-1-3H3.5z"/></svg>
+            808-515-3081
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="inner-footer">
+    <span class="footer-brand">Life, Land &amp; Legacy</span>
+    <img src="agency-exp-logo.png" alt="The Agency Team Hawai'i · Brokered by eXp Realty" class="footer-logo">
+    <p class="footer-legal">© 2026 Keala M. Wall · All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Smooth scroll for area-nav tiles
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>

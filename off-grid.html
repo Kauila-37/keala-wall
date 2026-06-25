@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Off-Grid Living on Hawai'i Island | Keala M. Wall — Realtor</title>
+  <meta name="description" content="A practical guide to off-grid living on the Big Island — rainwater catchment, solar power, septic systems, rural building permits, and the best areas to live off the grid in Hawai'i.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    img { display: block; max-width: 100%; }
+
+    :root {
+      --cream:       #faf7f2;
+      --cream-2:     #f0e9d8;
+      --cream-3:     #e5dbc8;
+      --green-deep:  #1a2e20;
+      --green-mid:   #2d5235;
+      --green-sage:  #5a7e5d;
+      --green-light: #8aad8d;
+      --gold:        #a07828;
+      --gold-warm:   #c4982e;
+      --gold-light:  #e0b84a;
+      --text-dark:   #1c2b1e;
+      --text-body:   #3d4e3f;
+      --text-muted:  #6b7d6d;
+      --white:       #ffffff;
+    }
+
+    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text-dark); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; line-height: 1.15; color: var(--green-deep); }
+    a { color: inherit; text-decoration: none; }
+    p { line-height: 1.75; color: var(--text-body); }
+
+    /* ─── Nav ──────────────────────────────────────────────────── */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 68px; padding: 0 3rem; display: flex; align-items: center; justify-content: space-between; background: rgba(250, 247, 242, 0.97); border-bottom: 1px solid rgba(0,0,0,0.07); backdrop-filter: blur(8px); }
+    .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400; color: var(--green-deep); letter-spacing: 0.04em; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--green-deep); }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-phone { font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.02em; }
+    .nav-cta { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid currentColor; padding-bottom: 1px; transition: color 0.2s; }
+    .nav-cta:hover { color: var(--gold-warm); }
+    @media (max-width: 1000px) { .nav-links { display: none; } }
+    @media (max-width: 640px) { .nav-phone { display: none; } nav { padding: 0 1.5rem; } }
+
+    /* ─── Hero ──────────────────────────────────────────────────── */
+    .hero { position: relative; min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 9rem 2rem 5rem; overflow: hidden; background-color: var(--green-deep); }
+    .hero-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center 70%; opacity: 0.4; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(12,26,14,0.6) 0%, rgba(8,20,10,0.78) 100%); }
+    .hero-inner { position: relative; z-index: 2; max-width: 720px; }
+    .hero-eyebrow { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-warm); margin-bottom: 1.2rem; }
+    .hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 500; color: white; margin-bottom: 1.2rem; }
+    .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.82); max-width: 580px; margin: 0 auto; line-height: 1.7; }
+
+    /* ─── Shared Layout ─────────────────────────────────────────── */
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    section { padding: 6rem 2.5rem; }
+    .eyebrow { display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+    .section-title { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 500; margin-bottom: 1.25rem; }
+    .section-lead { font-size: 1.05rem; color: var(--text-body); line-height: 1.75; max-width: 700px; margin-bottom: 3rem; }
+    .btn-primary { display: inline-block; background: var(--gold); color: white; padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--gold-warm); }
+    .btn-ghost { display: inline-block; border: 1.5px solid rgba(255,255,255,0.55); color: rgba(255,255,255,0.9); padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; transition: border-color 0.2s, color 0.2s; }
+    .btn-ghost:hover { border-color: white; color: white; }
+
+    /* ─── Intro ──────────────────────────────────────────────────── */
+    .intro { background: var(--cream); }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .intro-grid p + p { margin-top: 1rem; }
+    .reality-cards { display: flex; flex-direction: column; gap: 1.25rem; }
+    .reality-card { background: var(--cream-2); border-radius: 8px; padding: 1.5rem 1.75rem; display: flex; gap: 1rem; align-items: flex-start; }
+    .reality-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+    .reality-card h4 { font-size: 1rem; font-weight: 600; color: var(--green-deep); margin-bottom: 0.3rem; }
+    .reality-card p { font-size: 0.87rem; color: var(--text-body); line-height: 1.6; }
+
+    /* ─── Water ─────────────────────────────────────────────────── */
+    .water { background: var(--green-deep); padding: 6rem 2.5rem; }
+    .water .eyebrow { color: var(--gold-warm); }
+    .water .section-title { color: white; }
+    .water .section-lead { color: rgba(255,255,255,0.72); }
+    .water-detail {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+    }
+    .water-detail p { color: rgba(255,255,255,0.72); line-height: 1.75; }
+    .water-detail p + p { margin-top: 1rem; }
+    .water-specs { background: rgba(255,255,255,0.06); border-radius: 8px; padding: 2rem; border: 1px solid rgba(255,255,255,0.09); }
+    .water-specs h3 { font-size: 1.1rem; font-weight: 500; color: white; margin-bottom: 1.25rem; }
+    .spec-row { display: flex; justify-content: space-between; align-items: center; padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-label { font-size: 0.82rem; color: rgba(255,255,255,0.55); }
+    .spec-value { font-size: 0.9rem; color: white; font-weight: 500; text-align: right; max-width: 55%; }
+    .water-warning { margin-top: 2rem; padding: 1.25rem 1.5rem; background: rgba(160,120,40,0.18); border-left: 3px solid var(--gold-warm); border-radius: 0 6px 6px 0; font-size: 0.88rem; color: rgba(255,255,255,0.72); line-height: 1.65; }
+    .water-warning strong { color: var(--gold-warm); }
+
+    /* ─── Solar ──────────────────────────────────────────────────── */
+    .solar { background: var(--cream-2); }
+    .solar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .solar-grid p + p { margin-top: 1rem; }
+    .solar-compare {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
+    }
+    .solar-option { background: white; border-radius: 8px; padding: 1.75rem; border-top: 3px solid var(--green-sage); }
+    .solar-option h4 { font-size: 1rem; font-weight: 600; color: var(--green-deep); margin-bottom: 0.75rem; }
+    .solar-option p { font-size: 0.87rem; color: var(--text-body); line-height: 1.65; }
+    .solar-option p + p { margin-top: 0.65rem; }
+    .solar-option .cost { margin-top: 1rem; font-size: 0.8rem; font-weight: 600; color: var(--gold); }
+    .solar-tip { margin-top: 1.5rem; grid-column: 1 / -1; padding: 1.25rem 1.5rem; background: var(--cream-2); border-left: 3px solid var(--green-sage); border-radius: 0 6px 6px 0; font-size: 0.88rem; color: var(--text-body); line-height: 1.65; }
+
+    /* ─── Septic ──────────────────────────────────────────────────── */
+    .septic { background: var(--cream); }
+    .septic-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 4rem; align-items: start; }
+    .septic-grid p + p { margin-top: 1rem; }
+    .cesspool-box { background: var(--cream-2); border-radius: 8px; padding: 2rem; }
+    .cesspool-box h3 { font-size: 1.2rem; font-weight: 500; color: var(--green-deep); margin-bottom: 1rem; }
+    .cesspool-box p { font-size: 0.88rem; color: var(--text-body); line-height: 1.65; }
+    .cesspool-box p + p { margin-top: 0.75rem; }
+    .deadline-badge { display: inline-block; background: #fef3cd; border: 1px solid #ffc107; color: #856404; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 4px; margin-bottom: 1rem; }
+
+    /* ─── Permits ────────────────────────────────────────────────── */
+    .permits { background: var(--cream-2); }
+    .permits-list { margin-top: 0.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .permit-card { background: white; border-radius: 8px; padding: 1.75rem; }
+    .permit-card h3 { font-size: 1rem; font-weight: 600; color: var(--green-deep); margin-bottom: 0.75rem; }
+    .permit-card p { font-size: 0.87rem; color: var(--text-body); line-height: 1.65; }
+    .permit-card p + p { margin-top: 0.65rem; }
+
+    /* ─── Areas ──────────────────────────────────────────────────── */
+    .og-areas { background: var(--green-deep); padding: 6rem 2.5rem; }
+    .og-areas .eyebrow { color: var(--gold-warm); }
+    .og-areas .section-title { color: white; }
+    .og-areas .section-lead { color: rgba(255,255,255,0.72); }
+    .og-area-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .og-area-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1.75rem; }
+    .og-area-card h3 { font-size: 1.15rem; font-weight: 500; color: white; margin-bottom: 0.6rem; }
+    .og-area-card p { font-size: 0.87rem; color: rgba(255,255,255,0.65); line-height: 1.65; }
+    .og-area-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .og-meta-pill { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; padding: 0.25rem 0.65rem; border-radius: 3px; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.6); }
+    .og-meta-pill.good { background: rgba(90,126,93,0.3); color: var(--green-light); }
+    .og-meta-pill.caution { background: rgba(160,120,40,0.25); color: var(--gold-warm); }
+
+    /* ─── Cost Table ─────────────────────────────────────────────── */
+    .costs { background: var(--cream-2); }
+    .cost-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+    .cost-table th { text-align: left; padding: 0.85rem 1.25rem; background: var(--green-deep); color: rgba(255,255,255,0.85); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+    .cost-table td { padding: 1rem 1.25rem; border-bottom: 1px solid var(--cream-3); font-size: 0.9rem; color: var(--text-body); vertical-align: top; line-height: 1.5; }
+    .cost-table tr:last-child td { border-bottom: none; background: var(--cream-3); font-weight: 600; color: var(--green-deep); }
+    .cost-table tr:nth-child(even) td { background: white; }
+    .cost-range { font-weight: 600; color: var(--green-deep); white-space: nowrap; }
+    .cost-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+    /* ─── CTA ──────────────────────────────────────────────────── */
+    .cta { position: relative; overflow: hidden; padding: 7rem 2.5rem; text-align: center; background-color: var(--green-mid); }
+    .cta-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; opacity: 0.28; }
+    .cta-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(14,28,16,0.65) 0%, rgba(8,18,10,0.82) 100%); }
+    .cta-inner { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
+    .cta .eyebrow { color: var(--gold-warm); margin-bottom: 1rem; }
+    .cta h2 { font-size: clamp(2rem, 5vw, 3rem); color: white; margin-bottom: 1rem; }
+    .cta-sub { font-size: 1rem; color: rgba(255,255,255,0.72); line-height: 1.7; margin-bottom: 2.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .contact-card { margin-top: 3rem; display: inline-block; border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; padding: 1.5rem 2.5rem; text-align: left; }
+    .contact-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; color: white; margin-bottom: 0.15rem; }
+    .contact-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-warm); margin-bottom: 1.25rem; }
+    .contact-lines { display: flex; flex-direction: column; gap: 0.5rem; }
+    .contact-line { display: flex; align-items: center; gap: 0.65rem; color: rgba(255,255,255,0.75); font-size: 0.88rem; transition: color 0.2s; }
+    .contact-line:hover { color: var(--gold-light); }
+    .contact-line svg { width: 13px; height: 13px; stroke: var(--gold-warm); fill: none; stroke-width: 2; stroke-linecap: round; flex-shrink: 0; }
+
+    footer { background: #0c1a0e; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 1.75rem 3rem; }
+    .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.5); letter-spacing: 0.04em; }
+    .footer-logo { height: 32px; width: auto; opacity: 0.75; filter: brightness(0) invert(1); }
+    .footer-legal { font-size: 0.72rem; color: rgba(255,255,255,0.2); margin: 0; }
+    footer a { color: rgba(255,255,255,0.55); transition: color 0.2s; }
+    footer a:hover { color: #c4982e; }
+
+    @media (max-width: 900px) {
+      section { padding: 4rem 1.75rem; }
+      .intro-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .water-detail { grid-template-columns: 1fr; }
+      .solar-grid { grid-template-columns: 1fr; }
+      .septic-grid { grid-template-columns: 1fr; }
+      .permits-list { grid-template-columns: 1fr; }
+      .og-area-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .solar-compare { grid-template-columns: 1fr; }
+      .og-area-grid { grid-template-columns: 1fr; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── Nav ──────────────────────────────────────────────────── -->
+  <nav>
+    <a class="nav-brand" href="index.html">Life, Land &amp; Legacy</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="land.html">Buy Land</a></li>
+      <li><a href="ranches.html">Ranches</a></li>
+      <li><a href="off-grid.html" class="active">Off-Grid</a></li>
+      <li><a href="relocation.html">Relocate</a></li>
+      <li><a href="areas.html">Areas</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:8085153081" class="nav-phone">808-515-3081</a>
+      <a href="index.html#contact" class="nav-cta">Talk Story</a>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ──────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Off-Grid Living Guide</span>
+      <h1>Life Off the Grid<br>on the Big Island</h1>
+      <p class="hero-sub">Living without county water or utility power is completely normal in rural Hawai'i — here's what it actually means and what it actually costs.</p>
+    </div>
+  </section>
+
+  <!-- ─── Intro ─────────────────────────────────────────────────── -->
+  <section class="intro">
+    <div class="wrap">
+      <div class="intro-grid">
+        <div>
+          <span class="eyebrow">What "Off-Grid" Means Here</span>
+          <h2 class="section-title">This Isn't a Trend. It's a Reality.</h2>
+          <p>On the Big Island, living off-grid isn't a lifestyle statement — it's the everyday reality for thousands of residents across Puna, Kaʻū, and parts of the Hāmākua Coast. These districts were subdivided decades ago without utility infrastructure, and many parcels simply don't have access to county water or HELCO grid power.</p>
+          <p>That doesn't make them undesirable. An off-grid home with a well-designed rainwater catchment system, a properly sized solar array, and a good septic system is a fully functional, comfortable, and often more self-reliant home than its on-grid neighbors.</p>
+          <p>But it does mean buyers need to understand what they're getting into — because maintaining these systems is your responsibility, not the county's. This guide covers the three critical systems in every off-grid Big Island home: water, power, and waste.</p>
+        </div>
+        <div>
+          <div class="reality-cards">
+            <div class="reality-card">
+              <div class="reality-icon">💧</div>
+              <div>
+                <h4>Water: Rainwater Catchment</h4>
+                <p>Most off-grid Big Island homes collect rainwater from rooftops into large storage tanks. With 100+ inches of annual rainfall in Puna, a well-maintained system is reliable year-round.</p>
+              </div>
+            </div>
+            <div class="reality-card">
+              <div class="reality-icon">☀️</div>
+              <div>
+                <h4>Power: Solar + Battery</h4>
+                <p>Photovoltaic panels with battery storage and a generator backup are the standard off-grid power setup. Hawaii's solar resource is excellent — one of the best in the country.</p>
+              </div>
+            </div>
+            <div class="reality-card">
+              <div class="reality-icon">🌿</div>
+              <div>
+                <h4>Waste: Septic Systems</h4>
+                <p>Off-grid properties use permitted septic systems for wastewater. The state is phasing out cesspools by 2050 — buying a property with a cesspool comes with a future obligation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Water Section ─────────────────────────────────────────── -->
+  <section class="water">
+    <div class="wrap">
+      <span class="eyebrow">System One</span>
+      <h2 class="section-title">Rainwater Catchment — How It Works</h2>
+      <p class="section-lead" style="color:rgba(255,255,255,0.72)">Rainwater catchment collects precipitation from rooftops, channels it through gutters and a first-flush diverter, and stores it in large polyethylene or fiberglass tanks. When properly designed and maintained, it is a clean, reliable water source.</p>
+      <div class="water-detail">
+        <div>
+          <p>The Puna District receives 100–150 inches of rainfall per year in many areas — among the highest in the state. Even on drier parts of the island, a correctly sized catchment system can meet household needs year-round when supplemented with occasional water delivery during dry spells.</p>
+          <p>Standard household water usage on catchment is similar to grid-connected homes: 50–100 gallons per person per day for cooking, bathing, laundry, and landscape irrigation. A family of four needs roughly 200–400 gallons per day — meaning a 20,000-gallon tank provides roughly 50–100 days of reserve, depending on rainfall.</p>
+          <p>The most important component of a catchment system is filtration. Rooftop runoff can contain bird droppings, pollen, and particulates. A properly designed system includes:</p>
+          <p><strong style="color:rgba(255,255,255,0.85)">First-flush diverter</strong> — discards the first 10–15 gallons of each rain event, which carry the most contamination.</p>
+          <p><strong style="color:rgba(255,255,255,0.85)">Sediment filter</strong> — removes particulates before water enters the tank.</p>
+          <p><strong style="color:rgba(255,255,255,0.85)">UV treatment or reverse osmosis</strong> — for drinking and cooking water. Do not drink catchment water without treatment.</p>
+        </div>
+        <div>
+          <div class="water-specs">
+            <h3>Catchment System Specs</h3>
+            <div class="spec-row">
+              <span class="spec-label">Typical tank size</span>
+              <span class="spec-value">10,000–30,000 gallons</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Daily household usage</span>
+              <span class="spec-value">50–100 gal/person/day</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Annual rainfall (Puna)</span>
+              <span class="spec-value">100–150 inches/year</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Tank material</span>
+              <span class="spec-value">Polyethylene or fiberglass (never steel)</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">System installation cost</span>
+              <span class="spec-value">$5,000–$15,000</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Annual maintenance</span>
+              <span class="spec-value">Tank cleaning, filter replacement</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Drinking water</span>
+              <span class="spec-value">UV or RO filter required</span>
+            </div>
+          </div>
+          <div class="water-warning">
+            <strong>When buying a catchment home:</strong> inspect the tank material (reject rusted steel), check the first-flush diverter, verify filter age, and ask for the last tank cleaning date. A dirty or undersized tank can be a health hazard — and a costly fix.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Solar Section ─────────────────────────────────────────── -->
+  <section class="solar">
+    <div class="wrap">
+      <span class="eyebrow">System Two</span>
+      <h2 class="section-title">Solar Power — Grid-Tied vs. Off-Grid</h2>
+      <p class="section-lead">Hawai'i has the highest electricity rates in the United States — averaging $0.38–$0.45/kWh, compared to the national average of about $0.16/kWh. That makes solar economically compelling everywhere on the island, but the system design differs significantly between grid-tied and off-grid properties.</p>
+      <div class="solar-grid">
+        <div>
+          <p>An off-grid solar system must supply 100% of your electricity needs — no utility backup to draw from at night or on cloudy days. This means larger panel arrays, larger battery banks, and a backup generator for extended low-sun periods. The system requires more planning, more upfront cost, and more ongoing maintenance than a grid-tied system.</p>
+          <p>Most off-grid households on the Big Island use 10–25 kWh per day. A system sized for 15 kWh/day typically requires a 5–8 kW array paired with 10–20 kWh of battery storage (lithium preferred for depth of discharge and lifespan). A propane or gas generator as backup adds reliability for long rainy stretches.</p>
+          <p>When buying an off-grid home, always ask for documentation on the existing solar system — panel brand and age, battery type and age (lithium lasts 10–15 years; lead-acid, 5–7), inverter brand, and any monitoring data. An aging lead-acid battery bank that needs replacement represents a $8,000–$15,000 expense.</p>
+        </div>
+        <div>
+          <div class="solar-compare">
+            <div class="solar-option">
+              <h4>Grid-Tied Solar</h4>
+              <p>Panels feed into the HELCO grid. You earn credits for excess generation, draw from the grid at night. Simpler, lower upfront cost.</p>
+              <p>No battery required (though increasingly common). Available in areas with utility power lines.</p>
+              <div class="cost">System cost: $15,000–$30,000</div>
+            </div>
+            <div class="solar-option">
+              <h4>Off-Grid Solar</h4>
+              <p>Panels charge batteries. You run entirely on stored solar + generator. More complex — full energy independence.</p>
+              <p>Required in areas without HELCO access. Sizing matters — undersized systems cause headaches.</p>
+              <div class="cost">System cost: $25,000–$55,000</div>
+            </div>
+            <div class="solar-tip">
+              <strong>Pro tip:</strong> Solar installation in Hawai'i typically costs $2.50–$4.00 per watt installed for panels. A 5kW system runs $12,000–$20,000 in panels alone — before batteries ($8,000–$15,000 for lithium) and inverter. Federal solar tax credits (currently 30%) apply and can significantly offset costs. Always get multiple bids from licensed Hawaii contractors.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Septic Section ────────────────────────────────────────── -->
+  <section class="septic">
+    <div class="wrap">
+      <span class="eyebrow">System Three</span>
+      <h2 class="section-title">Septic Systems &amp; the Cesspool Deadline</h2>
+      <div class="septic-grid">
+        <div>
+          <p>Off-grid homes on the Big Island use one of two waste systems: a permitted septic system, or — on older properties — a cesspool. A septic system uses a tank to separate solids from liquid waste, then releases treated effluent into a drain field in the soil. A cesspool simply collects waste in an unlined pit.</p>
+          <p>Cesspools are an environmental and health hazard. Hawai'i has more cesspools per capita than any other state, and they are a significant source of nutrient pollution in coastal waters. The state legislature recognized this and passed Act 125 in 2017, requiring all cesspools statewide to be converted to septic systems or alternative wastewater systems by January 1, 2050.</p>
+          <p>If you are buying a property with a cesspool, you are also buying a future obligation to upgrade it — costs typically range from $15,000–$40,000 depending on lot size, soil conditions, and the scope of the drain field needed. Factor that into your offer price.</p>
+          <p>New construction and major renovations already require septic systems — cesspools cannot be installed on any property where construction permits are pulled after Act 125. If you are buying land to build, you'll need a percolation test by a licensed engineer before the county will approve a building permit.</p>
+        </div>
+        <div>
+          <div class="cesspool-box">
+            <span class="deadline-badge">State Deadline: 2050</span>
+            <h3>Cesspool Conversion: What to Expect</h3>
+            <p>All cesspools in Hawai'i must be upgraded or decommissioned by January 1, 2050. Priorities are set by proximity to sensitive coastal areas and drinking water sources — some properties may be required to convert earlier.</p>
+            <p><strong>Conversion cost:</strong> $15,000–$40,000+ depending on lot size and conditions. The state has offered financial assistance programs — check with Hawaii Department of Health for current status of any available grants or low-interest loans.</p>
+            <p><strong>Process:</strong> Hire a licensed professional engineer to assess the lot, design the system, and apply for a permit through Hawaii County Department of Environmental Management. Timeline from application to installation: typically 6–12 months.</p>
+            <p>If you're buying a property with a cesspool near a shoreline, stream, or in an area the county has flagged for priority — budget for conversion soon, not in 2049.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Permits Section ──────────────────────────────────────── -->
+  <section class="permits">
+    <div class="wrap">
+      <span class="eyebrow">Building in Rural Areas</span>
+      <h2 class="section-title">Rural Building Permits — What You Need to Know</h2>
+      <p class="section-lead">Building on off-grid land in rural Hawai'i is possible — but the permitting process is more complex than in urban areas. Understanding the system before you break ground saves months of delay.</p>
+      <div class="permits-list">
+        <div class="permit-card">
+          <h3>Building Permit Basics</h3>
+          <p>Hawaii County requires building permits for any structure over 200 sq ft, or any structure with plumbing, electrical, or mechanical systems — regardless of location. This includes homes, accessory dwelling units (ADUs), agricultural storage buildings with utilities, and catchment tank installations above a certain size.</p>
+          <p>Unpermitted structures are extremely common in rural Puna and Ka'ū — often listed as "built without permits" or BWP. These can create significant problems for buyers: difficulty financing, future county action, and inability to insure the structure properly. Always ask about permit status before making an offer.</p>
+        </div>
+        <div class="permit-card">
+          <h3>Conservation District Rules</h3>
+          <p>Some rural Big Island land falls within the State Land Use Conservation District — areas the state has designated as environmentally sensitive. These include upland forest areas, steep coastal cliffs, and land adjacent to national parks.</p>
+          <p>Building in the Conservation District requires approval from the state Board of Land and Natural Resources (BLNR) — a separate process from county permits that can take 12–24 months. Always confirm land use classification before purchasing remote or upland parcels.</p>
+        </div>
+        <div class="permit-card">
+          <h3>Agricultural Farm Dwellings</h3>
+          <p>On agriculturally zoned land, you can build a home — but it must qualify as a "farm dwelling" incidental to the agricultural use of the property. This is not just semantics: the county can require you to demonstrate that the property is being actively farmed before approving a dwelling permit on some ag-zoned parcels.</p>
+          <p>The specific requirements vary by zoning district (A-1, A-20, A-40, etc.). Work with a Realtor who understands agricultural permitting, and consult the Hawaii County Planning Department early in the process — before you design your home or break ground.</p>
+        </div>
+        <div class="permit-card">
+          <h3>Temporary Structures &amp; Tiny Homes</h3>
+          <p>A common question from off-grid buyers: can I live in a tiny home, yurt, or temporary structure while I build? Technically, most temporary structures still require permits if they'll be inhabited. Hawaii County has occasionally enforced against unpermitted habitation on ag land.</p>
+          <p>The practical reality varies by area — enforcement is much more active in some districts than others. But buyers who purchase land planning to "camp while they build" should be aware of the regulatory risk and should confirm what is permissible with the county before closing on the land.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Best Areas ────────────────────────────────────────────── -->
+  <section class="og-areas">
+    <div class="wrap">
+      <span class="eyebrow">Where to Live Off-Grid</span>
+      <h2 class="section-title">Best Areas for Off-Grid Living</h2>
+      <p class="section-lead" style="color:rgba(255,255,255,0.72)">Not all off-grid living is the same — the experience in wet, lush Puna is completely different from the dry, remote Ka'ū. Here's how the main off-grid areas compare.</p>
+      <div class="og-area-grid">
+        <div class="og-area-card">
+          <h3>Lower Puna</h3>
+          <p>The most populated off-grid area on the island. Subdivisions like Hawaiian Paradise Park, Orchidland Estates, and Hawaiian Acres have tens of thousands of residential lots — many of them off-grid. Dense jungle, abundant rainfall, strong off-grid community culture.</p>
+          <div class="og-area-meta">
+            <span class="og-meta-pill good">Great Rainfall</span>
+            <span class="og-meta-pill good">Strong Community</span>
+            <span class="og-meta-pill caution">Lava Zone 1–2</span>
+          </div>
+        </div>
+        <div class="og-area-card">
+          <h3>Upper Puna / Pahoa Area</h3>
+          <p>Slightly higher elevation and lower volcanic risk than lower Puna. More established community infrastructure, proximity to Pahoa town for services. Mix of on-grid and off-grid properties.</p>
+          <div class="og-area-meta">
+            <span class="og-meta-pill good">Moderate Volcanic Risk</span>
+            <span class="og-meta-pill good">Near Town</span>
+            <span class="og-meta-pill">Zone 3–4</span>
+          </div>
+        </div>
+        <div class="og-area-card">
+          <h3>Ka'ū &amp; Ocean View</h3>
+          <p>The most remote and most affordable off-grid area. Ocean View Estates offers large lots at very low prices — but it is truly remote (90 min from Kona), dry, and stark. For buyers who truly want isolation and self-sufficiency, it delivers.</p>
+          <div class="og-area-meta">
+            <span class="og-meta-pill good">Very Affordable</span>
+            <span class="og-meta-pill caution">Very Remote</span>
+            <span class="og-meta-pill caution">Dry — Tank Delivery</span>
+          </div>
+        </div>
+        <div class="og-area-card">
+          <h3>Hāmākua Coast</h3>
+          <p>Off-grid living in one of the most beautiful settings on the island — dramatic sea cliffs, lush rainforest, and excellent rainfall for catchment. More expensive than Puna, but significantly lower volcanic risk and more established infrastructure.</p>
+          <div class="og-area-meta">
+            <span class="og-meta-pill good">Low Volcanic Risk</span>
+            <span class="og-meta-pill good">Lush &amp; Scenic</span>
+            <span class="og-meta-pill">Zone 7–8</span>
+          </div>
+        </div>
+        <div class="og-area-card">
+          <h3>Volcano &amp; Upland Ka'ū</h3>
+          <p>Cool, forested, and quiet. Many properties around Volcano Village are off-grid with excellent catchment from the consistent rainfall. The proximity to Hawaii Volcanoes National Park is a major draw — and a unique lifestyle experience.</p>
+          <div class="og-area-meta">
+            <span class="og-meta-pill good">Cool &amp; Lush</span>
+            <span class="og-meta-pill good">National Park Nearby</span>
+            <span class="og-meta-pill caution">Vog Risk</span>
+          </div>
+        </div>
+        <div class="og-area-card">
+          <h3>South Kona &amp; Captain Cook</h3>
+          <p>Not exclusively off-grid, but many small farms and coffee properties in this area operate on catchment water and solar — especially at higher elevations. Combines agricultural lifestyle with proximity to Kailua-Kona's services (30–45 min).</p>
+          <div class="og-area-meta">
+            <span class="og-meta-pill good">Near Kona Services</span>
+            <span class="og-meta-pill good">Agricultural Community</span>
+            <span class="og-meta-pill">Zone 5–6</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Cost Summary ──────────────────────────────────────────── -->
+  <section class="costs">
+    <div class="wrap">
+      <span class="eyebrow">Real Numbers</span>
+      <h2 class="section-title">Total Cost to Set Up Off-Grid</h2>
+      <p class="section-lead">If you're buying raw land and building from scratch, these are the realistic system costs you're working with — separate from the land price, home construction, and permits.</p>
+      <table class="cost-table">
+        <thead>
+          <tr>
+            <th>System</th>
+            <th>Low End</th>
+            <th>High End</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rainwater catchment system</td>
+            <td class="cost-range">$5,000</td>
+            <td class="cost-range">$15,000</td>
+            <td>
+              Tank, gutters, first-flush diverter, basic filtration.
+              <div class="cost-note">Add $3,000–$8,000 for UV/RO drinking water treatment.</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Solar panels (5–8 kW array)</td>
+            <td class="cost-range">$12,000</td>
+            <td class="cost-range">$32,000</td>
+            <td>
+              Panel installation. Lithium battery bank adds $8,000–$15,000. 30% federal tax credit applies.
+            </td>
+          </tr>
+          <tr>
+            <td>Battery storage (lithium)</td>
+            <td class="cost-range">$8,000</td>
+            <td class="cost-range">$20,000</td>
+            <td>
+              Lithium preferred. Lifespan 10–15 years. Lead-acid cheaper but shorter life and less usable capacity.
+            </td>
+          </tr>
+          <tr>
+            <td>Backup generator</td>
+            <td class="cost-range">$1,000</td>
+            <td class="cost-range">$4,000</td>
+            <td>
+              Propane or gasoline. Essential for extended cloudy/rainy periods.
+            </td>
+          </tr>
+          <tr>
+            <td>Septic system</td>
+            <td class="cost-range">$12,000</td>
+            <td class="cost-range">$35,000</td>
+            <td>
+              Includes perc test, engineering, permitting, and installation. Highly variable by lot conditions.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Total system setup</strong></td>
+            <td class="cost-range"><strong>$38,000</strong></td>
+            <td class="cost-range"><strong>$106,000</strong></td>
+            <td><strong>Before land, home construction, or permits. Plan for the middle of this range for a comfortable, reliable system.</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ─── CTA ───────────────────────────────────────────────────── -->
+  <section class="cta" id="contact">
+    <div class="cta-bg"></div>
+    <div class="cta-overlay"></div>
+    <div class="cta-inner">
+      <span class="eyebrow">Ready to Talk</span>
+      <h2>Thinking About<br>an Off-Grid Property?</h2>
+      <p class="cta-sub">Off-grid land and homes require a different kind of due diligence — and a Realtor who understands what "catchment water" and "off-grid solar" actually mean on the ground. Let's have an honest conversation about what you're looking for.</p>
+      <div class="cta-buttons">
+        <a href="mailto:Keala@kealawall.com?subject=Off-Grid%20Property%20Inquiry%20%E2%80%94%20Big%20Island" class="btn-primary">Email Keala</a>
+        <a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener" class="btn-ghost">Search Listings</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-name">Keala M. Wall</div>
+        <div class="contact-title">Hawai'i Island Realtor &nbsp;·&nbsp; eXp Realty</div>
+        <div class="contact-lines">
+          <a href="mailto:Keala@kealawall.com" class="contact-line">
+            <svg viewBox="0 0 16 16"><rect x="1" y="3" width="14" height="10" rx="1.5"/><polyline points="1,3 8,9.5 15,3"/></svg>
+            Keala@kealawall.com
+          </a>
+          <a href="tel:8085153081" class="contact-line">
+            <svg viewBox="0 0 16 16"><path d="M3.5 1.5c-.8 0-1.5.7-1.5 1.5 0 5.8 4.7 10.5 10.5 10.5.8 0 1.5-.7 1.5-1.5V10l-3-1-1 1.5C8 10 6 8 5.5 6L7 5l-1-3H3.5z"/></svg>
+            808-515-3081
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="inner-footer">
+    <span class="footer-brand">Life, Land &amp; Legacy</span>
+    <img src="agency-exp-logo.png" alt="The Agency Team Hawai'i · Brokered by eXp Realty" class="footer-logo">
+    <p class="footer-legal">© 2026 Keala M. Wall · All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

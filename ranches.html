@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranch & Farm Property on Hawai'i Island | Keala M. Wall — Realtor</title>
+  <meta name="description" content="Your guide to buying ranch and farm property on the Big Island of Hawai'i — agricultural corridors, property types, price ranges, zoning, and local insight from a Hawai'i Island Realtor.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    img { display: block; max-width: 100%; }
+
+    :root {
+      --cream:       #faf7f2;
+      --cream-2:     #f0e9d8;
+      --cream-3:     #e5dbc8;
+      --green-deep:  #1a2e20;
+      --green-mid:   #2d5235;
+      --green-sage:  #5a7e5d;
+      --green-light: #8aad8d;
+      --gold:        #a07828;
+      --gold-warm:   #c4982e;
+      --gold-light:  #e0b84a;
+      --text-dark:   #1c2b1e;
+      --text-body:   #3d4e3f;
+      --text-muted:  #6b7d6d;
+      --white:       #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; line-height: 1.15; color: var(--green-deep); }
+    a { color: inherit; text-decoration: none; }
+    p { line-height: 1.75; color: var(--text-body); }
+
+    /* ─── Nav ──────────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 68px; padding: 0 3rem;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(250, 247, 242, 0.97);
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      backdrop-filter: blur(8px);
+    }
+    .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400; color: var(--green-deep); letter-spacing: 0.04em; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--green-deep); }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-phone { font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.02em; }
+    .nav-cta { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid currentColor; padding-bottom: 1px; transition: color 0.2s; }
+    .nav-cta:hover { color: var(--gold-warm); }
+    @media (max-width: 1000px) { .nav-links { display: none; } }
+    @media (max-width: 640px) { .nav-phone { display: none; } nav { padding: 0 1.5rem; } }
+
+    /* ─── Hero ──────────────────────────────────────────────────── */
+    .hero {
+      position: relative; min-height: 60vh;
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      padding: 9rem 2rem 5rem; overflow: hidden; background-color: var(--green-deep);
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1542259009477-d625272157b7?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover; background-position: center 30%; opacity: 0.5;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(14,28,16,0.5) 0%, rgba(8,20,10,0.72) 100%);
+    }
+    .hero-inner { position: relative; z-index: 2; max-width: 720px; }
+    .hero-eyebrow { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-warm); margin-bottom: 1.2rem; }
+    .hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 500; color: white; margin-bottom: 1.2rem; }
+    .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.82); max-width: 580px; margin: 0 auto; line-height: 1.7; }
+
+    /* ─── Shared Layout ─────────────────────────────────────────── */
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    section { padding: 6rem 2.5rem; }
+    .eyebrow { display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+    .section-title { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 500; margin-bottom: 1.25rem; }
+    .section-lead { font-size: 1.05rem; color: var(--text-body); line-height: 1.75; max-width: 700px; margin-bottom: 3rem; }
+    .btn-primary { display: inline-block; background: var(--gold); color: white; padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--gold-warm); }
+    .btn-ghost { display: inline-block; border: 1.5px solid rgba(255,255,255,0.55); color: rgba(255,255,255,0.9); padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; transition: border-color 0.2s, color 0.2s; }
+    .btn-ghost:hover { border-color: white; color: white; }
+
+    /* ─── Corridors ──────────────────────────────────────────────── */
+    .corridors { background: var(--cream); }
+    .corridors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+    .corridor-card {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem 1.75rem;
+      border-left: 4px solid var(--green-sage);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .corridor-card:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+    .corridor-region {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .corridor-card h3 { font-size: 1.2rem; font-weight: 500; color: var(--green-deep); margin-bottom: 0.75rem; }
+    .corridor-card p { font-size: 0.87rem; color: var(--text-body); line-height: 1.65; }
+    .corridor-types {
+      margin-top: 0.9rem;
+      display: flex; flex-wrap: wrap; gap: 0.4rem;
+    }
+    .type-pill {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em;
+      padding: 0.25rem 0.65rem; border-radius: 3px;
+      background: var(--cream-2); color: var(--green-mid);
+    }
+
+    /* ─── Property Types ─────────────────────────────────────────── */
+    .prop-types { background: var(--green-deep); padding: 6rem 2.5rem; }
+    .prop-types .eyebrow { color: var(--gold-warm); }
+    .prop-types .section-title { color: white; }
+    .prop-types .section-lead { color: rgba(255,255,255,0.72); }
+    .prop-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 0.5rem;
+    }
+    .prop-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+    .prop-card h3 { font-size: 1.35rem; font-weight: 500; color: white; margin-bottom: 0.5rem; }
+    .prop-card p { font-size: 0.88rem; color: rgba(255,255,255,0.68); line-height: 1.65; }
+    .prop-price {
+      margin-top: 1.1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.8rem;
+      color: var(--gold-warm);
+      font-weight: 500;
+    }
+
+    /* ─── Area Deep Dives ───────────────────────────────────────── */
+    .areas { background: var(--cream-2); }
+    .area-items { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 2.5rem; }
+    .area-item {
+      background: white;
+      border-radius: 8px;
+      padding: 2.5rem 2.5rem;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .area-sidebar {}
+    .area-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 500;
+      color: var(--green-deep);
+      margin-bottom: 0.3rem;
+      line-height: 1.2;
+    }
+    .area-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+    .area-quick dt { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-top: 0.75rem; }
+    .area-quick dd { font-size: 0.88rem; color: var(--text-body); line-height: 1.5; }
+    .area-body h4 { font-size: 1rem; font-weight: 600; color: var(--green-deep); margin-bottom: 0.5rem; margin-top: 1.25rem; }
+    .area-body h4:first-child { margin-top: 0; }
+    .area-body p { font-size: 0.9rem; color: var(--text-body); line-height: 1.7; }
+    .area-body p + p { margin-top: 0.75rem; }
+
+    /* ─── Tax Section ───────────────────────────────────────────── */
+    .taxes { background: var(--cream); }
+    .taxes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-top: 0.5rem;
+    }
+    .taxes-grid p + p { margin-top: 1rem; }
+    .tax-callout {
+      background: var(--cream-2);
+      border-radius: 8px;
+      padding: 2.5rem;
+    }
+    .tax-callout h3 { font-size: 1.3rem; font-weight: 500; color: var(--green-deep); margin-bottom: 1rem; }
+    .tax-rule { display: flex; gap: 1rem; margin-bottom: 1.1rem; align-items: flex-start; }
+    .tax-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 2rem;
+    }
+    .tax-desc { font-size: 0.87rem; color: var(--text-body); line-height: 1.6; }
+
+    /* ─── Inspect Checklist ─────────────────────────────────────── */
+    .inspect { background: var(--cream-2); }
+    .inspect-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-top: 0.5rem;
+    }
+    .inspect-col h3 {
+      font-size: 1rem; font-weight: 600; color: var(--green-deep);
+      margin-bottom: 1rem; padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--cream-3);
+    }
+    .inspect-item { display: flex; gap: 0.65rem; margin-bottom: 0.9rem; align-items: flex-start; }
+    .check-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--green-sage);
+      flex-shrink: 0; margin-top: 7px;
+    }
+    .inspect-item p { font-size: 0.87rem; color: var(--text-body); line-height: 1.6; }
+
+    /* ─── CTA ──────────────────────────────────────────────────── */
+    .cta { position: relative; overflow: hidden; padding: 7rem 2.5rem; text-align: center; background-color: var(--green-mid); }
+    .cta-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1542259009477-d625272157b7?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; opacity: 0.25; }
+    .cta-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(14,28,16,0.65) 0%, rgba(8,18,10,0.82) 100%); }
+    .cta-inner { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
+    .cta .eyebrow { color: var(--gold-warm); margin-bottom: 1rem; }
+    .cta h2 { font-size: clamp(2rem, 5vw, 3rem); color: white; margin-bottom: 1rem; }
+    .cta-sub { font-size: 1rem; color: rgba(255,255,255,0.72); line-height: 1.7; margin-bottom: 2.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .contact-card { margin-top: 3rem; display: inline-block; border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; padding: 1.5rem 2.5rem; text-align: left; }
+    .contact-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; color: white; margin-bottom: 0.15rem; }
+    .contact-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-warm); margin-bottom: 1.25rem; }
+    .contact-lines { display: flex; flex-direction: column; gap: 0.5rem; }
+    .contact-line { display: flex; align-items: center; gap: 0.65rem; color: rgba(255,255,255,0.75); font-size: 0.88rem; transition: color 0.2s; }
+    .contact-line:hover { color: var(--gold-light); }
+    .contact-line svg { width: 13px; height: 13px; stroke: var(--gold-warm); fill: none; stroke-width: 2; stroke-linecap: round; flex-shrink: 0; }
+
+    /* ─── Footer ─────────────────────────────────────────────────── */
+    footer { background: #0c1a0e; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 1.75rem 3rem; }
+    .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.5); letter-spacing: 0.04em; }
+    .footer-logo { height: 32px; width: auto; opacity: 0.75; filter: brightness(0) invert(1); }
+    .footer-legal { font-size: 0.72rem; color: rgba(255,255,255,0.2); margin: 0; }
+    footer a { color: rgba(255,255,255,0.55); transition: color 0.2s; }
+    footer a:hover { color: #c4982e; }
+
+    /* ─── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      section { padding: 4rem 1.75rem; }
+      .corridors-grid { grid-template-columns: 1fr 1fr; }
+      .prop-grid { grid-template-columns: 1fr; }
+      .area-item { grid-template-columns: 1fr; gap: 1.5rem; }
+      .taxes-grid { grid-template-columns: 1fr; }
+      .inspect-cols { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .corridors-grid { grid-template-columns: 1fr; }
+      .inspect-cols { grid-template-columns: 1fr; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── Nav ──────────────────────────────────────────────────── -->
+  <nav>
+    <a class="nav-brand" href="index.html">Life, Land &amp; Legacy</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="land.html">Buy Land</a></li>
+      <li><a href="ranches.html" class="active">Ranches</a></li>
+      <li><a href="off-grid.html">Off-Grid</a></li>
+      <li><a href="relocation.html">Relocate</a></li>
+      <li><a href="areas.html">Areas</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:8085153081" class="nav-phone">808-515-3081</a>
+      <a href="index.html#contact" class="nav-cta">Talk Story</a>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ──────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Ranch &amp; Farm Property Guide</span>
+      <h1>Working Land<br>on the Big Island</h1>
+      <p class="hero-sub">From Kona coffee farms to Waimea cattle ranches — Hawai'i Island's agricultural landscape is one of the most diverse and sought-after in the Pacific.</p>
+    </div>
+  </section>
+
+  <!-- ─── Agricultural Corridors ───────────────────────────────── -->
+  <section class="corridors">
+    <div class="wrap">
+      <span class="eyebrow">Where the Farmland Is</span>
+      <h2 class="section-title">Six Agricultural Corridors</h2>
+      <p class="section-lead">The Big Island's farm and ranch land is concentrated in six distinct corridors — each with its own climate, crop profile, price range, and character. Understanding which corridor fits your vision is the starting point for any agricultural property search.</p>
+      <div class="corridors-grid">
+        <div class="corridor-card">
+          <div class="corridor-region">West Side · Elevation 1,500–4,000 ft</div>
+          <h3>Kona Coffee Belt</h3>
+          <p>The world-famous Kona coffee growing region runs along the western slope of Hualālai volcano, from Holualoa south through Captain Cook and Honaunau. Microclimates here produce ideal growing conditions: warm mornings, afternoon clouds, and consistent rainfall at elevation.</p>
+          <div class="corridor-types">
+            <span class="type-pill">Coffee</span>
+            <span class="type-pill">Macadamia Nut</span>
+            <span class="type-pill">Diversified Ag</span>
+          </div>
+        </div>
+        <div class="corridor-card">
+          <div class="corridor-region">North · Elevation 2,500–3,500 ft</div>
+          <h3>Waimea &amp; Kohala Ranch Country</h3>
+          <p>The Parker Ranch — one of the largest cattle ranches in the United States at ~150,000 acres — anchors the Waimea/Kamuela plateau. The surrounding area is some of the most scenic ranch land in Hawaiʻi, with green pastures, misty mornings, and cool temperatures year-round.</p>
+          <div class="corridor-types">
+            <span class="type-pill">Cattle</span>
+            <span class="type-pill">Horse</span>
+            <span class="type-pill">Mixed Pastoral</span>
+          </div>
+        </div>
+        <div class="corridor-card">
+          <div class="corridor-region">North · Elevation 0–2,000 ft</div>
+          <h3>North Kohala</h3>
+          <p>The rugged northern tip of the island transitions from dry coastal land to lush upland pasture. Smaller ranches and farms sit on some of the oldest volcanic terrain on the island (Lava Zone 9) — lowest volcanic risk, dramatic views, and strong cultural roots.</p>
+          <div class="corridor-types">
+            <span class="type-pill">Cattle</span>
+            <span class="type-pill">Fruit Orchards</span>
+            <span class="type-pill">Heritage Farms</span>
+          </div>
+        </div>
+        <div class="corridor-card">
+          <div class="corridor-region">Windward · Elevation 500–2,500 ft</div>
+          <h3>Hāmākua Coast</h3>
+          <p>Once the heart of Hawaiʻi's sugar industry, the Hāmākua Coast now supports diversified farming — tropical fruits, floriculture, specialty crops, and small-scale orchards. Deep red soil, dramatic sea cliffs, and 80–120 inches of annual rainfall make it extraordinarily fertile.</p>
+          <div class="corridor-types">
+            <span class="type-pill">Tropical Fruits</span>
+            <span class="type-pill">Floriculture</span>
+            <span class="type-pill">Diversified Ag</span>
+          </div>
+        </div>
+        <div class="corridor-card">
+          <div class="corridor-region">Windward · Elevation 500–2,000 ft</div>
+          <h3>Honoka'a &amp; Pa'auilo</h3>
+          <p>The upper Hāmākua area around Honoka'a and Pa'auilo supports macadamia nut orchards, cattle operations, and small diversified farms. More affordable than the Kona belt, with good soil, reliable rain, and a strong local agricultural community.</p>
+          <div class="corridor-types">
+            <span class="type-pill">Macadamia Nut</span>
+            <span class="type-pill">Cattle</span>
+            <span class="type-pill">Orchard</span>
+          </div>
+        </div>
+        <div class="corridor-card">
+          <div class="corridor-region">South · Elevation 500–4,000 ft</div>
+          <h3>Ka'ū &amp; Volcano</h3>
+          <p>Ka'ū produces Ka'ū coffee — now internationally recognized as rivaling Kona in quality. The area also supports cattle and small diversified farms. Upland Volcano-area farms benefit from cool temperatures and lush volcanic soil for specialty crops including mushrooms, berries, and orchids.</p>
+          <div class="corridor-types">
+            <span class="type-pill">Ka'ū Coffee</span>
+            <span class="type-pill">Cattle</span>
+            <span class="type-pill">Specialty Crops</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Property Types & Prices ─────────────────────────────── -->
+  <section class="prop-types">
+    <div class="wrap">
+      <span class="eyebrow">What to Expect</span>
+      <h2 class="section-title">Property Types &amp; Price Ranges</h2>
+      <p class="section-lead" style="color:rgba(255,255,255,0.72)">Big Island agricultural properties span an enormous range — from small coffee farms under 5 acres to trophy ranch land over 1,000 acres. Here's how the market breaks down by type.</p>
+      <div class="prop-grid">
+        <div class="prop-card">
+          <h3>Small Farm &amp; Residential-Ag</h3>
+          <p>2–10 acre parcels zoned FA-2a or A-1a. Typically include a home or permitted structure, a water source, and some cleared agricultural land. Common in Puna, Ka'ū, and outer Hāmākua. Entry-level agricultural living on the Big Island.</p>
+          <div class="prop-price">Typical range: $300K–$800K &nbsp;·&nbsp; Puna/Ka'ū end; Kona/Kohala higher</div>
+        </div>
+        <div class="prop-card">
+          <h3>Working Coffee Farm</h3>
+          <p>3–15 acre farms in the Kona coffee belt or Ka'ū district with established coffee trees, processing equipment, and a home. Kona coffee commands premium prices globally — buyers pay for both the land and the income potential. Due diligence on tree health, yield history, and water rights is essential.</p>
+          <div class="prop-price">Typical range: $1M–$3M &nbsp;·&nbsp; Kona coffee belt; Ka'ū generally lower</div>
+        </div>
+        <div class="prop-card">
+          <h3>Macadamia Nut Orchard</h3>
+          <p>Established mac nut orchards on 5–50 acres, primarily in the Hāmākua and Honoka'a areas. Trees take 7–10 years to reach full production — buying an established orchard versus raw land is a major price and timeline difference. Check processor contracts and infrastructure condition.</p>
+          <div class="prop-price">Typical range: $500K–$2M &nbsp;·&nbsp; Depends heavily on tree age and acreage</div>
+        </div>
+        <div class="prop-card">
+          <h3>Ranch &amp; Cattle Land</h3>
+          <p>Working cattle and horse ranches in Waimea, Kohala, and North Hāmākua. Properties range from 20-acre gentleman ranches to 500+ acre working operations. The Waimea and Kohala area supports some of the most premium ranch land in Hawaiʻi — access to Parker Ranch's infrastructure and community is a significant draw.</p>
+          <div class="prop-price">Typical range: $1M–$25M+ &nbsp;·&nbsp; Kohala/Waimea trophy land at the high end</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Area Deep Dives ──────────────────────────────────────── -->
+  <section class="areas">
+    <div class="wrap">
+      <span class="eyebrow">Know Your Area</span>
+      <h2 class="section-title">Deep Dive: Key Ranch Areas</h2>
+      <p class="section-lead">Every agricultural corridor has its own character, community, and practical realities. Here's what buyers need to know about the three most active ranch and farm markets on the island.</p>
+      <div class="area-items">
+
+        <div class="area-item">
+          <div class="area-sidebar">
+            <div class="area-name">Waimea / Kamuela</div>
+            <div class="area-label">Ranch Country</div>
+            <dl class="area-quick">
+              <dt>Elevation</dt><dd>2,500–3,500 ft</dd>
+              <dt>Climate</dt><dd>Cool, misty, 25–50 in. rainfall/yr</dd>
+              <dt>Lava Zone</dt><dd>Zone 7–8 (very low risk)</dd>
+              <dt>Min. Ag Lot</dt><dd>20–40 acres for working ranch</dd>
+            </dl>
+          </div>
+          <div class="area-body">
+            <h4>The Parker Ranch Legacy</h4>
+            <p>Waimea sits at the center of one of the most storied ranching cultures in the United States. Parker Ranch — founded in the early 1800s and today covering approximately 150,000 acres — defines the character of the entire region. Paniolo (Hawaiian cowboy) tradition runs deep here, and neighboring ranch properties benefit from that culture, the established infrastructure, and the agricultural expertise embedded in the community.</p>
+            <h4>What Buyers Find Here</h4>
+            <p>Smaller parcels adjacent to large ranch operations, gentleman horse farms, cattle operations on 20–200 acres, and lifestyle ranches for buyers who want the rural pastoral experience close to a real town. Waimea has excellent schools, the KTA grocery, multiple restaurants, and a strong community — making it more accessible than more remote ranch areas.</p>
+            <h4>What to Know</h4>
+            <p>Water here comes primarily from Kamuela Irrigation Association or private catchment — county water is available in town. Properties at higher elevation can be foggy and significantly cooler than the coast. The Kohala Center in Waimea provides agricultural technical assistance and is a valuable resource for new farmers and ranchers.</p>
+          </div>
+        </div>
+
+        <div class="area-item">
+          <div class="area-sidebar">
+            <div class="area-name">Kohala</div>
+            <div class="area-label">Ranch &amp; Heritage Land</div>
+            <dl class="area-quick">
+              <dt>Elevation</dt><dd>0–5,480 ft (Kohala Mtn.)</dd>
+              <dt>Climate</dt><dd>Dry coast; lush upland. Ranges from 5 to 150 in. rainfall/yr</dd>
+              <dt>Lava Zone</dt><dd>Zone 9 (lowest risk on island)</dd>
+              <dt>Min. Ag Lot</dt><dd>Varies by zone; 20–200+ acres</dd>
+            </dl>
+          </div>
+          <div class="area-body">
+            <h4>The Oldest Land on the Island</h4>
+            <p>Kohala Mountain is the oldest of the Big Island's five volcanoes — dormant for over 60,000 years and classified Zone 9, the lowest possible volcanic risk. This geological age means rich, deeply developed soils in the uplands and a track record of stability that makes lenders and insurers comfortable. It also means some of the most expensive ranch land on the island.</p>
+            <h4>Dramatic Microclimate Range</h4>
+            <p>North Kohala is defined by extremes: the coastal Kohala Resort area is bone-dry and sunny, while the upland ranches above 2,000 feet receive heavy rainfall and are blanketed in lush pasture. A property's specific elevation and aspect — which direction it faces — determines its climate more than its district label. Work with a Realtor who has walked the land.</p>
+            <h4>What Buyers Find Here</h4>
+            <p>Heritage ranch land with deep Hawaiian history, scenic ocean-view pastures, small working cattle operations, and lifestyle properties with privacy and dramatic views. Access to the Kohala Coast's luxury resort amenities is minutes away from upland farms — a combination few places in the world can offer.</p>
+          </div>
+        </div>
+
+        <div class="area-item">
+          <div class="area-sidebar">
+            <div class="area-name">Hāmākua Coast</div>
+            <div class="area-label">Fertile Windward Farmland</div>
+            <dl class="area-quick">
+              <dt>Elevation</dt><dd>200–2,500 ft</dd>
+              <dt>Climate</dt><dd>Lush and wet, 80–120 in. rainfall/yr</dd>
+              <dt>Lava Zone</dt><dd>Zone 7–8 (low risk)</dd>
+              <dt>Min. Ag Lot</dt><dd>2–20 acres depending on zone</dd>
+            </dl>
+          </div>
+          <div class="area-body">
+            <h4>Post-Sugar Country</h4>
+            <p>The Hāmākua Coast's sugar industry ended in 1994 with the closure of Honoka'a Sugar Company. In the three decades since, the land has transitioned to diversified agriculture — tropical fruits, floriculture, macadamia nuts, timber, and specialty crops. The red volcanic soil is extraordinarily fertile, and the consistent rainfall means irrigation is rarely needed.</p>
+            <h4>Value and Opportunity</h4>
+            <p>Compared to Kona coffee farms or Waimea ranch land, Hāmākua farms are often significantly more affordable per acre. Buyers who don't need the Kona name or the Waimea prestige — but do want productive soil, good rainfall, and a working farm lifestyle — find exceptional value here.</p>
+            <h4>What to Know</h4>
+            <p>Most properties here use catchment water — verify tank condition and sizing carefully. Roads can be steep and narrow, and some parcels are accessed via private easements. The spectacular sea cliff scenery and Waipiʻo Valley proximity make this one of the most beautiful agricultural regions in the state.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Tax & Zoning ─────────────────────────────────────────── -->
+  <section class="taxes">
+    <div class="wrap">
+      <span class="eyebrow">Tax Benefits &amp; Zoning</span>
+      <h2 class="section-title">Agricultural Tax Exemptions — How They Work</h2>
+      <div class="taxes-grid">
+        <div>
+          <p>One of the most valuable financial benefits of owning agricultural land in Hawai'i is the agricultural property tax exemption. AG-zoned land assessed at agricultural use rates pays dramatically lower property taxes than residential or commercial land.</p>
+          <p>To qualify, you must demonstrate active agricultural use — the land must be genuinely farmed, ranched, or used for agricultural production. Passive ownership with no farming activity generally does not qualify.</p>
+          <p>The county's Real Property Tax Division reviews agricultural exemption applications and can audit whether active use requirements are being met. If a property transitions from active farming to non-agricultural use, the tax rate can increase substantially — sometimes retroactively.</p>
+          <p>Important: agricultural exemptions run with the use, not just the zoning. A property can be zoned agricultural but taxed at a higher rate if the buyer isn't farming. Work with your Realtor and a local tax professional to understand your specific obligation before closing.</p>
+        </div>
+        <div class="tax-callout">
+          <h3>Key Rules to Know</h3>
+          <div class="tax-rule">
+            <div class="tax-num">1</div>
+            <div class="tax-desc"><strong>Active use required.</strong> The land must be in active agricultural production — not just zoned ag. Crops, livestock, orchard, or other qualifying agricultural activity must be present and ongoing.</div>
+          </div>
+          <div class="tax-rule">
+            <div class="tax-num">2</div>
+            <div class="tax-desc"><strong>Farm dwellings are permitted.</strong> You can build a residence on agricultural land — but it must be an "farm dwelling" accessory to the ag use. Standalone residential development without ag activity may trigger a rezoning or tax reclassification.</div>
+          </div>
+          <div class="tax-rule">
+            <div class="tax-num">3</div>
+            <div class="tax-desc"><strong>Important Agricultural Lands (IAL).</strong> Some parcels carry voluntary IAL designation — a state program that offers additional tax benefits and development credits in exchange for a long-term agricultural commitment. These protect the land's farming future and are highly valued by conservation-minded buyers.</div>
+          </div>
+          <div class="tax-rule">
+            <div class="tax-num">4</div>
+            <div class="tax-desc"><strong>Subdivision rules are strict.</strong> Subdividing agricultural land on the Big Island requires Hawaii County Planning approval and must meet minimum lot size requirements by zone. Unlawful subdivision — common in some older ag subdivisions — can create title and financing problems for buyers.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Pre-Buy Checklist ────────────────────────────────────── -->
+  <section class="inspect">
+    <div class="wrap">
+      <span class="eyebrow">Before You Buy</span>
+      <h2 class="section-title">What to Inspect on a Farm or Ranch</h2>
+      <p class="section-lead">Agricultural properties carry unique inspection considerations that a standard residential inspection won't cover. These are the questions to answer before you close.</p>
+      <div class="inspect-cols">
+        <div class="inspect-col">
+          <h3>Land &amp; Soil</h3>
+          <div class="inspect-item"><div class="check-dot"></div><p>Has the soil been tested? Know the pH, nutrient levels, and any history of chemical applications.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>Are there drainage issues? Low-lying areas on windward parcels can flood seasonally.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>What is the timber/tree inventory? On orchard properties, count and assess tree age and health.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>Are there noxious weeds or invasive species requiring ongoing management?</p></div>
+        </div>
+        <div class="inspect-col">
+          <h3>Infrastructure</h3>
+          <div class="inspect-item"><div class="check-dot"></div><p>Verify fencing condition and boundary markers — especially on large parcels where encroachment is common.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>Inspect roads and access — are they paved, gravel, or dirt? Who is responsible for maintenance?</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>Are barns, storage buildings, and equipment structures permitted? Unpermitted structures can create closing delays.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>What irrigation infrastructure exists? Pipes, valves, tanks — assess age and condition.</p></div>
+        </div>
+        <div class="inspect-col">
+          <h3>Legal &amp; Financial</h3>
+          <div class="inspect-item"><div class="check-dot"></div><p>Verify the property's current ag exemption status and what documentation the county requires to maintain it.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>Review any USDA or state conservation program enrollment — these can restrict what you do with the land for years after purchase.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>Check for water rights and water system agreements — especially on large parcels that share irrigation infrastructure.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>Ask for 3 years of income and expense records on working farms — yield history tells you more than the seller's verbal description.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ───────────────────────────────────────────────────── -->
+  <section class="cta" id="contact">
+    <div class="cta-bg"></div>
+    <div class="cta-overlay"></div>
+    <div class="cta-inner">
+      <span class="eyebrow">Start the Conversation</span>
+      <h2>Looking for Ranch or<br>Farm Property?</h2>
+      <p class="cta-sub">Finding the right agricultural property requires local knowledge, not just a listing search. Let's talk about what kind of land and lifestyle you're looking for — and where on the island it actually exists.</p>
+      <div class="cta-buttons">
+        <a href="mailto:Keala@kealawall.com?subject=Ranch%20%26%20Farm%20Property%20Inquiry" class="btn-primary">Email Keala</a>
+        <a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener" class="btn-ghost">Search Farm Listings</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-name">Keala M. Wall</div>
+        <div class="contact-title">Hawai'i Island Realtor &nbsp;·&nbsp; eXp Realty</div>
+        <div class="contact-lines">
+          <a href="mailto:Keala@kealawall.com" class="contact-line">
+            <svg viewBox="0 0 16 16"><rect x="1" y="3" width="14" height="10" rx="1.5"/><polyline points="1,3 8,9.5 15,3"/></svg>
+            Keala@kealawall.com
+          </a>
+          <a href="tel:8085153081" class="contact-line">
+            <svg viewBox="0 0 16 16"><path d="M3.5 1.5c-.8 0-1.5.7-1.5 1.5 0 5.8 4.7 10.5 10.5 10.5.8 0 1.5-.7 1.5-1.5V10l-3-1-1 1.5C8 10 6 8 5.5 6L7 5l-1-3H3.5z"/></svg>
+            808-515-3081
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
+  <footer class="inner-footer">
+    <span class="footer-brand">Life, Land &amp; Legacy</span>
+    <img src="agency-exp-logo.png" alt="The Agency Team Hawai'i · Brokered by eXp Realty" class="footer-logo">
+    <p class="footer-legal">© 2026 Keala M. Wall · All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
