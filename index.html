@@ -672,6 +672,138 @@
     }
     @media (max-width: 640px) { .contact { padding: 5rem 1.5rem; } }
 
+    /* ─── Testimonials ───────────────────────────────────────────── */
+    .testimonials {
+      background: var(--white);
+      padding: 7rem 3rem;
+    }
+    .testimonials-inner { max-width: 1100px; margin: 0 auto; }
+    .testimonials-header { margin-bottom: 4rem; max-width: 620px; }
+    .testimonials-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .testimonials-header h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      color: var(--green-deep);
+      margin-bottom: 1rem;
+    }
+    .testimonials-header h2 em { font-style: italic; color: var(--gold); }
+    .testimonials-header p {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      line-height: 1.75;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .testimonial-card {
+      background: var(--cream);
+      border: 1px solid var(--cream-2);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .testimonial-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      line-height: 0.6;
+      color: var(--gold-light);
+      margin-bottom: 1.25rem;
+    }
+    .testimonial-text {
+      font-size: 0.92rem;
+      color: var(--text-body);
+      line-height: 1.8;
+      flex-grow: 1;
+      margin-bottom: 1.75rem;
+    }
+    .testimonial-author {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--green-deep);
+      border-top: 1px solid var(--cream-2);
+      padding-top: 1.25rem;
+    }
+    .testimonial-context {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+    @media (max-width: 900px) {
+      .testimonial-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+    @media (max-width: 640px) { .testimonials { padding: 5rem 1.5rem; } }
+
+    /* ─── Contact form ───────────────────────────────────────────── */
+    .contact-form { display: flex; flex-direction: column; gap: 1.1rem; }
+    .contact-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .contact-field label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green-deep);
+      margin-bottom: 0.45rem;
+    }
+    .contact-field input,
+    .contact-field select,
+    .contact-field textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid var(--cream-3);
+      background: var(--white);
+      padding: 0.8rem 0.9rem;
+      font-size: 0.92rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      transition: border-color 0.2s;
+    }
+    .contact-field input:focus,
+    .contact-field select:focus,
+    .contact-field textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+    .contact-field textarea { min-height: 110px; resize: vertical; }
+    .contact-submit {
+      background: var(--green-deep);
+      color: white;
+      border: none;
+      padding: 0.95rem 2rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+      align-self: flex-start;
+      margin-top: 0.4rem;
+    }
+    .contact-submit:hover { background: var(--green-mid); }
+    .contact-form-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.1rem;
+    }
+    @media (max-width: 500px) {
+      .contact-form-row { grid-template-columns: 1fr; }
+    }
+
     /* ─── Footer ─────────────────────────────────────────────────── */
     footer {
       background: #0c1a0e;
@@ -954,6 +1086,44 @@
     </div>
   </section>
 
+  <!-- ─── Client Stories ───────────────────────────────────────── -->
+  <section class="testimonials" id="stories">
+    <div class="testimonials-inner">
+      <div class="testimonials-header">
+        <span class="testimonials-eyebrow">In Their Words</span>
+        <h2>Client <em>Stories</em></h2>
+        <p>Real conversations, real land, real families — here's what it's been like to work with Keala, in her clients' own words.</p>
+      </div>
+      <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+          <div class="testimonial-mark">&ldquo;</div>
+          <p class="testimonial-text">Last year we purchased our first family home in Hawaiian Homes. As many people know, this process is long, stressful and usually brutal. Keala went above and beyond reassuring us along the way and keeping us updated. She communicated with us consistently through the entire process and treated us with kindness and respect. We highly recommend using Keala for any of your real estate needs if you prefer a punctual, reliable and personable agent! She answered all of our questions and never let us feel unheard or dismissed. We are so grateful she made our DHHL purchase go as smoothly and quickly as possible for our family!</p>
+          <div class="testimonial-author">Ashton
+            <span class="testimonial-context">Bought a home · DHHL · Kailua-Kona</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-mark">&ldquo;</div>
+          <p class="testimonial-text">Keala Wall is your go-to realtor. Not only is she our realtor, but a friend. She is quick to respond to questions, provide information and set up viewings, making us feel like we are her main priority. Our sale went smoothly without any hiccups or hidden issues.</p>
+          <div class="testimonial-author">Altamirano
+            <span class="testimonial-context">Sold a condo · Kailua-Kona</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-mark">&ldquo;</div>
+          <p class="testimonial-text">Keala was easy to work with as I explored available properties to purchase. She is no-nonsense and easy to communicate with. She answered my questions about different properties quickly, which I appreciated because home buying is already challenging, especially in a hot market. Because she is "local girl" she knows the highs and lows of the community and was able to guide me to properties that best fit my needs. Ultimately, I decided to wait on a purchase, but I highly recommend her and will seek her out when I am ready to start searching again.</p>
+          <div class="testimonial-author">J.K.
+            <span class="testimonial-context">Buyer consultation · Kailua-Kona</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ─── Contact ────────────────────────────────────────────────── -->
   <section class="contact" id="contact">
     <div class="contact-inner">
@@ -967,9 +1137,42 @@
           <li>What Big Island buyers need to know before they start</li>
           <li>Your next three steps — specific to where you are right now</li>
         </ul>
-        <div class="contact-links">
-          <a href="mailto:Keala@kealawall.com?subject=Let%27s%20Talk%20Story" class="contact-link-btn">Send Keala a Message</a>
-        </div>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+          <input type="hidden" name="form-name" value="contact">
+          <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+          <div class="contact-form-row">
+            <div class="contact-field">
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" name="name" required>
+            </div>
+            <div class="contact-field">
+              <label for="cf-phone">Phone</label>
+              <input type="tel" id="cf-phone" name="phone">
+            </div>
+          </div>
+          <div class="contact-field">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" required>
+          </div>
+          <div class="contact-field">
+            <label for="cf-interest">What are you looking to do?</label>
+            <select id="cf-interest" name="interest">
+              <option value="">Select one</option>
+              <option>Buy land or acreage</option>
+              <option>Ranch or farm property</option>
+              <option>Off-grid property</option>
+              <option>Relocating to the Big Island</option>
+              <option>Sell my property or family land</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="contact-field">
+            <label for="cf-message">Tell me a bit about what you're looking for</label>
+            <textarea id="cf-message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="contact-submit">Send Keala a Message</button>
+          <p class="contact-form-note">Usually replies within one business day · 808-515-3081</p>
+        </form>
       </div>
 
       <div class="contact-right">
