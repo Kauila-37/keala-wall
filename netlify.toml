@@ -1,0 +1,6 @@
+# Netlify config — static site, no build step.
+# Publishes the repo root as-is. Kept in version control so the deploy
+# setup is reproducible and travels with the repo.
+
+[build]
+  publish = "."
