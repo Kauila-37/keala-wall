@@ -1139,6 +1139,10 @@
         </ul>
         <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
           <input type="hidden" name="form-name" value="contact">
+          <!-- CRM routing fields (Netlify → Zapier → Follow Up Boss). form-type = FUB tag, source = FUB lead source, page = URL submitted from. -->
+          <input type="hidden" name="form-type" value="Contact Form">
+          <input type="hidden" name="source" value="LifeLandLegacyHI.com">
+          <input type="hidden" name="page" value="">
           <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
           <div class="contact-form-row">
             <div class="contact-field">
@@ -1173,6 +1177,13 @@
           <button type="submit" class="contact-submit">Send Keala a Message</button>
           <p class="contact-form-note">Usually replies within one business day · 808-515-3081</p>
         </form>
+        <script>
+          // Stamp the submitted-from URL so the CRM records which page the lead came from.
+          (function () {
+            var p = document.querySelector('form.contact-form [name="page"]');
+            if (p) p.value = window.location.href;
+          })();
+        </script>
       </div>
 
       <div class="contact-right">
