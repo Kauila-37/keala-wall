@@ -1,0 +1,7 @@
+# Private client/business docs — this repo is PUBLIC, keep these out of it.
+README.md
+Contracts/
+Assets/
+
+# OS
+.DS_Store
