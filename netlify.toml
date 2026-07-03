@@ -4,3 +4,12 @@
 
 [build]
   publish = "."
+
+# Keep non-production deploys (staging branch + PR deploy previews) out of
+# search engines so they never compete with the live domain as duplicate
+# content. Production (main) gets no _headers file, so it stays crawlable.
+[context.branch-deploy]
+  command = "printf '/*\\n  X-Robots-Tag: noindex\\n' > _headers"
+
+[context.deploy-preview]
+  command = "printf '/*\\n  X-Robots-Tag: noindex\\n' > _headers"
