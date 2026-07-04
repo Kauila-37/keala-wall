@@ -3,1253 +3,208 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Keala M. Wall — Hawai'i Island Realtor | Life, Land &amp; Legacy</title>
-  <meta name="description" content="Keala M. Wall is a Hawai'i Island Realtor with eXp Realty specializing in land, lifestyle, and legacy-driven real estate across the Big Island.">
+  <title>Keala M. Wall — Hawaiʻi Island Real Estate | Life · Land · Legacy</title>
+  <meta name="description" content="Hawaiʻi Island real estate, organized around three worlds — Life, Land, and Legacy. Land and acreage expertise, relocation guidance, and homes across the Big Island with Keala M. Wall.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    img { display: block; max-width: 100%; }
-
-    :root {
-      --cream:       #faf7f2;
-      --cream-2:     #f0e9d8;
-      --cream-3:     #e5dbc8;
-      --green-deep:  #1a2e20;
-      --green-mid:   #2d5235;
-      --green-sage:  #5a7e5d;
-      --gold:        #a07828;
-      --gold-warm:   #c4982e;
-      --gold-light:  #e0b84a;
-      --text-dark:   #1c2b1e;
-      --text-body:   #3d4e3f;
-      --text-muted:  #7a8c7c;
-      --white:       #ffffff;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--white);
-      color: var(--text-dark);
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; line-height: 1.12; }
-    a { color: inherit; text-decoration: none; }
-    p { line-height: 1.78; }
-
-    /* ─── Nav ────────────────────────────────────────────────────── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0; z-index: 200;
-      height: 68px;
-      padding: 0 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: background 0.4s, border-color 0.4s;
-      border-bottom: 1px solid transparent;
-    }
-    nav.scrolled {
-      background: rgba(250, 247, 242, 0.97);
-      border-bottom-color: rgba(0,0,0,0.07);
-      backdrop-filter: blur(8px);
-    }
-    .nav-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-weight: 400;
-      letter-spacing: 0.04em;
-      color: rgba(255,255,255,0.9);
-      transition: color 0.4s;
-      white-space: nowrap;
-    }
-    nav.scrolled .nav-brand { color: var(--green-deep); }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.72);
-      transition: color 0.2s;
-    }
-    nav.scrolled .nav-links a { color: var(--text-muted); }
-    .nav-links a:hover,
-    .nav-links a.active { color: white; }
-    nav.scrolled .nav-links a:hover,
-    nav.scrolled .nav-links a.active { color: var(--green-deep); }
-    .nav-right { display: flex; align-items: center; gap: 2rem; }
-    .nav-phone {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.65);
-      transition: color 0.4s;
-      letter-spacing: 0.02em;
-    }
-    nav.scrolled .nav-phone { color: var(--text-muted); }
-    .nav-cta {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold-warm);
-      border-bottom: 1px solid currentColor;
-      padding-bottom: 1px;
-      transition: color 0.2s;
-    }
-    .nav-cta:hover { color: var(--gold-light); }
-    nav.scrolled .nav-cta { color: var(--gold); }
-    nav.scrolled .nav-cta:hover { color: var(--gold-warm); }
-    @media (max-width: 1000px) { .nav-links { display: none; } }
-    @media (max-width: 640px) { .nav-phone { display: none; } nav { padding: 0 1.5rem; } }
-
-    /* ─── Hero ───────────────────────────────────────────────────── */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: flex-end;
-      padding: 0 3rem 5rem;
-      overflow: hidden;
-      background: var(--green-deep);
-    }
-    .hero-bg {
-      position: absolute; inset: 0;
-      background-image: url('photos/hero-sunset-lava.jpg');
-      background-size: cover;
-      background-position: center 35%;
-      opacity: 0.65;
-    }
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(
-        105deg,
-        rgba(8,18,10,0.82) 0%,
-        rgba(8,18,10,0.5) 50%,
-        rgba(8,18,10,0.2) 100%
-      );
-    }
-    .hero-inner {
-      position: relative; z-index: 2;
-      max-width: 700px;
-    }
-    .hero-label {
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold-warm);
-      margin-bottom: 1.25rem;
-    }
-    .hero h1 {
-      font-size: clamp(4rem, 9vw, 7.5rem);
-      font-weight: 300;
-      color: white;
-      line-height: 0.95;
-      letter-spacing: -0.02em;
-      margin-bottom: 2rem;
-    }
-    .hero h1 em {
-      font-style: italic;
-      font-weight: 300;
-    }
-    .hero-rule {
-      width: 56px; height: 1px;
-      background: var(--gold-warm);
-      opacity: 0.6;
-      margin-bottom: 1.5rem;
-    }
-    .hero-sub {
-      font-size: 1rem;
-      color: rgba(255,255,255,0.7);
-      line-height: 1.7;
-      max-width: 460px;
-      margin-bottom: 2.5rem;
-    }
-    .hero-actions {
-      display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
-    }
-    .btn-primary {
-      display: inline-block;
-      background: var(--gold);
-      color: white;
-      padding: 0.85rem 2rem;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      transition: background 0.2s;
-    }
-    .btn-primary:hover { background: var(--gold-warm); }
-    .btn-line {
-      display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.72);
-      border-bottom: 1px solid rgba(255,255,255,0.35);
-      padding-bottom: 2px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .btn-line:hover { color: white; border-color: white; }
-    .scroll-indicator {
-      position: absolute;
-      bottom: 2.5rem; right: 3rem;
-      z-index: 2;
-      display: flex; flex-direction: column; align-items: center; gap: 6px;
-    }
-    .scroll-label { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
-    .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3)); }
-    @media (max-width: 640px) {
-      .hero { padding: 0 1.5rem 4rem; }
-      .scroll-indicator { display: none; }
-    }
-
-    /* ─── Listings ───────────────────────────────────────────────── */
-    .listings {
-      background: var(--white);
-      padding: 5rem 3rem;
-      border-bottom: 1px solid var(--cream-2);
-    }
-    .listings-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-    .listings h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 400;
-      color: var(--green-deep);
-      margin-bottom: 1rem;
-    }
-    .listings p {
-      font-size: 0.95rem;
-      color: var(--text-body);
-      margin-bottom: 2rem;
-      max-width: 400px;
-    }
-    .listings .btn-primary { display: inline-block; }
-    .listing-types {
-      display: flex; flex-direction: column; gap: 0;
-    }
-    .listing-type {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.25rem 0;
-      border-bottom: 1px solid var(--cream-2);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
-      font-weight: 400;
-      color: var(--text-dark);
-      transition: color 0.2s;
-    }
-    .listing-type:first-child { border-top: 1px solid var(--cream-2); }
-    .listing-type:hover { color: var(--gold); }
-    .listing-type span { font-size: 1rem; color: var(--text-muted); transition: color 0.2s; }
-    .listing-type:hover span { color: var(--gold-warm); }
-    @media (max-width: 800px) {
-      .listings-inner { grid-template-columns: 1fr; gap: 3rem; }
-    }
-    @media (max-width: 640px) { .listings { padding: 4rem 1.5rem; } }
-
-    /* ─── About ──────────────────────────────────────────────────── */
-    .about {
-      background: var(--cream);
-      padding: 7rem 3rem;
-    }
-    .about-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 420px 1fr;
-      gap: 6rem;
-      align-items: start;
-    }
-    .about-left {
-      position: sticky;
-      top: 88px;
-    }
-    .about-photo {
-      width: 100%;
-      aspect-ratio: 4/5;
-      overflow: hidden;
-      background: var(--cream-2);
-      margin-bottom: 1.75rem;
-    }
-    .about-photo img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      object-position: center top;
-    }
-    .about-id strong {
-      display: block;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
-      font-weight: 400;
-      color: var(--green-deep);
-      margin-bottom: 0.25rem;
-    }
-    .about-id span {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-      display: block;
-      margin-bottom: 1rem;
-    }
-    .about-brokerage-logo {
-      height: 32px;
-      width: auto;
-      opacity: 0.7;
-    }
-    .about-tag {
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.25rem;
-      display: block;
-    }
-    .about-quote {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.5rem, 2.2vw, 1.9rem);
-      font-style: italic;
-      font-weight: 300;
-      color: var(--green-deep);
-      line-height: 1.45;
-      margin-bottom: 2rem;
-      padding-left: 1.25rem;
-      border-left: 2px solid var(--gold);
-    }
-    .about-right .about-tag { margin-bottom: 1rem; }
-    .about-right .about-quote { margin-bottom: 2.5rem; }
-    .about-right h2 {
-      font-size: clamp(2rem, 3.5vw, 2.75rem);
-      font-weight: 400;
-      color: var(--green-deep);
-      margin-bottom: 2rem;
-      line-height: 1.15;
-    }
-    .about-right p {
-      font-size: 1rem;
-      color: var(--text-body);
-      margin-bottom: 1.25rem;
-    }
-    .about-right p.lead {
-      font-size: 1.08rem;
-      color: var(--text-dark);
-      font-weight: 500;
-      margin-bottom: 1.5rem;
-    }
-    .about-specialties {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 2rem;
-    }
-    .specialty {
-      font-size: 0.74rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      color: var(--green-mid);
-      border: 1px solid rgba(45,82,53,0.22);
-      padding: 0.4rem 0.9rem;
-    }
-    @media (max-width: 960px) {
-      .about-inner { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
-    }
-    @media (max-width: 700px) {
-      .about-inner { grid-template-columns: 1fr; gap: 3rem; }
-      .about-left { position: static; }
-      .about-photo { aspect-ratio: 3/2; }
-    }
-    @media (max-width: 640px) { .about { padding: 5rem 1.5rem; } }
-
-    /* ─── Scenic ─────────────────────────────────────────────────── */
-    .scenic {
-      position: relative;
-      height: 400px;
-      overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
-      background: var(--green-deep);
-    }
-    .scenic-bg {
-      position: absolute; inset: 0;
-      background-image: url('photos/aerial-coastline.jpg');
-      background-size: cover;
-      background-position: center 40%;
-      background-attachment: fixed;
-      opacity: 0.4;
-    }
-    .scenic-overlay {
-      position: absolute; inset: 0;
-      background: rgba(8, 18, 10, 0.45);
-    }
-    .scenic-quote {
-      position: relative; z-index: 2;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.4rem, 3vw, 2.1rem);
-      font-style: italic;
-      font-weight: 300;
-      color: rgba(255,255,255,0.9);
-      text-align: center;
-      max-width: 680px;
-      padding: 0 2rem;
-      line-height: 1.5;
-    }
-    @media (max-width: 640px) { .scenic-bg { background-attachment: scroll; } }
-
-    /* ─── Guides ─────────────────────────────────────────────────── */
-    .guides {
-      background: var(--white);
-      padding: 7rem 3rem;
-    }
-    .guides-inner { max-width: 1100px; margin: 0 auto; }
-    .guides-header {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      margin-bottom: 4rem;
-      align-items: end;
-    }
-    .guides-header h2 {
-      font-size: clamp(2.2rem, 4vw, 3.2rem);
-      font-weight: 400;
-      color: var(--green-deep);
-    }
-    .guides-header p {
-      font-size: 0.95rem;
-      color: var(--text-body);
-      line-height: 1.75;
-    }
-    .guides-list { border-top: 1px solid var(--cream-2); }
-    .guide-row {
-      display: grid;
-      grid-template-columns: 48px 1fr 32px;
-      gap: 2rem;
-      align-items: center;
-      padding: 2rem 0;
-      border-bottom: 1px solid var(--cream-2);
-      transition: background 0.2s;
-    }
-    .guide-row:hover { background: var(--cream); margin: 0 -3rem; padding: 2rem 3rem; }
-    .guide-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      font-weight: 300;
-      color: var(--text-muted);
-      opacity: 0.5;
-    }
-    .guide-content strong {
-      display: block;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.45rem;
-      font-weight: 400;
-      color: var(--green-deep);
-      margin-bottom: 0.3rem;
-      transition: color 0.2s;
-    }
-    .guide-row:hover .guide-content strong { color: var(--gold); }
-    .guide-content p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-    .guide-arrow {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      transition: color 0.2s, transform 0.2s;
-    }
-    .guide-row:hover .guide-arrow { color: var(--gold); transform: translateX(4px); }
-    @media (max-width: 800px) {
-      .guides-header { grid-template-columns: 1fr; gap: 1.5rem; }
-      .guide-row:hover { margin: 0; padding: 2rem 0; background: none; }
-    }
-    @media (max-width: 640px) { .guides { padding: 5rem 1.5rem; } }
-
-    /* ─── Insider ────────────────────────────────────────────────── */
-    .insider {
-      background: var(--green-deep);
-      padding: 7rem 3rem;
-    }
-    .insider-inner { max-width: 1100px; margin: 0 auto; }
-    .insider-header { margin-bottom: 4rem; }
-    .insider-eyebrow {
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold-warm);
-      display: block;
-      margin-bottom: 1rem;
-    }
-    .insider-header h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 400;
-      color: white;
-      margin-bottom: 1rem;
-    }
-    .insider-header p {
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.5);
-      max-width: 520px;
-      line-height: 1.75;
-    }
-    .insider-items { border-top: 1px solid rgba(255,255,255,0.08); }
-    .insider-item {
-      display: grid;
-      grid-template-columns: 48px 1fr;
-      gap: 2rem;
-      padding: 2.5rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .insider-n {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 300;
-      color: var(--gold);
-      opacity: 0.5;
-      margin-top: 4px;
-    }
-    .insider-item h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
-      font-weight: 400;
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 0.65rem;
-    }
-    .insider-item p {
-      font-size: 0.875rem;
-      color: rgba(255,255,255,0.5);
-      line-height: 1.8;
-      max-width: 680px;
-    }
-    @media (max-width: 640px) { .insider { padding: 5rem 1.5rem; } }
-
-    /* ─── Contact ────────────────────────────────────────────────── */
-    .contact {
-      background: var(--cream);
-      padding: 7rem 3rem;
-    }
-    .contact-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: start;
-    }
-    .contact-left h2 {
-      font-size: clamp(2.2rem, 4vw, 3.5rem);
-      font-weight: 400;
-      color: var(--green-deep);
-      margin-bottom: 1.25rem;
-      line-height: 1.1;
-    }
-    .contact-left p {
-      font-size: 0.95rem;
-      color: var(--text-body);
-      line-height: 1.8;
-      margin-bottom: 2.5rem;
-    }
-    .contact-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      margin-bottom: 3rem;
-    }
-    .contact-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.85rem;
-      font-size: 0.92rem;
-      color: var(--text-body);
-      line-height: 1.5;
-    }
-    .contact-list li::before {
-      content: '';
-      width: 5px; height: 5px;
-      min-width: 5px;
-      border-radius: 50%;
-      background: var(--gold);
-      margin-top: 7px;
-    }
-    .contact-links {
-      display: flex; flex-direction: column; gap: 1rem;
-    }
-    .contact-link-btn {
-      display: inline-block;
-      background: var(--green-deep);
-      color: white;
-      padding: 0.9rem 2rem;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      transition: background 0.2s;
-      align-self: flex-start;
-    }
-    .contact-link-btn:hover { background: var(--green-mid); }
-    .contact-right {
-      background: var(--white);
-      padding: 3rem;
-      border: 1px solid var(--cream-2);
-    }
-    .contact-right h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem;
-      font-weight: 400;
-      color: var(--green-deep);
-      margin-bottom: 0.25rem;
-    }
-    .contact-brokerage {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      display: block;
-      margin-bottom: 2rem;
-    }
-    .contact-details { border-top: 1px solid var(--cream-2); }
-    .contact-detail {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--cream-2);
-      font-size: 0.9rem;
-      color: var(--text-body);
-      transition: color 0.2s;
-    }
-    .contact-detail:hover { color: var(--green-deep); }
-    .contact-detail svg {
-      width: 14px; height: 14px;
-      stroke: var(--gold);
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      flex-shrink: 0;
-    }
-    .contact-search {
-      margin-top: 2rem;
-      padding: 1.5rem;
-      background: var(--green-deep);
-      text-align: center;
-    }
-    .contact-search p {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-    }
-    .contact-search a {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-style: italic;
-      color: var(--gold-light);
-      transition: color 0.2s;
-    }
-    .contact-search a:hover { color: white; }
-    @media (max-width: 900px) {
-      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
-    }
-    @media (max-width: 640px) { .contact { padding: 5rem 1.5rem; } }
-
-    /* ─── Testimonials ───────────────────────────────────────────── */
-    .testimonials {
-      background: var(--white);
-      padding: 7rem 3rem;
-    }
-    .testimonials-inner { max-width: 1100px; margin: 0 auto; }
-    .testimonials-header { margin-bottom: 4rem; max-width: 620px; }
-    .testimonials-eyebrow {
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      display: block;
-      margin-bottom: 1rem;
-    }
-    .testimonials-header h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 400;
-      color: var(--green-deep);
-      margin-bottom: 1rem;
-    }
-    .testimonials-header h2 em { font-style: italic; color: var(--gold); }
-    .testimonials-header p {
-      font-size: 0.95rem;
-      color: var(--text-body);
-      line-height: 1.75;
-    }
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
-    .testimonial-card {
-      background: var(--cream);
-      border: 1px solid var(--cream-2);
-      padding: 2.5rem 2rem;
-      display: flex;
-      flex-direction: column;
-    }
-    .testimonial-mark {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.5rem;
-      line-height: 0.6;
-      color: var(--gold-light);
-      margin-bottom: 1.25rem;
-    }
-    .testimonial-text {
-      font-size: 0.92rem;
-      color: var(--text-body);
-      line-height: 1.8;
-      flex-grow: 1;
-      margin-bottom: 1.75rem;
-    }
-    .testimonial-author {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--green-deep);
-      border-top: 1px solid var(--cream-2);
-      padding-top: 1.25rem;
-    }
-    .testimonial-context {
-      display: block;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.74rem;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-      color: var(--text-muted);
-      margin-top: 0.4rem;
-    }
-    @media (max-width: 900px) {
-      .testimonial-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-    }
-    @media (max-width: 640px) { .testimonials { padding: 5rem 1.5rem; } }
-
-    /* ─── Contact form ───────────────────────────────────────────── */
-    .contact-form { display: flex; flex-direction: column; gap: 1.1rem; }
-    .contact-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .contact-field label {
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--green-deep);
-      margin-bottom: 0.45rem;
-    }
-    .contact-field input,
-    .contact-field select,
-    .contact-field textarea {
-      width: 100%;
-      box-sizing: border-box;
-      border: 1px solid var(--cream-3);
-      background: var(--white);
-      padding: 0.8rem 0.9rem;
-      font-size: 0.92rem;
-      font-family: 'Inter', sans-serif;
-      color: var(--text-dark);
-      transition: border-color 0.2s;
-    }
-    .contact-field input:focus,
-    .contact-field select:focus,
-    .contact-field textarea:focus {
-      outline: none;
-      border-color: var(--gold);
-    }
-    .contact-field textarea { min-height: 110px; resize: vertical; }
-    .contact-submit {
-      background: var(--green-deep);
-      color: white;
-      border: none;
-      padding: 0.95rem 2rem;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.2s;
-      align-self: flex-start;
-      margin-top: 0.4rem;
-    }
-    .contact-submit:hover { background: var(--green-mid); }
-    .contact-form-note {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-top: 0.1rem;
-    }
-    @media (max-width: 500px) {
-      .contact-form-row { grid-template-columns: 1fr; }
-    }
-
-    /* ─── Footer ─────────────────────────────────────────────────── */
-    footer {
-      background: #0c1a0e;
-      padding: 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-    .footer-left { display: flex; flex-direction: column; gap: 0.25rem; }
-    .footer-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
-      font-weight: 400;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 0.04em;
-    }
-    .footer-sub {
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.25);
-      letter-spacing: 0.05em;
-    }
-    .footer-links {
-      display: flex; gap: 2rem; list-style: none;
-    }
-    .footer-links a {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--gold-warm); }
-    .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.75rem; }
-    .footer-logo {
-      height: 30px;
-      width: auto;
-      background: rgba(255,255,255,0.12);
-      padding: 4px 10px;
-      border-radius: 4px;
-    }
-    .footer-legal {
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.2);
-      text-align: right;
-      line-height: 1.6;
-    }
-    @media (max-width: 700px) {
-      footer { flex-direction: column; align-items: flex-start; padding: 2.5rem 1.5rem; }
-      .footer-right { align-items: flex-start; }
-      .footer-legal { text-align: left; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ─── Nav ──────────────────────────────────────────────────── -->
-  <nav id="nav">
-    <a class="nav-brand" href="index.html">Keala M. Wall</a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="land.html">Buy Land</a></li>
-      <li><a href="ranches.html">Ranches</a></li>
-      <li><a href="off-grid.html">Off-Grid</a></li>
-      <li><a href="relocation.html">Relocate</a></li>
-      <li><a href="areas.html">Areas</a></li>
-    </ul>
-    <div class="nav-right">
-      <a href="tel:8085153081" class="nav-phone">808-515-3081</a>
-      <a href="#contact" class="nav-cta">Talk Story</a>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html" aria-label="Keala M. Wall — The Agency Team Hawaiʻi, brokered by eXp Realty">
+        <img class="logo-light" src="/logo-real.png" alt="The Agency Team Hawaiʻi · Brokered by eXp Realty">
+        <img class="logo-dark" src="/logo-real.png" alt="The Agency Team Hawaiʻi · Brokered by eXp Realty">
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="life.html">Life</a></li>
+        <li><a href="land.html">Land</a></li>
+        <li><a href="legacy.html">Legacy</a></li>
+        <li><a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener">Search</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="cta">Contact</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- ─── Hero ─────────────────────────────────────────────────── -->
-  <section class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-inner">
-      <p class="hero-label">Hawai'i Island Real Estate</p>
-      <h1>Life, Land<br><em>&amp; Legacy</em></h1>
-      <div class="hero-rule"></div>
-      <p class="hero-sub">Big Island real estate rooted in local knowledge, land experience, and aloha-centered guidance.</p>
-      <div class="hero-actions">
-        <a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener" class="btn-primary">Search Listings</a>
-        <a href="#about" class="btn-line">Meet Keala</a>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <span class="scroll-label">Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
+  <!-- HERO -->
+  <header class="hero center">
+    <div class="hero-bg" style="background-image:url('/photos/hero-sunset-lava.jpg')"></div>
+    <div class="hero-inner wrap">
+      <p class="eyebrow">Hawaiʻi Island Real Estate</p>
 
-  <!-- ─── Listings Search ───────────────────────────────────────── -->
-  <section class="listings" id="listings">
-    <div class="listings-inner">
-      <div>
-        <h2>Search Active<br>Listings</h2>
-        <p>Homes, condos, raw land, farms, and legacy property across Hawai'i Island — all current, all MLS-connected.</p>
-        <a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener" class="btn-primary">Open Listing Search</a>
-      </div>
-      <div class="listing-types">
-        <a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener" class="listing-type">
-          Homes &amp; Condos <span>→</span>
-        </a>
-        <a href="land.html" class="listing-type">
-          Raw Land &amp; Acreage <span>→</span>
-        </a>
-        <a href="ranches.html" class="listing-type">
-          Farms &amp; Ranches <span>→</span>
-        </a>
-        <a href="off-grid.html" class="listing-type">
-          Off-Grid Properties <span>→</span>
-        </a>
-        <a href="relocation.html" class="listing-type">
-          Relocating to the Big Island <span>→</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── About ────────────────────────────────────────────────── -->
-  <section class="about" id="about">
-    <div class="about-inner">
-
-      <div class="about-left">
-        <div class="about-photo">
-          <img src="keala.jpg" alt="Keala M. Wall — Hawai'i Island Realtor">
+      <div class="wordmark-group" id="wordmarkGroup">
+        <div class="wordmark" id="wordmark">
+          <a class="word" href="life.html" data-key="life">Life</a>
+          <span class="word-dot">·</span>
+          <a class="word" href="land.html" data-key="land">Land</a>
+          <span class="word-dot">·</span>
+          <a class="word" href="legacy.html" data-key="legacy">Legacy</a>
         </div>
-        <div class="about-id">
-          <strong>Keala M. Wall</strong>
-          <span>Realtor · 808-515-3081</span>
-          <img src="agency-exp-logo.png" alt="The Agency Team Hawai'i · Brokered by eXp Realty" class="about-brokerage-logo">
+        <div class="word-panels">
+          <div class="wp" data-key="life">
+            <span class="wp-label">Life · Living on Hawaiʻi Island</span>
+            <ul><li>Communities &amp; areas</li><li>Relocation</li><li>Cost of living</li><li>Schools &amp; lifestyle</li><li>Beaches &amp; dining</li><li>Events</li></ul>
+          </div>
+          <div class="wp" data-key="land">
+            <span class="wp-label">Land · Acreage &amp; Building</span>
+            <ul><li>Vacant land</li><li>Coffee farms</li><li>Ranches &amp; ag</li><li>Off-grid living</li><li>Catchment &amp; solar</li><li>Financing &amp; permits</li></ul>
+          </div>
+          <div class="wp" data-key="legacy">
+            <span class="wp-label">Legacy · Homes &amp; Your Next Chapter</span>
+            <ul><li>Residential homes</li><li>Luxury estates</li><li>Condos</li><li>Multi-generational</li><li>Downsizing</li><li>Selling family land</li></ul>
+          </div>
         </div>
       </div>
 
-      <div class="about-right">
-        <span class="about-tag">About Keala</span>
-        <blockquote class="about-quote">"I help clients align their real estate decisions with their values — whether that means building a homestead, creating income-producing land, or securing a lasting family legacy."</blockquote>
-        <h2>Big Island Realtor.<br>Land Steward.<br>Legacy Guide.</h2>
-        <p class="lead">Keala Wall is a Hawai'i-based real estate professional specializing in land, lifestyle, and legacy-driven investments across the Big Island.</p>
-        <p>With a deep connection to the land and a background rooted in agriculture and large acreage stewardship, she helps clients navigate everything from raw land acquisitions to long-term generational planning.</p>
-        <p>Through her "Life, Land &amp; Legacy" approach, Keala goes beyond the transaction — guiding buyers and sellers in aligning their real estate decisions with their values. When she's not working with clients, Keala is actively involved in managing thousands of acres of farmland alongside her family, giving her a unique, real-world perspective that sets her apart in Hawai'i's land market.</p>
-        <p>Whether you're buying your first home, selling family land, searching for acreage, or building a long-term legacy in Hawai'i — Keala will help you move with clarity, strategy, and confidence.</p>
-        <div class="about-specialties">
-          <span class="specialty">Land &amp; Acreage</span>
-          <span class="specialty">Agricultural Property</span>
-          <span class="specialty">Legacy Planning</span>
-          <span class="specialty">Relocation</span>
-          <span class="specialty">Homes &amp; Condos</span>
-          <span class="specialty">Farm &amp; Ranch</span>
+      <p>One island, three ways to belong to it. <em>Tap a word</em> to see what lives inside — or start with a property search below.</p>
+
+      <form class="search-bar" action="https://keala.theagencyteamhawaii.com" method="get" target="_blank" rel="noopener">
+        <div class="search-field">
+          <label for="s-area">Area</label>
+          <select id="s-area" name="area">
+            <option value="">All of Hawaiʻi Island</option>
+            <option>Kailua-Kona</option><option>Waimea</option><option>Kohala</option>
+            <option>Hāmākua</option><option>Hilo</option><option>Puna</option><option>Kaʻū</option><option>Volcano</option>
+          </select>
         </div>
-      </div>
-
+        <div class="search-field">
+          <label for="s-type">Property Type</label>
+          <select id="s-type" name="type">
+            <option value="">Any Type</option>
+            <option>Homes &amp; Condos</option><option>Vacant Land &amp; Acreage</option>
+            <option>Farms &amp; Ranches</option><option>Off-Grid</option><option>Luxury Estates</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label for="s-price">Max Price</label>
+          <select id="s-price" name="price">
+            <option value="">No Max</option><option>$500K</option><option>$750K</option>
+            <option>$1M</option><option>$2M</option><option>$5M+</option>
+          </select>
+        </div>
+        <button type="submit" class="search-btn">
+          <svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="5"/><line x1="11" y1="11" x2="15" y2="15"/></svg>
+          Search
+        </button>
+      </form>
     </div>
-  </section>
+  </header>
 
-  <!-- ─── Photo Gallery ───────────────────────────────────────── -->
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);height:320px;overflow:hidden;">
-    <div style="overflow:hidden;"><img src="photos/black-lava-ocean.jpg" alt="Black lava coastline, Big Island" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-    <div style="overflow:hidden;"><img src="photos/ohia-lehua.jpg" alt="ʻŌhiʻa lehua blossoms, Hawai'i Island" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-    <div style="overflow:hidden;"><img src="photos/coffee-cherries.jpg" alt="Kona coffee cherries" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-    <div style="overflow:hidden;"><img src="photos/lei-heart-sunset.jpg" alt="Lei heart on lava at sunset" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-  </div>
-
-  <!-- ─── Scenic Break ──────────────────────────────────────────── -->
-  <div class="scenic">
-    <div class="scenic-bg"></div>
-    <div class="scenic-overlay"></div>
-    <blockquote class="scenic-quote">
-      Real estate in Hawai'i is about lifestyle, kuleana, family, and long-term vision.
-    </blockquote>
-  </div>
-
-  <!-- ─── Buyer Guides ──────────────────────────────────────────── -->
-  <section class="guides" id="guides">
-    <div class="guides-inner">
-      <div class="guides-header">
-        <h2>Big Island<br>Buyer Guides</h2>
-        <p>In-depth resources for every type of Big Island buyer — written from local knowledge, not an algorithm. Each guide covers what you actually need to know before making a move.</p>
+  <!-- THREE WORLDS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">Three Worlds, One Island</p>
+        <h2>Real estate, organized the way people actually live it.</h2>
+        <p>Most sites bury you in tabs. This one starts with the life you're building — and takes you to the properties that fit it.</p>
       </div>
-      <div class="guides-list">
-        <a href="land.html" class="guide-row">
-          <span class="guide-num">01</span>
-          <div class="guide-content">
-            <strong>Buying Land on Hawai'i Island</strong>
-            <p>Lava zones, water systems, agricultural zoning, and a full due diligence checklist for raw land buyers.</p>
+      <div class="cards">
+        <a class="card reveal" href="life.html">
+          <div class="card-img"><img src="/photos/coral-beach.jpg" alt="Big Island coastline"></div>
+          <div class="card-body">
+            <h3>Life</h3>
+            <p>Living on Hawaiʻi Island — communities, relocation, cost of living, and everything that makes the day-to-day here different.</p>
+            <span class="link-arrow">Explore Life <span class="ar">→</span></span>
           </div>
-          <span class="guide-arrow">→</span>
         </a>
-        <a href="ranches.html" class="guide-row">
-          <span class="guide-num">02</span>
-          <div class="guide-content">
-            <strong>Ranches &amp; Farm Property</strong>
-            <p>Six agricultural corridors, price ranges, coffee &amp; mac nut farm guide, and pre-buy inspection checklist.</p>
+        <a class="card reveal d1" href="land.html">
+          <div class="card-img"><img src="/photos/coffee-cherries.jpg" alt="Kona coffee farmland"></div>
+          <div class="card-body">
+            <h3>Land</h3>
+            <p>Acreage and building — vacant land, farms, off-grid, and the lava-zone, water, and zoning realities that never show up on Zillow.</p>
+            <span class="link-arrow">Explore Land <span class="ar">→</span></span>
           </div>
-          <span class="guide-arrow">→</span>
         </a>
-        <a href="off-grid.html" class="guide-row">
-          <span class="guide-num">03</span>
-          <div class="guide-content">
-            <strong>Off-Grid Living on Hawai'i Island</strong>
-            <p>Rainwater catchment, solar systems, septic permits, cesspool deadline, and the best areas for off-grid life.</p>
+        <a class="card reveal d2" href="legacy.html">
+          <div class="card-img"><img src="/photos/aerial-coastline.jpg" alt="Aerial view of the Big Island coastline"></div>
+          <div class="card-body">
+            <h3>Legacy</h3>
+            <p>Homes that become part of your story — from a first home to a legacy estate, downsizing, or selling family land with care.</p>
+            <span class="link-arrow">Explore Legacy <span class="ar">→</span></span>
           </div>
-          <span class="guide-arrow">→</span>
-        </a>
-        <a href="relocation.html" class="guide-row">
-          <span class="guide-num">04</span>
-          <div class="guide-content">
-            <strong>Relocating to Hawai'i Island</strong>
-            <p>Area comparisons, cost of living reality, what mainlanders get wrong, and a full relocation checklist.</p>
-          </div>
-          <span class="guide-arrow">→</span>
-        </a>
-        <a href="areas.html" class="guide-row">
-          <span class="guide-num">05</span>
-          <div class="guide-content">
-            <strong>Area &amp; Community Guides</strong>
-            <p>Kona, Waimea, Kohala, Hāmākua, Hilo, Puna, Ka'ū, and Volcano — climate, prices, and who each fits.</p>
-          </div>
-          <span class="guide-arrow">→</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ─── Big Island Insider ────────────────────────────────────── -->
-  <section class="insider" id="insider">
-    <div class="insider-inner">
-      <div class="insider-header">
-        <span class="insider-eyebrow">Big Island Insider</span>
-        <h2>What Most Agents<br>Won't Tell You</h2>
-        <p>The Big Island has its own rules. Five things every buyer needs to understand — things that only matter here, and that only a local agent will know to flag.</p>
-      </div>
-      <div class="insider-items">
+  <!-- SCENIC -->
+  <section class="scenic">
+    <div class="scenic-bg" style="background-image:url('/photos/black-lava-ocean.jpg')"></div>
+    <div class="wrap">
+      <blockquote class="reveal">Real estate on Hawaiʻi Island is about lifestyle, kuleana, family, and long-term vision — not just a transaction.</blockquote>
+      <cite class="reveal d1">Keala M. Wall · Realtor</cite>
+    </div>
+  </section>
 
-        <div class="insider-item">
-          <span class="insider-n">01</span>
-          <div>
-            <h3>Lava Flow Zones Change Everything</h3>
-            <p>Every property on the Big Island is rated Lava Zone 1–9. Zone 1 is highest risk — often uninsurable and carrying significant financing limitations. Zone 1 and 2 properties in lower Puna are a different conversation than Zone 8 in Waimea. Know the zone before you fall in love with the address.</p>
-          </div>
-        </div>
+  <!-- LAND AUTHORITY TEASER -->
+  <section class="split reverse">
+    <div class="split-media">
+      <img src="/photos/lava-outcrops-trees.jpg" alt="Volcanic land with trees, Hawaiʻi Island">
+      <span class="tag">Land</span>
+    </div>
+    <div class="split-body reveal">
+      <p class="eyebrow">Where Keala Goes Deep</p>
+      <h2>Buying land here is a different game.</h2>
+      <p>Lava hazard zones, catchment water, agricultural zoning, the 2050 cesspool deadline — these decide whether a parcel is a wise investment or a costly mistake. The Land guide walks through all of it, sourced and in plain language.</p>
+      <div style="margin-top:2rem"><a href="land.html" class="btn btn-dark">Open the Land Guide →</a></div>
+    </div>
+  </section>
 
-        <div class="insider-item">
-          <span class="insider-n">02</span>
-          <div>
-            <h3>Water Systems Are Not All Equal</h3>
-            <p>County water is straightforward. But many rural and agricultural properties run on catchment — rainwater collection — or private water systems. Each has different costs, maintenance responsibilities, and financing implications. This is one of the first questions I ask about any property.</p>
-          </div>
-        </div>
-
-        <div class="insider-item">
-          <span class="insider-n">03</span>
-          <div>
-            <h3>Agricultural Zoning Controls More Than You Think</h3>
-            <p>A-1 zoning requires a 20-acre minimum lot size. A-20 allows smaller parcels. These designations affect what you can legally build, whether you can subdivide, and how land can be used long-term. Vacant ag land that looks like a deal can carry serious restrictions — and those restrictions don't show up on Zillow.</p>
-          </div>
-        </div>
-
-        <div class="insider-item">
-          <span class="insider-n">04</span>
-          <div>
-            <h3>The Two Coasts Are Two Different Worlds</h3>
-            <p>The Kona side is dry, sunny, and premium-priced. The Hilo side receives 130+ inches of rain annually and is significantly more affordable. Waimea sits at 2,500 feet in cool ranch country. These aren't just climate differences — they're lifestyle differences. Knowing which side fits your life is one of the most important decisions you'll make.</p>
-          </div>
-        </div>
-
-        <div class="insider-item">
-          <span class="insider-n">05</span>
-          <div>
-            <h3>CPR Lots vs. Fee Simple</h3>
-            <p>Condominium Property Regime (CPR) is common in Hawai'i and means you own a unit or parcel within a shared project — not the underlying land outright. It's different from a traditional condo and different from fee simple ownership. CPR properties have specific financing requirements and resale considerations worth understanding before you're under contract.</p>
-          </div>
-        </div>
-
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="wrap">
+      <h2 class="reveal">Let's talk story.</h2>
+      <p class="reveal d1">Whether you're relocating, buying land, or writing your family's next chapter on Hawaiʻi Island — start with a real conversation.</p>
+      <div class="cta-actions reveal d2">
+        <a href="contact.html" class="btn btn-brown">Contact Keala</a>
+        <a href="tel:8085153081" class="btn btn-ghost">808-515-3081</a>
       </div>
     </div>
   </section>
 
-  <!-- ─── Client Stories ───────────────────────────────────────── -->
-  <section class="testimonials" id="stories">
-    <div class="testimonials-inner">
-      <div class="testimonials-header">
-        <span class="testimonials-eyebrow">In Their Words</span>
-        <h2>Client <em>Stories</em></h2>
-        <p>Real conversations, real land, real families — here's what it's been like to work with Keala, in her clients' own words.</p>
-      </div>
-      <div class="testimonial-grid">
-
-        <div class="testimonial-card">
-          <div class="testimonial-mark">&ldquo;</div>
-          <p class="testimonial-text">Last year we purchased our first family home in Hawaiian Homes. As many people know, this process is long, stressful and usually brutal. Keala went above and beyond reassuring us along the way and keeping us updated. She communicated with us consistently through the entire process and treated us with kindness and respect. We highly recommend using Keala for any of your real estate needs if you prefer a punctual, reliable and personable agent! She answered all of our questions and never let us feel unheard or dismissed. We are so grateful she made our DHHL purchase go as smoothly and quickly as possible for our family!</p>
-          <div class="testimonial-author">Ashton
-            <span class="testimonial-context">Bought a home · DHHL · Kailua-Kona</span>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-mark">&ldquo;</div>
-          <p class="testimonial-text">Keala Wall is your go-to realtor. Not only is she our realtor, but a friend. She is quick to respond to questions, provide information and set up viewings, making us feel like we are her main priority. Our sale went smoothly without any hiccups or hidden issues.</p>
-          <div class="testimonial-author">Altamirano
-            <span class="testimonial-context">Sold a condo · Kailua-Kona</span>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-mark">&ldquo;</div>
-          <p class="testimonial-text">Keala was easy to work with as I explored available properties to purchase. She is no-nonsense and easy to communicate with. She answered my questions about different properties quickly, which I appreciated because home buying is already challenging, especially in a hot market. Because she is "local girl" she knows the highs and lows of the community and was able to guide me to properties that best fit my needs. Ultimately, I decided to wait on a purchase, but I highly recommend her and will seek her out when I am ready to start searching again.</p>
-          <div class="testimonial-author">J.K.
-            <span class="testimonial-context">Buyer consultation · Kailua-Kona</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── Contact ────────────────────────────────────────────────── -->
-  <section class="contact" id="contact">
-    <div class="contact-inner">
-
-      <div class="contact-left">
-        <h2>Let's Talk<br>Story</h2>
-        <p>The best place to start is a real conversation. Whether you're early in the process, relocating from the mainland, or trying to understand what's possible on the Big Island — I'll give you honest, no-pressure guidance.</p>
-        <ul class="contact-list">
-          <li>What's realistic in today's market for your budget and goals</li>
-          <li>Which areas and land types match your vision</li>
-          <li>What Big Island buyers need to know before they start</li>
-          <li>Your next three steps — specific to where you are right now</li>
-        </ul>
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
-          <input type="hidden" name="form-name" value="contact">
-          <!-- CRM routing fields (Netlify → Zapier → Follow Up Boss). form-type = FUB tag, source = FUB lead source, page = URL submitted from. -->
-          <input type="hidden" name="form-type" value="Contact Form">
-          <input type="hidden" name="source" value="LifeLandLegacyHI.com">
-          <input type="hidden" name="page" value="">
-          <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
-          <div class="contact-form-row">
-            <div class="contact-field">
-              <label for="cf-name">Name</label>
-              <input type="text" id="cf-name" name="name" required>
-            </div>
-            <div class="contact-field">
-              <label for="cf-phone">Phone</label>
-              <input type="tel" id="cf-phone" name="phone">
-            </div>
-          </div>
-          <div class="contact-field">
-            <label for="cf-email">Email</label>
-            <input type="email" id="cf-email" name="email" required>
-          </div>
-          <div class="contact-field">
-            <label for="cf-interest">What are you looking to do?</label>
-            <select id="cf-interest" name="interest">
-              <option value="">Select one</option>
-              <option>Buy land or acreage</option>
-              <option>Ranch or farm property</option>
-              <option>Off-grid property</option>
-              <option>Relocating to the Big Island</option>
-              <option>Sell my property or family land</option>
-              <option>Something else</option>
-            </select>
-          </div>
-          <div class="contact-field">
-            <label for="cf-message">Tell me a bit about what you're looking for</label>
-            <textarea id="cf-message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="contact-submit">Send Keala a Message</button>
-          <p class="contact-form-note">Usually replies within one business day · 808-515-3081</p>
-        </form>
-        <script>
-          // Stamp the submitted-from URL so the CRM records which page the lead came from.
-          (function () {
-            var p = document.querySelector('form.contact-form [name="page"]');
-            if (p) p.value = window.location.href;
-          })();
-        </script>
-      </div>
-
-      <div class="contact-right">
-        <h3>Keala M. Wall</h3>
-        <span class="contact-brokerage">Realtor · eXp Realty · The Agency Team Hawai'i</span>
-        <div class="contact-details">
-          <a href="tel:8085153081" class="contact-detail">
-            <svg viewBox="0 0 16 16"><path d="M3.5 1.5c-.8 0-1.5.7-1.5 1.5 0 5.8 4.7 10.5 10.5 10.5.8 0 1.5-.7 1.5-1.5V10l-3-1-1 1.5C8 10 6 8 5.5 6L7 5l-1-3H3.5z"/></svg>
-            808-515-3081
-          </a>
-          <a href="mailto:Keala@kealawall.com" class="contact-detail">
-            <svg viewBox="0 0 16 16"><rect x="1" y="3" width="14" height="10" rx="1.5"/><polyline points="1,3 8,9.5 15,3"/></svg>
-            Keala@kealawall.com
-          </a>
-          <a href="https://www.instagram.com/lifelandlegacyhi" target="_blank" rel="noopener" class="contact-detail">
-            <svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="3"/><circle cx="8" cy="8" r="3"/><circle cx="11.5" cy="4.5" r="0.8" fill="currentColor"/></svg>
-            @lifelandlegacyhi
-          </a>
-          <a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener" class="contact-detail">
-            <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5"/><path d="M8 1.5C8 1.5 5.5 5 5.5 8s2.5 6.5 2.5 6.5"/><path d="M8 1.5C8 1.5 10.5 5 10.5 8S8 14.5 8 14.5"/><line x1="1.5" y1="8" x2="14.5" y2="8"/></svg>
-            keala.theagencyteamhawaii.com
-          </a>
-        </div>
-        <div class="contact-search">
-          <p>Search Current Listings</p>
-          <a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener">Browse All Properties on Hawai'i Island →</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ─── Footer ───────────────────────────────────────────────── -->
+  <!-- FOOTER -->
   <footer>
-    <div class="footer-left">
-      <span class="footer-brand">Life, Land &amp; Legacy</span>
-      <span class="footer-sub">Keala M. Wall · Realtor</span>
+    <div class="footer-top">
+      <div class="wrap footer-cols">
+        <div>
+          <img src="/logo-real.png" alt="The Agency Team Hawaiʻi · Brokered by eXp Realty" style="height:42px;width:auto">
+          <div class="footer-brand-sub">Keala M. Wall · Realtor<br>Life · Land · Legacy · Hawaiʻi Island</div>
+        </div>
+        <div class="footer-nav">
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="life.html">Life</a></li>
+              <li><a href="land.html">Land</a></li>
+              <li><a href="legacy.html">Legacy</a></li>
+              <li><a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener">Search Listings</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="sources.html">Sources</a></li>
+              <li><a href="https://www.instagram.com/lifelandlegacyhi" target="_blank" rel="noopener">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <ul class="footer-links">
-      <li><a href="land.html">Buy Land</a></li>
-      <li><a href="ranches.html">Ranches</a></li>
-      <li><a href="off-grid.html">Off-Grid</a></li>
-      <li><a href="relocation.html">Relocate</a></li>
-      <li><a href="areas.html">Areas</a></li>
-    </ul>
-    <div class="footer-right">
-      <img src="agency-exp-logo.png" alt="The Agency Team Hawai'i · Brokered by eXp Realty" class="footer-logo">
-      <div class="footer-legal">© 2026 Keala M. Wall · All Rights Reserved</div>
+    <div class="footer-bar">
+      <div class="wrap">
+        <span class="footer-legal">© 2026 Keala M. Wall · Realtor · eXp Realty · The Agency Team Hawaiʻi</span>
+        <span class="powered">Powered by <a href="https://touchpointai.com" target="_blank" rel="noopener">Touchpoint AI</a></span>
+      </div>
     </div>
   </footer>
 
-  <script>
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
-
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', e => {
-        const target = document.querySelector(link.getAttribute('href'));
-        if (!target) return;
-        e.preventDefault();
-        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
-      });
-    });
-  </script>
-
+  <script src="app.js"></script>
 </body>
 </html>

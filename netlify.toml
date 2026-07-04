@@ -13,3 +13,26 @@
 
 [context.deploy-preview]
   command = "printf '/*\\n  X-Robots-Tag: noindex\\n' > _headers"
+
+# Redirects for the old flat pages folded into the new Life/Land/Legacy structure,
+# so existing inbound links and search rankings carry over instead of 404-ing.
+# (index.html and land.html keep their URLs — no redirect needed.)
+[[redirects]]
+  from = "/ranches.html"
+  to = "/land.html"
+  status = 301
+
+[[redirects]]
+  from = "/off-grid.html"
+  to = "/land.html"
+  status = 301
+
+[[redirects]]
+  from = "/relocation.html"
+  to = "/life.html"
+  status = 301
+
+[[redirects]]
+  from = "/areas.html"
+  to = "/life.html"
+  status = 301

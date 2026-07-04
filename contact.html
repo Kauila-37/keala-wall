@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Keala M. Wall — Hawaiʻi Island Realtor</title>
+  <meta name="description" content="Start a real conversation about buying, selling, or building on Hawaiʻi Island. Honest, no-pressure guidance from Keala M. Wall.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav" data-always="true">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html" aria-label="Keala M. Wall — home">
+        <img class="logo-light" src="/logo-real.png" alt="The Agency Team Hawaiʻi · Brokered by eXp Realty">
+        <img class="logo-dark" src="/logo-real.png" alt="The Agency Team Hawaiʻi · Brokered by eXp Realty">
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="life.html">Life</a></li>
+        <li><a href="land.html">Land</a></li>
+        <li><a href="legacy.html">Legacy</a></li>
+        <li><a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener">Search</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="cta active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main style="padding-top:66px">
+    <section class="section">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div class="reveal">
+            <p class="eyebrow">Let's Talk Story</p>
+            <h1 style="font-size:clamp(2.4rem,5vw,3.6rem);margin:1rem 0 1.2rem">Start with a real conversation.</h1>
+            <p style="color:var(--ink-2);margin-bottom:2rem;max-width:460px">Whether you're early in the process, relocating from the mainland, or trying to understand what's possible on the Big Island — you'll get honest, no-pressure guidance.</p>
+            <div style="border-top:1px solid var(--line)">
+              <a href="tel:8085153081" class="contact-detail">
+                <svg viewBox="0 0 16 16"><path d="M3.5 1.5c-.8 0-1.5.7-1.5 1.5 0 5.8 4.7 10.5 10.5 10.5.8 0 1.5-.7 1.5-1.5V10l-3-1-1 1.5C8 10 6 8 5.5 6L7 5l-1-3H3.5z"/></svg>
+                808-515-3081
+              </a>
+              <a href="mailto:Keala@kealawall.com" class="contact-detail">
+                <svg viewBox="0 0 16 16"><rect x="1" y="3" width="14" height="10" rx="1.5"/><polyline points="1,3 8,9.5 15,3"/></svg>
+                Keala@kealawall.com
+              </a>
+              <a href="https://www.instagram.com/lifelandlegacyhi" target="_blank" rel="noopener" class="contact-detail">
+                <svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="3"/><circle cx="8" cy="8" r="3"/><circle cx="11.5" cy="4.5" r="0.8" fill="currentColor"/></svg>
+                @lifelandlegacyhi
+              </a>
+              <a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener" class="contact-detail">
+                <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5"/><path d="M8 1.5C8 1.5 5.5 5 5.5 8s2.5 6.5 2.5 6.5"/><path d="M8 1.5C8 1.5 10.5 5 10.5 8S8 14.5 8 14.5"/><line x1="1.5" y1="8" x2="14.5" y2="8"/></svg>
+                Search all listings
+              </a>
+            </div>
+            <p style="font-size:0.82rem;color:var(--ink-3);margin-top:1.5rem">Realtor · eXp Realty · The Agency Team Hawaiʻi</p>
+          </div>
+
+          <div class="reveal d1" style="background:var(--white);border:1px solid var(--line);padding:2.5rem">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contact">
+              <!-- CRM routing fields (Netlify → Zapier → Follow Up Boss). Preserve exactly. -->
+              <input type="hidden" name="form-type" value="Contact Form">
+              <input type="hidden" name="source" value="LifeLandLegacyHI.com">
+              <input type="hidden" name="page" value="">
+              <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+              <div class="field-row">
+                <div class="field"><label for="cf-name">Name</label><input type="text" id="cf-name" name="name" required></div>
+                <div class="field"><label for="cf-phone">Phone</label><input type="tel" id="cf-phone" name="phone"></div>
+              </div>
+              <div class="field"><label for="cf-email">Email</label><input type="email" id="cf-email" name="email" required></div>
+              <div class="field">
+                <label for="cf-interest">What are you looking to do?</label>
+                <select id="cf-interest" name="interest">
+                  <option value="">Select one</option>
+                  <option>Buy land or acreage</option>
+                  <option>Buy a home or condo</option>
+                  <option>Farm, ranch or off-grid property</option>
+                  <option>Relocating to the Big Island</option>
+                  <option>Sell my property or family land</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+              <div class="field"><label for="cf-message">Tell me a bit about what you're looking for</label><textarea id="cf-message" name="message" required></textarea></div>
+              <button type="submit" class="btn btn-brown" style="width:100%;justify-content:center">Send Keala a Message</button>
+              <p style="font-size:0.78rem;color:var(--ink-3);margin-top:0.9rem">Usually replies within one business day · 808-515-3081</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div class="wrap footer-cols">
+        <div>
+          <img src="/logo-real.png" alt="The Agency Team Hawaiʻi · Brokered by eXp Realty" style="height:42px;width:auto">
+          <div class="footer-brand-sub">Keala M. Wall · Realtor<br>Life · Land · Legacy · Hawaiʻi Island</div>
+        </div>
+        <div class="footer-nav">
+          <div><h4>Explore</h4><ul>
+            <li><a href="life.html">Life</a></li><li><a href="land.html">Land</a></li>
+            <li><a href="legacy.html">Legacy</a></li><li><a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener">Search Listings</a></li>
+          </ul></div>
+          <div><h4>Connect</h4><ul>
+            <li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+            <li><a href="sources.html">Sources</a></li><li><a href="https://www.instagram.com/lifelandlegacyhi" target="_blank" rel="noopener">Instagram</a></li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="wrap">
+        <span class="footer-legal">© 2026 Keala M. Wall · Realtor · eXp Realty · The Agency Team Hawaiʻi</span>
+        <span class="powered">Powered by <a href="https://touchpointai.com" target="_blank" rel="noopener">Touchpoint AI</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
