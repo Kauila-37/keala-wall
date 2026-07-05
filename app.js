@@ -53,25 +53,44 @@
       words.forEach(function (w) { w.classList.remove('active'); });
     };
 
-    words.forEach(function (w) {
-      w.addEventListener('click', function (e) {
-        e.preventDefault();
-        if (w.classList.contains('active')) { window.location.href = w.getAttribute('href'); }
-        else { openKey(w.dataset.key); }
-      });
-      if (canHover) w.addEventListener('mouseenter', function () { openKey(w.dataset.key); });
-    });
+    // Desktop: hover reveals the panel; the word click follows its href normally.
+    // Touch: no hover panel — a tap just navigates (default anchor behavior).
     if (canHover) {
+      words.forEach(function (w) {
+        w.addEventListener('mouseenter', function () { openKey(w.dataset.key); });
+      });
       var gw = document.getElementById('wordmarkGroup');
       if (gw) gw.addEventListener('mouseleave', closeAll);
     }
-    document.addEventListener('click', function (e) {
-      var gw = document.getElementById('wordmarkGroup');
-      if (gw && !gw.contains(e.target)) closeAll();
-    });
   }
 
-  // ── Stamp contact form source URL ─────────────────────────
-  var pageField = document.querySelector('form [name="page"]');
-  if (pageField) pageField.value = window.location.href;
+  // ── Stamp source URL on any lead form ─────────────────────
+  document.querySelectorAll('form [name="page"]').forEach(function (p) { p.value = window.location.href; });
+
+  // ── Email-gated guides ────────────────────────────────────
+  // Captures name+email to Netlify (→ Follow Up Boss) via AJAX, then reveals
+  // the guide inline. Remembers unlock per-guide so returning readers skip it.
+  var gate = document.querySelector('.gate-form');
+  var guideBody = document.querySelector('.guide-body');
+  if (gate && guideBody) {
+    var key = 'guide-unlocked-' + (gate.dataset.guide || 'x');
+    var unlock = function () {
+      gate.closest('.gate').style.display = 'none';
+      guideBody.hidden = false;
+    };
+    if (localStorage.getItem(key) === '1') unlock();
+
+    gate.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = gate.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; btn.textContent = 'Unlocking…'; }
+      var body = new URLSearchParams(new FormData(gate)).toString();
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
+        .finally(function () {
+          try { localStorage.setItem(key, '1'); } catch (err) {}
+          unlock();
+          guideBody.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+  }
 })();
