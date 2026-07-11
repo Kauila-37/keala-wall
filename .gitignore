@@ -1,7 +1,9 @@
 # Private client/business docs — this repo is PUBLIC, keep these out of it.
-README.md
-Contracts/
-Assets/
+# Leading slashes anchor these to the repo root, so a nested README.md or
+# assets/ directory elsewhere in the tree isn't swallowed by accident.
+/README.md
+/Contracts/
+/Assets/
 
 # OS
 .DS_Store

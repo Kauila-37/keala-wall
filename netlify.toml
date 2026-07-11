@@ -14,6 +14,19 @@
 [context.deploy-preview]
   command = "printf '/*\\n  X-Robots-Tag: noindex\\n' > _headers"
 
+# The repo root is published as-is, so tracked working files would otherwise be
+# fetchable on the live domain. Serve the content drafts and the workflow doc as
+# 404s. (research/ is untracked and never deploys, so it needs no rule.)
+[[redirects]]
+  from = "/content/*"
+  to = "/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/CONTENT-PIPELINE.md"
+  to = "/404.html"
+  status = 404
+
 # Redirects for the old flat pages folded into the new Life/Land/Legacy structure,
 # so existing inbound links and search rankings carry over instead of 404-ing.
 # (index.html and land.html keep their URLs — no redirect needed.)
