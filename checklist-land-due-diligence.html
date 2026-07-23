@@ -208,35 +208,7 @@
       .footer-logo { height: 46px; }
     }
 
-    /* ─── Nav dropdowns + mobile menu ───────────────────────────── */
     .nav-links li { position: relative; }
-    .nav-links .drop-toggle {
-      display: flex; align-items: center; gap: 0.4rem;
-      background: none; border: 0; padding: 0; cursor: pointer;
-      font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 500;
-      letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s;
-    }
-    .drop-toggle .caret { width: 9px; height: 6px; transition: transform 0.25s; }
-    .has-drop:hover .caret, .has-drop:focus-within .caret, .has-drop.open .caret { transform: rotate(180deg); }
-    .drop-panel {
-      position: absolute; top: calc(100% + 16px); left: 50%;
-      transform: translateX(-50%) translateY(6px);
-      background: var(--cream); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px;
-      box-shadow: 0 18px 44px rgba(12,26,14,0.16);
-      padding: 0.55rem 0; min-width: 200px; list-style: none;
-      opacity: 0; visibility: hidden;
-      transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
-    }
-    .drop-panel::before { content: ''; position: absolute; top: -18px; left: 0; right: 0; height: 18px; }
-    .has-drop:hover .drop-panel, .has-drop:focus-within .drop-panel, .has-drop.open .drop-panel {
-      opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
-    }
-    .nav-links .drop-panel a {
-      display: block; padding: 0.55rem 1.3rem;
-      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--text-body); transition: color 0.15s, background 0.15s;
-    }
-    .nav-links .drop-panel a:hover { color: var(--green-deep); background: var(--cream-2); }
 
     .nav-burger { display: none; background: none; border: 0; cursor: pointer; padding: 6px 2px; flex-direction: column; gap: 5px; }
     .nav-burger span { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 0.25s, opacity 0.2s; }
@@ -253,16 +225,14 @@
     }
     .mobile-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
     .mm-home { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--cream-3); }
-    .mm-group { margin-bottom: 1.5rem; }
-    .mm-label { display: block; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
-    .mm-group a { display: block; font-size: 1.05rem; color: var(--text-dark); padding: 0.45rem 0; }
+    .mm-group { margin-bottom: 1.4rem; }
+    .mm-group a { display: block; padding: 0.32rem 0; }
+    .mm-group a.mm-primary { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); margin-bottom: 0.15rem; }
+    .mm-group a:not(.mm-primary) { font-size: 0.92rem; color: var(--text-muted); }
     .mm-foot { margin-top: 2.25rem; padding-top: 1.75rem; border-top: 1px solid var(--cream-3); display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
     .mm-cta { display: inline-block; background: var(--gold); color: white; padding: 0.8rem 1.8rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
     .mm-phone { font-size: 0.95rem; color: var(--text-muted); }
 
-    /* inner-page nav is always cream */
-    .nav-links .drop-toggle { color: var(--text-muted); }
-    .nav-links .has-drop:hover .drop-toggle, .nav-links .has-drop.active .drop-toggle { color: var(--green-deep); }
     .nav-burger { color: var(--green-deep); }
 
     /* ─── Photo strip ───────────────────────────────────────────── */
@@ -303,23 +273,10 @@
   <nav id="nav">
     <a class="nav-brand" href="index.html">Keala M. Wall</a>
     <ul class="nav-links">
-      <li class="has-drop">
-        <button class="drop-toggle" type="button" aria-expanded="false" aria-haspopup="true">Life <svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
-        <ul class="drop-panel">
-          <li><a href="relocation.html">Relocating Here</a></li>
-          <li><a href="areas.html">Area Guides</a></li>
-        </ul>
-      </li>
-      <li class="has-drop active">
-        <button class="drop-toggle" type="button" aria-expanded="false" aria-haspopup="true">Land <svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
-        <ul class="drop-panel">
-          <li><a href="land.html">Buying Land</a></li>
-          <li><a href="ranches.html">Ranches &amp; Farms</a></li>
-          <li><a href="off-grid.html">Off-Grid Living</a></li>
-        </ul>
-      </li>
-      <li><a href="legacy.html">Legacy</a></li>
-      <li><a href="guides.html">Guides</a></li>
+      <li><a href="land.html">Buy Land</a></li>
+      <li><a href="relocation.html">Relocate</a></li>
+      <li><a href="legacy.html">Homes</a></li>
+      <li><a href="guides.html" class="active">Guides</a></li>
     </ul>
     <div class="nav-right">
       <a href="tel:8085153081" class="nav-phone">808-515-3081</a>
@@ -331,23 +288,19 @@
   <div class="mobile-menu" id="mobileMenu">
     <a class="mm-home" href="index.html">Home</a>
     <div class="mm-group">
-      <span class="mm-label">Life</span>
-      <a href="relocation.html">Relocating Here</a>
-      <a href="areas.html">Area Guides</a>
-    </div>
-    <div class="mm-group">
-      <span class="mm-label">Land</span>
-      <a href="land.html">Buying Land</a>
+      <a class="mm-primary" href="land.html">Buy Land</a>
       <a href="ranches.html">Ranches &amp; Farms</a>
       <a href="off-grid.html">Off-Grid Living</a>
     </div>
     <div class="mm-group">
-      <span class="mm-label">Legacy</span>
-      <a href="legacy.html">Homes &amp; Estates</a>
+      <a class="mm-primary" href="relocation.html">Relocate</a>
+      <a href="areas.html">Area Guides</a>
     </div>
     <div class="mm-group">
-      <span class="mm-label">Guides</span>
-      <a href="guides.html">Guides &amp; Downloads</a>
+      <a class="mm-primary" href="legacy.html">Homes</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="guides.html">Guides &amp; Downloads</a>
     </div>
     <div class="mm-foot">
       <a href="index.html#contact" class="mm-cta">Talk Story</a>
@@ -486,42 +439,25 @@
   </footer>
 
   <script>
-    // Mobile menu + dropdown toggles.
+    // Mobile hamburger menu.
     (function () {
       var nav = document.getElementById('nav');
       var burger = document.querySelector('.nav-burger');
       var menu = document.getElementById('mobileMenu');
-      if (burger && menu) {
-        burger.addEventListener('click', function () {
-          var open = menu.classList.toggle('open');
-          burger.classList.toggle('open', open);
-          if (nav) nav.classList.toggle('menu-open', open);
-          burger.setAttribute('aria-expanded', open);
-          document.body.style.overflow = open ? 'hidden' : '';
-        });
-        menu.querySelectorAll('a').forEach(function (a) {
-          a.addEventListener('click', function () {
-            menu.classList.remove('open'); burger.classList.remove('open');
-            if (nav) nav.classList.remove('menu-open');
-            burger.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-          });
-        });
-      }
-      // Click/keyboard support for the hover dropdowns.
-      document.querySelectorAll('.has-drop').forEach(function (li) {
-        var btn = li.querySelector('.drop-toggle');
-        btn.addEventListener('click', function () {
-          var open = li.classList.toggle('open');
-          btn.setAttribute('aria-expanded', open);
-        });
+      if (!burger || !menu) return;
+      burger.addEventListener('click', function () {
+        var open = menu.classList.toggle('open');
+        burger.classList.toggle('open', open);
+        if (nav) nav.classList.toggle('menu-open', open);
+        burger.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
       });
-      document.addEventListener('click', function (e) {
-        document.querySelectorAll('.has-drop.open').forEach(function (li) {
-          if (!li.contains(e.target)) {
-            li.classList.remove('open');
-            li.querySelector('.drop-toggle').setAttribute('aria-expanded', 'false');
-          }
+      menu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          menu.classList.remove('open'); burger.classList.remove('open');
+          if (nav) nav.classList.remove('menu-open');
+          burger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
         });
       });
     })();
