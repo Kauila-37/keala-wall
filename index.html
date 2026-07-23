@@ -183,12 +183,45 @@
       overflow: hidden;
       background: var(--green-deep);
     }
-    .hero-bg {
+    /* Slideshow: three layered slides crossfade every few seconds, and the
+       active slide runs a slow Ken Burns zoom so the photo is always moving.
+       Slide 1 has its image in CSS (it's the preloaded LCP image); slides 2-3
+       get theirs from data-bg via JS after the page loads, so the extra
+       photos never compete with first paint. */
+    .hero-slide {
       position: absolute; inset: 0;
-      background-image: url('photos/hero-sunset-lava.jpg');
       background-size: cover;
       background-position: center 35%;
-      opacity: 0.65;
+      opacity: 0;
+      transition: opacity 1.8s ease-in-out;
+    }
+    .hero-slide.active { opacity: 0.65; }
+    .hero-slide:nth-child(1) { background-image: url('photos/hero-sunset-lava.jpg'); }
+    @keyframes kenburns-a { from { transform: scale(1) translate(0, 0); } to { transform: scale(1.09) translate(-1.2%, -1%); } }
+    @keyframes kenburns-b { from { transform: scale(1.09) translate(1.2%, 0); } to { transform: scale(1) translate(0, 0); } }
+    .hero-slide.active { animation: kenburns-a 9s ease-out forwards; }
+    .hero-slide.active.alt { animation-name: kenburns-b; }
+    /* Hold the zoom's end frame while a slide fades out, so the photo
+       doesn't snap back to its start position mid-fade. */
+    .hero-slide.was { transform: scale(1.09) translate(-1.2%, -1%); }
+    .hero-slide.alt.was { transform: scale(1); }
+
+    /* Headline entrance: label, headline, rule, sub, buttons rise in turn. */
+    @keyframes hero-rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    .hero-label, .hero h1, .hero-rule, .hero-sub, .hero-actions {
+      opacity: 0;
+      animation: hero-rise 0.9s cubic-bezier(0.22, 0.9, 0.3, 1) forwards;
+    }
+    .hero-label   { animation-delay: 0.15s; }
+    .hero h1      { animation-delay: 0.3s; }
+    .hero-rule    { animation-delay: 0.55s; }
+    .hero-sub     { animation-delay: 0.7s; }
+    .hero-actions { animation-delay: 0.85s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-slide.active { animation: none; }
+      .hero-label, .hero h1, .hero-rule, .hero-sub, .hero-actions { animation: none; opacity: 1; }
+      .scroll-line::after { animation: none; }
     }
     .hero-overlay {
       position: absolute; inset: 0;
@@ -270,7 +303,15 @@
       display: flex; flex-direction: column; align-items: center; gap: 6px;
     }
     .scroll-label { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
-    .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3)); }
+    .scroll-line { position: relative; width: 1px; height: 40px; background: rgba(255,255,255,0.14); overflow: hidden; }
+    .scroll-line::after {
+      content: '';
+      position: absolute; left: 0; top: -40px;
+      width: 1px; height: 40px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.55));
+      animation: scroll-drip 2.4s ease-in-out infinite;
+    }
+    @keyframes scroll-drip { 0% { top: -40px; } 60% { top: 40px; } 100% { top: 40px; } }
     @media (max-width: 640px) {
       .hero { padding: 0 1.5rem 4rem; }
       .scroll-indicator { display: none; }
@@ -1080,7 +1121,9 @@
 
   <!-- ─── Hero ─────────────────────────────────────────────────── -->
   <section class="hero" id="home">
-    <div class="hero-bg"></div>
+    <div class="hero-slide active"></div>
+    <div class="hero-slide" data-bg="photos/aerial-coastline.jpg"></div>
+    <div class="hero-slide alt" data-bg="photos/coral-beach.jpg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
       <p class="hero-label">Hawai'i Island Real Estate</p>
@@ -1511,6 +1554,43 @@
           }
         });
       });
+    })();
+  </script>
+  <script>
+    // Hero slideshow: crossfade the three slides so the hero moves like
+    // video. The extra photos load only after the page has finished loading,
+    // and nothing cycles if the visitor prefers reduced motion.
+    (function () {
+      var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-slide'));
+      if (slides.length < 2) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      window.addEventListener('load', function () {
+        var pending = slides.filter(function (s) { return s.dataset.bg; }).length;
+        slides.forEach(function (s) {
+          if (!s.dataset.bg) return;
+          var img = new Image();
+          img.onload = img.onerror = function () { if (--pending === 0) start(); };
+          img.src = s.dataset.bg;
+          s.style.backgroundImage = "url('" + s.dataset.bg + "')";
+        });
+        if (pending === 0) start();
+      });
+
+      var started = false;
+      function start() {
+        if (started) return;
+        started = true;
+        var i = 0;
+        setInterval(function () {
+          var current = slides[i];
+          i = (i + 1) % slides.length;
+          current.classList.add('was');
+          current.classList.remove('active');
+          slides[i].classList.add('active');
+          setTimeout(function () { current.classList.remove('was'); }, 1900);
+        }, 7000);
+      }
     })();
   </script>
 </body>
