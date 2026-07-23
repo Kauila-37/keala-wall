@@ -13,3 +13,15 @@
 
 [context.deploy-preview]
   command = "printf '/*\\n  X-Robots-Tag: noindex\\n' > _headers"
+
+# The two prose "guides" were duplicates of the free land/relocation pages and
+# were removed 2026-07-23; send any bookmarked links to the real pages.
+[[redirects]]
+  from = "/guide-land-buying.html"
+  to = "/land.html"
+  status = 301
+
+[[redirects]]
+  from = "/guide-relocation.html"
+  to = "/relocation.html"
+  status = 301
