@@ -1,7 +1,17 @@
 # Private client/business docs — this repo is PUBLIC, keep these out of it.
-README.md
-Contracts/
-Assets/
+# Anchored to the repo root: an unanchored rule like "README.md" matches at
+# any depth and silently swallows nested files.
+/README.md
+/Contracts/
+/Assets/
+
+# Unedited camera originals. These are large, carry GPS EXIF, and every file
+# in the repo root is published by netlify.toml (publish = "."), so anything
+# dropped here is downloadable from the live domain. Keep originals in the
+# client folder and commit only web-ready images under photos/.
+IMG_*.jpeg
+IMG_*.JPG
+IMG_*.jpg
 
 # OS
 .DS_Store
