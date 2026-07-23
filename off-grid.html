@@ -163,7 +163,12 @@
 
     /* ─── Cost Table ─────────────────────────────────────────────── */
     .costs { background: var(--cream-2); }
-    .cost-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+    /* The table can't shrink below its content width, so let it scroll
+       inside its own box rather than pushing the whole page sideways. */
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 0.5rem; }
+    /* min-width keeps columns readable instead of collapsing to one word per
+       line; the wrapper scrolls instead. */
+    .cost-table { width: 100%; min-width: 34rem; border-collapse: collapse; }
     .cost-table th { text-align: left; padding: 0.85rem 1.25rem; background: var(--green-deep); color: rgba(255,255,255,0.85); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
     .cost-table td { padding: 1rem 1.25rem; border-bottom: 1px solid var(--cream-3); font-size: 0.9rem; color: var(--text-body); vertical-align: top; line-height: 1.5; }
     .cost-table tr:last-child td { border-bottom: none; background: var(--cream-3); font-weight: 600; color: var(--green-deep); }
@@ -521,65 +526,67 @@
       <span class="eyebrow">Real Numbers</span>
       <h2 class="section-title">Total Cost to Set Up Off-Grid</h2>
       <p class="section-lead">If you're buying raw land and building from scratch, these are the realistic system costs you're working with — separate from the land price, home construction, and permits.</p>
-      <table class="cost-table">
-        <thead>
-          <tr>
-            <th>System</th>
-            <th>Low End</th>
-            <th>High End</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Rainwater catchment system</td>
-            <td class="cost-range">$5,000</td>
-            <td class="cost-range">$15,000</td>
-            <td>
-              Tank, gutters, first-flush diverter, basic filtration.
-              <div class="cost-note">Add $3,000–$8,000 for UV/RO drinking water treatment.</div>
-            </td>
-          </tr>
-          <tr>
-            <td>Solar panels (5–8 kW array)</td>
-            <td class="cost-range">$12,000</td>
-            <td class="cost-range">$32,000</td>
-            <td>
-              Panel installation. Lithium battery bank adds $8,000–$15,000. 30% federal tax credit applies.
-            </td>
-          </tr>
-          <tr>
-            <td>Battery storage (lithium)</td>
-            <td class="cost-range">$8,000</td>
-            <td class="cost-range">$20,000</td>
-            <td>
-              Lithium preferred. Lifespan 10–15 years. Lead-acid cheaper but shorter life and less usable capacity.
-            </td>
-          </tr>
-          <tr>
-            <td>Backup generator</td>
-            <td class="cost-range">$1,000</td>
-            <td class="cost-range">$4,000</td>
-            <td>
-              Propane or gasoline. Essential for extended cloudy/rainy periods.
-            </td>
-          </tr>
-          <tr>
-            <td>Septic system</td>
-            <td class="cost-range">$12,000</td>
-            <td class="cost-range">$35,000</td>
-            <td>
-              Includes perc test, engineering, permitting, and installation. Highly variable by lot conditions.
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Total system setup</strong></td>
-            <td class="cost-range"><strong>$38,000</strong></td>
-            <td class="cost-range"><strong>$106,000</strong></td>
-            <td><strong>Before land, home construction, or permits. Plan for the middle of this range for a comfortable, reliable system.</strong></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-scroll">
+        <table class="cost-table">
+          <thead>
+            <tr>
+              <th>System</th>
+              <th>Low End</th>
+              <th>High End</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rainwater catchment system</td>
+              <td class="cost-range">$5,000</td>
+              <td class="cost-range">$15,000</td>
+              <td>
+                Tank, gutters, first-flush diverter, basic filtration.
+                <div class="cost-note">Add $3,000–$8,000 for UV/RO drinking water treatment.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>Solar panels (5–8 kW array)</td>
+              <td class="cost-range">$12,000</td>
+              <td class="cost-range">$32,000</td>
+              <td>
+                Panel installation. Lithium battery bank adds $8,000–$15,000. 30% federal tax credit applies.
+              </td>
+            </tr>
+            <tr>
+              <td>Battery storage (lithium)</td>
+              <td class="cost-range">$8,000</td>
+              <td class="cost-range">$20,000</td>
+              <td>
+                Lithium preferred. Lifespan 10–15 years. Lead-acid cheaper but shorter life and less usable capacity.
+              </td>
+            </tr>
+            <tr>
+              <td>Backup generator</td>
+              <td class="cost-range">$1,000</td>
+              <td class="cost-range">$4,000</td>
+              <td>
+                Propane or gasoline. Essential for extended cloudy/rainy periods.
+              </td>
+            </tr>
+            <tr>
+              <td>Septic system</td>
+              <td class="cost-range">$12,000</td>
+              <td class="cost-range">$35,000</td>
+              <td>
+                Includes perc test, engineering, permitting, and installation. Highly variable by lot conditions.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Total system setup</strong></td>
+              <td class="cost-range"><strong>$38,000</strong></td>
+              <td class="cost-range"><strong>$106,000</strong></td>
+              <td><strong>Before land, home construction, or permits. Plan for the middle of this range for a comfortable, reliable system.</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
