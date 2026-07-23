@@ -13,5 +13,9 @@ IMG_*.jpeg
 IMG_*.JPG
 IMG_*.jpg
 
+# Local dev tooling. Also keeps it out of the deploy — netlify.toml publishes
+# the repo root, so anything committed here is served from the live domain.
+.claude/
+
 # OS
 .DS_Store
