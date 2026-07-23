@@ -365,10 +365,20 @@
 
     /* ─── Zoning Section ─────────────────────────────────────────── */
     .zoning { background: var(--cream); }
+    /* The table can't shrink below its content width, so let it scroll
+       inside its own box rather than pushing the whole page sideways. */
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-top: 0.5rem;
+    }
     .zoning-table {
       width: 100%;
+      /* Without a floor the notes column collapses to one word per line and
+         rows grow enormously tall. Better to keep columns readable and let
+         the wrapper scroll. */
+      min-width: 34rem;
       border-collapse: collapse;
-      margin-top: 0.5rem;
       font-size: 0.9rem;
     }
     .zoning-table th {
@@ -533,22 +543,6 @@
       flex-shrink: 0;
     }
 
-    /* ─── Footer ─────────────────────────────────────────────────── */
-    footer {
-      background: #0c1a0e;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding: 1.75rem 3rem;
-    }
-    .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.5); letter-spacing: 0.04em; }
-    .footer-logo { height: 26px; width: auto; background: rgba(255,255,255,0.12); padding: 3px 8px; border-radius: 4px; }
-    .footer-legal { font-size: 0.72rem; color: rgba(255,255,255,0.2); margin: 0; }
-    footer a { color: rgba(255,255,255,0.55); transition: color 0.2s; }
-    footer a:hover { color: #c4982e; }
-
     /* ─── Responsive ─────────────────────────────────────────────── */
     @media (max-width: 900px) {
       section { padding: 4rem 1.75rem; }
@@ -562,6 +556,91 @@
       .lava-grid { grid-template-columns: 1fr; }
       .intro-stat-row { grid-template-columns: 1fr; }
       .cta-buttons { flex-direction: column; align-items: center; }
+    }
+
+    /* ─── Footer ─────────────────────────────────────────────────── */
+    footer {
+      background: #0c1a0e;
+      padding: 4.5rem 3rem 2.25rem;
+    }
+    .footer-top {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.25fr 1fr 1fr;
+      gap: 4rem;
+      padding-bottom: 3rem;
+    }
+    .footer-identity { display: flex; flex-direction: column; }
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: rgba(255,255,255,0.92);
+    }
+    .footer-name {
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+      color: rgba(255,255,255,0.6);
+      margin-top: 0.6rem;
+    }
+    .footer-role {
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.32);
+      margin-top: 0.3rem;
+    }
+    .footer-heading {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #c4982e;
+      margin-bottom: 1.1rem;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+    .footer-col a {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.58);
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: #e0b84a; }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-top: 2.25rem;
+      border-top: 1px solid rgba(255,255,255,0.09);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.75rem;
+    }
+    .footer-logo { height: 56px; width: auto; flex-shrink: 0; }
+    .footer-legal {
+      display: flex;
+      flex-direction: column;
+      gap: 0.28rem;
+      text-align: right;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.32);
+    }
+    .footer-legal p { font-size: 0.7rem; line-height: 1.6; color: inherit; }
+    .footer-copy { color: rgba(255,255,255,0.22); }
+    @media (max-width: 860px) {
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .footer-identity { grid-column: 1 / -1; }
+    }
+    @media (max-width: 640px) {
+      footer { padding: 3.5rem 1.5rem 2rem; }
+      .footer-top { grid-template-columns: 1fr; gap: 2.25rem; padding-bottom: 2.25rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+      .footer-legal { text-align: left; }
+      .footer-logo { height: 46px; }
     }
   </style>
 </head>
@@ -730,48 +809,50 @@
       <span class="eyebrow">Agricultural Zoning</span>
       <h2 class="section-title">What Can You Build on Ag Land?</h2>
       <p class="section-lead">The vast majority of vacant land on the Big Island is zoned agricultural. That doesn't mean you can't build — but it does mean what you can build, how large a lot you need, and what farming activities you must demonstrate are all governed by the county zoning code.</p>
-      <table class="zoning-table">
-        <thead>
-          <tr>
-            <th>Zone Code</th>
-            <th>Min. Lot Size</th>
-            <th>Dwelling Allowed?</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="zone-code">FA-2a</span></td>
-            <td>2 acres</td>
-            <td>Yes — 1 dwelling</td>
-            <td>Family Agricultural. Most accessible ag zone for residential development. Common in rural subdivisions near established areas.</td>
-          </tr>
-          <tr>
-            <td><span class="zone-code">A-1a</span></td>
-            <td>1 acre</td>
-            <td>Yes — 1 dwelling</td>
-            <td>One-acre minimum. Permits agricultural activities plus a dwelling. More common in older ag subdivisions near town centers.</td>
-          </tr>
-          <tr>
-            <td><span class="zone-code">A-20a</span></td>
-            <td>20 acres</td>
-            <td>Yes — with farming</td>
-            <td>Working farm designation. Must demonstrate active agricultural use to qualify for ag tax exemption. Common for serious farm operations.</td>
-          </tr>
-          <tr>
-            <td><span class="zone-code">A-40</span></td>
-            <td>40 acres</td>
-            <td>Yes — 1 per 40 ac.</td>
-            <td>Large ranch and farm parcels. One dwelling per 40 acres of land owned. Active agricultural operations required.</td>
-          </tr>
-          <tr>
-            <td><span class="zone-code">A-200a</span></td>
-            <td>200 acres</td>
-            <td>Yes — limited</td>
-            <td>Large-scale agricultural operations. Rarely subdivided. Think legacy ranch land and large family holdings.</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-scroll">
+        <table class="zoning-table">
+          <thead>
+            <tr>
+              <th>Zone Code</th>
+              <th>Min. Lot Size</th>
+              <th>Dwelling Allowed?</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="zone-code">FA-2a</span></td>
+              <td>2 acres</td>
+              <td>Yes — 1 dwelling</td>
+              <td>Family Agricultural. Most accessible ag zone for residential development. Common in rural subdivisions near established areas.</td>
+            </tr>
+            <tr>
+              <td><span class="zone-code">A-1a</span></td>
+              <td>1 acre</td>
+              <td>Yes — 1 dwelling</td>
+              <td>One-acre minimum. Permits agricultural activities plus a dwelling. More common in older ag subdivisions near town centers.</td>
+            </tr>
+            <tr>
+              <td><span class="zone-code">A-20a</span></td>
+              <td>20 acres</td>
+              <td>Yes — with farming</td>
+              <td>Working farm designation. Must demonstrate active agricultural use to qualify for ag tax exemption. Common for serious farm operations.</td>
+            </tr>
+            <tr>
+              <td><span class="zone-code">A-40</span></td>
+              <td>40 acres</td>
+              <td>Yes — 1 per 40 ac.</td>
+              <td>Large ranch and farm parcels. One dwelling per 40 acres of land owned. Active agricultural operations required.</td>
+            </tr>
+            <tr>
+              <td><span class="zone-code">A-200a</span></td>
+              <td>200 acres</td>
+              <td>Yes — limited</td>
+              <td>Large-scale agricultural operations. Rarely subdivided. Think legacy ranch land and large family holdings.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div class="zoning-note">
         <strong>Agricultural Tax Exemption:</strong> AG-zoned land carries significantly lower property taxes — but only if you can demonstrate active farming, ranching, or agricultural production. If you buy ag land intending to live on it without farming, the county can assess it at a higher non-ag rate. Talk to your Realtor about what qualifies and how to protect your tax status.
       </div>
@@ -861,10 +942,48 @@
   </section>
 
   <!-- ─── Footer ────────────────────────────────────────────────── -->
-  <footer class="inner-footer">
-    <span class="footer-brand">Life, Land &amp; Legacy</span>
-    <img loading="lazy" decoding="async" width="880" height="222" src="agency-exp-logo.png" alt="The Agency Team Hawai'i · Brokered by eXp Realty" class="footer-logo">
-    <p class="footer-legal">© 2026 Keala M. Wall · All Rights Reserved</p>
+  <footer>
+    <div class="footer-top">
+
+      <div class="footer-identity">
+        <span class="footer-brand">Life, Land &amp; Legacy</span>
+        <span class="footer-name">Keala M. Wall</span>
+        <span class="footer-role">Realtor &middot; Hawai'i Island</span>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-heading">Explore</span>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="land.html">Buy Land</a></li>
+          <li><a href="ranches.html">Ranches</a></li>
+          <li><a href="off-grid.html">Off-Grid</a></li>
+          <li><a href="relocation.html">Relocate</a></li>
+          <li><a href="areas.html">Areas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-heading">Get in Touch</span>
+        <ul>
+          <li><a href="tel:8085153081">808-515-3081</a></li>
+          <li><a href="mailto:Keala@kealawall.com">Keala@kealawall.com</a></li>
+          <li><a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener">Search Listings</a></li>
+          <li><a href="https://www.instagram.com/lifelandlegacyhi" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <img src="logo-agency-exp-light.png" width="1200" height="200" loading="lazy" decoding="async"
+           alt="The Agency Team Hawai'i, brokered by eXp Realty" class="footer-logo">
+      <div class="footer-legal">
+        <p>6600 Kalaniana'ole Hwy #114, Honolulu, HI 96825</p>
+        <p>License RS-82797 &middot; Brokerage License RB-21841</p>
+        <p class="footer-copy">&copy; 2026 Keala M. Wall. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
 </body>
