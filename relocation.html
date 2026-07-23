@@ -335,6 +335,39 @@
     .nav-links .drop-toggle { color: var(--text-muted); }
     .nav-links .has-drop:hover .drop-toggle, .nav-links .has-drop.active .drop-toggle { color: var(--green-deep); }
     .nav-burger { color: var(--green-deep); }
+
+    /* ─── Photo strip ───────────────────────────────────────────── */
+    /* Desktop keeps each page's own column template and height, passed in
+       as --cols / --h. On narrow screens a fixed 3-4 column row turns each
+       photo into a ~94px sliver, so below 900px the strip becomes two
+       columns of 4:3 cells and drops the fixed height entirely; an odd
+       last photo spans the full width. */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: var(--cols);
+      height: var(--h);
+      overflow: hidden;
+    }
+    .photo-strip > div { overflow: hidden; }
+    .photo-strip img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s;
+    }
+    @media (hover: hover) { .photo-strip img:hover { transform: scale(1.06); } }
+    @media (max-width: 900px) {
+      .photo-strip {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+      }
+      .photo-strip > div { aspect-ratio: 4 / 3; }
+      .photo-strip.strip-odd > div:last-child {
+        grid-column: span 2;
+        aspect-ratio: 16 / 9;
+      }
+    }
   </style>
 </head>
 <body>
@@ -600,10 +633,10 @@
   </section>
 
   <!-- ─── Photo Strip ──────────────────────────────────────────── -->
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;height:260px;overflow:hidden;">
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/lei-heart-sunset.jpg" alt="Lei heart on lava at sunset" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;"></div>
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/sunset-green-lawn.jpg" alt="Golden sunset over Hawai'i landscape" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;"></div>
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/ohia-lehua.jpg" alt="ʻŌhiʻa lehua in bloom" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
+  <div class="photo-strip strip-odd" style="--cols:1fr 1fr 1fr;--h:260px">
+    <div><img loading="lazy" decoding="async" src="photos/lei-heart-sunset.jpg" alt="Lei heart on lava at sunset" style="object-position:center 20%"></div>
+    <div><img loading="lazy" decoding="async" src="photos/sunset-green-lawn.jpg" alt="Golden sunset over Hawai'i landscape" style="object-position:center 30%"></div>
+    <div><img loading="lazy" decoding="async" src="photos/ohia-lehua.jpg" alt="ʻŌhiʻa lehua in bloom"></div>
   </div>
 
   <!-- ─── Cost of Living ────────────────────────────────────────── -->
