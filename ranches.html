@@ -364,26 +364,116 @@
       .footer-legal { text-align: left; }
       .footer-logo { height: 46px; }
     }
+
+    .nav-links li { position: relative; }
+
+    .nav-burger { display: none; background: none; border: 0; cursor: pointer; padding: 6px 2px; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 0.25s, opacity 0.2s; }
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 1000px) { .nav-burger { display: flex; } }
+
+    .mobile-menu {
+      position: fixed; top: 68px; left: 0; right: 0; bottom: 0; z-index: 190;
+      background: var(--cream); padding: 2rem 1.75rem 3rem; overflow-y: auto;
+      opacity: 0; visibility: hidden; transform: translateY(-10px);
+      transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
+    }
+    .mobile-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+    .mm-home { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--cream-3); }
+    .mm-group { margin-bottom: 1.4rem; }
+    .mm-group a { display: block; padding: 0.32rem 0; }
+    .mm-group a.mm-primary { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); margin-bottom: 0.15rem; }
+    .mm-group a:not(.mm-primary) { font-size: 0.92rem; color: var(--text-muted); }
+    .mm-foot { margin-top: 2.25rem; padding-top: 1.75rem; border-top: 1px solid var(--cream-3); display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .mm-cta { display: inline-block; background: var(--gold); color: white; padding: 0.8rem 1.8rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    .mm-phone { font-size: 0.95rem; color: var(--text-muted); }
+
+    .nav-burger { color: var(--green-deep); }
+
+    /* ─── Photo strip ───────────────────────────────────────────── */
+    /* Desktop keeps each page's own column template and height, passed in
+       as --cols / --h. On narrow screens a fixed 3-4 column row turns each
+       photo into a ~94px sliver, so below 900px the strip becomes two
+       columns of 4:3 cells and drops the fixed height entirely; an odd
+       last photo spans the full width. */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: var(--cols);
+      height: var(--h);
+      overflow: hidden;
+    }
+    .photo-strip > div { overflow: hidden; }
+    .photo-strip img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s;
+    }
+    @media (hover: hover) { .photo-strip img:hover { transform: scale(1.06); } }
+    @media (max-width: 900px) {
+      .photo-strip {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+      }
+      .photo-strip > div { aspect-ratio: 4 / 3; }
+      .photo-strip.strip-odd > div:last-child {
+        grid-column: span 2;
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    /* ─── Section sub-nav ───────────────────────────────────────── */
+    .subnav { background: var(--cream-2); border-bottom: 1px solid var(--cream-3); }
+    .subnav-inner { max-width: 1100px; margin: 0 auto; padding: 0.85rem 2rem; display: flex; align-items: center; gap: 0.9rem 1.6rem; flex-wrap: wrap; }
+    .subnav-label { font-size: 0.66rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
+    .subnav a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.02em; color: var(--text-muted); transition: color 0.2s; padding-bottom: 2px; }
+    .subnav a:hover { color: var(--green-deep); }
+    .subnav a.active { color: var(--green-deep); border-bottom: 1.5px solid var(--gold); }
   </style>
 </head>
 <body>
 
   <!-- ─── Nav ──────────────────────────────────────────────────── -->
-  <nav>
+  <nav id="nav">
     <a class="nav-brand" href="index.html">Keala M. Wall</a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="land.html">Buy Land</a></li>
-      <li><a href="ranches.html" class="active">Ranches</a></li>
-      <li><a href="off-grid.html">Off-Grid</a></li>
+      <li><a href="land.html" class="active">Buy Land</a></li>
       <li><a href="relocation.html">Relocate</a></li>
-      <li><a href="areas.html">Areas</a></li>
+      <li><a href="legacy.html">Homes</a></li>
+      <li><a href="guides.html">Guides</a></li>
     </ul>
     <div class="nav-right">
       <a href="tel:8085153081" class="nav-phone">808-515-3081</a>
       <a href="index.html#contact" class="nav-cta">Talk Story</a>
+      <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="mm-home" href="index.html">Home</a>
+    <div class="mm-group">
+      <a class="mm-primary" href="land.html">Buy Land</a>
+      <a href="ranches.html">Ranches &amp; Farms</a>
+      <a href="off-grid.html">Off-Grid Living</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="relocation.html">Relocate</a>
+      <a href="areas.html">Area Guides</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="legacy.html">Homes</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="guides.html">Guides &amp; Downloads</a>
+    </div>
+    <div class="mm-foot">
+      <a href="index.html#contact" class="mm-cta">Talk Story</a>
+      <a href="tel:8085153081" class="mm-phone">808-515-3081</a>
+    </div>
+  </div>
 
   <!-- ─── Hero ──────────────────────────────────────────────────── -->
   <section class="hero">
@@ -395,6 +485,15 @@
       <p class="hero-sub">From Kona coffee farms to Waimea cattle ranches — Hawai'i Island's agricultural landscape is one of the most diverse and sought-after in the Pacific.</p>
     </div>
   </section>
+
+  <div class="subnav">
+    <div class="subnav-inner">
+      <span class="subnav-label">Land</span>
+      <a href="land.html">Buying Land</a>
+      <a href="ranches.html" class="active">Ranches &amp; Farms</a>
+      <a href="off-grid.html">Off-Grid Living</a>
+    </div>
+  </div>
 
   <!-- ─── Agricultural Corridors ───────────────────────────────── -->
   <section class="corridors">
@@ -416,7 +515,7 @@
         <div class="corridor-card">
           <div class="corridor-region">North · Elevation 2,500–3,500 ft</div>
           <h3>Waimea &amp; Kohala Ranch Country</h3>
-          <p>The Parker Ranch — one of the largest cattle ranches in the United States at ~150,000 acres — anchors the Waimea/Kamuela plateau. The surrounding area is some of the most scenic ranch land in Hawaiʻi, with green pastures, misty mornings, and cool temperatures year-round.</p>
+          <p>The Parker Ranch — one of the largest cattle ranches in the United States at roughly 130,000 acres — anchors the Waimea/Kamuela plateau. The surrounding area is some of the most scenic ranch land in Hawaiʻi, with green pastures, misty mornings, and cool temperatures year-round.</p>
           <div class="corridor-types">
             <span class="type-pill">Cattle</span>
             <span class="type-pill">Horse</span>
@@ -468,10 +567,10 @@
   </section>
 
   <!-- ─── Photo Strip ──────────────────────────────────────────── -->
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);height:260px;overflow:hidden;">
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/ranch-fallen-tree.jpg" alt="Open ranch land, Big Island" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;"></div>
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/coffee-cherries.jpg" alt="Kona coffee cherries" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/coffee-blossoms.jpg" alt="Coffee blossoms, Kona snow" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
+  <div class="photo-strip strip-odd" style="--cols:repeat(3,1fr);--h:260px">
+    <div><img loading="lazy" decoding="async" src="photos/ranch-fallen-tree.jpg" alt="Open ranch land, Big Island" style="object-position:center 30%"></div>
+    <div><img loading="lazy" decoding="async" src="photos/coffee-cherries.jpg" alt="Kona coffee cherries"></div>
+    <div><img loading="lazy" decoding="async" src="photos/coffee-blossoms.jpg" alt="Coffee blossoms, Kona snow"></div>
   </div>
 
   <!-- ─── Property Types & Prices ─────────────────────────────── -->
@@ -526,7 +625,7 @@
           </div>
           <div class="area-body">
             <h4>The Parker Ranch Legacy</h4>
-            <p>Waimea sits at the center of one of the most storied ranching cultures in the United States. Parker Ranch — founded in the early 1800s and today covering approximately 150,000 acres — defines the character of the entire region. Paniolo (Hawaiian cowboy) tradition runs deep here, and neighboring ranch properties benefit from that culture, the established infrastructure, and the agricultural expertise embedded in the community.</p>
+            <p>Waimea sits at the center of one of the most storied ranching cultures in the United States. Parker Ranch — founded in 1847 and today covering roughly 130,000 acres — defines the character of the entire region. Paniolo (Hawaiian cowboy) tradition runs deep here, and neighboring ranch properties benefit from that culture, the established infrastructure, and the agricultural expertise embedded in the community.</p>
             <h4>What Buyers Find Here</h4>
             <p>Smaller parcels adjacent to large ranch operations, gentleman horse farms, cattle operations on 20–200 acres, and lifestyle ranches for buyers who want the rural pastoral experience close to a real town. Waimea has excellent schools, the KTA grocery, multiple restaurants, and a strong community — making it more accessible than more remote ranch areas.</p>
             <h4>What to Know</h4>
@@ -568,7 +667,7 @@
           </div>
           <div class="area-body">
             <h4>Post-Sugar Country</h4>
-            <p>The Hāmākua Coast's sugar industry ended in 1994 with the closure of Honoka'a Sugar Company. In the three decades since, the land has transitioned to diversified agriculture — tropical fruits, floriculture, macadamia nuts, timber, and specialty crops. The red volcanic soil is extraordinarily fertile, and the consistent rainfall means irrigation is rarely needed.</p>
+            <p>The Hāmākua Coast's sugar industry ended in 1994 with the closure of the Hāmākua Sugar Company. In the three decades since, the land has transitioned to diversified agriculture — tropical fruits, floriculture, macadamia nuts, timber, and specialty crops. The red volcanic soil is extraordinarily fertile, and the consistent rainfall means irrigation is rarely needed.</p>
             <h4>Value and Opportunity</h4>
             <p>Compared to Kona coffee farms or Waimea ranch land, Hāmākua farms are often significantly more affordable per acre. Buyers who don't need the Kona name or the Waimea prestige — but do want productive soil, good rainfall, and a working farm lifestyle — find exceptional value here.</p>
             <h4>What to Know</h4>
@@ -695,6 +794,8 @@
           <li><a href="off-grid.html">Off-Grid</a></li>
           <li><a href="relocation.html">Relocate</a></li>
           <li><a href="areas.html">Areas</a></li>
+          <li><a href="legacy.html">Legacy</a></li>
+          <li><a href="guides.html">Guides</a></li>
         </ul>
       </div>
 
@@ -721,5 +822,29 @@
     </div>
   </footer>
 
+  <script>
+    // Mobile hamburger menu.
+    (function () {
+      var nav = document.getElementById('nav');
+      var burger = document.querySelector('.nav-burger');
+      var menu = document.getElementById('mobileMenu');
+      if (!burger || !menu) return;
+      burger.addEventListener('click', function () {
+        var open = menu.classList.toggle('open');
+        burger.classList.toggle('open', open);
+        if (nav) nav.classList.toggle('menu-open', open);
+        burger.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      menu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          menu.classList.remove('open'); burger.classList.remove('open');
+          if (nav) nav.classList.remove('menu-open');
+          burger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -278,25 +278,115 @@
       .footer-legal { text-align: left; }
       .footer-logo { height: 46px; }
     }
+
+    .nav-links li { position: relative; }
+
+    .nav-burger { display: none; background: none; border: 0; cursor: pointer; padding: 6px 2px; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 0.25s, opacity 0.2s; }
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 1000px) { .nav-burger { display: flex; } }
+
+    .mobile-menu {
+      position: fixed; top: 68px; left: 0; right: 0; bottom: 0; z-index: 190;
+      background: var(--cream); padding: 2rem 1.75rem 3rem; overflow-y: auto;
+      opacity: 0; visibility: hidden; transform: translateY(-10px);
+      transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
+    }
+    .mobile-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+    .mm-home { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--cream-3); }
+    .mm-group { margin-bottom: 1.4rem; }
+    .mm-group a { display: block; padding: 0.32rem 0; }
+    .mm-group a.mm-primary { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); margin-bottom: 0.15rem; }
+    .mm-group a:not(.mm-primary) { font-size: 0.92rem; color: var(--text-muted); }
+    .mm-foot { margin-top: 2.25rem; padding-top: 1.75rem; border-top: 1px solid var(--cream-3); display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .mm-cta { display: inline-block; background: var(--gold); color: white; padding: 0.8rem 1.8rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    .mm-phone { font-size: 0.95rem; color: var(--text-muted); }
+
+    .nav-burger { color: var(--green-deep); }
+
+    /* ─── Photo strip ───────────────────────────────────────────── */
+    /* Desktop keeps each page's own column template and height, passed in
+       as --cols / --h. On narrow screens a fixed 3-4 column row turns each
+       photo into a ~94px sliver, so below 900px the strip becomes two
+       columns of 4:3 cells and drops the fixed height entirely; an odd
+       last photo spans the full width. */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: var(--cols);
+      height: var(--h);
+      overflow: hidden;
+    }
+    .photo-strip > div { overflow: hidden; }
+    .photo-strip img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s;
+    }
+    @media (hover: hover) { .photo-strip img:hover { transform: scale(1.06); } }
+    @media (max-width: 900px) {
+      .photo-strip {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+      }
+      .photo-strip > div { aspect-ratio: 4 / 3; }
+      .photo-strip.strip-odd > div:last-child {
+        grid-column: span 2;
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    /* ─── Section sub-nav ───────────────────────────────────────── */
+    .subnav { background: var(--cream-2); border-bottom: 1px solid var(--cream-3); }
+    .subnav-inner { max-width: 1100px; margin: 0 auto; padding: 0.85rem 2rem; display: flex; align-items: center; gap: 0.9rem 1.6rem; flex-wrap: wrap; }
+    .subnav-label { font-size: 0.66rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
+    .subnav a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.02em; color: var(--text-muted); transition: color 0.2s; padding-bottom: 2px; }
+    .subnav a:hover { color: var(--green-deep); }
+    .subnav a.active { color: var(--green-deep); border-bottom: 1.5px solid var(--gold); }
   </style>
 </head>
 <body>
 
-  <nav>
+  <nav id="nav">
     <a class="nav-brand" href="index.html">Keala M. Wall</a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
       <li><a href="land.html">Buy Land</a></li>
-      <li><a href="ranches.html">Ranches</a></li>
-      <li><a href="off-grid.html">Off-Grid</a></li>
       <li><a href="relocation.html" class="active">Relocate</a></li>
-      <li><a href="areas.html">Areas</a></li>
+      <li><a href="legacy.html">Homes</a></li>
+      <li><a href="guides.html">Guides</a></li>
     </ul>
     <div class="nav-right">
       <a href="tel:8085153081" class="nav-phone">808-515-3081</a>
       <a href="index.html#contact" class="nav-cta">Talk Story</a>
+      <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="mm-home" href="index.html">Home</a>
+    <div class="mm-group">
+      <a class="mm-primary" href="land.html">Buy Land</a>
+      <a href="ranches.html">Ranches &amp; Farms</a>
+      <a href="off-grid.html">Off-Grid Living</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="relocation.html">Relocate</a>
+      <a href="areas.html">Area Guides</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="legacy.html">Homes</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="guides.html">Guides &amp; Downloads</a>
+    </div>
+    <div class="mm-foot">
+      <a href="index.html#contact" class="mm-cta">Talk Story</a>
+      <a href="tel:8085153081" class="mm-phone">808-515-3081</a>
+    </div>
+  </div>
 
   <section class="hero">
     <div class="hero-bg"></div>
@@ -307,6 +397,14 @@
       <p class="hero-sub">The Big Island is not Oahu. Not Maui. It is the largest, most diverse, and most genuinely rural island in the state — and moving here requires different preparation.</p>
     </div>
   </section>
+
+  <div class="subnav">
+    <div class="subnav-inner">
+      <span class="subnav-label">Relocate</span>
+      <a href="relocation.html" class="active">Relocating</a>
+      <a href="areas.html">Area Guides</a>
+    </div>
+  </div>
 
   <!-- ─── Intro ─────────────────────────────────────────────────── -->
   <section class="intro">
@@ -358,7 +456,7 @@
             </div>
             <div class="stat-item">
               <span class="stat-label">Avg electricity rate</span>
-              <span class="stat-val">$0.38–$0.45/kWh</span>
+              <span class="stat-val">~43¢/kWh (2026)</span>
             </div>
             <div class="stat-item">
               <span class="stat-label">Drive: Kona ↔ Hilo</span>
@@ -388,6 +486,7 @@
       <span class="eyebrow">Find Your Fit</span>
       <h2 class="section-title">Which Area Is Right for You?</h2>
       <p class="section-lead">Every corner of the Big Island has a distinct personality, climate, and cost profile. This side-by-side breakdown helps you narrow down where to focus your search.</p>
+      <p class="price-note" style="font-size:0.78rem;color:var(--text-muted);max-width:700px;margin-top:-1.5rem;margin-bottom:3rem;">Price and rent figures are approximate ranges as of mid-2026 and move with the market — ask Keala for current comps before making decisions.</p>
       <div class="compare-cards">
 
         <div class="compare-card">
@@ -451,7 +550,7 @@
           <p>The county seat and most affordable major area on the island. Hilo gets 130 inches of rain per year — it is green, tropical, and genuinely beautiful. Not a tourist town. Strong local culture, a real downtown, excellent farmers markets, and significantly lower home prices than the west side.</p>
           <div class="compare-metrics">
             <div class="metric"><span class="metric-k">Rainfall</span><span class="metric-v">130+ in/yr (very wet)</span></div>
-            <div class="metric"><span class="metric-k">Median price</span><span class="metric-v">$350K–$550K</span></div>
+            <div class="metric"><span class="metric-k">Median price</span><span class="metric-v">$450K–$600K</span></div>
             <div class="metric"><span class="metric-k">1BR rent</span><span class="metric-v">~$1,200–$1,600/mo</span></div>
             <div class="metric"><span class="metric-k">Services</span><span class="metric-v">Full city — Walmart, Target</span></div>
           </div>
@@ -503,10 +602,10 @@
   </section>
 
   <!-- ─── Photo Strip ──────────────────────────────────────────── -->
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;height:260px;overflow:hidden;">
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/lei-heart-sunset.jpg" alt="Lei heart on lava at sunset" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;"></div>
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/sunset-green-lawn.jpg" alt="Golden sunset over Hawai'i landscape" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;"></div>
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/ohia-lehua.jpg" alt="ʻŌhiʻa lehua in bloom" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
+  <div class="photo-strip strip-odd" style="--cols:1fr 1fr 1fr;--h:260px">
+    <div><img loading="lazy" decoding="async" src="photos/lei-heart-sunset.jpg" alt="Lei heart on lava at sunset" style="object-position:center 20%"></div>
+    <div><img loading="lazy" decoding="async" src="photos/sunset-green-lawn.jpg" alt="Golden sunset over Hawai'i landscape" style="object-position:center 30%"></div>
+    <div><img loading="lazy" decoding="async" src="photos/ohia-lehua.jpg" alt="ʻŌhiʻa lehua in bloom"></div>
   </div>
 
   <!-- ─── Cost of Living ────────────────────────────────────────── -->
@@ -519,7 +618,7 @@
         <div>
           <p>The Big Island is significantly more affordable than Oahu and Maui — median home prices in Hilo and Puna are a fraction of what you'd pay in Honolulu. But compared to most mainland cities, Hawai'i Island is still expensive, and some costs catch newcomers completely off-guard.</p>
           <p><strong style="color:rgba(255,255,255,0.85)">Groceries</strong> cost 30–50% more than the mainland average. The island imports most of its food, and the shipping cost is passed to consumers. Local farmers markets help, but even staples like milk, eggs, and meat carry a significant premium.</p>
-          <p><strong style="color:rgba(255,255,255,0.85)">Electricity</strong> is the other shock. At $0.38–$0.45/kWh, a household running a central AC unit and standard appliances can easily see $300–$600/month in electric bills. Solar is not a luxury here — it pays for itself within 5–8 years on most properties.</p>
+          <p><strong style="color:rgba(255,255,255,0.85)">Electricity</strong> is the other shock. At roughly 43¢/kWh (as of 2026), a household running a central AC unit and standard appliances can easily see $300–$600/month in electric bills. Solar is not a luxury here — it pays for itself within 5–8 years on most properties.</p>
           <p><strong style="color:rgba(255,255,255,0.85)">The trade-off</strong> is that many costs common on the mainland disappear: heavy winter clothing, heating bills, annual car registration (lower in Hawaii), and the grinding commutes that add hours and vehicle wear to mainland life. Quality of life — measured in proximity to the ocean, the land, and a genuine community — is difficult to price.</p>
         </div>
         <div>
@@ -691,6 +790,8 @@
           <li><a href="off-grid.html">Off-Grid</a></li>
           <li><a href="relocation.html">Relocate</a></li>
           <li><a href="areas.html">Areas</a></li>
+          <li><a href="legacy.html">Legacy</a></li>
+          <li><a href="guides.html">Guides</a></li>
         </ul>
       </div>
 
@@ -717,5 +818,29 @@
     </div>
   </footer>
 
+  <script>
+    // Mobile hamburger menu.
+    (function () {
+      var nav = document.getElementById('nav');
+      var burger = document.querySelector('.nav-burger');
+      var menu = document.getElementById('mobileMenu');
+      if (!burger || !menu) return;
+      burger.addEventListener('click', function () {
+        var open = menu.classList.toggle('open');
+        burger.classList.toggle('open', open);
+        if (nav) nav.classList.toggle('menu-open', open);
+        burger.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      menu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          menu.classList.remove('open'); burger.classList.remove('open');
+          if (nav) nav.classList.remove('menu-open');
+          burger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

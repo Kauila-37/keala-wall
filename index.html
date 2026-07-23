@@ -183,12 +183,45 @@
       overflow: hidden;
       background: var(--green-deep);
     }
-    .hero-bg {
+    /* Slideshow: three layered slides crossfade every few seconds, and the
+       active slide runs a slow Ken Burns zoom so the photo is always moving.
+       Slide 1 has its image in CSS (it's the preloaded LCP image); slides 2-3
+       get theirs from data-bg via JS after the page loads, so the extra
+       photos never compete with first paint. */
+    .hero-slide {
       position: absolute; inset: 0;
-      background-image: url('photos/hero-sunset-lava.jpg');
       background-size: cover;
       background-position: center 35%;
-      opacity: 0.65;
+      opacity: 0;
+      transition: opacity 1.8s ease-in-out;
+    }
+    .hero-slide.active { opacity: 0.65; }
+    .hero-slide:nth-child(1) { background-image: url('photos/hero-sunset-lava.jpg'); }
+    @keyframes kenburns-a { from { transform: scale(1) translate(0, 0); } to { transform: scale(1.09) translate(-1.2%, -1%); } }
+    @keyframes kenburns-b { from { transform: scale(1.09) translate(1.2%, 0); } to { transform: scale(1) translate(0, 0); } }
+    .hero-slide.active { animation: kenburns-a 9s ease-out forwards; }
+    .hero-slide.active.alt { animation-name: kenburns-b; }
+    /* Hold the zoom's end frame while a slide fades out, so the photo
+       doesn't snap back to its start position mid-fade. */
+    .hero-slide.was { transform: scale(1.09) translate(-1.2%, -1%); }
+    .hero-slide.alt.was { transform: scale(1); }
+
+    /* Headline entrance: label, headline, rule, sub, buttons rise in turn. */
+    @keyframes hero-rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    .hero-label, .hero h1, .hero-rule, .hero-sub, .hero-actions {
+      opacity: 0;
+      animation: hero-rise 0.9s cubic-bezier(0.22, 0.9, 0.3, 1) forwards;
+    }
+    .hero-label   { animation-delay: 0.15s; }
+    .hero h1      { animation-delay: 0.3s; }
+    .hero-rule    { animation-delay: 0.55s; }
+    .hero-sub     { animation-delay: 0.7s; }
+    .hero-actions { animation-delay: 0.85s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-slide.active { animation: none; }
+      .hero-label, .hero h1, .hero-rule, .hero-sub, .hero-actions { animation: none; opacity: 1; }
+      .scroll-line::after { animation: none; }
     }
     .hero-overlay {
       position: absolute; inset: 0;
@@ -270,7 +303,15 @@
       display: flex; flex-direction: column; align-items: center; gap: 6px;
     }
     .scroll-label { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
-    .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3)); }
+    .scroll-line { position: relative; width: 1px; height: 40px; background: rgba(255,255,255,0.14); overflow: hidden; }
+    .scroll-line::after {
+      content: '';
+      position: absolute; left: 0; top: -40px;
+      width: 1px; height: 40px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.55));
+      animation: scroll-drip 2.4s ease-in-out infinite;
+    }
+    @keyframes scroll-drip { 0% { top: -40px; } 60% { top: 40px; } 100% { top: 40px; } }
     @media (max-width: 640px) {
       .hero { padding: 0 1.5rem 4rem; }
       .scroll-indicator { display: none; }
@@ -466,6 +507,8 @@
       padding: 7rem 3rem;
     }
     .guides-inner { max-width: 1100px; margin: 0 auto; }
+    .guides-all { display: inline-block; margin-top: 2.5rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid currentColor; padding-bottom: 2px; transition: color 0.2s; }
+    .guides-all:hover { color: var(--gold-warm); }
     .guides-header {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -953,6 +996,71 @@
       .footer-legal { text-align: left; }
       .footer-logo { height: 46px; }
     }
+
+    .nav-links li { position: relative; }
+
+    .nav-burger { display: none; background: none; border: 0; cursor: pointer; padding: 6px 2px; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 0.25s, opacity 0.2s; }
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 1000px) { .nav-burger { display: flex; } }
+
+    .mobile-menu {
+      position: fixed; top: 68px; left: 0; right: 0; bottom: 0; z-index: 190;
+      background: var(--cream); padding: 2rem 1.75rem 3rem; overflow-y: auto;
+      opacity: 0; visibility: hidden; transform: translateY(-10px);
+      transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
+    }
+    .mobile-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+    .mm-home { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--cream-3); }
+    .mm-group { margin-bottom: 1.4rem; }
+    .mm-group a { display: block; padding: 0.32rem 0; }
+    .mm-group a.mm-primary { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); margin-bottom: 0.15rem; }
+    .mm-group a:not(.mm-primary) { font-size: 0.92rem; color: var(--text-muted); }
+    .mm-foot { margin-top: 2.25rem; padding-top: 1.75rem; border-top: 1px solid var(--cream-3); display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .mm-cta { display: inline-block; background: var(--gold); color: white; padding: 0.8rem 1.8rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    .mm-phone { font-size: 0.95rem; color: var(--text-muted); }
+
+    .nav-burger { color: rgba(255,255,255,0.9); transition: color 0.4s; }
+    nav.scrolled .nav-burger, nav.menu-open .nav-burger { color: var(--green-deep); }
+    nav.menu-open { background: rgba(250,247,242,0.97); border-bottom-color: rgba(0,0,0,0.07); }
+    nav.menu-open .nav-brand { color: var(--green-deep); }
+    nav.menu-open .nav-phone { color: var(--text-muted); }
+    nav.menu-open .nav-cta { color: var(--gold); }
+
+    /* ─── Photo strip ───────────────────────────────────────────── */
+    /* Desktop keeps each page's own column template and height, passed in
+       as --cols / --h. On narrow screens a fixed 3-4 column row turns each
+       photo into a ~94px sliver, so below 900px the strip becomes two
+       columns of 4:3 cells and drops the fixed height entirely; an odd
+       last photo spans the full width. */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: var(--cols);
+      height: var(--h);
+      overflow: hidden;
+    }
+    .photo-strip > div { overflow: hidden; }
+    .photo-strip img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s;
+    }
+    @media (hover: hover) { .photo-strip img:hover { transform: scale(1.06); } }
+    @media (max-width: 900px) {
+      .photo-strip {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+      }
+      .photo-strip > div { aspect-ratio: 4 / 3; }
+      .photo-strip.strip-odd > div:last-child {
+        grid-column: span 2;
+        aspect-ratio: 16 / 9;
+      }
+    }
   </style>
 </head>
 <body>
@@ -961,22 +1069,46 @@
   <nav id="nav">
     <a class="nav-brand" href="index.html">Keala M. Wall</a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="land.html">Buy Land</a></li>
-      <li><a href="ranches.html">Ranches</a></li>
-      <li><a href="off-grid.html">Off-Grid</a></li>
       <li><a href="relocation.html">Relocate</a></li>
-      <li><a href="areas.html">Areas</a></li>
+      <li><a href="legacy.html">Homes</a></li>
+      <li><a href="guides.html">Guides</a></li>
     </ul>
     <div class="nav-right">
       <a href="tel:8085153081" class="nav-phone">808-515-3081</a>
       <a href="#contact" class="nav-cta">Talk Story</a>
+      <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="mm-home" href="index.html">Home</a>
+    <div class="mm-group">
+      <a class="mm-primary" href="land.html">Buy Land</a>
+      <a href="ranches.html">Ranches &amp; Farms</a>
+      <a href="off-grid.html">Off-Grid Living</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="relocation.html">Relocate</a>
+      <a href="areas.html">Area Guides</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="legacy.html">Homes</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="guides.html">Guides &amp; Downloads</a>
+    </div>
+    <div class="mm-foot">
+      <a href="#contact" class="mm-cta">Talk Story</a>
+      <a href="tel:8085153081" class="mm-phone">808-515-3081</a>
+    </div>
+  </div>
+
   <!-- ─── Hero ─────────────────────────────────────────────────── -->
   <section class="hero" id="home">
-    <div class="hero-bg"></div>
+    <div class="hero-slide active"></div>
+    <div class="hero-slide" data-bg="photos/aerial-coastline.jpg"></div>
+    <div class="hero-slide alt" data-bg="photos/coral-beach.jpg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
       <p class="hero-label">Hawai'i Island Real Estate</p>
@@ -1052,11 +1184,11 @@
   </section>
 
   <!-- ─── Photo Gallery ───────────────────────────────────────── -->
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);height:320px;overflow:hidden;">
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/black-lava-ocean.jpg" alt="Black lava coastline, Big Island" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/ohia-lehua.jpg" alt="ʻŌhiʻa lehua blossoms, Hawai'i Island" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/coffee-cherries.jpg" alt="Kona coffee cherries" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/lei-heart-sunset.jpg" alt="Lei heart on lava at sunset" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"></div>
+  <div class="photo-strip" style="--cols:repeat(4,1fr);--h:320px">
+    <div><img loading="lazy" decoding="async" src="photos/black-lava-ocean.jpg" alt="Black lava coastline, Big Island"></div>
+    <div><img loading="lazy" decoding="async" src="photos/ohia-lehua.jpg" alt="ʻŌhiʻa lehua blossoms, Hawai'i Island"></div>
+    <div><img loading="lazy" decoding="async" src="photos/coffee-cherries.jpg" alt="Kona coffee cherries"></div>
+    <div><img loading="lazy" decoding="async" src="photos/lei-heart-sunset.jpg" alt="Lei heart on lava at sunset" style="object-position:center top"></div>
   </div>
 
   <!-- ─── Scenic Break ──────────────────────────────────────────── -->
@@ -1072,8 +1204,8 @@
   <section class="guides" id="guides">
     <div class="guides-inner">
       <div class="guides-header">
-        <h2>Big Island<br>Buyer Guides</h2>
-        <p>In-depth resources for every type of Big Island buyer — written from local knowledge, not an algorithm. Each guide covers what you actually need to know before making a move.</p>
+        <h2>Free to Read.<br>No Sign-Up.</h2>
+        <p>In-depth guides for every type of Big Island buyer — written from local knowledge, not an algorithm, and free to read start to finish. Printable checklists and area fact sheets are a click further in.</p>
       </div>
       <div class="guides-list">
         <a href="land.html" class="guide-row">
@@ -1117,6 +1249,7 @@
           <span class="guide-arrow">→</span>
         </a>
       </div>
+      <a href="guides.html" class="guides-all">All guides, checklists &amp; area fact sheets →</a>
     </div>
   </section>
 
@@ -1150,7 +1283,7 @@
           <span class="insider-n">03</span>
           <div>
             <h3>Agricultural Zoning Controls More Than You Think</h3>
-            <p>A-1 zoning requires a 20-acre minimum lot size. A-20 allows smaller parcels. These designations affect what you can legally build, whether you can subdivide, and how land can be used long-term. Vacant ag land that looks like a deal can carry serious restrictions — and those restrictions don't show up on Zillow.</p>
+            <p>Agricultural zoning sets the minimum lot size — from 1 acre in A-1a up to 20, 40, even 200 acres in the larger designations. The zone code determines what you can legally build, whether you can subdivide, and how land can be used long-term. Vacant ag land that looks like a deal can carry serious restrictions — and those restrictions don't show up on Zillow.</p>
           </div>
         </div>
 
@@ -1324,6 +1457,8 @@
           <li><a href="off-grid.html">Off-Grid</a></li>
           <li><a href="relocation.html">Relocate</a></li>
           <li><a href="areas.html">Areas</a></li>
+          <li><a href="legacy.html">Legacy</a></li>
+          <li><a href="guides.html">Guides</a></li>
         </ul>
       </div>
 
@@ -1366,5 +1501,66 @@
     });
   </script>
 
+  <script>
+    // Mobile hamburger menu.
+    (function () {
+      var nav = document.getElementById('nav');
+      var burger = document.querySelector('.nav-burger');
+      var menu = document.getElementById('mobileMenu');
+      if (!burger || !menu) return;
+      burger.addEventListener('click', function () {
+        var open = menu.classList.toggle('open');
+        burger.classList.toggle('open', open);
+        if (nav) nav.classList.toggle('menu-open', open);
+        burger.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      menu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          menu.classList.remove('open'); burger.classList.remove('open');
+          if (nav) nav.classList.remove('menu-open');
+          burger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+  </script>
+  <script>
+    // Hero slideshow: crossfade the three slides so the hero moves like
+    // video. The extra photos load only after the page has finished loading,
+    // and nothing cycles if the visitor prefers reduced motion.
+    (function () {
+      var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-slide'));
+      if (slides.length < 2) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      window.addEventListener('load', function () {
+        var pending = slides.filter(function (s) { return s.dataset.bg; }).length;
+        slides.forEach(function (s) {
+          if (!s.dataset.bg) return;
+          var img = new Image();
+          img.onload = img.onerror = function () { if (--pending === 0) start(); };
+          img.src = s.dataset.bg;
+          s.style.backgroundImage = "url('" + s.dataset.bg + "')";
+        });
+        if (pending === 0) start();
+      });
+
+      var started = false;
+      function start() {
+        if (started) return;
+        started = true;
+        var i = 0;
+        setInterval(function () {
+          var current = slides[i];
+          i = (i + 1) % slides.length;
+          current.classList.add('was');
+          current.classList.remove('active');
+          slides[i].classList.add('active');
+          setTimeout(function () { current.classList.remove('was'); }, 1900);
+        }, 7000);
+      }
+    })();
+  </script>
 </body>
 </html>

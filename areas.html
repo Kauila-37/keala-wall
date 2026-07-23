@@ -250,26 +250,116 @@
       .footer-legal { text-align: left; }
       .footer-logo { height: 46px; }
     }
+
+    .nav-links li { position: relative; }
+
+    .nav-burger { display: none; background: none; border: 0; cursor: pointer; padding: 6px 2px; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 0.25s, opacity 0.2s; }
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 1000px) { .nav-burger { display: flex; } }
+
+    .mobile-menu {
+      position: fixed; top: 68px; left: 0; right: 0; bottom: 0; z-index: 190;
+      background: var(--cream); padding: 2rem 1.75rem 3rem; overflow-y: auto;
+      opacity: 0; visibility: hidden; transform: translateY(-10px);
+      transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
+    }
+    .mobile-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+    .mm-home { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--cream-3); }
+    .mm-group { margin-bottom: 1.4rem; }
+    .mm-group a { display: block; padding: 0.32rem 0; }
+    .mm-group a.mm-primary { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); margin-bottom: 0.15rem; }
+    .mm-group a:not(.mm-primary) { font-size: 0.92rem; color: var(--text-muted); }
+    .mm-foot { margin-top: 2.25rem; padding-top: 1.75rem; border-top: 1px solid var(--cream-3); display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .mm-cta { display: inline-block; background: var(--gold); color: white; padding: 0.8rem 1.8rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    .mm-phone { font-size: 0.95rem; color: var(--text-muted); }
+
+    .nav-burger { color: var(--green-deep); }
+
+    /* ─── Photo strip ───────────────────────────────────────────── */
+    /* Desktop keeps each page's own column template and height, passed in
+       as --cols / --h. On narrow screens a fixed 3-4 column row turns each
+       photo into a ~94px sliver, so below 900px the strip becomes two
+       columns of 4:3 cells and drops the fixed height entirely; an odd
+       last photo spans the full width. */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: var(--cols);
+      height: var(--h);
+      overflow: hidden;
+    }
+    .photo-strip > div { overflow: hidden; }
+    .photo-strip img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s;
+    }
+    @media (hover: hover) { .photo-strip img:hover { transform: scale(1.06); } }
+    @media (max-width: 900px) {
+      .photo-strip {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+      }
+      .photo-strip > div { aspect-ratio: 4 / 3; }
+      .photo-strip.strip-odd > div:last-child {
+        grid-column: span 2;
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    /* ─── Section sub-nav ───────────────────────────────────────── */
+    .subnav { background: var(--cream-2); border-bottom: 1px solid var(--cream-3); }
+    .subnav-inner { max-width: 1100px; margin: 0 auto; padding: 0.85rem 2rem; display: flex; align-items: center; gap: 0.9rem 1.6rem; flex-wrap: wrap; }
+    .subnav-label { font-size: 0.66rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
+    .subnav a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.02em; color: var(--text-muted); transition: color 0.2s; padding-bottom: 2px; }
+    .subnav a:hover { color: var(--green-deep); }
+    .subnav a.active { color: var(--green-deep); border-bottom: 1.5px solid var(--gold); }
   </style>
 </head>
 <body>
 
   <!-- ─── Nav ──────────────────────────────────────────────────── -->
-  <nav>
+  <nav id="nav">
     <a class="nav-brand" href="index.html">Keala M. Wall</a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
       <li><a href="land.html">Buy Land</a></li>
-      <li><a href="ranches.html">Ranches</a></li>
-      <li><a href="off-grid.html">Off-Grid</a></li>
-      <li><a href="relocation.html">Relocate</a></li>
-      <li><a href="areas.html" class="active">Areas</a></li>
+      <li><a href="relocation.html" class="active">Relocate</a></li>
+      <li><a href="legacy.html">Homes</a></li>
+      <li><a href="guides.html">Guides</a></li>
     </ul>
     <div class="nav-right">
       <a href="tel:8085153081" class="nav-phone">808-515-3081</a>
       <a href="index.html#contact" class="nav-cta">Talk Story</a>
+      <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="mm-home" href="index.html">Home</a>
+    <div class="mm-group">
+      <a class="mm-primary" href="land.html">Buy Land</a>
+      <a href="ranches.html">Ranches &amp; Farms</a>
+      <a href="off-grid.html">Off-Grid Living</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="relocation.html">Relocate</a>
+      <a href="areas.html">Area Guides</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="legacy.html">Homes</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="guides.html">Guides &amp; Downloads</a>
+    </div>
+    <div class="mm-foot">
+      <a href="index.html#contact" class="mm-cta">Talk Story</a>
+      <a href="tel:8085153081" class="mm-phone">808-515-3081</a>
+    </div>
+  </div>
 
   <!-- ─── Hero ──────────────────────────────────────────────────── -->
   <section class="hero">
@@ -281,6 +371,14 @@
       <p class="hero-sub">Every corner of the Big Island has its own climate, character, and cost. This guide covers the communities people actually move to — and what life is really like in each one.</p>
     </div>
   </section>
+
+  <div class="subnav">
+    <div class="subnav-inner">
+      <span class="subnav-label">Relocate</span>
+      <a href="relocation.html">Relocating</a>
+      <a href="areas.html" class="active">Area Guides</a>
+    </div>
+  </div>
 
   <!-- ─── Quick Nav ─────────────────────────────────────────────── -->
   <section class="area-nav">
@@ -301,10 +399,10 @@
   </section>
 
   <!-- ─── Photo Strip ──────────────────────────────────────────── -->
-  <div style="display:grid;grid-template-columns:2fr 1fr 1fr;height:300px;overflow:hidden;">
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/aerial-coastline.jpg" alt="Big Island coastline from above" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/coffee-cherries.jpg" alt="Kona coffee cherries" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/ohia-lehua.jpg" alt="ʻŌhiʻa lehua, native Hawaiian tree" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
+  <div class="photo-strip strip-odd" style="--cols:2fr 1fr 1fr;--h:300px">
+    <div><img loading="lazy" decoding="async" src="photos/aerial-coastline.jpg" alt="Big Island coastline from above"></div>
+    <div><img loading="lazy" decoding="async" src="photos/coffee-cherries.jpg" alt="Kona coffee cherries"></div>
+    <div><img loading="lazy" decoding="async" src="photos/ohia-lehua.jpg" alt="ʻŌhiʻa lehua, native Hawaiian tree"></div>
   </div>
 
   <!-- ─── KONA ──────────────────────────────────────────────────── -->
@@ -318,6 +416,7 @@
       <div class="area-body">
         <div class="area-content">
           <p>Kailua-Kona — or just "Kona" — is what most people picture when they imagine moving to Hawaii. Sun almost every day, world-class snorkeling and diving, Alii Drive running along the waterfront, and the greatest concentration of restaurants, shops, and services on the island. It is the most accessible and most recognizable place to live on the Big Island.</p>
+      <p class="price-note" style="font-size:0.78rem;color:var(--text-muted);max-width:700px;margin-top:-1.5rem;margin-bottom:3rem;">Price and rent figures are approximate ranges as of mid-2026 and move with the market — ask Keala for current comps before making decisions.</p>
           <p>Kailua-Kona proper is a small town of around 22,000 people. It has everything you need day-to-day: KTA and Safeway grocery stores, Home Depot, medical facilities, a farmers market, and direct flights to the mainland via Kona International Airport (KOA). What it does not have is the density or anonymity of a mainland city — for many people, that's exactly the point.</p>
           <h4>Keauhou</h4>
           <p>Just south of Kailua-Kona, Keauhou is a quieter, more residential neighborhood with its own shopping center, boat harbor, and beach access. It attracts families and retirees who want to be close to Kona's amenities without being in the middle of the tourist corridor. Property prices are slightly lower than prime Kailua-Kona real estate, and the community feel is noticeably calmer.</p>
@@ -396,7 +495,7 @@
           <p>Waimea — also called Kamuela, the postal name — sits at 2,500 feet elevation on the saddle between Mauna Kea and the Kohala Mountains. It has the best public schools on the island, a genuine downtown with excellent restaurants (Merriman's, Pueo's Osteria), a farmers market, and a strong community grounded in paniolo (Hawaiian cowboy) culture.</p>
           <p>The climate surprises most first-time visitors. Waimea is cool — sometimes cold by Hawaii standards, with temperatures regularly dipping into the 50s at night and morning fog that burns off by midday. Rainfall varies dramatically: the east side of town (toward Hilo) gets significantly more rain than the drier west. Know which side of town a property is on before making assumptions about the microclimate.</p>
           <h4>The Parker Ranch Legacy</h4>
-          <p>Waimea exists in the shadow of Parker Ranch — one of the largest cattle ranches in the United States, founded in the early 1800s by John Palmer Parker and spanning approximately 150,000 acres. The ranch shaped the town's economy, culture, and landscape for over 200 years. Properties adjacent to or within view of Parker Ranch land carry significant scenic value.</p>
+          <p>Waimea exists in the shadow of Parker Ranch — one of the largest cattle ranches in the United States, founded in 1847 by John Palmer Parker and spanning roughly 130,000 acres. The ranch has shaped the town's economy, culture, and landscape for over 175 years. Properties adjacent to or within view of Parker Ranch land carry significant scenic value.</p>
           <h4>Who Lives Here</h4>
           <p>Waimea attracts a diverse mix: astronomers and scientists from the Mauna Kea observatories, ranching families with deep roots, professionals commuting to Kona or Hilo (each about 45 minutes away), and an active community of agricultural entrepreneurs. It is the Big Island's best example of a functional, full-service small town that happens to have extraordinary scenery.</p>
         </div>
@@ -470,7 +569,7 @@
           <p>The Hāmākua Coast runs 50 miles along the island's windward northeast shore, from Waipiʻo Valley south toward Hilo. This is some of the most visually stunning terrain in all of Hawaiʻi — deep stream valleys, thousand-foot sea cliffs, waterfalls, and lush agricultural land with rich red volcanic soil that once supported the island's massive sugar industry.</p>
           <p>The towns here — Honoka'a, Pa'auilo, Laupāhoehoe, Hakalau — are small, real, and deeply local. They're not tourist destinations. They're working communities with their own culture, their own farmers markets, and their own pace of life. Living on the Hāmākua Coast means being part of something that hasn't been homogenized.</p>
           <h4>The Post-Sugar Opportunity</h4>
-          <p>When Honoka'a Sugar Company closed in 1994, it left behind some of the most fertile agricultural land in the state with no dominant industry to take sugar's place. That transition — still ongoing three decades later — has created opportunities for small farmers, orchardists, and rural buyers who want productive land at prices far below what similar quality land commands elsewhere on the island.</p>
+          <p>When the Hāmākua Sugar Company closed in 1994, it left behind some of the most fertile agricultural land in the state with no dominant industry to take sugar's place. That transition — still ongoing three decades later — has created opportunities for small farmers, orchardists, and rural buyers who want productive land at prices far below what similar quality land commands elsewhere on the island.</p>
           <h4>Practical Realities</h4>
           <p>The Hāmākua Coast gets 80–120 inches of rainfall per year — expect rain, lushness, and mud. Most properties use rainwater catchment. Roads can be steep and narrow, and some rural lots are accessed by private easements that require 4WD. The scenic beauty is exceptional, but so is the isolation — Hilo is 30–60 minutes south, and Kona is 2+ hours west. Cell service and internet connectivity require verification for specific properties.</p>
         </div>
@@ -507,7 +606,7 @@
           <p>Hilo is the county seat and the commercial hub of the Big Island's east side. It is not a tourist town — no resort corridor, no Alii Drive, no four-deep crowds at sunset. What Hilo has is a real city with full infrastructure: Walmart, Target, multiple hospitals, an airport (ITO), the University of Hawaiʻi at Hilo campus, and one of the best farmers markets in the entire state (Wednesday and Saturday at the Hilo Bayfront).</p>
           <p>Hilo averages 130 inches of rain per year, which earns it the title of "America's wettest city." That rainfall is responsible for the extraordinary lushness of the east side — tropical flowers, towering trees, clear streams running through neighborhoods — and for real estate prices that are dramatically lower than the dry Kona side.</p>
           <h4>The Value Proposition</h4>
-          <p>Median home prices in Hilo run $350,000–$550,000 — significantly less than Kona for comparable square footage. For buyers willing to embrace the rain (and most Hilo residents genuinely love it), the city offers a full-service life at Hawaii prices that are as close to "affordable" as the state gets. Many longtime Big Island residents choose Hilo precisely because they want a real community, real culture, and a real town — not a resort aesthetic.</p>
+          <p>Median home prices in Hilo run roughly $450,000–$600,000 (as of mid-2026) — significantly less than Kona for comparable square footage. For buyers willing to embrace the rain (and most Hilo residents genuinely love it), the city offers a full-service life at Hawaii prices that are as close to "affordable" as the state gets. Many longtime Big Island residents choose Hilo precisely because they want a real community, real culture, and a real town — not a resort aesthetic.</p>
           <h4>East-West Split</h4>
           <p>Getting from Hilo to Kona takes 90 minutes via the Saddle Road (Highway 200) — the most direct route, which passes between Mauna Kea and Mauna Loa at 6,500 feet elevation. Saddle Road can be foggy, cold, and occasionally closed in winter. If your life requires regular trips between Hilo and Kona, plan for that reality.</p>
         </div>
@@ -517,7 +616,7 @@
             <div class="sidebar-row"><span class="s-label">Climate</span><span class="s-value">Rainy and lush, 70–80°F</span></div>
             <div class="sidebar-row"><span class="s-label">Annual rainfall</span><span class="s-value">~130 inches</span></div>
             <div class="sidebar-row"><span class="s-label">Lava zone</span><span class="s-value">Zone 5–7</span></div>
-            <div class="sidebar-row"><span class="s-label">Median home price</span><span class="s-value">$350K–$550K</span></div>
+            <div class="sidebar-row"><span class="s-label">Median home price</span><span class="s-value">$450K–$600K</span></div>
             <div class="sidebar-row"><span class="s-label">1BR rent</span><span class="s-value">~$1,200–$1,600/mo</span></div>
             <div class="sidebar-row"><span class="s-label">Airport</span><span class="s-value">Hilo Intl (ITO) — inter-island &amp; some mainland</span></div>
             <div class="sidebar-row"><span class="s-label">Full services</span><span class="s-value">Yes — Walmart, Target, hospital, UH Hilo</span></div>
@@ -694,6 +793,8 @@
           <li><a href="off-grid.html">Off-Grid</a></li>
           <li><a href="relocation.html">Relocate</a></li>
           <li><a href="areas.html">Areas</a></li>
+          <li><a href="legacy.html">Legacy</a></li>
+          <li><a href="guides.html">Guides</a></li>
         </ul>
       </div>
 
@@ -733,5 +834,29 @@
     });
   </script>
 
+  <script>
+    // Mobile hamburger menu.
+    (function () {
+      var nav = document.getElementById('nav');
+      var burger = document.querySelector('.nav-burger');
+      var menu = document.getElementById('mobileMenu');
+      if (!burger || !menu) return;
+      burger.addEventListener('click', function () {
+        var open = menu.classList.toggle('open');
+        burger.classList.toggle('open', open);
+        if (nav) nav.classList.toggle('menu-open', open);
+        burger.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      menu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          menu.classList.remove('open'); burger.classList.remove('open');
+          if (nav) nav.classList.remove('menu-open');
+          burger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

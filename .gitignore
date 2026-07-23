@@ -19,3 +19,6 @@ IMG_*.jpg
 
 # OS
 .DS_Store
+
+# Working fact-verification register — reference material, not deployed.
+/research/

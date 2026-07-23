@@ -292,26 +292,116 @@
       .footer-legal { text-align: left; }
       .footer-logo { height: 46px; }
     }
+
+    .nav-links li { position: relative; }
+
+    .nav-burger { display: none; background: none; border: 0; cursor: pointer; padding: 6px 2px; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 0.25s, opacity 0.2s; }
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 1000px) { .nav-burger { display: flex; } }
+
+    .mobile-menu {
+      position: fixed; top: 68px; left: 0; right: 0; bottom: 0; z-index: 190;
+      background: var(--cream); padding: 2rem 1.75rem 3rem; overflow-y: auto;
+      opacity: 0; visibility: hidden; transform: translateY(-10px);
+      transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
+    }
+    .mobile-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+    .mm-home { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--cream-3); }
+    .mm-group { margin-bottom: 1.4rem; }
+    .mm-group a { display: block; padding: 0.32rem 0; }
+    .mm-group a.mm-primary { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); margin-bottom: 0.15rem; }
+    .mm-group a:not(.mm-primary) { font-size: 0.92rem; color: var(--text-muted); }
+    .mm-foot { margin-top: 2.25rem; padding-top: 1.75rem; border-top: 1px solid var(--cream-3); display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .mm-cta { display: inline-block; background: var(--gold); color: white; padding: 0.8rem 1.8rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    .mm-phone { font-size: 0.95rem; color: var(--text-muted); }
+
+    .nav-burger { color: var(--green-deep); }
+
+    /* ─── Photo strip ───────────────────────────────────────────── */
+    /* Desktop keeps each page's own column template and height, passed in
+       as --cols / --h. On narrow screens a fixed 3-4 column row turns each
+       photo into a ~94px sliver, so below 900px the strip becomes two
+       columns of 4:3 cells and drops the fixed height entirely; an odd
+       last photo spans the full width. */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: var(--cols);
+      height: var(--h);
+      overflow: hidden;
+    }
+    .photo-strip > div { overflow: hidden; }
+    .photo-strip img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s;
+    }
+    @media (hover: hover) { .photo-strip img:hover { transform: scale(1.06); } }
+    @media (max-width: 900px) {
+      .photo-strip {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+      }
+      .photo-strip > div { aspect-ratio: 4 / 3; }
+      .photo-strip.strip-odd > div:last-child {
+        grid-column: span 2;
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    /* ─── Section sub-nav ───────────────────────────────────────── */
+    .subnav { background: var(--cream-2); border-bottom: 1px solid var(--cream-3); }
+    .subnav-inner { max-width: 1100px; margin: 0 auto; padding: 0.85rem 2rem; display: flex; align-items: center; gap: 0.9rem 1.6rem; flex-wrap: wrap; }
+    .subnav-label { font-size: 0.66rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
+    .subnav a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.02em; color: var(--text-muted); transition: color 0.2s; padding-bottom: 2px; }
+    .subnav a:hover { color: var(--green-deep); }
+    .subnav a.active { color: var(--green-deep); border-bottom: 1.5px solid var(--gold); }
   </style>
 </head>
 <body>
 
   <!-- ─── Nav ──────────────────────────────────────────────────── -->
-  <nav>
+  <nav id="nav">
     <a class="nav-brand" href="index.html">Keala M. Wall</a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="land.html">Buy Land</a></li>
-      <li><a href="ranches.html">Ranches</a></li>
-      <li><a href="off-grid.html" class="active">Off-Grid</a></li>
+      <li><a href="land.html" class="active">Buy Land</a></li>
       <li><a href="relocation.html">Relocate</a></li>
-      <li><a href="areas.html">Areas</a></li>
+      <li><a href="legacy.html">Homes</a></li>
+      <li><a href="guides.html">Guides</a></li>
     </ul>
     <div class="nav-right">
       <a href="tel:8085153081" class="nav-phone">808-515-3081</a>
       <a href="index.html#contact" class="nav-cta">Talk Story</a>
+      <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="mm-home" href="index.html">Home</a>
+    <div class="mm-group">
+      <a class="mm-primary" href="land.html">Buy Land</a>
+      <a href="ranches.html">Ranches &amp; Farms</a>
+      <a href="off-grid.html">Off-Grid Living</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="relocation.html">Relocate</a>
+      <a href="areas.html">Area Guides</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="legacy.html">Homes</a>
+    </div>
+    <div class="mm-group">
+      <a class="mm-primary" href="guides.html">Guides &amp; Downloads</a>
+    </div>
+    <div class="mm-foot">
+      <a href="index.html#contact" class="mm-cta">Talk Story</a>
+      <a href="tel:8085153081" class="mm-phone">808-515-3081</a>
+    </div>
+  </div>
 
   <!-- ─── Hero ──────────────────────────────────────────────────── -->
   <section class="hero">
@@ -323,6 +413,15 @@
       <p class="hero-sub">Living without county water or utility power is completely normal in rural Hawai'i — here's what it actually means and what it actually costs.</p>
     </div>
   </section>
+
+  <div class="subnav">
+    <div class="subnav-inner">
+      <span class="subnav-label">Land</span>
+      <a href="land.html">Buying Land</a>
+      <a href="ranches.html">Ranches &amp; Farms</a>
+      <a href="off-grid.html" class="active">Off-Grid Living</a>
+    </div>
+  </div>
 
   <!-- ─── Intro ─────────────────────────────────────────────────── -->
   <section class="intro">
@@ -424,7 +523,7 @@
     <div class="wrap">
       <span class="eyebrow">System Two</span>
       <h2 class="section-title">Solar Power — Grid-Tied vs. Off-Grid</h2>
-      <p class="section-lead">Hawai'i has the highest electricity rates in the United States — averaging $0.38–$0.45/kWh, compared to the national average of about $0.16/kWh. That makes solar economically compelling everywhere on the island, but the system design differs significantly between grid-tied and off-grid properties.</p>
+      <p class="section-lead">Hawai'i has the highest electricity rates in the United States — about 43¢/kWh as of 2026, versus a national average around 18¢. That makes solar economically compelling everywhere on the island, but the system design differs significantly between grid-tied and off-grid properties.</p>
       <div class="solar-grid">
         <div>
           <p>An off-grid solar system must supply 100% of your electricity needs — no utility backup to draw from at night or on cloudy days. This means larger panel arrays, larger battery banks, and a backup generator for extended low-sun periods. The system requires more planning, more upfront cost, and more ongoing maintenance than a grid-tied system.</p>
@@ -446,7 +545,7 @@
               <div class="cost">System cost: $25,000–$55,000</div>
             </div>
             <div class="solar-tip">
-              <strong>Pro tip:</strong> Solar installation in Hawai'i typically costs $2.50–$4.00 per watt installed for panels. A 5kW system runs $12,000–$20,000 in panels alone — before batteries ($8,000–$15,000 for lithium) and inverter. Federal solar tax credits (currently 30%) apply and can significantly offset costs. Always get multiple bids from licensed Hawaii contractors.
+              <strong>Pro tip:</strong> Solar installation in Hawai'i typically costs $2.50–$4.00 per watt installed for panels. A 5kW system runs $12,000–$20,000 in panels alone — before batteries ($8,000–$15,000 for lithium) and inverter. The federal residential solar credit ended for systems installed after December 31, 2025 — but Hawai'i's state credit (35% of system cost, up to $5,000) still applies as of 2026; confirm current rules with your tax professional. Always get multiple bids from licensed Hawaii contractors.
             </div>
           </div>
         </div>
@@ -463,7 +562,7 @@
         <div>
           <p>Off-grid homes on the Big Island use one of two waste systems: a permitted septic system, or — on older properties — a cesspool. A septic system uses a tank to separate solids from liquid waste, then releases treated effluent into a drain field in the soil. A cesspool simply collects waste in an unlined pit.</p>
           <p>Cesspools are an environmental and health hazard. Hawai'i has more cesspools per capita than any other state, and they are a significant source of nutrient pollution in coastal waters. The state legislature recognized this and passed Act 125 in 2017, requiring all cesspools statewide to be converted to septic systems or alternative wastewater systems by January 1, 2050.</p>
-          <p>If you are buying a property with a cesspool, you are also buying a future obligation to upgrade it — costs typically range from $15,000–$40,000 depending on lot size, soil conditions, and the scope of the drain field needed. Factor that into your offer price.</p>
+          <p>If you are buying a property with a cesspool, you are also buying a future obligation to upgrade it — costs typically run $30,000–$50,000 — sometimes more — depending on lot size, soil conditions, and the scope of the drain field needed. Factor that into your offer price.</p>
           <p>New construction and major renovations already require septic systems — cesspools cannot be installed on any property where construction permits are pulled after Act 125. If you are buying land to build, you'll need a percolation test by a licensed engineer before the county will approve a building permit.</p>
         </div>
         <div>
@@ -471,7 +570,7 @@
             <span class="deadline-badge">State Deadline: 2050</span>
             <h3>Cesspool Conversion: What to Expect</h3>
             <p>All cesspools in Hawai'i must be upgraded or decommissioned by January 1, 2050. Priorities are set by proximity to sensitive coastal areas and drinking water sources — some properties may be required to convert earlier.</p>
-            <p><strong>Conversion cost:</strong> $15,000–$40,000+ depending on lot size and conditions. The state has offered financial assistance programs — check with Hawaii Department of Health for current status of any available grants or low-interest loans.</p>
+            <p><strong>Conversion cost:</strong> $30,000–$50,000+ depending on lot size and conditions. The state has offered financial assistance programs — check with Hawaii Department of Health for current status of any available grants or low-interest loans.</p>
             <p><strong>Process:</strong> Hire a licensed professional engineer to assess the lot, design the system, and apply for a permit through Hawaii County Department of Environmental Management. Timeline from application to installation: typically 6–12 months.</p>
             <p>If you're buying a property with a cesspool near a shoreline, stream, or in an area the county has flagged for priority — budget for conversion soon, not in 2049.</p>
           </div>
@@ -512,11 +611,11 @@
   </section>
 
   <!-- ─── Photo Strip ──────────────────────────────────────────── -->
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;height:260px;overflow:hidden;">
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/forest-path.jpg" alt="Old-growth forest, Big Island" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block;"></div>
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/fern-golden-hour.jpg" alt="Native fern at golden hour" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/ferns-lava.jpg" alt="Ferns growing from lava" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
-    <div style="overflow:hidden;"><img loading="lazy" decoding="async" src="photos/driftwood-lava.jpg" alt="Raw lava land, Big Island" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
+  <div class="photo-strip" style="--cols:1fr 1fr 1fr 1fr;--h:260px">
+    <div><img loading="lazy" decoding="async" src="photos/forest-path.jpg" alt="Old-growth forest, Big Island" style="object-position:center 25%"></div>
+    <div><img loading="lazy" decoding="async" src="photos/fern-golden-hour.jpg" alt="Native fern at golden hour"></div>
+    <div><img loading="lazy" decoding="async" src="photos/ferns-lava.jpg" alt="Ferns growing from lava"></div>
+    <div><img loading="lazy" decoding="async" src="photos/driftwood-lava.jpg" alt="Raw lava land, Big Island"></div>
   </div>
 
   <!-- ─── Best Areas ────────────────────────────────────────────── -->
@@ -615,7 +714,7 @@
               <td class="cost-range">$12,000</td>
               <td class="cost-range">$32,000</td>
               <td>
-                Panel installation. Lithium battery bank adds $8,000–$15,000. 30% federal tax credit applies.
+                Panel installation. Lithium battery bank adds $8,000–$15,000. Hawai'i's 35% state tax credit (capped at $5,000) still applies as of 2026; the federal residential credit ended after 2025.
               </td>
             </tr>
             <tr>
@@ -701,6 +800,8 @@
           <li><a href="off-grid.html">Off-Grid</a></li>
           <li><a href="relocation.html">Relocate</a></li>
           <li><a href="areas.html">Areas</a></li>
+          <li><a href="legacy.html">Legacy</a></li>
+          <li><a href="guides.html">Guides</a></li>
         </ul>
       </div>
 
@@ -727,5 +828,29 @@
     </div>
   </footer>
 
+  <script>
+    // Mobile hamburger menu.
+    (function () {
+      var nav = document.getElementById('nav');
+      var burger = document.querySelector('.nav-burger');
+      var menu = document.getElementById('mobileMenu');
+      if (!burger || !menu) return;
+      burger.addEventListener('click', function () {
+        var open = menu.classList.toggle('open');
+        burger.classList.toggle('open', open);
+        if (nav) nav.classList.toggle('menu-open', open);
+        burger.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      menu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          menu.classList.remove('open'); burger.classList.remove('open');
+          if (nav) nav.classList.remove('menu-open');
+          burger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
