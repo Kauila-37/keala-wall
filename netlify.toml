@@ -14,14 +14,101 @@
 [context.deploy-preview]
   command = "printf '/*\\n  X-Robots-Tag: noindex\\n' > _headers"
 
-# The two prose "guides" were duplicates of the free land/relocation pages and
-# were removed 2026-07-23; send any bookmarked links to the real pages.
+# ─── Retired pages ──────────────────────────────────────────────────
+# 2026-07-24: the site was restructured onto the brand's three pillars.
+# Six content pages became three, and the deep-dives that used to have
+# their own URLs are now anchored sections of the pillar page that
+# absorbed them. Each old URL points at the exact section that replaced
+# it, so nothing 404s and no one lands at the top of a very long page
+# wondering where their content went.
+
+[[redirects]]
+  from = "/relocation.html"
+  to = "/life"
+  status = 301
+
+[[redirects]]
+  from = "/areas.html"
+  to = "/life#districts"
+  status = 301
+
+[[redirects]]
+  from = "/ranches.html"
+  to = "/land#ranches"
+  status = 301
+
+[[redirects]]
+  from = "/off-grid.html"
+  to = "/land#off-grid"
+  status = 301
+
+# The two prose "guides" were duplicates of the free land/relocation pages
+# and were removed 2026-07-23; send any bookmarked links to the real pages.
 [[redirects]]
   from = "/guide-land-buying.html"
-  to = "/land.html"
+  to = "/land"
   status = 301
 
 [[redirects]]
   from = "/guide-relocation.html"
-  to = "/relocation.html"
+  to = "/life"
+  status = 301
+
+# ─── Extensionless URLs ─────────────────────────────────────────────
+# Netlify already serves life.html at /life. These send the .html form to
+# the clean one, so no page has two indexable addresses.
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/life.html"
+  to = "/life"
+  status = 301
+
+[[redirects]]
+  from = "/land.html"
+  to = "/land"
+  status = 301
+
+[[redirects]]
+  from = "/legacy.html"
+  to = "/legacy"
+  status = 301
+
+[[redirects]]
+  from = "/listings.html"
+  to = "/listings"
+  status = 301
+
+[[redirects]]
+  from = "/guides.html"
+  to = "/guides"
+  status = 301
+
+[[redirects]]
+  from = "/checklist-land-due-diligence.html"
+  to = "/checklist-land-due-diligence"
+  status = 301
+
+[[redirects]]
+  from = "/factsheet-kona.html"
+  to = "/factsheet-kona"
+  status = 301
+
+[[redirects]]
+  from = "/factsheet-hilo.html"
+  to = "/factsheet-hilo"
+  status = 301
+
+[[redirects]]
+  from = "/factsheet-puna.html"
+  to = "/factsheet-puna"
+  status = 301
+
+[[redirects]]
+  from = "/factsheet-waimea.html"
+  to = "/factsheet-waimea"
   status = 301
