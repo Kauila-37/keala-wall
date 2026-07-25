@@ -93,22 +93,57 @@
   to = "/checklist-land-due-diligence"
   status = 301
 
+# ─── Area fact sheets ───────────────────────────────────────────────
+# 2026-07-24: fact-sheet slugs realigned to the island's nine judicial
+# districts (Kailua-Kona → north-kona, Hilo → south-hilo, Waimea →
+# south-kohala). Old clean URLs and .html forms 301 to the new slug so
+# prior links, bookmarks, and indexed pages never 404. Puna was already
+# a judicial district and is unchanged.
+
+# Kailua-Kona → North Kona
+[[redirects]]
+  from = "/factsheet-kona"
+  to = "/factsheet-north-kona"
+  status = 301
 [[redirects]]
   from = "/factsheet-kona.html"
-  to = "/factsheet-kona"
+  to = "/factsheet-north-kona"
+  status = 301
+[[redirects]]
+  from = "/factsheet-north-kona.html"
+  to = "/factsheet-north-kona"
   status = 301
 
+# Hilo → South Hilo
+[[redirects]]
+  from = "/factsheet-hilo"
+  to = "/factsheet-south-hilo"
+  status = 301
 [[redirects]]
   from = "/factsheet-hilo.html"
-  to = "/factsheet-hilo"
+  to = "/factsheet-south-hilo"
+  status = 301
+[[redirects]]
+  from = "/factsheet-south-hilo.html"
+  to = "/factsheet-south-hilo"
   status = 301
 
+# Waimea / Kamuela → South Kohala
+[[redirects]]
+  from = "/factsheet-waimea"
+  to = "/factsheet-south-kohala"
+  status = 301
+[[redirects]]
+  from = "/factsheet-waimea.html"
+  to = "/factsheet-south-kohala"
+  status = 301
+[[redirects]]
+  from = "/factsheet-south-kohala.html"
+  to = "/factsheet-south-kohala"
+  status = 301
+
+# Puna (unchanged — already a judicial district)
 [[redirects]]
   from = "/factsheet-puna.html"
   to = "/factsheet-puna"
-  status = 301
-
-[[redirects]]
-  from = "/factsheet-waimea.html"
-  to = "/factsheet-waimea"
   status = 301
