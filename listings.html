@@ -252,11 +252,11 @@
 </svg>
           </div>
           <aside class="island-card" id="islandCard" aria-live="polite">
-            <div class="ic-media" id="icMedia"></div>
+            <div class="ic-media" id="icMedia" style="background-image:url('/photos/aerial-coastline.jpg')"></div>
             <div class="ic-body" id="icBody">
               <span class="ic-eyebrow">Featured listing</span>
               <h3 class="ic-title">Pick a district</h3>
-              <p class="ic-note">Tap any district on the map to see this month&rsquo;s featured home there.</p>
+              <p class="ic-note">Tap any district on the map to see this month&#39;s featured home there.</p>
             </div>
           </aside>
         </div>
@@ -360,7 +360,7 @@
         <div class="listing-empty" id="south-kona">
           <div>
             <h3>South Kona</h3>
-            <p>Captain Cook, Kealakekua and Ho‘okena — coffee country, 1,500–3,000 ft. No featured home here this month.</p>
+            <p>Captain Cook, Honaunau and Ho'okena — coffee country, 1,500–3,000 ft. No featured home here this month.</p>
           </div>
           <div class="listing-empty-links">
             <a class="text-link" href="/life#south-kona">Area Guide</a>
@@ -382,7 +382,7 @@
         <div class="listing-empty" id="hamakua">
           <div>
             <h3>Hāmākua</h3>
-            <p>Honoka‘a and Pa‘auilo — sea cliffs, deep soil, small towns. No featured home here this month.</p>
+            <p>Honoka'a and Pa'auilo — sea cliffs, deep soil, small towns. No featured home here this month.</p>
           </div>
           <div class="listing-empty-links">
             <a class="text-link" href="/life#hamakua">Area Guide</a>
@@ -393,7 +393,7 @@
         <div class="listing-empty" id="north-hilo">
           <div>
             <h3>North Hilo</h3>
-            <p>Hakalau and Laupāhoehoe — the green, rural coast north of Hilo. No featured home here this month.</p>
+            <p>Laupāhoehoe and Papa'aloa — the green, rural coast north of Hilo. No featured home here this month.</p>
           </div>
           <div class="listing-empty-links">
             <a class="text-link" href="/life#north-hilo">Area Guide</a>
@@ -415,7 +415,7 @@
         <div class="listing-empty" id="puna">
           <div>
             <h3>Puna</h3>
-            <p>Pāhoa, Kea‘au, Mountain View and Volcano Village — lowest prices, real volcanic risk. No featured home here this month.</p>
+            <p>Pahoa, Kea'au, Mountain View and Volcano Village — lowest prices, real volcanic risk. No featured home here this month.</p>
           </div>
           <div class="listing-empty-links">
             <a class="text-link" href="/life#puna">Area Guide</a>
@@ -425,8 +425,8 @@
 
         <div class="listing-empty" id="kau">
           <div>
-            <h3>Ka‘ū</h3>
-            <p>Nā‘ālehu, Pāhala and Ocean View — the most remote district on the island. No featured home here this month.</p>
+            <h3>Ka'ū</h3>
+            <p>Nā'ālehu, Pahala and Ocean View — the most remote district on the island. No featured home here this month.</p>
           </div>
           <div class="listing-empty-links">
             <a class="text-link" href="/life#kau">Area Guide</a>
@@ -565,7 +565,7 @@
     if (!map) return;
     var LABELS = {
       'north-kohala':'North Kohala','south-kohala':'South Kohala','hamakua':'Hāmākua',
-      'north-hilo':'North Hilo','south-hilo':'South Hilo','puna':'Puna','kau':'Ka‘ū',
+      'north-hilo':'North Hilo','south-hilo':'South Hilo','puna':'Puna','kau':'Ka\'ū',
       'south-kona':'South Kona','north-kona':'North Kona'
     };
     var icMedia = document.getElementById('icMedia');
@@ -609,9 +609,9 @@
         icBody.innerHTML =
           '<span class="ic-eyebrow">' + name + '</span>' +
           '<h3 class="ic-title">No featured home this month</h3>' +
-          '<p class="ic-note">Tell Keala what you&rsquo;re looking for in ' + name +
-            ' and she&rsquo;ll send what&rsquo;s active.</p>' +
-          '<a class="btn-primary ic-btn" href="#contact">Ask what&rsquo;s active</a>';
+          '<p class="ic-note">Tell Keala what you&#39;re looking for in ' + name +
+            ' and she&#39;ll send what&#39;s active.</p>' +
+          '<a class="btn-primary ic-btn" href="#contact">Ask what&#39;s active</a>';
       }
     }
 
