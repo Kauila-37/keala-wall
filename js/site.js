@@ -41,6 +41,46 @@
     });
   }
 
+  /* ─── Floating mobile actions: Talk Story + back to top ────────────
+     Puts the primary action in the thumb zone on long pages, and a
+     labelled back-to-top in the opposite corner. CSS shows these on
+     mobile only; here we build them and toggle visibility on scroll. */
+  (function () {
+    var wrap = document.createElement('div');
+    wrap.className = 'floaters';
+
+    var top = document.createElement('button');
+    top.type = 'button';
+    top.className = 'float-top';
+    top.setAttribute('aria-label', 'Back to top of page');
+    top.innerHTML = '&uarr; Top';
+    top.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    var cta = document.createElement('a');
+    cta.className = 'float-cta';
+    // Prefer the on-page contact section; fall back to a direct call.
+    cta.href = document.getElementById('contact') ? '#contact' : 'tel:8085153081';
+    cta.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>Talk Story';
+
+    wrap.appendChild(top);
+    wrap.appendChild(cta);
+    document.body.appendChild(wrap);
+
+    var visible = false;
+    var update = function () {
+      var scrolled   = window.scrollY > window.innerHeight * 0.6;
+      // Don't cover the contact section / footer at the very bottom.
+      var nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 140;
+      var show = scrolled && !nearBottom;
+      if (show !== visible) { visible = show; wrap.classList.toggle('is-visible', show); }
+    };
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+    update();
+  })();
+
   /* ─── Sub-nav scroll-spy ───────────────────────────────────────────
      Marks the link whose section currently sits under the header. Uses
      scroll position rather than IntersectionObserver so that tall
@@ -60,6 +100,44 @@
     })
     .filter(Boolean);
   if (!targets.length) return;
+
+  /* ─── Jump-to-section dropdown (mobile) ────────────────────────────
+     On a phone the sub-nav strip only shows two or three of a dozen-plus
+     sections. This adds an "On this page" toggle (CSS turns the strip
+     into the dropdown it opens) so every section is one tap away. The
+     scroll-spy below still marks the active link, which the open menu
+     highlights. */
+  (function () {
+    var inner = subnav.querySelector('.subnav-inner');
+    var list  = subnav.querySelector('.subnav-links');
+    if (!inner || !list) return;
+
+    var toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'subnav-toggle';
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.innerHTML = '<span>On this page</span>' +
+                       '<span class="subnav-toggle-chev" aria-hidden="true">&#9662;</span>';
+    inner.insertBefore(toggle, list);
+
+    var close = function () {
+      subnav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = !subnav.classList.contains('open');
+      subnav.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    links.forEach(function (a) { a.addEventListener('click', close); });
+    document.addEventListener('click', function (e) {
+      if (subnav.classList.contains('open') && !subnav.contains(e.target)) close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') close();
+    });
+  })();
 
   var current = null;
   var ticking = false;
