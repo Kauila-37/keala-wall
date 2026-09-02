@@ -3,745 +3,333 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buying Land on Hawai'i Island | Keala M. Wall — Realtor</title>
-  <meta name="description" content="A complete guide to buying land on the Big Island of Hawai'i — lava zones, water systems, agricultural zoning, and due diligence from a local expert.">
-  <link rel="canonical" href="https://lifelandlegacyhi.com/land.html">
+  <title>Buying Land on Hawai'i Island — Lava Zones, Water, Ag Zoning, Off-Grid &amp; Ranches | Keala M. Wall</title>
+  <meta name="description" content="Everything that decides whether a Big Island parcel is buildable: the nine lava zones, county water vs catchment vs wells, agricultural zoning, off-grid systems and costs, ranch and farm land, and what to verify before you make an offer.">
+  <link rel="canonical" href="https://lifelandlegacyhi.com/land">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Life, Land &amp; Legacy — Keala M. Wall">
   <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://lifelandlegacyhi.com/land.html">
+  <meta property="og:url" content="https://lifelandlegacyhi.com/land">
   <meta property="og:title" content="Buying Land on Hawai'i Island | Keala M. Wall — Realtor">
-  <meta property="og:description" content="A complete guide to buying land on the Big Island of Hawai'i — lava zones, water systems, agricultural zoning, and due diligence from a local expert.">
+  <meta property="og:description" content="Everything that decides whether a Big Island parcel is buildable: lava zones, water, agricultural zoning, off-grid systems, ranch land, and due diligence.">
   <meta property="og:image" content="https://lifelandlegacyhi.com/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Aerial view of the Hawai'i Island coastline, where green upland meets lava rock and open ocean">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Buying Land on Hawai'i Island | Keala M. Wall — Realtor">
-  <meta name="twitter:description" content="A complete guide to buying land on the Big Island of Hawai'i — lava zones, water systems, agricultural zoning, and due diligence from a local expert.">
+  <meta name="twitter:description" content="Everything that decides whether a Big Island parcel is buildable: lava zones, water, agricultural zoning, off-grid systems, ranch land, and due diligence.">
   <meta name="twitter:image" content="https://lifelandlegacyhi.com/og-image.jpg">
 
-  <link rel="preload" as="image" href="photos/lava-outcrops-trees.jpg">
+  <link rel="preload" as="image" href="/photos/lava-outcrops-trees.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    img { display: block; max-width: 100%; }
+    /* Page-specific sections. Shared tokens, nav, sub-nav, CTA and footer
+       come from /css/site.css. This page merges what used to be three
+       pages — land, ranches and off-grid — so the section styles from all
+       three live here, de-duplicated. */
 
-    :root {
-      --cream:       #faf7f2;
-      --cream-2:     #f0e9d8;
-      --cream-3:     #e5dbc8;
-      --green-deep:  #1a2e20;
-      --green-mid:   #2d5235;
-      --green-sage:  #5a7e5d;
-      --green-light: #8aad8d;
-      --gold:        #a07828;
-      --gold-warm:   #c4982e;
-      --gold-light:  #e0b84a;
-      --text-dark:   #1c2b1e;
-      --text-body:   #3d4e3f;
-      --text-muted:  #6b7d6d;
-      --white:       #ffffff;
-    }
+    .hero-bg { background-image: url('/photos/lava-outcrops-trees.jpg'); background-position: center 40%; }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--cream);
-      color: var(--text-dark);
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-    h1, h2, h3, h4 {
-      font-family: 'Cormorant Garamond', serif;
-      line-height: 1.15;
-      color: var(--green-deep);
-    }
-    a { color: inherit; text-decoration: none; }
-    p { line-height: 1.75; color: var(--text-body); }
-
-    /* ─── Nav ──────────────────────────────────────────────────── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 200;
-      height: 68px;
-      padding: 0 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(250, 247, 242, 0.97);
-      border-bottom: 1px solid rgba(0,0,0,0.07);
-      backdrop-filter: blur(8px);
-    }
-    .nav-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-weight: 400;
-      color: var(--green-deep);
-      letter-spacing: 0.04em;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      transition: color 0.2s;
-    }
-    .nav-links a:hover,
-    .nav-links a.active { color: var(--green-deep); }
-    .nav-right { display: flex; align-items: center; gap: 2rem; }
-    .nav-phone {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      letter-spacing: 0.02em;
-    }
-    .nav-cta {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold);
-      border-bottom: 1px solid currentColor;
-      padding-bottom: 1px;
-      transition: color 0.2s;
-    }
-    .nav-cta:hover { color: var(--gold-warm); }
-    @media (max-width: 1000px) { .nav-links { display: none; } }
-    @media (max-width: 640px) { .nav-phone { display: none; } nav { padding: 0 1.5rem; } }
-
-    /* ─── Hero ──────────────────────────────────────────────────── */
-    .hero {
-      position: relative;
-      min-height: 60vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 9rem 2rem 5rem;
-      overflow: hidden;
-      background-color: var(--green-deep);
-    }
-    .hero-bg {
-      position: absolute; inset: 0;
-      background-image: url('photos/lava-outcrops-trees.jpg');
-      background-size: cover;
-      background-position: center 40% 40%;
-      opacity: 0.45;
-    }
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to bottom, rgba(14,28,16,0.55) 0%, rgba(8,20,10,0.7) 100%);
-    }
-    .hero-inner {
-      position: relative; z-index: 2;
-      max-width: 720px;
-    }
-    .hero-eyebrow {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold-warm);
-      margin-bottom: 1.2rem;
-    }
-    .hero h1 {
-      font-size: clamp(2.4rem, 6vw, 4rem);
-      font-weight: 500;
-      color: white;
-      margin-bottom: 1.2rem;
-    }
-    .hero-sub {
-      font-size: 1.05rem;
-      color: rgba(255,255,255,0.82);
-      max-width: 560px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
-
-    /* ─── Shared Layout ─────────────────────────────────────────── */
-    .wrap { max-width: 1100px; margin: 0 auto; }
-    section { padding: 6rem 2.5rem; }
-    .eyebrow {
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.8rem;
-    }
-    .section-title {
-      font-size: clamp(1.9rem, 4vw, 2.8rem);
-      font-weight: 500;
-      margin-bottom: 1.25rem;
-    }
-    .section-lead {
-      font-size: 1.05rem;
-      color: var(--text-body);
-      line-height: 1.75;
-      max-width: 700px;
-      margin-bottom: 3rem;
-    }
-    .btn-primary {
-      display: inline-block;
-      background: var(--gold);
-      color: white;
-      padding: 0.85rem 2rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: background 0.2s;
-    }
-    .btn-primary:hover { background: var(--gold-warm); }
-    .btn-ghost {
-      display: inline-block;
-      border: 1.5px solid rgba(255,255,255,0.55);
-      color: rgba(255,255,255,0.9);
-      padding: 0.85rem 2rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .btn-ghost:hover { border-color: white; color: white; }
-
-    /* ─── Intro Section ─────────────────────────────────────────── */
+    /* ─── Buying Land (intro) ────────────────────────────────────── */
     .intro { background: var(--cream); }
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-    }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
     .intro-grid p + p { margin-top: 1.1rem; }
-    .intro-stat-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-    .intro-stat {
-      background: var(--cream-2);
-      border-left: 3px solid var(--gold);
-      padding: 1.25rem 1.5rem;
-      border-radius: 0 6px 6px 0;
-    }
-    .intro-stat-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      font-weight: 600;
-      color: var(--green-deep);
-      line-height: 1;
-    }
-    .intro-stat-label {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-top: 0.3rem;
-      line-height: 1.4;
-    }
+    .intro-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+    .intro-stat { background: var(--cream-2); border-left: 3px solid var(--gold); padding: 1.25rem 1.5rem; border-radius: 0 6px 6px 0; }
+    .intro-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 600; color: var(--green-deep); line-height: 1; }
+    .intro-stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem; line-height: 1.4; }
 
-    /* ─── Lava Zones ────────────────────────────────────────────── */
+    /* ─── Lava Zones ─────────────────────────────────────────────── */
     .lava { background: var(--green-deep); padding: 6rem 2.5rem; }
     .lava .eyebrow { color: var(--gold-warm); }
     .lava .section-title { color: white; }
     .lava .section-lead { color: rgba(255,255,255,0.72); }
-    .lava-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-      margin-top: 0.5rem;
-    }
-    .lava-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 8px;
-      padding: 1.75rem;
-      transition: background 0.2s;
-    }
-    .lava-card:hover { background: rgba(255,255,255,0.09); }
-    .lava-zone-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.9rem;
-    }
-    .lava-zone-dot {
-      width: 10px; height: 10px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    .dot-red    { background: #e05252; }
-    .dot-orange { background: #e07c2e; }
-    .dot-yellow { background: #c4ac2e; }
-    .dot-sage   { background: #5a7e5d; }
-    .dot-green  { background: #3d7a46; }
-    .lava-zone-num {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-    }
-    .lava-card h3 {
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: white;
-      margin-bottom: 0.6rem;
-    }
-    .lava-card p {
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.65);
-      line-height: 1.65;
-    }
-    .lava-note {
-      margin-top: 2.5rem;
-      padding: 1.5rem 2rem;
-      background: rgba(160,120,40,0.15);
-      border-left: 3px solid var(--gold-warm);
-      border-radius: 0 6px 6px 0;
-    }
-    .lava-note p {
-      font-size: 0.92rem;
-      color: rgba(255,255,255,0.72);
-      line-height: 1.65;
-    }
+    .lava-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .lava-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1.5rem; }
+    .lava-zone-num { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
+    .lava-zone-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .dot-red { background: #c0392b; }
+    .dot-orange { background: #d68910; }
+    .dot-yellow { background: #d4ac0d; }
+    .dot-sage { background: #7d9d80; }
+    .dot-green { background: #5a7e5d; }
+    .lava-zone-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.85); }
+    .lava-card h3 { font-size: 1.05rem; font-weight: 500; color: white; margin-bottom: 0.45rem; }
+    .lava-card p { font-size: 0.85rem; color: rgba(255,255,255,0.65); line-height: 1.6; }
+    .lava-note { margin-top: 2.5rem; padding: 1.5rem 1.75rem; background: rgba(160,120,40,0.16); border-left: 3px solid var(--gold-warm); border-radius: 0 6px 6px 0; }
+    .lava-note p { font-size: 0.9rem; color: rgba(255,255,255,0.78); line-height: 1.7; }
     .lava-note strong { color: var(--gold-warm); }
 
-    /* ─── Water Section ──────────────────────────────────────────── */
+    /* ─── Water ──────────────────────────────────────────────────── */
     .water { background: var(--cream-2); }
-    .water-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 0.5rem;
-    }
-    .water-card {
-      background: white;
-      border-radius: 8px;
-      padding: 2rem;
-      border-top: 3px solid var(--green-sage);
-    }
-    .water-card h3 {
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: var(--green-deep);
-      margin-bottom: 0.6rem;
-    }
-    .water-card p {
-      font-size: 0.88rem;
-      line-height: 1.65;
-      color: var(--text-body);
-    }
+    .water-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 0.5rem; }
+    .water-card { background: white; border-radius: 8px; padding: 2rem 1.75rem; }
+    .water-tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.65rem; border-radius: 3px; margin-bottom: 0.9rem; }
+    .tag-available { background: #e3f0e4; color: #2d5235; }
+    .tag-common { background: #f0e9d8; color: #8a6a20; }
+    .tag-limited { background: #f5e6e3; color: #9b4a35; }
+    .water-card h3 { font-size: 1.2rem; font-weight: 500; color: var(--green-deep); margin-bottom: 0.75rem; }
+    .water-card p { font-size: 0.87rem; color: var(--text-body); line-height: 1.65; }
     .water-card p + p { margin-top: 0.75rem; }
-    .water-tag {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.25rem 0.65rem;
-      border-radius: 3px;
-      margin-bottom: 1rem;
-    }
-    .tag-available { background: #d4edda; color: #1a5c29; }
-    .tag-common    { background: #fff3cd; color: #856404; }
-    .tag-limited   { background: #f8d7da; color: #721c24; }
+    .inline-jump { color: var(--gold); border-bottom: 1px solid currentColor; font-weight: 500; }
+    .inline-jump:hover { color: var(--gold-warm); }
 
-    /* ─── Zoning Section ─────────────────────────────────────────── */
+    /* ─── Zoning &amp; Ag ────────────────────────────────────────── */
     .zoning { background: var(--cream); }
-    /* The table can't shrink below its content width, so let it scroll
-       inside its own box rather than pushing the whole page sideways. */
-    .table-scroll {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      margin-top: 0.5rem;
-    }
-    .zoning-table {
-      width: 100%;
-      /* Without a floor the notes column collapses to one word per line and
-         rows grow enormously tall. Better to keep columns readable and let
-         the wrapper scroll. */
-      min-width: 34rem;
-      border-collapse: collapse;
-      font-size: 0.9rem;
-    }
-    .zoning-table th {
-      text-align: left;
-      padding: 0.85rem 1.25rem;
-      background: var(--green-deep);
-      color: rgba(255,255,255,0.85);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-    .zoning-table td {
-      padding: 1rem 1.25rem;
-      border-bottom: 1px solid var(--cream-3);
-      color: var(--text-body);
-      line-height: 1.5;
-      vertical-align: top;
-    }
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 0.5rem; }
+    .zoning-table { width: 100%; min-width: 34rem; border-collapse: collapse; }
+    .zoning-table th { text-align: left; padding: 0.85rem 1.25rem; background: var(--green-deep); color: rgba(255,255,255,0.85); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+    .zoning-table td { padding: 1rem 1.25rem; border-bottom: 1px solid var(--cream-3); font-size: 0.9rem; color: var(--text-body); vertical-align: top; line-height: 1.55; }
     .zoning-table tr:last-child td { border-bottom: none; }
     .zoning-table tr:nth-child(even) td { background: var(--cream-2); }
-    .zone-code {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--green-deep);
-    }
-    .zoning-note {
-      margin-top: 2rem;
-      padding: 1.5rem 2rem;
-      background: var(--cream-2);
-      border-left: 3px solid var(--green-sage);
-      border-radius: 0 6px 6px 0;
-      font-size: 0.9rem;
-      color: var(--text-body);
-      line-height: 1.65;
-    }
+    .zone-code { font-weight: 600; color: var(--green-deep); white-space: nowrap; }
+    .zoning-note { margin-top: 2rem; font-size: 0.87rem; color: var(--text-muted); line-height: 1.7; max-width: 760px; }
 
-    /* ─── Checklist Section ──────────────────────────────────────── */
+    /* Agricultural tax rules, folded in from the old ranches page. */
+    .taxes { background: var(--cream-2); }
+    .taxes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-top: 0.5rem; }
+    .taxes-grid p + p { margin-top: 1rem; }
+    .tax-callout { background: white; border-radius: 8px; padding: 2.5rem; }
+    .tax-callout h3 { font-size: 1.3rem; font-weight: 500; color: var(--green-deep); margin-bottom: 1rem; }
+    .tax-rule { display: flex; gap: 1rem; margin-bottom: 1.1rem; align-items: flex-start; }
+    .tax-num { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--gold); line-height: 1; flex-shrink: 0; min-width: 2rem; }
+    .tax-desc { font-size: 0.87rem; color: var(--text-body); line-height: 1.6; }
+
+    /* ─── Off-Grid ───────────────────────────────────────────────── */
+    .og-intro { background: var(--green-deep); padding: 6rem 2.5rem; }
+    .og-intro .eyebrow { color: var(--gold-warm); }
+    .og-intro .section-title { color: white; }
+    .og-intro .intro-grid p { color: rgba(255,255,255,0.72); }
+    .reality-cards { display: flex; flex-direction: column; gap: 1.25rem; }
+    .reality-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.09); border-radius: 8px; border-left: 3px solid var(--gold-warm); padding: 1.4rem 1.6rem; }
+    .reality-card h4 { font-size: 1rem; font-weight: 600; color: white; margin-bottom: 0.3rem; }
+    .reality-card p { font-size: 0.87rem; color: rgba(255,255,255,0.68); line-height: 1.6; }
+
+    /* Catchment detail — was the old off-grid page's own "water" section;
+       renamed so it can't collide with the county/well comparison above. */
+    .catchment { background: var(--cream); }
+    .water-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .water-detail p + p { margin-top: 1rem; }
+    .water-specs { background: var(--green-deep); border-radius: 8px; padding: 2rem; }
+    .water-specs h3 { font-size: 1.1rem; font-weight: 500; color: white; margin-bottom: 1.25rem; }
+    .spec-row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-label { font-size: 0.82rem; color: rgba(255,255,255,0.55); }
+    .spec-value { font-size: 0.9rem; color: white; font-weight: 500; text-align: right; max-width: 55%; }
+    .water-warning { margin-top: 2rem; padding: 1.25rem 1.5rem; background: var(--cream-2); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; font-size: 0.88rem; color: var(--text-body); line-height: 1.65; }
+    .water-warning strong { color: var(--gold); }
+
+    .solar { background: var(--cream-2); }
+    .solar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .solar-grid p + p { margin-top: 1rem; }
+    .solar-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .solar-option { background: white; border-radius: 8px; padding: 1.75rem; border-top: 3px solid var(--green-sage); }
+    .solar-option h4 { font-size: 1rem; font-weight: 600; color: var(--green-deep); margin-bottom: 0.75rem; }
+    .solar-option p { font-size: 0.87rem; color: var(--text-body); line-height: 1.65; }
+    .solar-option p + p { margin-top: 0.65rem; }
+    .solar-option .cost { margin-top: 1rem; font-size: 0.8rem; font-weight: 600; color: var(--gold); }
+    .solar-tip { margin-top: 1.5rem; grid-column: 1 / -1; padding: 1.25rem 1.5rem; background: var(--cream); border-left: 3px solid var(--green-sage); border-radius: 0 6px 6px 0; font-size: 0.88rem; color: var(--text-body); line-height: 1.65; }
+
+    .septic { background: var(--cream); }
+    .septic-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 4rem; align-items: start; }
+    .septic-grid p + p { margin-top: 1rem; }
+    .cesspool-box { background: var(--cream-2); border-radius: 8px; padding: 2rem; }
+    .cesspool-box h3 { font-size: 1.2rem; font-weight: 500; color: var(--green-deep); margin-bottom: 1rem; }
+    .cesspool-box p { font-size: 0.88rem; color: var(--text-body); line-height: 1.65; }
+    .cesspool-box p + p { margin-top: 0.75rem; }
+    .deadline-badge { display: inline-block; background: #fef3cd; border: 1px solid #ffc107; color: #856404; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 4px; margin-bottom: 1rem; }
+
+    .permits { background: var(--cream-2); }
+    .permits-list { margin-top: 0.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .permit-card { background: white; border-radius: 8px; padding: 1.75rem; }
+    .permit-card h3 { font-size: 1rem; font-weight: 600; color: var(--green-deep); margin-bottom: 0.75rem; }
+    .permit-card p { font-size: 0.87rem; color: var(--text-body); line-height: 1.65; }
+    .permit-card p + p { margin-top: 0.65rem; }
+
+    .og-areas { background: var(--green-deep); padding: 6rem 2.5rem; }
+    .og-areas .eyebrow { color: var(--gold-warm); }
+    .og-areas .section-title { color: white; }
+    .og-areas .section-lead { color: rgba(255,255,255,0.72); }
+    .og-area-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .og-area-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1.75rem; }
+    .og-area-card h3 { font-size: 1.15rem; font-weight: 500; color: white; margin-bottom: 0.6rem; }
+    .og-area-card p { font-size: 0.87rem; color: rgba(255,255,255,0.65); line-height: 1.65; }
+    .og-area-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .og-meta-pill { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; padding: 0.25rem 0.65rem; border-radius: 3px; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.6); }
+    .og-meta-pill.good { background: rgba(90,126,93,0.3); color: var(--green-light); }
+    .og-meta-pill.caution { background: rgba(160,120,40,0.25); color: var(--gold-warm); }
+
+    .costs { background: var(--cream); }
+    .cost-table { width: 100%; min-width: 34rem; border-collapse: collapse; }
+    .cost-table th { text-align: left; padding: 0.85rem 1.25rem; background: var(--green-deep); color: rgba(255,255,255,0.85); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+    .cost-table td { padding: 1rem 1.25rem; border-bottom: 1px solid var(--cream-3); font-size: 0.9rem; color: var(--text-body); vertical-align: top; line-height: 1.5; }
+    .cost-table tr:last-child td { border-bottom: none; background: var(--cream-3); font-weight: 600; color: var(--green-deep); }
+    .cost-table tr:nth-child(even) td { background: var(--cream-2); }
+    .cost-range { font-weight: 600; color: var(--green-deep); white-space: nowrap; }
+    .cost-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+    /* ─── Ranches &amp; Farms ────────────────────────────────────── */
+    .corridors { background: var(--cream-2); }
+    .corridors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 0.5rem; }
+    .corridor-card { background: white; border-radius: 8px; padding: 2rem 1.75rem; border-left: 4px solid var(--green-sage); box-shadow: 0 2px 16px rgba(0,0,0,0.04); transition: transform 0.2s, box-shadow 0.2s; }
+    .corridor-card:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+    .corridor-region { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+    .corridor-card h3 { font-size: 1.2rem; font-weight: 500; color: var(--green-deep); margin-bottom: 0.75rem; }
+    .corridor-card p { font-size: 0.87rem; color: var(--text-body); line-height: 1.65; }
+    .corridor-types { margin-top: 0.9rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .type-pill { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; padding: 0.25rem 0.65rem; border-radius: 3px; background: var(--cream-2); color: var(--green-mid); }
+
+    .prop-types { background: var(--green-deep); padding: 6rem 2.5rem; }
+    .prop-types .eyebrow { color: var(--gold-warm); }
+    .prop-types .section-title { color: white; }
+    .prop-types .section-lead { color: rgba(255,255,255,0.72); }
+    .prop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 0.5rem; }
+    .prop-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.09); border-radius: 8px; padding: 2rem; }
+    .prop-card h3 { font-size: 1.35rem; font-weight: 500; color: white; margin-bottom: 0.5rem; }
+    .prop-card p { font-size: 0.88rem; color: rgba(255,255,255,0.68); line-height: 1.65; }
+    .prop-price { margin-top: 1.1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; color: var(--gold-warm); font-weight: 500; }
+
+    /* Namespaced: the old ranches page called these .area-*, which now
+       means something different on /life. */
+    .ranch-areas { background: var(--cream); }
+    .ranch-area-items { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 2.5rem; }
+    .ranch-area-item { background: var(--cream-2); border-radius: 8px; padding: 2.5rem; display: grid; grid-template-columns: 280px 1fr; gap: 3rem; align-items: start; }
+    .ranch-area-name { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 500; color: var(--green-deep); margin-bottom: 0.3rem; line-height: 1.2; }
+    .ranch-area-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+    .ranch-area-quick dt { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-top: 0.75rem; }
+    .ranch-area-quick dd { font-size: 0.88rem; color: var(--text-body); line-height: 1.5; }
+    .ranch-area-body h4 { font-size: 1rem; font-weight: 600; color: var(--green-deep); margin-bottom: 0.5rem; margin-top: 1.25rem; }
+    .ranch-area-body h4:first-child { margin-top: 0; }
+    .ranch-area-body p { font-size: 0.9rem; color: var(--text-body); line-height: 1.7; }
+    .ranch-area-body p + p { margin-top: 0.75rem; }
+
+    /* ─── Due Diligence ──────────────────────────────────────────── */
     .checklist { background: var(--cream-2); }
-    .checklist-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-top: 0.5rem;
-    }
-    .checklist-group h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--green-deep);
-      margin-bottom: 1.1rem;
-      padding-bottom: 0.6rem;
-      border-bottom: 1px solid var(--cream-3);
-    }
-    .checklist-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      margin-bottom: 0.85rem;
-    }
-    .check-icon {
-      width: 18px; height: 18px;
-      border-radius: 50%;
-      background: var(--green-mid);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    .check-icon svg {
-      width: 10px; height: 10px;
-      stroke: white;
-      stroke-width: 2.5;
-      fill: none;
-    }
-    .checklist-item p {
-      font-size: 0.88rem;
-      color: var(--text-body);
-      line-height: 1.55;
-    }
+    .checklist-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 0.5rem; }
+    .checklist-group h3 { font-size: 1.1rem; font-weight: 600; color: var(--green-deep); margin-bottom: 1.25rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--cream-3); }
+    .checklist-item { display: flex; gap: 0.85rem; align-items: flex-start; margin-bottom: 1rem; }
+    .check-icon { width: 18px; height: 18px; border-radius: 4px; background: var(--green-sage); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .check-icon svg { width: 10px; height: 10px; stroke: white; stroke-width: 3; fill: none; }
+    .checklist-item p { font-size: 0.88rem; color: var(--text-body); line-height: 1.6; }
 
-    /* ─── CTA ──────────────────────────────────────────────────── */
-    .cta {
-      position: relative;
-      overflow: hidden;
-      padding: 7rem 2.5rem;
-      text-align: center;
-      background-color: var(--green-mid);
-    }
-    .cta-bg {
-      position: absolute; inset: 0;
-      background-image: url('photos/lava-wall-sky.jpg');
-      background-size: cover;
-      background-position: center;
-      opacity: 0.3;
-    }
-    .cta-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to bottom, rgba(14,28,16,0.65) 0%, rgba(8,18,10,0.8) 100%);
-    }
-    .cta-inner {
-      position: relative; z-index: 2;
-      max-width: 640px;
-      margin: 0 auto;
-    }
-    .cta .eyebrow { color: var(--gold-warm); margin-bottom: 1rem; }
-    .cta h2 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      color: white;
-      margin-bottom: 1rem;
-    }
-    .cta-sub {
-      font-size: 1rem;
-      color: rgba(255,255,255,0.72);
-      line-height: 1.7;
-      margin-bottom: 2.5rem;
-    }
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .contact-card {
-      margin-top: 3rem;
-      display: inline-block;
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 8px;
-      padding: 1.5rem 2.5rem;
-      text-align: left;
-    }
-    .contact-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: white;
-      margin-bottom: 0.15rem;
-    }
-    .contact-title {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--gold-warm);
-      margin-bottom: 1.25rem;
-    }
-    .contact-lines { display: flex; flex-direction: column; gap: 0.5rem; }
-    .contact-line {
-      display: flex; align-items: center; gap: 0.65rem;
-      color: rgba(255,255,255,0.75);
-      font-size: 0.88rem;
-      transition: color 0.2s;
-    }
-    .contact-line:hover { color: var(--gold-light); }
-    .contact-line svg {
-      width: 13px; height: 13px;
-      stroke: var(--gold-warm);
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      flex-shrink: 0;
-    }
+    .inspect { background: var(--cream); }
+    .inspect-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-top: 0.5rem; }
+    .inspect-col h3 { font-size: 1rem; font-weight: 600; color: var(--green-deep); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--cream-3); }
+    .inspect-item { display: flex; gap: 0.65rem; margin-bottom: 0.9rem; align-items: flex-start; }
+    .check-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-sage); flex-shrink: 0; margin-top: 7px; }
+    .inspect-item p { font-size: 0.87rem; color: var(--text-body); line-height: 1.6; }
 
-    /* ─── Responsive ─────────────────────────────────────────────── */
+    .cta-bg { background-image: url('/photos/lava-wall-sky.jpg'); }
+
+    /* ─── Photo strip ────────────────────────────────────────────── */
+    .photo-strip { display: grid; grid-template-columns: var(--cols); height: var(--h); overflow: hidden; }
+    .photo-strip > div { overflow: hidden; }
+    .photo-strip img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s; }
+    @media (hover: hover) { .photo-strip img:hover { transform: scale(1.06); } }
     @media (max-width: 900px) {
-      section { padding: 4rem 1.75rem; }
+      .photo-strip { grid-template-columns: 1fr 1fr; height: auto; }
+      .photo-strip > div { aspect-ratio: 4 / 3; }
+      .photo-strip.strip-odd > div:last-child { grid-column: span 2; aspect-ratio: 16 / 9; }
+    }
+
+    @media (max-width: 900px) {
       .intro-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .intro-stat-row { grid-template-columns: 1fr 1fr; }
       .lava-grid { grid-template-columns: 1fr 1fr; }
       .water-cards { grid-template-columns: 1fr; }
-      .checklist-grid { grid-template-columns: 1fr; }
+      .water-detail { grid-template-columns: 1fr; }
+      .solar-grid { grid-template-columns: 1fr; }
+      .septic-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .permits-list { grid-template-columns: 1fr; }
+      .og-area-grid { grid-template-columns: 1fr 1fr; }
+      .corridors-grid { grid-template-columns: 1fr 1fr; }
+      .prop-grid { grid-template-columns: 1fr; }
+      .ranch-area-item { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.75rem; }
+      .taxes-grid { grid-template-columns: 1fr; }
+      .checklist-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .inspect-cols { grid-template-columns: 1fr 1fr; }
+      .og-intro, .lava, .og-areas, .prop-types { padding: 4rem 1.75rem; }
     }
     @media (max-width: 600px) {
       .lava-grid { grid-template-columns: 1fr; }
       .intro-stat-row { grid-template-columns: 1fr; }
-      .cta-buttons { flex-direction: column; align-items: center; }
+      .og-area-grid { grid-template-columns: 1fr; }
+      .corridors-grid { grid-template-columns: 1fr; }
+      .solar-compare { grid-template-columns: 1fr; }
+      .inspect-cols { grid-template-columns: 1fr; }
     }
-
-    /* ─── Footer ─────────────────────────────────────────────────── */
-    footer {
-      background: #0c1a0e;
-      padding: 4.5rem 3rem 2.25rem;
-    }
-    .footer-top {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.25fr 1fr 1fr;
-      gap: 4rem;
-      padding-bottom: 3rem;
-    }
-    .footer-identity { display: flex; flex-direction: column; }
-    .footer-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 400;
-      letter-spacing: 0.02em;
-      color: rgba(255,255,255,0.92);
-    }
-    .footer-name {
-      font-size: 0.9rem;
-      letter-spacing: 0.03em;
-      color: rgba(255,255,255,0.6);
-      margin-top: 0.6rem;
-    }
-    .footer-role {
-      font-size: 0.68rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.32);
-      margin-top: 0.3rem;
-    }
-    .footer-heading {
-      display: block;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #c4982e;
-      margin-bottom: 1.1rem;
-    }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
-    .footer-col a {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.58);
-      transition: color 0.2s;
-    }
-    .footer-col a:hover { color: #e0b84a; }
-    .footer-bottom {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding-top: 2.25rem;
-      border-top: 1px solid rgba(255,255,255,0.09);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1.75rem;
-    }
-    .footer-logo { height: 56px; width: auto; flex-shrink: 0; }
-    .footer-legal {
-      display: flex;
-      flex-direction: column;
-      gap: 0.28rem;
-      text-align: right;
-      font-size: 0.7rem;
-      color: rgba(255,255,255,0.32);
-    }
-    .footer-legal p { font-size: 0.7rem; line-height: 1.6; color: inherit; }
-    .footer-copy { color: rgba(255,255,255,0.22); }
-    @media (max-width: 860px) {
-      .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
-      .footer-identity { grid-column: 1 / -1; }
-    }
-    @media (max-width: 640px) {
-      footer { padding: 3.5rem 1.5rem 2rem; }
-      .footer-top { grid-template-columns: 1fr; gap: 2.25rem; padding-bottom: 2.25rem; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-      .footer-legal { text-align: left; }
-      .footer-logo { height: 46px; }
-    }
-
-    .nav-links li { position: relative; }
-
-    .nav-burger { display: none; background: none; border: 0; cursor: pointer; padding: 6px 2px; flex-direction: column; gap: 5px; }
-    .nav-burger span { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 0.25s, opacity 0.2s; }
-    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-burger.open span:nth-child(2) { opacity: 0; }
-    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    @media (max-width: 1000px) { .nav-burger { display: flex; } }
-
-    .mobile-menu {
-      position: fixed; top: 68px; left: 0; right: 0; bottom: 0; z-index: 190;
-      background: var(--cream); padding: 2rem 1.75rem 3rem; overflow-y: auto;
-      opacity: 0; visibility: hidden; transform: translateY(-10px);
-      transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
-    }
-    .mobile-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
-    .mm-home { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--cream-3); }
-    .mm-group { margin-bottom: 1.4rem; }
-    .mm-group a { display: block; padding: 0.32rem 0; }
-    .mm-group a.mm-primary { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); margin-bottom: 0.15rem; }
-    .mm-group a:not(.mm-primary) { font-size: 0.92rem; color: var(--text-muted); }
-    .mm-foot { margin-top: 2.25rem; padding-top: 1.75rem; border-top: 1px solid var(--cream-3); display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
-    .mm-cta { display: inline-block; background: var(--gold); color: white; padding: 0.8rem 1.8rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-    .mm-phone { font-size: 0.95rem; color: var(--text-muted); }
-
-    .nav-burger { color: var(--green-deep); }
-
-    /* ─── Section sub-nav ───────────────────────────────────────── */
-    .subnav { background: var(--cream-2); border-bottom: 1px solid var(--cream-3); }
-    .subnav-inner { max-width: 1100px; margin: 0 auto; padding: 0.85rem 2rem; display: flex; align-items: center; gap: 0.9rem 1.6rem; flex-wrap: wrap; }
-    .subnav-label { font-size: 0.66rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
-    .subnav a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.02em; color: var(--text-muted); transition: color 0.2s; padding-bottom: 2px; }
-    .subnav a:hover { color: var(--green-deep); }
-    .subnav a.active { color: var(--green-deep); border-bottom: 1.5px solid var(--gold); }
   </style>
 </head>
 <body>
 
-  <!-- ─── Nav ──────────────────────────────────────────────────── -->
   <nav id="nav">
-    <a class="nav-brand" href="index.html">Keala M. Wall</a>
+    <a class="nav-brand" href="/">Keala M. Wall</a>
     <ul class="nav-links">
-      <li><a href="land.html" class="active">Buy Land</a></li>
-      <li><a href="relocation.html">Relocate</a></li>
-      <li><a href="legacy.html">Homes</a></li>
-      <li><a href="guides.html">Guides</a></li>
+      <li><a class="pillar" href="/life">Life</a></li>
+      <li><a class="pillar active" href="/land">Land</a></li>
+      <li><a class="pillar" href="/legacy">Legacy</a></li>
+      <li><a href="/listings">Listings</a></li>
+      <li><a href="/guides">Guides</a></li>
     </ul>
     <div class="nav-right">
       <a href="tel:8085153081" class="nav-phone">808-515-3081</a>
-      <a href="index.html#contact" class="nav-cta">Talk Story</a>
+      <a href="#contact" class="nav-cta">Talk Story</a>
       <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a class="mm-home" href="index.html">Home</a>
+    <a class="mm-home" href="/">Home</a>
+    <div class="mm-group"><a class="mm-primary" href="/life">Life</a></div>
     <div class="mm-group">
-      <a class="mm-primary" href="land.html">Buy Land</a>
-      <a href="ranches.html">Ranches &amp; Farms</a>
-      <a href="off-grid.html">Off-Grid Living</a>
+      <a class="mm-primary" href="/land">Land</a>
+      <a href="#buying">Buying Land</a>
+      <a href="#lava">Lava Zones</a>
+      <a href="#water">Water</a>
+      <a href="#zoning">Zoning &amp; Ag</a>
+      <a href="#off-grid">Off-Grid Living</a>
+      <a href="#ranches">Ranches &amp; Farms</a>
+      <a href="#diligence">Due Diligence</a>
     </div>
-    <div class="mm-group">
-      <a class="mm-primary" href="relocation.html">Relocate</a>
-      <a href="areas.html">Area Guides</a>
-    </div>
-    <div class="mm-group">
-      <a class="mm-primary" href="legacy.html">Homes</a>
-    </div>
-    <div class="mm-group">
-      <a class="mm-primary" href="guides.html">Guides &amp; Downloads</a>
-    </div>
+    <div class="mm-group"><a class="mm-primary" href="/legacy">Legacy</a></div>
+    <div class="mm-group"><a class="mm-primary" href="/listings">Listings</a></div>
+    <div class="mm-group"><a class="mm-primary" href="/guides">Guides</a></div>
     <div class="mm-foot">
-      <a href="index.html#contact" class="mm-cta">Talk Story</a>
+      <a href="#contact" class="mm-cta">Talk Story</a>
       <a href="tel:8085153081" class="mm-phone">808-515-3081</a>
     </div>
   </div>
 
-  <!-- ─── Hero ──────────────────────────────────────────────────── -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
-      <span class="hero-eyebrow">Big Island Land Buying Guide</span>
+      <span class="hero-eyebrow">Land</span>
       <h1>Know Before<br>You Buy Land</h1>
-      <p class="hero-sub">Lava zones, water rights, agricultural zoning, and what most buyers miss — from a local Hawai'i Island Realtor.</p>
+      <p class="hero-sub">Lava zones, water, zoning, off-grid systems, and ranch land — everything that decides whether a Hawai'i Island parcel is worth what it's priced at, and whether you can build on it at all.</p>
     </div>
   </section>
 
   <div class="subnav">
     <div class="subnav-inner">
       <span class="subnav-label">Land</span>
-      <a href="land.html" class="active">Buying Land</a>
-      <a href="ranches.html">Ranches &amp; Farms</a>
-      <a href="off-grid.html">Off-Grid Living</a>
+      <ul class="subnav-links">
+        <li><a href="#buying">Buying Land</a></li>
+        <li><a href="#lava">Lava Zones</a></li>
+        <li><a href="#water">Water</a></li>
+        <li><a href="#zoning">Zoning &amp; Ag</a></li>
+        <li><a href="#off-grid">Off-Grid</a></li>
+        <li><a href="#ranches">Ranches &amp; Farms</a></li>
+        <li><a href="#diligence">Due Diligence</a></li>
+      </ul>
     </div>
   </div>
-
   <!-- ─── Intro ─────────────────────────────────────────────────── -->
-  <section class="intro">
+  <section class="intro" id="buying">
     <div class="wrap">
       <div class="intro-grid">
         <div>
@@ -776,7 +364,7 @@
   </section>
 
   <!-- ─── Lava Zones ────────────────────────────────────────────── -->
-  <section class="lava">
+  <section class="lava" id="lava">
     <div class="wrap">
       <span class="eyebrow">Volcanic Hazard Zones</span>
       <h2 class="section-title">The 9 Lava Flow Zones — Explained</h2>
@@ -838,7 +426,7 @@
   </section>
 
   <!-- ─── Water ──────────────────────────────────────────────────── -->
-  <section class="water">
+  <section class="water" id="water">
     <div class="wrap">
       <span class="eyebrow">Water Systems</span>
       <h2 class="section-title">Where Does the Water Come From?</h2>
@@ -855,8 +443,7 @@
           <span class="water-tag tag-common">Puna · Hāmākua · Rural Areas</span>
           <h3>Rainwater Catchment</h3>
           <p>Thousands of Big Island residents — especially in Puna and the Hāmākua Coast — rely entirely on rainwater collected from rooftops and stored in large above-ground tanks. This is not primitive: it is a fully functional water system when sized and maintained correctly.</p>
-          <p>Standard tank capacity: 10,000–30,000 gallons. Average household usage: 50–100 gallons per person per day. With 150+ inches of annual rainfall in some Puna areas, a well-maintained catchment system can be very reliable.</p>
-          <p>When buying a catchment home, inspect the tank (fiberglass or polyethylene, not rusted steel), the first-flush diverter, and the filtration system. Budget for a UV or reverse-osmosis filter for drinking water.</p>
+          <p>Tanks typically hold 10,000–30,000 gallons, and a household uses 50–100 gallons per person per day. <a class="inline-jump" href="#off-grid">How catchment actually works &mdash; sizing, filtration, and what to inspect &rarr;</a></p>
         </div>
         <div class="water-card">
           <span class="water-tag tag-limited">Some Rural Parcels</span>
@@ -870,7 +457,7 @@
   </section>
 
   <!-- ─── Zoning ────────────────────────────────────────────────── -->
-  <section class="zoning">
+  <section class="zoning" id="zoning">
     <div class="wrap">
       <span class="eyebrow">Agricultural Zoning</span>
       <h2 class="section-title">What Can You Build on Ag Land?</h2>
@@ -925,8 +512,554 @@
     </div>
   </section>
 
+  <!-- ─── Tax & Zoning ─────────────────────────────────────────── -->
+  <section class="taxes">
+    <div class="wrap">
+      <span class="eyebrow">Tax Benefits &amp; Zoning</span>
+      <h2 class="section-title">Agricultural Tax Exemptions — How They Work</h2>
+      <div class="taxes-grid">
+        <div>
+          <p>One of the most valuable financial benefits of owning agricultural land in Hawai'i is the agricultural property tax exemption. AG-zoned land assessed at agricultural use rates pays dramatically lower property taxes than residential or commercial land.</p>
+          <p>To qualify, you must demonstrate active agricultural use — the land must be genuinely farmed, ranched, or used for agricultural production. Passive ownership with no farming activity generally does not qualify.</p>
+          <p>The county's Real Property Tax Division reviews agricultural exemption applications and can audit whether active use requirements are being met. If a property transitions from active farming to non-agricultural use, the tax rate can increase substantially — sometimes retroactively.</p>
+          <p>Important: agricultural exemptions run with the use, not just the zoning. A property can be zoned agricultural but taxed at a higher rate if the buyer isn't farming. Work with your Realtor and a local tax professional to understand your specific obligation before closing.</p>
+        </div>
+        <div class="tax-callout">
+          <h3>Key Rules to Know</h3>
+          <div class="tax-rule">
+            <div class="tax-num">1</div>
+            <div class="tax-desc"><strong>Active use required.</strong> The land must be in active agricultural production — not just zoned ag. Crops, livestock, orchard, or other qualifying agricultural activity must be present and ongoing.</div>
+          </div>
+          <div class="tax-rule">
+            <div class="tax-num">2</div>
+            <div class="tax-desc"><strong>Farm dwellings are permitted.</strong> You can build a residence on agricultural land — but it must be an "farm dwelling" accessory to the ag use. Standalone residential development without ag activity may trigger a rezoning or tax reclassification.</div>
+          </div>
+          <div class="tax-rule">
+            <div class="tax-num">3</div>
+            <div class="tax-desc"><strong>Important Agricultural Lands (IAL).</strong> Some parcels carry voluntary IAL designation — a state program that offers additional tax benefits and development credits in exchange for a long-term agricultural commitment. These protect the land's farming future and are highly valued by conservation-minded buyers.</div>
+          </div>
+          <div class="tax-rule">
+            <div class="tax-num">4</div>
+            <div class="tax-desc"><strong>Subdivision rules are strict.</strong> Subdividing agricultural land on the Big Island requires Hawaii County Planning approval and must meet minimum lot size requirements by zone. Unlawful subdivision — common in some older ag subdivisions — can create title and financing problems for buyers.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Intro ─────────────────────────────────────────────────── -->
+  <section class="og-intro" id="off-grid">
+    <div class="wrap">
+      <div class="intro-grid">
+        <div>
+          <span class="eyebrow">What "Off-Grid" Means Here</span>
+          <h2 class="section-title">Living Off-Grid Isn't a Trend Here</h2>
+          <p>On the Big Island, living off-grid isn't a lifestyle statement — it's the everyday reality for thousands of residents across Puna, Kaʻū, and parts of the Hāmākua Coast. These districts were subdivided decades ago without utility infrastructure, and many parcels simply don't have access to county water or HELCO grid power.</p>
+          <p>That doesn't make them undesirable. An off-grid home with a well-designed rainwater catchment system, a properly sized solar array, and a good septic system is a fully functional, comfortable, and often more self-reliant home than its on-grid neighbors.</p>
+          <p>But it does mean buyers need to understand what they're getting into — because maintaining these systems is your responsibility, not the county's. This guide covers the three critical systems in every off-grid Big Island home: water, power, and waste.</p>
+        </div>
+        <div>
+          <div class="reality-cards">
+            <div class="reality-card">
+              <div>
+                <h4>Water: Rainwater Catchment</h4>
+                <p>Most off-grid Big Island homes collect rainwater from rooftops into large storage tanks. With 100+ inches of annual rainfall in Puna, a well-maintained system is reliable year-round.</p>
+              </div>
+            </div>
+            <div class="reality-card">
+              <div>
+                <h4>Power: Solar + Battery</h4>
+                <p>Photovoltaic panels with battery storage and a generator backup are the standard off-grid power setup. Hawaii's solar resource is excellent — one of the best in the country.</p>
+              </div>
+            </div>
+            <div class="reality-card">
+              <div>
+                <h4>Waste: Septic Systems</h4>
+                <p>Off-grid properties use permitted septic systems for wastewater. The state is phasing out cesspools by 2050 — buying a property with a cesspool comes with a future obligation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Water Section ─────────────────────────────────────────── -->
+  <section class="catchment">
+    <div class="wrap">
+      <span class="eyebrow">System One</span>
+      <h2 class="section-title">Rainwater Catchment — How It Works</h2>
+      <p class="section-lead" style="color:rgba(255,255,255,0.72)">Rainwater catchment collects precipitation from rooftops, channels it through gutters and a first-flush diverter, and stores it in large polyethylene or fiberglass tanks. When properly designed and maintained, it is a clean, reliable water source.</p>
+      <div class="water-detail">
+        <div>
+          <p>The Puna District receives 100–150 inches of rainfall per year in many areas — among the highest in the state. Even on drier parts of the island, a correctly sized catchment system can meet household needs year-round when supplemented with occasional water delivery during dry spells.</p>
+          <p>Standard household water usage on catchment is similar to grid-connected homes: 50–100 gallons per person per day for cooking, bathing, laundry, and landscape irrigation. A family of four needs roughly 200–400 gallons per day — meaning a 20,000-gallon tank provides roughly 50–100 days of reserve, depending on rainfall.</p>
+          <p>The most important component of a catchment system is filtration. Rooftop runoff can contain bird droppings, pollen, and particulates. A properly designed system includes:</p>
+          <p><strong style="color:rgba(255,255,255,0.85)">First-flush diverter</strong> — discards the first 10–15 gallons of each rain event, which carry the most contamination.</p>
+          <p><strong style="color:rgba(255,255,255,0.85)">Sediment filter</strong> — removes particulates before water enters the tank.</p>
+          <p><strong style="color:rgba(255,255,255,0.85)">UV treatment or reverse osmosis</strong> — for drinking and cooking water. Do not drink catchment water without treatment.</p>
+        </div>
+        <div>
+          <div class="water-specs">
+            <h3>Catchment System Specs</h3>
+            <div class="spec-row">
+              <span class="spec-label">Typical tank size</span>
+              <span class="spec-value">10,000–30,000 gallons</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Daily household usage</span>
+              <span class="spec-value">50–100 gal/person/day</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Annual rainfall (Puna)</span>
+              <span class="spec-value">100–150 inches/year</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Tank material</span>
+              <span class="spec-value">Polyethylene or fiberglass (never steel)</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">System installation cost</span>
+              <span class="spec-value">$5,000–$15,000</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Annual maintenance</span>
+              <span class="spec-value">Tank cleaning, filter replacement</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Drinking water</span>
+              <span class="spec-value">UV or RO filter required</span>
+            </div>
+          </div>
+          <div class="water-warning">
+            <strong>When buying a catchment home:</strong> inspect the tank material (reject rusted steel), check the first-flush diverter, verify filter age, and ask for the last tank cleaning date. A dirty or undersized tank can be a health hazard — and a costly fix.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Solar Section ─────────────────────────────────────────── -->
+  <section class="solar">
+    <div class="wrap">
+      <span class="eyebrow">System Two</span>
+      <h2 class="section-title">Solar Power — Grid-Tied vs. Off-Grid</h2>
+      <p class="section-lead">Hawai'i has the highest electricity rates in the United States — about 43¢/kWh as of 2026, versus a national average around 18¢. That makes solar economically compelling everywhere on the island, but the system design differs significantly between grid-tied and off-grid properties.</p>
+      <div class="solar-grid">
+        <div>
+          <p>An off-grid solar system must supply 100% of your electricity needs — no utility backup to draw from at night or on cloudy days. This means larger panel arrays, larger battery banks, and a backup generator for extended low-sun periods. The system requires more planning, more upfront cost, and more ongoing maintenance than a grid-tied system.</p>
+          <p>Most off-grid households on the Big Island use 10–25 kWh per day. A system sized for 15 kWh/day typically requires a 5–8 kW array paired with 10–20 kWh of battery storage (lithium preferred for depth of discharge and lifespan). A propane or gas generator as backup adds reliability for long rainy stretches.</p>
+          <p>When buying an off-grid home, always ask for documentation on the existing solar system — panel brand and age, battery type and age (lithium lasts 10–15 years; lead-acid, 5–7), inverter brand, and any monitoring data. An aging lead-acid battery bank that needs replacement represents a $8,000–$15,000 expense.</p>
+        </div>
+        <div>
+          <div class="solar-compare">
+            <div class="solar-option">
+              <h4>Grid-Tied Solar</h4>
+              <p>Panels feed into the HELCO grid. You earn credits for excess generation, draw from the grid at night. Simpler, lower upfront cost.</p>
+              <p>No battery required (though increasingly common). Available in areas with utility power lines.</p>
+              <div class="cost">System cost: $15,000–$30,000</div>
+            </div>
+            <div class="solar-option">
+              <h4>Off-Grid Solar</h4>
+              <p>Panels charge batteries. You run entirely on stored solar + generator. More complex — full energy independence.</p>
+              <p>Required in areas without HELCO access. Sizing matters — undersized systems cause headaches.</p>
+              <div class="cost">System cost: $25,000–$55,000</div>
+            </div>
+            <div class="solar-tip">
+              <strong>Pro tip:</strong> Solar installation in Hawai'i typically costs $2.50–$4.00 per watt installed for panels. A 5kW system runs $12,000–$20,000 in panels alone — before batteries ($8,000–$15,000 for lithium) and inverter. The federal residential solar credit ended for systems installed after December 31, 2025 — but Hawai'i's state credit (35% of system cost, up to $5,000) still applies as of 2026; confirm current rules with your tax professional. Always get multiple bids from licensed Hawaii contractors.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Septic Section ────────────────────────────────────────── -->
+  <section class="septic">
+    <div class="wrap">
+      <span class="eyebrow">System Three</span>
+      <h2 class="section-title">Septic Systems &amp; the Cesspool Deadline</h2>
+      <div class="septic-grid">
+        <div>
+          <p>Off-grid homes on the Big Island use one of two waste systems: a permitted septic system, or — on older properties — a cesspool. A septic system uses a tank to separate solids from liquid waste, then releases treated effluent into a drain field in the soil. A cesspool simply collects waste in an unlined pit.</p>
+          <p>Cesspools are an environmental and health hazard. Hawai'i has more cesspools per capita than any other state, and they are a significant source of nutrient pollution in coastal waters. The state legislature recognized this and passed Act 125 in 2017, requiring all cesspools statewide to be converted to septic systems or alternative wastewater systems by January 1, 2050.</p>
+          <p>If you are buying a property with a cesspool, you are also buying a future obligation to upgrade it — costs typically run $30,000–$50,000 — sometimes more — depending on lot size, soil conditions, and the scope of the drain field needed. Factor that into your offer price.</p>
+          <p>New construction and major renovations already require septic systems — cesspools cannot be installed on any property where construction permits are pulled after Act 125. If you are buying land to build, you'll need a percolation test by a licensed engineer before the county will approve a building permit.</p>
+        </div>
+        <div>
+          <div class="cesspool-box">
+            <span class="deadline-badge">State Deadline: 2050</span>
+            <h3>Cesspool Conversion: What to Expect</h3>
+            <p>All cesspools in Hawai'i must be upgraded or decommissioned by January 1, 2050. Priorities are set by proximity to sensitive coastal areas and drinking water sources — some properties may be required to convert earlier.</p>
+            <p><strong>Conversion cost:</strong> $30,000–$50,000+ depending on lot size and conditions. The state has offered financial assistance programs — check with Hawaii Department of Health for current status of any available grants or low-interest loans.</p>
+            <p><strong>Process:</strong> Hire a licensed professional engineer to assess the lot, design the system, and apply for a permit through Hawaii County Department of Environmental Management. Timeline from application to installation: typically 6–12 months.</p>
+            <p>If you're buying a property with a cesspool near a shoreline, stream, or in an area the county has flagged for priority — budget for conversion soon, not in 2049.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Permits Section ──────────────────────────────────────── -->
+  <section class="permits">
+    <div class="wrap">
+      <span class="eyebrow">Building in Rural Areas</span>
+      <h2 class="section-title">Rural Building Permits — What You Need to Know</h2>
+      <p class="section-lead">Building on off-grid land in rural Hawai'i is possible — but the permitting process is more complex than in urban areas. Understanding the system before you break ground saves months of delay.</p>
+      <div class="permits-list">
+        <div class="permit-card">
+          <h3>Building Permit Basics</h3>
+          <p>Hawaii County requires building permits for any structure over 200 sq ft, or any structure with plumbing, electrical, or mechanical systems — regardless of location. This includes homes, accessory dwelling units (ADUs), agricultural storage buildings with utilities, and catchment tank installations above a certain size.</p>
+          <p>Unpermitted structures are extremely common in rural Puna and Ka'ū — often listed as "built without permits" or BWP. These can create significant problems for buyers: difficulty financing, future county action, and inability to insure the structure properly. Always ask about permit status before making an offer.</p>
+        </div>
+        <div class="permit-card">
+          <h3>Conservation District Rules</h3>
+          <p>Some rural Big Island land falls within the State Land Use Conservation District — areas the state has designated as environmentally sensitive. These include upland forest areas, steep coastal cliffs, and land adjacent to national parks.</p>
+          <p>Building in the Conservation District requires approval from the state Board of Land and Natural Resources (BLNR) — a separate process from county permits that can take 12–24 months. Always confirm land use classification before purchasing remote or upland parcels.</p>
+        </div>
+        <div class="permit-card">
+          <h3>Agricultural Farm Dwellings</h3>
+          <p>On agriculturally zoned land, you can build a home — but it must qualify as a "farm dwelling" incidental to the agricultural use of the property. This is not just semantics: the county can require you to demonstrate that the property is being actively farmed before approving a dwelling permit on some ag-zoned parcels.</p>
+          <p>The specific requirements vary by zoning district (A-1, A-20, A-40, etc.). Work with a Realtor who understands agricultural permitting, and consult the Hawaii County Planning Department early in the process — before you design your home or break ground.</p>
+        </div>
+        <div class="permit-card">
+          <h3>Temporary Structures &amp; Tiny Homes</h3>
+          <p>A common question from off-grid buyers: can I live in a tiny home, yurt, or temporary structure while I build? Technically, most temporary structures still require permits if they'll be inhabited. Hawaii County has occasionally enforced against unpermitted habitation on ag land.</p>
+          <p>The practical reality varies by area — enforcement is much more active in some districts than others. But buyers who purchase land planning to "camp while they build" should be aware of the regulatory risk and should confirm what is permissible with the county before closing on the land.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Photo Strip ──────────────────────────────────────────── -->
+  <div class="photo-strip" style="--cols:1fr 1fr 1fr 1fr;--h:260px">
+    <div><img loading="lazy" decoding="async" src="/photos/forest-path.jpg" alt="Old-growth forest, Big Island" style="object-position:center 25%"></div>
+    <div><img loading="lazy" decoding="async" src="/photos/fern-golden-hour.jpg" alt="Native fern at golden hour"></div>
+    <div><img loading="lazy" decoding="async" src="/photos/ferns-lava.jpg" alt="Ferns growing from lava"></div>
+    <div><img loading="lazy" decoding="async" src="/photos/driftwood-lava.jpg" alt="Raw lava land, Big Island"></div>
+  </div>
+
+  <!-- ─── Best Areas ────────────────────────────────────────────── -->
+  <section class="og-areas">
+    <div class="wrap">
+      <span class="eyebrow">Where to Live Off-Grid</span>
+      <h2 class="section-title">Best Areas for Off-Grid Living</h2>
+      <p class="section-lead" style="color:rgba(255,255,255,0.72)">Not all off-grid living is the same — the experience in wet, lush Puna is completely different from the dry, remote Ka'ū. Here's how the main off-grid areas compare.</p>
+      <div class="og-area-grid">
+        <div class="og-area-card">
+          <h3>Lower Puna</h3>
+          <p>The most populated off-grid area on the island. Subdivisions like Hawaiian Paradise Park, Orchidland Estates, and Hawaiian Acres have tens of thousands of residential lots — many of them off-grid. Dense jungle, abundant rainfall, strong off-grid community culture.</p>
+          <div class="og-area-meta">
+            <span class="og-meta-pill good">Great Rainfall</span>
+            <span class="og-meta-pill good">Strong Community</span>
+            <span class="og-meta-pill caution">Lava Zone 1–2</span>
+          </div>
+        </div>
+        <div class="og-area-card">
+          <h3>Upper Puna / Pahoa Area</h3>
+          <p>Slightly higher elevation and lower volcanic risk than lower Puna. More established community infrastructure, proximity to Pahoa town for services. Mix of on-grid and off-grid properties.</p>
+          <div class="og-area-meta">
+            <span class="og-meta-pill good">Moderate Volcanic Risk</span>
+            <span class="og-meta-pill good">Near Town</span>
+            <span class="og-meta-pill">Zone 3–4</span>
+          </div>
+        </div>
+        <div class="og-area-card">
+          <h3>Ka'ū &amp; Ocean View</h3>
+          <p>The most remote and most affordable off-grid area. Ocean View Estates offers large lots at very low prices — but it is truly remote (90 min from Kona), dry, and stark. For buyers who truly want isolation and self-sufficiency, it delivers.</p>
+          <div class="og-area-meta">
+            <span class="og-meta-pill good">Very Affordable</span>
+            <span class="og-meta-pill caution">Very Remote</span>
+            <span class="og-meta-pill caution">Dry — Tank Delivery</span>
+          </div>
+        </div>
+        <div class="og-area-card">
+          <h3>Hāmākua Coast</h3>
+          <p>Off-grid living in one of the most beautiful settings on the island — dramatic sea cliffs, lush rainforest, and excellent rainfall for catchment. More expensive than Puna, but significantly lower volcanic risk and more established infrastructure.</p>
+          <div class="og-area-meta">
+            <span class="og-meta-pill good">Low Volcanic Risk</span>
+            <span class="og-meta-pill good">Lush &amp; Scenic</span>
+            <span class="og-meta-pill">Zone 7–8</span>
+          </div>
+        </div>
+        <div class="og-area-card">
+          <h3>Volcano &amp; Upland Ka'ū</h3>
+          <p>Cool, forested, and quiet. Many properties around Volcano Village are off-grid with excellent catchment from the consistent rainfall. The proximity to Hawaii Volcanoes National Park is a major draw — and a unique lifestyle experience.</p>
+          <div class="og-area-meta">
+            <span class="og-meta-pill good">Cool &amp; Lush</span>
+            <span class="og-meta-pill good">National Park Nearby</span>
+            <span class="og-meta-pill caution">Vog Risk</span>
+          </div>
+        </div>
+        <div class="og-area-card">
+          <h3>South Kona &amp; Captain Cook</h3>
+          <p>Not exclusively off-grid, but many small farms and coffee properties in this area operate on catchment water and solar — especially at higher elevations. Combines agricultural lifestyle with proximity to Kailua-Kona's services (30–45 min).</p>
+          <div class="og-area-meta">
+            <span class="og-meta-pill good">Near Kona Services</span>
+            <span class="og-meta-pill good">Agricultural Community</span>
+            <span class="og-meta-pill">Zone 5–6</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Cost Summary ──────────────────────────────────────────── -->
+  <section class="costs">
+    <div class="wrap">
+      <span class="eyebrow">Real Numbers</span>
+      <h2 class="section-title">Total Cost to Set Up Off-Grid</h2>
+      <p class="section-lead">If you're buying raw land and building from scratch, these are the realistic system costs you're working with — separate from the land price, home construction, and permits.</p>
+      <div class="table-scroll">
+        <table class="cost-table">
+          <thead>
+            <tr>
+              <th>System</th>
+              <th>Low End</th>
+              <th>High End</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rainwater catchment system</td>
+              <td class="cost-range">$5,000</td>
+              <td class="cost-range">$15,000</td>
+              <td>
+                Tank, gutters, first-flush diverter, basic filtration.
+                <div class="cost-note">Add $3,000–$8,000 for UV/RO drinking water treatment.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>Solar panels (5–8 kW array)</td>
+              <td class="cost-range">$12,000</td>
+              <td class="cost-range">$32,000</td>
+              <td>
+                Panel installation. Lithium battery bank adds $8,000–$15,000. Hawai'i's 35% state tax credit (capped at $5,000) still applies as of 2026; the federal residential credit ended after 2025.
+              </td>
+            </tr>
+            <tr>
+              <td>Battery storage (lithium)</td>
+              <td class="cost-range">$8,000</td>
+              <td class="cost-range">$20,000</td>
+              <td>
+                Lithium preferred. Lifespan 10–15 years. Lead-acid cheaper but shorter life and less usable capacity.
+              </td>
+            </tr>
+            <tr>
+              <td>Backup generator</td>
+              <td class="cost-range">$1,000</td>
+              <td class="cost-range">$4,000</td>
+              <td>
+                Propane or gasoline. Essential for extended cloudy/rainy periods.
+              </td>
+            </tr>
+            <tr>
+              <td>Septic system</td>
+              <td class="cost-range">$12,000</td>
+              <td class="cost-range">$35,000</td>
+              <td>
+                Includes perc test, engineering, permitting, and installation. Highly variable by lot conditions.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Total system setup</strong></td>
+              <td class="cost-range"><strong>$38,000</strong></td>
+              <td class="cost-range"><strong>$106,000</strong></td>
+              <td><strong>Before land, home construction, or permits. Plan for the middle of this range for a comfortable, reliable system.</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Agricultural Corridors ───────────────────────────────── -->
+  <section class="corridors" id="ranches">
+    <div class="wrap">
+      <span class="eyebrow">Where the Farmland Is</span>
+      <h2 class="section-title">Six Agricultural Corridors</h2>
+      <p class="section-lead">The Big Island's farm and ranch land is concentrated in six distinct corridors — each with its own climate, crop profile, price range, and character. Understanding which corridor fits your vision is the starting point for any agricultural property search.</p>
+      <div class="corridors-grid">
+        <div class="corridor-card">
+          <div class="corridor-region">West Side · Elevation 1,500–4,000 ft</div>
+          <h3>Kona Coffee Belt</h3>
+          <p>The world-famous Kona coffee growing region runs along the western slope of Hualālai volcano, from Holualoa south through Captain Cook and Honaunau. Microclimates here produce ideal growing conditions: warm mornings, afternoon clouds, and consistent rainfall at elevation.</p>
+          <div class="corridor-types">
+            <span class="type-pill">Coffee</span>
+            <span class="type-pill">Macadamia Nut</span>
+            <span class="type-pill">Diversified Ag</span>
+          </div>
+        </div>
+        <div class="corridor-card">
+          <div class="corridor-region">North · Elevation 2,500–3,500 ft</div>
+          <h3>Waimea &amp; Kohala Ranch Country</h3>
+          <p>The Parker Ranch — one of the largest cattle ranches in the United States at roughly 130,000 acres — anchors the Waimea/Kamuela plateau. The surrounding area is some of the most scenic ranch land in Hawaiʻi, with green pastures, misty mornings, and cool temperatures year-round.</p>
+          <div class="corridor-types">
+            <span class="type-pill">Cattle</span>
+            <span class="type-pill">Horse</span>
+            <span class="type-pill">Mixed Pastoral</span>
+          </div>
+        </div>
+        <div class="corridor-card">
+          <div class="corridor-region">North · Elevation 0–2,000 ft</div>
+          <h3>North Kohala</h3>
+          <p>The rugged northern tip of the island transitions from dry coastal land to lush upland pasture. Smaller ranches and farms sit on some of the oldest volcanic terrain on the island (Lava Zone 9) — lowest volcanic risk, dramatic views, and strong cultural roots.</p>
+          <div class="corridor-types">
+            <span class="type-pill">Cattle</span>
+            <span class="type-pill">Fruit Orchards</span>
+            <span class="type-pill">Heritage Farms</span>
+          </div>
+        </div>
+        <div class="corridor-card">
+          <div class="corridor-region">Windward · Elevation 500–2,500 ft</div>
+          <h3>Hāmākua Coast</h3>
+          <p>Once the heart of Hawaiʻi's sugar industry, the Hāmākua Coast now supports diversified farming — tropical fruits, floriculture, specialty crops, and small-scale orchards. Deep red soil, dramatic sea cliffs, and 80–120 inches of annual rainfall make it extraordinarily fertile.</p>
+          <div class="corridor-types">
+            <span class="type-pill">Tropical Fruits</span>
+            <span class="type-pill">Floriculture</span>
+            <span class="type-pill">Diversified Ag</span>
+          </div>
+        </div>
+        <div class="corridor-card">
+          <div class="corridor-region">Windward · Elevation 500–2,000 ft</div>
+          <h3>Honoka'a &amp; Pa'auilo</h3>
+          <p>The upper Hāmākua area around Honoka'a and Pa'auilo supports macadamia nut orchards, cattle operations, and small diversified farms. More affordable than the Kona belt, with good soil, reliable rain, and a strong local agricultural community.</p>
+          <div class="corridor-types">
+            <span class="type-pill">Macadamia Nut</span>
+            <span class="type-pill">Cattle</span>
+            <span class="type-pill">Orchard</span>
+          </div>
+        </div>
+        <div class="corridor-card">
+          <div class="corridor-region">South · Elevation 500–4,000 ft</div>
+          <h3>Ka'ū &amp; Volcano</h3>
+          <p>Ka'ū produces Ka'ū coffee — now internationally recognized as rivaling Kona in quality. The area also supports cattle and small diversified farms. Upland Volcano-area farms benefit from cool temperatures and lush volcanic soil for specialty crops including mushrooms, berries, and orchids.</p>
+          <div class="corridor-types">
+            <span class="type-pill">Ka'ū Coffee</span>
+            <span class="type-pill">Cattle</span>
+            <span class="type-pill">Specialty Crops</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Photo Strip ──────────────────────────────────────────── -->
+  <div class="photo-strip strip-odd" style="--cols:repeat(3,1fr);--h:260px">
+    <div><img loading="lazy" decoding="async" src="/photos/ranch-fallen-tree.jpg" alt="Open ranch land, Big Island" style="object-position:center 30%"></div>
+    <div><img loading="lazy" decoding="async" src="/photos/coffee-cherries.jpg" alt="Kona coffee cherries"></div>
+    <div><img loading="lazy" decoding="async" src="/photos/coffee-blossoms.jpg" alt="Coffee blossoms, Kona snow"></div>
+  </div>
+
+  <!-- ─── Property Types & Prices ─────────────────────────────── -->
+  <section class="prop-types">
+    <div class="wrap">
+      <span class="eyebrow">What to Expect</span>
+      <h2 class="section-title">Property Types &amp; Price Ranges</h2>
+      <p class="section-lead" style="color:rgba(255,255,255,0.72)">Big Island agricultural properties span an enormous range — from small coffee farms under 5 acres to trophy ranch land over 1,000 acres. Here's how the market breaks down by type.</p>
+      <div class="prop-grid">
+        <div class="prop-card">
+          <h3>Small Farm &amp; Residential-Ag</h3>
+          <p>2–10 acre parcels zoned FA-2a or A-1a. Typically include a home or permitted structure, a water source, and some cleared agricultural land. Common in Puna, Ka'ū, and outer Hāmākua. Entry-level agricultural living on the Big Island.</p>
+          <div class="prop-price">Typical range: $300K–$800K &nbsp;·&nbsp; Puna/Ka'ū end; Kona/Kohala higher</div>
+        </div>
+        <div class="prop-card">
+          <h3>Working Coffee Farm</h3>
+          <p>3–15 acre farms in the Kona coffee belt or Ka'ū district with established coffee trees, processing equipment, and a home. Kona coffee commands premium prices globally — buyers pay for both the land and the income potential. Due diligence on tree health, yield history, and water rights is essential.</p>
+          <div class="prop-price">Typical range: $1M–$3M &nbsp;·&nbsp; Kona coffee belt; Ka'ū generally lower</div>
+        </div>
+        <div class="prop-card">
+          <h3>Macadamia Nut Orchard</h3>
+          <p>Established mac nut orchards on 5–50 acres, primarily in the Hāmākua and Honoka'a areas. Trees take 7–10 years to reach full production — buying an established orchard versus raw land is a major price and timeline difference. Check processor contracts and infrastructure condition.</p>
+          <div class="prop-price">Typical range: $500K–$2M &nbsp;·&nbsp; Depends heavily on tree age and acreage</div>
+        </div>
+        <div class="prop-card">
+          <h3>Ranch &amp; Cattle Land</h3>
+          <p>Working cattle and horse ranches in Waimea, Kohala, and North Hāmākua. Properties range from 20-acre gentleman ranches to 500+ acre working operations. The Waimea and Kohala area supports some of the most premium ranch land in Hawaiʻi — access to Parker Ranch's infrastructure and community is a significant draw.</p>
+          <div class="prop-price">Typical range: $1M–$25M+ &nbsp;·&nbsp; Kohala/Waimea trophy land at the high end</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Area Deep Dives ──────────────────────────────────────── -->
+  <section class="ranch-areas">
+    <div class="wrap">
+      <span class="eyebrow">Know Your Area</span>
+      <h2 class="section-title">Deep Dive: Key Ranch Areas</h2>
+      <p class="section-lead">Every agricultural corridor has its own character, community, and practical realities. Here's what buyers need to know about the three most active ranch and farm markets on the island.</p>
+      <div class="ranch-area-items">
+
+        <div class="ranch-area-item">
+          <div class="ranch-area-sidebar">
+            <div class="ranch-area-name">Waimea / Kamuela</div>
+            <div class="ranch-area-label">Ranch Country</div>
+            <dl class="ranch-area-quick">
+              <dt>Elevation</dt><dd>2,500–3,500 ft</dd>
+              <dt>Climate</dt><dd>Cool, misty, 25–50 in. rainfall/yr</dd>
+              <dt>Lava Zone</dt><dd>Zone 7–8 (very low risk)</dd>
+              <dt>Min. Ag Lot</dt><dd>20–40 acres for working ranch</dd>
+            </dl>
+          </div>
+          <div class="ranch-area-body">
+            <h4>The Parker Ranch Legacy</h4>
+            <p>Waimea sits at the center of one of the most storied ranching cultures in the United States. Parker Ranch — founded in 1847 and today covering roughly 130,000 acres — defines the character of the entire region. Paniolo (Hawaiian cowboy) tradition runs deep here, and neighboring ranch properties benefit from that culture, the established infrastructure, and the agricultural expertise embedded in the community.</p>
+            <h4>What Buyers Find Here</h4>
+            <p>Smaller parcels adjacent to large ranch operations, gentleman horse farms, cattle operations on 20–200 acres, and lifestyle ranches for buyers who want the rural pastoral experience close to a real town. Waimea has excellent schools, the KTA grocery, multiple restaurants, and a strong community — making it more accessible than more remote ranch areas.</p>
+            <h4>What to Know</h4>
+            <p>Water here comes primarily from Kamuela Irrigation Association or private catchment — county water is available in town. Properties at higher elevation can be foggy and significantly cooler than the coast. The Kohala Center in Waimea provides agricultural technical assistance and is a valuable resource for new farmers and ranchers.</p>
+          </div>
+        </div>
+
+        <div class="ranch-area-item">
+          <div class="ranch-area-sidebar">
+            <div class="ranch-area-name">Kohala</div>
+            <div class="ranch-area-label">Ranch &amp; Heritage Land</div>
+            <dl class="ranch-area-quick">
+              <dt>Elevation</dt><dd>0–5,480 ft (Kohala Mtn.)</dd>
+              <dt>Climate</dt><dd>Dry coast; lush upland. Ranges from 5 to 150 in. rainfall/yr</dd>
+              <dt>Lava Zone</dt><dd>Zone 9 (lowest risk on island)</dd>
+              <dt>Min. Ag Lot</dt><dd>Varies by zone; 20–200+ acres</dd>
+            </dl>
+          </div>
+          <div class="ranch-area-body">
+            <h4>The Oldest Land on the Island</h4>
+            <p>Kohala Mountain is the oldest of the Big Island's five volcanoes — dormant for over 60,000 years and classified Zone 9, the lowest possible volcanic risk. This geological age means rich, deeply developed soils in the uplands and a track record of stability that makes lenders and insurers comfortable. It also means some of the most expensive ranch land on the island.</p>
+            <h4>Dramatic Microclimate Range</h4>
+            <p>North Kohala is defined by extremes: the coastal Kohala Resort area is bone-dry and sunny, while the upland ranches above 2,000 feet receive heavy rainfall and are blanketed in lush pasture. A property's specific elevation and aspect — which direction it faces — determines its climate more than its district label. Work with a Realtor who has walked the land.</p>
+            <h4>What Buyers Find Here</h4>
+            <p>Heritage ranch land with deep Hawaiian history, scenic ocean-view pastures, small working cattle operations, and lifestyle properties with privacy and dramatic views. Access to the Kohala Coast's luxury resort amenities is minutes away from upland farms — a combination few places in the world can offer.</p>
+          </div>
+        </div>
+
+        <div class="ranch-area-item">
+          <div class="ranch-area-sidebar">
+            <div class="ranch-area-name">Hāmākua Coast</div>
+            <div class="ranch-area-label">Fertile Windward Farmland</div>
+            <dl class="ranch-area-quick">
+              <dt>Elevation</dt><dd>200–2,500 ft</dd>
+              <dt>Climate</dt><dd>Lush and wet, 80–120 in. rainfall/yr</dd>
+              <dt>Lava Zone</dt><dd>Zone 7–8 (low risk)</dd>
+              <dt>Min. Ag Lot</dt><dd>2–20 acres depending on zone</dd>
+            </dl>
+          </div>
+          <div class="ranch-area-body">
+            <h4>Post-Sugar Country</h4>
+            <p>The Hāmākua Coast's sugar industry ended in 1994 with the closure of the Hāmākua Sugar Company. In the three decades since, the land has transitioned to diversified agriculture — tropical fruits, floriculture, macadamia nuts, timber, and specialty crops. The red volcanic soil is extraordinarily fertile, and the consistent rainfall means irrigation is rarely needed.</p>
+            <h4>Value and Opportunity</h4>
+            <p>Compared to Kona coffee farms or Waimea ranch land, Hāmākua farms are often significantly more affordable per acre. Buyers who don't need the Kona name or the Waimea prestige — but do want productive soil, good rainfall, and a working farm lifestyle — find exceptional value here.</p>
+            <h4>What to Know</h4>
+            <p>Most properties here use catchment water — verify tank condition and sizing carefully. Roads can be steep and narrow, and some parcels are accessed via private easements. The spectacular sea cliff scenery and Waipiʻo Valley proximity make this one of the most beautiful agricultural regions in the state.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ─── Checklist ─────────────────────────────────────────────── -->
-  <section class="checklist">
+  <section class="checklist" id="diligence">
     <div class="wrap">
       <span class="eyebrow">Due Diligence</span>
       <h2 class="section-title">Before You Make an Offer</h2>
@@ -978,29 +1111,61 @@
     </div>
   </section>
 
+  <!-- ─── Pre-Buy Checklist ────────────────────────────────────── -->
+  <section class="inspect">
+    <div class="wrap">
+      <span class="eyebrow">Before You Buy</span>
+      <h2 class="section-title">What to Inspect on a Farm or Ranch</h2>
+      <p class="section-lead">Agricultural properties carry unique inspection considerations that a standard residential inspection won't cover. These are the questions to answer before you close.</p>
+      <div class="inspect-cols">
+        <div class="inspect-col">
+          <h3>Land &amp; Soil</h3>
+          <div class="inspect-item"><div class="check-dot"></div><p>Has the soil been tested? Know the pH, nutrient levels, and any history of chemical applications.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>Are there drainage issues? Low-lying areas on windward parcels can flood seasonally.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>What is the timber/tree inventory? On orchard properties, count and assess tree age and health.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>Are there noxious weeds or invasive species requiring ongoing management?</p></div>
+        </div>
+        <div class="inspect-col">
+          <h3>Infrastructure</h3>
+          <div class="inspect-item"><div class="check-dot"></div><p>Verify fencing condition and boundary markers — especially on large parcels where encroachment is common.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>Inspect roads and access — are they paved, gravel, or dirt? Who is responsible for maintenance?</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>Are barns, storage buildings, and equipment structures permitted? Unpermitted structures can create closing delays.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>What irrigation infrastructure exists? Pipes, valves, tanks — assess age and condition.</p></div>
+        </div>
+        <div class="inspect-col">
+          <h3>Legal &amp; Financial</h3>
+          <div class="inspect-item"><div class="check-dot"></div><p>Verify the property's current ag exemption status and what documentation the county requires to maintain it.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>Review any USDA or state conservation program enrollment — these can restrict what you do with the land for years after purchase.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>Check for water rights and water system agreements — especially on large parcels that share irrigation infrastructure.</p></div>
+          <div class="inspect-item"><div class="check-dot"></div><p>Ask for 3 years of income and expense records on working farms — yield history tells you more than the seller's verbal description.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── CTA ───────────────────────────────────────────────────── -->
   <section class="cta" id="contact">
     <div class="cta-bg"></div>
     <div class="cta-overlay"></div>
     <div class="cta-inner">
-      <span class="eyebrow">Let's Talk Land</span>
-      <h2>Have Questions About<br>a Specific Parcel?</h2>
-      <p class="cta-sub">Land on the Big Island is uniquely complex — and the right guidance saves buyers from costly mistakes. Let's have a real conversation about what you're looking for before you make any commitments.</p>
+      <span class="eyebrow">Talk Story</span>
+      <h2>Thinking About Land?</h2>
+      <p class="cta-sub">Send me a parcel you're looking at and I'll tell you what I'd want verified before an offer — lava zone, water, access, zoning, and what it will actually cost to build.</p>
       <div class="cta-buttons">
-        <a href="mailto:Keala@kealawall.com?subject=Land%20Buying%20Question%20%E2%80%94%20Big%20Island" class="btn-primary">Email Keala</a>
-        <a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener" class="btn-ghost">Search Land Listings</a>
+        <a href="tel:8085153081" class="btn-primary">Call 808-515-3081</a>
+        <a href="mailto:Keala@kealawall.com" class="btn-ghost">Send an Email</a>
       </div>
       <div class="contact-card">
         <div class="contact-name">Keala M. Wall</div>
-        <div class="contact-title">Hawai'i Island Realtor &nbsp;·&nbsp; eXp Realty</div>
+        <div class="contact-title">Realtor &middot; Hawai'i Island</div>
         <div class="contact-lines">
-          <a href="mailto:Keala@kealawall.com" class="contact-line">
-            <svg viewBox="0 0 16 16"><rect x="1" y="3" width="14" height="10" rx="1.5"/><polyline points="1,3 8,9.5 15,3"/></svg>
-            Keala@kealawall.com
-          </a>
           <a href="tel:8085153081" class="contact-line">
-            <svg viewBox="0 0 16 16"><path d="M3.5 1.5c-.8 0-1.5.7-1.5 1.5 0 5.8 4.7 10.5 10.5 10.5.8 0 1.5-.7 1.5-1.5V10l-3-1-1 1.5C8 10 6 8 5.5 6L7 5l-1-3H3.5z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             808-515-3081
+          </a>
+          <a href="mailto:Keala@kealawall.com" class="contact-line">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Keala@kealawall.com
           </a>
         </div>
       </div>
@@ -1020,14 +1185,12 @@
       <div class="footer-col">
         <span class="footer-heading">Explore</span>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="land.html">Buy Land</a></li>
-          <li><a href="ranches.html">Ranches</a></li>
-          <li><a href="off-grid.html">Off-Grid</a></li>
-          <li><a href="relocation.html">Relocate</a></li>
-          <li><a href="areas.html">Areas</a></li>
-          <li><a href="legacy.html">Legacy</a></li>
-          <li><a href="guides.html">Guides</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/life">Life</a></li>
+          <li><a href="/land">Land</a></li>
+          <li><a href="/legacy">Legacy</a></li>
+          <li><a href="/listings">Listings</a></li>
+          <li><a href="/guides">Guides</a></li>
         </ul>
       </div>
 
@@ -1044,39 +1207,17 @@
     </div>
 
     <div class="footer-bottom">
-      <img src="logo-agency-exp-light.png" width="1200" height="200" loading="lazy" decoding="async"
+      <img src="/logo-agency-exp-light.png" width="1200" height="200" loading="lazy" decoding="async"
            alt="The Agency Team Hawai'i, brokered by eXp Realty" class="footer-logo">
       <div class="footer-legal">
         <p>6600 Kalaniana'ole Hwy #114, Honolulu, HI 96825</p>
         <p>License RS-82797 &middot; Brokerage License RB-21841</p>
         <p class="footer-copy">&copy; 2026 Keala M. Wall. All rights reserved.</p>
+        <p class="footer-credit">Powered by <a href="https://www.touchpointai.co/" target="_blank" rel="noopener">Touchpoint AI</a></p>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Mobile hamburger menu.
-    (function () {
-      var nav = document.getElementById('nav');
-      var burger = document.querySelector('.nav-burger');
-      var menu = document.getElementById('mobileMenu');
-      if (!burger || !menu) return;
-      burger.addEventListener('click', function () {
-        var open = menu.classList.toggle('open');
-        burger.classList.toggle('open', open);
-        if (nav) nav.classList.toggle('menu-open', open);
-        burger.setAttribute('aria-expanded', open);
-        document.body.style.overflow = open ? 'hidden' : '';
-      });
-      menu.querySelectorAll('a').forEach(function (a) {
-        a.addEventListener('click', function () {
-          menu.classList.remove('open'); burger.classList.remove('open');
-          if (nav) nav.classList.remove('menu-open');
-          burger.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
-        });
-      });
-    })();
-  </script>
+  <script src="/js/site.js"></script>
 </body>
 </html>

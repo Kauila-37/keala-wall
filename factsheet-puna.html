@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Puna District Area Fact Sheet — Free | Keala M. Wall, Hawai'i Island Realtor</title>
   <meta name="description" content="A free one-page Puna District fact sheet — climate, rainfall, lava zone, median prices, services, and the honest trade-offs of living there.">
-  <link rel="canonical" href="https://lifelandlegacyhi.com/factsheet-puna.html">
+  <link rel="canonical" href="https://lifelandlegacyhi.com/factsheet-puna">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Life, Land &amp; Legacy — Keala M. Wall">
-  <meta property="og:url" content="https://lifelandlegacyhi.com/factsheet-puna.html">
+  <meta property="og:url" content="https://lifelandlegacyhi.com/factsheet-puna">
   <meta property="og:title" content="Puna District Area Fact Sheet — Free | Keala M. Wall, Hawai'i Island Realtor">
   <meta property="og:description" content="A free one-page Puna District fact sheet — climate, rainfall, lava zone, median prices, services, and the honest trade-offs of living there.">
   <meta property="og:image" content="https://lifelandlegacyhi.com/og-image.jpg">
@@ -46,11 +46,13 @@
     .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
     .nav-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); transition: color 0.2s; }
     .nav-links a:hover, .nav-links a.active { color: var(--green-deep); }
+    .nav-links a.pillar { font-weight: 600; color: var(--text-body); }
+    .nav-links a.pillar:hover, .nav-links a.pillar.active { color: var(--green-deep); }
     .nav-right { display: flex; align-items: center; gap: 2rem; }
     .nav-phone { font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.02em; }
     .nav-cta { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid currentColor; padding-bottom: 1px; transition: color 0.2s; }
     .nav-cta:hover { color: var(--gold-warm); }
-    @media (max-width: 1000px) { .nav-links { display: none; } }
+    @media (max-width: 1080px) { .nav-links { display: none; } }
     @media (max-width: 640px) { .nav-phone { display: none; } nav { padding: 0 1.5rem; } }
 
 
@@ -70,7 +72,7 @@
     .gate > p { font-size: 0.92rem; margin-bottom: 1.4rem; }
     .gate-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.1rem; }
     .gate-field label { display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green-deep); margin-bottom: 0.4rem; }
-    .gate-field input { width: 100%; min-width: 0; box-sizing: border-box; border: 1px solid var(--cream-3); background: var(--cream); padding: 0.8rem 0.9rem; font-size: 0.92rem; font-family: 'Inter', sans-serif; color: var(--text-dark); }
+    .gate-field input { width: 100%; min-width: 0; box-sizing: border-box; border: 1px solid var(--cream-3); background: var(--cream); padding: 0.8rem 0.9rem; font-size: 1rem; font-family: 'Inter', sans-serif; color: var(--text-dark); }
     .gate-field input:focus { outline: none; border-color: var(--gold); }
     .gate button { width: 100%; border: 0; cursor: pointer; background: var(--gold); color: #fff; padding: 0.95rem 2rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-family: 'Inter', sans-serif; transition: background 0.2s; }
     .gate button:hover { background: var(--gold-warm); }
@@ -196,6 +198,9 @@
     }
     .footer-legal p { font-size: 0.7rem; line-height: 1.6; color: inherit; }
     .footer-copy { color: rgba(255,255,255,0.22); }
+.footer-credit { color: rgba(255,255,255,0.3); margin-top: 0.1rem; }
+.footer-credit a { color: rgba(255,255,255,0.5); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.18); transition: color 0.2s ease, border-color 0.2s ease; }
+.footer-credit a:hover, .footer-credit a:focus-visible { color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.45); }
     @media (max-width: 860px) {
       .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
       .footer-identity { grid-column: 1 / -1; }
@@ -215,7 +220,7 @@
     .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .nav-burger.open span:nth-child(2) { opacity: 0; }
     .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    @media (max-width: 1000px) { .nav-burger { display: flex; } }
+    @media (max-width: 1080px) { .nav-burger { display: flex; } }
 
     .mobile-menu {
       position: fixed; top: 68px; left: 0; right: 0; bottom: 0; z-index: 190;
@@ -271,45 +276,37 @@
 </head>
 <body>
   <nav id="nav">
-    <a class="nav-brand" href="index.html">Keala M. Wall</a>
+    <a class="nav-brand" href="/">Keala M. Wall</a>
     <ul class="nav-links">
-      <li><a href="land.html">Buy Land</a></li>
-      <li><a href="relocation.html">Relocate</a></li>
-      <li><a href="legacy.html">Homes</a></li>
-      <li><a href="guides.html" class="active">Guides</a></li>
+      <li><a class="pillar" href="/life">Life</a></li>
+      <li><a class="pillar" href="/land">Land</a></li>
+      <li><a class="pillar" href="/legacy">Legacy</a></li>
+      <li><a href="/listings">Listings</a></li>
+      <li><a href="/guides" class="active">Guides</a></li>
     </ul>
     <div class="nav-right">
       <a href="tel:8085153081" class="nav-phone">808-515-3081</a>
-      <a href="index.html#contact" class="nav-cta">Talk Story</a>
+      <a href="/#contact" class="nav-cta">Talk Story</a>
       <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a class="mm-home" href="index.html">Home</a>
-    <div class="mm-group">
-      <a class="mm-primary" href="land.html">Buy Land</a>
-      <a href="ranches.html">Ranches &amp; Farms</a>
-      <a href="off-grid.html">Off-Grid Living</a>
-    </div>
-    <div class="mm-group">
-      <a class="mm-primary" href="relocation.html">Relocate</a>
-      <a href="areas.html">Area Guides</a>
-    </div>
-    <div class="mm-group">
-      <a class="mm-primary" href="legacy.html">Homes</a>
-    </div>
-    <div class="mm-group">
-      <a class="mm-primary" href="guides.html">Guides &amp; Downloads</a>
-    </div>
+    <a class="mm-home" href="/">Home</a>
+    <div class="mm-group"><a class="mm-primary" href="/life">Life</a></div>
+    <div class="mm-group"><a class="mm-primary" href="/land">Land</a></div>
+    <div class="mm-group"><a class="mm-primary" href="/legacy">Legacy</a></div>
+    <div class="mm-group"><a class="mm-primary" href="/listings">Listings</a></div>
+    <div class="mm-group"><a class="mm-primary" href="/guides">Guides</a></div>
     <div class="mm-foot">
-      <a href="index.html#contact" class="mm-cta">Talk Story</a>
+      <a href="/#contact" class="mm-cta">Talk Story</a>
       <a href="tel:8085153081" class="mm-phone">808-515-3081</a>
     </div>
   </div>
+  </div>
 
   <header class="doc-head">
-    <span class="kicker">Free Download &middot; East Side · South</span>
+    <span class="kicker">Free Download &middot; Puna &middot; East Side</span>
     <h1>Puna District Fact Sheet</h1>
     <p>One page on Puna District — the numbers, the trade-offs, and who it actually suits. Printable.</p>
   </header>
@@ -342,7 +339,7 @@
       <div class="sheet">
         <div class="sheet-top">
           <h2>Puna District</h2>
-          <div class="stamp">East Side · South &middot; Hawai'i Island<br>Reviewed July 2026 &middot; Keala M. Wall</div>
+          <div class="stamp">Puna &middot; East Side &middot; Hawai'i Island<br>Reviewed July 2026 &middot; Keala M. Wall</div>
         </div>
 
         <p style="font-size:0.95rem;margin-bottom:0.5rem">The island's most affordable land, a strong off-grid culture, and real volcanic risk.</p>
@@ -364,7 +361,7 @@
         <h3>Who It Suits</h3>
         <div class="who"><span>Off-grid lifestyle buyers</span><span>Buyers with a lower budget and higher risk tolerance</span><span>Self-reliant builders</span></div>
 
-        <div class="note"><strong>Comparing areas?</strong> The full write-up on every Big Island district — climate, lava zone, prices, services — is free to read on the <a href="areas.html">Area Guides</a> page. <a href="index.html#contact">Ask Keala which fits you &rarr;</a></div>
+        <div class="note"><strong>Comparing areas?</strong> The full write-up on every Big Island district — climate, lava zone, prices, services — is free to read on the <a href="/life#districts">Area Guides</a> page. <a href="/#contact">Ask Keala which fits you &rarr;</a></div>
 
         <div class="sheet-foot">
           Prices and rents are approximate ranges as of mid-2026 and move with the market — ask for current comps before making decisions. Lava zone assignments per USGS; verify any specific parcel from its Tax Map Key. General information, not legal, tax, or financial advice.
@@ -373,7 +370,7 @@
 
       <div class="after">
         <a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener" class="btn-primary">Search Listings</a>
-        <a href="index.html#contact" class="btn-outline">Talk to Keala</a>
+        <a href="/#contact" class="btn-outline">Talk to Keala</a>
       </div>
     </div>
   </div>
@@ -390,14 +387,14 @@
       <div class="footer-col">
         <span class="footer-heading">Explore</span>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="land.html">Buy Land</a></li>
-          <li><a href="ranches.html">Ranches</a></li>
-          <li><a href="off-grid.html">Off-Grid</a></li>
-          <li><a href="relocation.html">Relocate</a></li>
-          <li><a href="areas.html">Areas</a></li>
-          <li><a href="legacy.html">Legacy</a></li>
-          <li><a href="guides.html">Guides</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/land">Buy Land</a></li>
+          <li><a href="/land#ranches">Ranches</a></li>
+          <li><a href="/land#off-grid">Off-Grid</a></li>
+          <li><a href="/life">Relocate</a></li>
+          <li><a href="/life#districts">Areas</a></li>
+          <li><a href="/legacy">Legacy</a></li>
+          <li><a href="/guides">Guides</a></li>
         </ul>
       </div>
 
@@ -420,6 +417,7 @@
         <p>6600 Kalaniana'ole Hwy #114, Honolulu, HI 96825</p>
         <p>License RS-82797 &middot; Brokerage License RB-21841</p>
         <p class="footer-copy">&copy; 2026 Keala M. Wall. All rights reserved.</p>
+        <p class="footer-credit">Powered by <a href="https://www.touchpointai.co/" target="_blank" rel="noopener">Touchpoint AI</a></p>
       </div>
     </div>
   </footer>

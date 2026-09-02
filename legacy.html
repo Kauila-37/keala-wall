@@ -3,289 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homes & Legacy Property on Hawai'i Island | Keala M. Wall — Realtor</title>
-  <meta name="description" content="Buying or selling a home on the Big Island — residential, luxury estates, condos, multi-generational living, downsizing, and the care that selling a family home deserves.">
-  <link rel="canonical" href="https://lifelandlegacyhi.com/legacy.html">
+  <title>Protecting &amp; Passing On Hawai'i Land — Trusts, LLCs, Kuleana &amp; DHHL | Keala M. Wall</title>
+  <meta name="description" content="How Hawai'i Island landowners protect, structure, and pass on family land: revocable trusts and probate, LLCs for ranch and ag land, kuleana and inherited-property rights, land financing and buyouts, and DHHL homestead lease succession.">
+  <link rel="canonical" href="https://lifelandlegacyhi.com/legacy">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Life, Land &amp; Legacy — Keala M. Wall">
   <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://lifelandlegacyhi.com/legacy.html">
-  <meta property="og:title" content="Homes & Legacy Property on Hawai'i Island | Keala M. Wall — Realtor">
-  <meta property="og:description" content="Buying or selling a home on the Big Island — residential, luxury estates, condos, multi-generational living, downsizing, and the care that selling a family home deserves.">
+  <meta property="og:url" content="https://lifelandlegacyhi.com/legacy">
+  <meta property="og:title" content="Protecting &amp; Passing On Hawai'i Land — Trusts, LLCs, Kuleana &amp; DHHL">
+  <meta property="og:description" content="How Hawai'i Island landowners protect, structure, and pass on family land: trusts and probate, LLCs for ranch and ag land, kuleana and inherited property, financing, and DHHL lease succession.">
   <meta property="og:image" content="https://lifelandlegacyhi.com/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Aerial view of the Hawai'i Island coastline, where green upland meets lava rock and open ocean">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Homes & Legacy Property on Hawai'i Island | Keala M. Wall — Realtor">
-  <meta name="twitter:description" content="Buying or selling a home on the Big Island — residential, luxury estates, condos, multi-generational living, downsizing, and the care that selling a family home deserves.">
+  <meta name="twitter:title" content="Protecting &amp; Passing On Hawai'i Land — Trusts, LLCs, Kuleana &amp; DHHL">
+  <meta name="twitter:description" content="How Hawai'i Island landowners protect, structure, and pass on family land: trusts and probate, LLCs, kuleana and inherited property, financing, and DHHL lease succession.">
   <meta name="twitter:image" content="https://lifelandlegacyhi.com/og-image.jpg">
 
-  <link rel="preload" as="image" href="photos/lava-wall-sky.jpg">
+  <link rel="preload" as="image" href="/photos/sunset-green-lawn.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    img { display: block; max-width: 100%; }
+    .hero-bg { background-image: url('/photos/sunset-green-lawn.jpg'); background-position: center 35%; }
 
-    :root {
-      --cream:       #faf7f2;
-      --cream-2:     #f0e9d8;
-      --cream-3:     #e5dbc8;
-      --green-deep:  #1a2e20;
-      --green-mid:   #2d5235;
-      --green-sage:  #5a7e5d;
-      --gold:        #a07828;
-      --gold-warm:   #c4982e;
-      --gold-light:  #e0b84a;
-      --text-dark:   #1c2b1e;
-      --text-body:   #3d4e3f;
-      --text-muted:  #6b7d6d;
-      --white:       #ffffff;
+    /* ─── Shared section furniture ───────────────────────────────── */
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .split p + p { margin-top: 1rem; }
+    .prose h4 { font-size: 1.05rem; font-weight: 600; color: var(--green-deep); margin-top: 1.75rem; margin-bottom: 0.4rem; }
+    .prose h4:first-child { margin-top: 0; }
+    .prose sup { font-size: 0.68em; color: var(--gold); font-weight: 600; }
+
+    /* A fact panel — the numbers and statutes for the section beside it. */
+    .panel { background: var(--green-deep); border-radius: 8px; padding: 2rem; }
+    .panel h3 { font-size: 1.1rem; font-weight: 500; color: white; margin-bottom: 1.25rem; }
+    .panel-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; padding: 0.65rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .panel-row:last-child { border-bottom: none; }
+    .panel-k { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.4; }
+    .panel-v { font-size: 0.88rem; color: white; font-weight: 500; text-align: right; line-height: 1.4; }
+    .panel.light { background: white; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
+    .panel.light h3 { color: var(--green-deep); }
+    .panel.light .panel-row { border-bottom-color: var(--cream-2); }
+    .panel.light .panel-k { color: var(--text-muted); }
+    .panel.light .panel-v { color: var(--text-dark); }
+
+    /* Statute / pending-legislation callout. */
+    .note {
+      margin-top: 1.75rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--cream-2);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 6px 6px 0;
+      font-size: 0.88rem; line-height: 1.65; color: var(--text-body);
     }
+    .note strong { color: var(--gold); }
+    .note a { color: var(--gold); border-bottom: 1px solid currentColor; }
+    .note.pending { background: #fdf6e3; border-left-color: #b07d12; }
+    .note.pending strong { color: #8a6410; }
+    .note.dark { background: rgba(255,255,255,0.07); border-left-color: var(--gold-warm); color: rgba(255,255,255,0.75); }
+    .note.dark strong { color: var(--gold-warm); }
 
-    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text-dark); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; line-height: 1.15; color: var(--green-deep); }
-    a { color: inherit; text-decoration: none; }
-    p { line-height: 1.75; color: var(--text-body); }
-
-    /* ─── Nav ──────────────────────────────────────────────────── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      height: 68px; padding: 0 3rem;
-      display: flex; align-items: center; justify-content: space-between;
-      background: rgba(250, 247, 242, 0.97);
-      border-bottom: 1px solid rgba(0,0,0,0.07);
-      backdrop-filter: blur(8px);
+    /* Keala's own voice — genuine background, set apart from the neutral
+       explanatory prose so it reads as a personal note, not a legal claim. */
+    .personal {
+      margin-top: 1.75rem;
+      display: flex; gap: 1.1rem; align-items: flex-start;
+      padding: 1.5rem 1.75rem;
+      background: rgba(255,255,255,0.06);
+      border-left: 3px solid var(--gold-warm);
+      border-radius: 0 8px 8px 0;
     }
-    .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400; color: var(--green-deep); letter-spacing: 0.04em; }
-    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
-    .nav-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); transition: color 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--green-deep); }
-    .nav-right { display: flex; align-items: center; gap: 2rem; }
-    .nav-phone { font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.02em; }
-    .nav-cta { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid currentColor; padding-bottom: 1px; transition: color 0.2s; }
-    .nav-cta:hover { color: var(--gold-warm); }
-    @media (max-width: 1000px) { .nav-links { display: none; } }
-    @media (max-width: 640px) { .nav-phone { display: none; } nav { padding: 0 1.5rem; } }
+    .personal img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .personal p { font-family: 'Cormorant Garamond', serif; font-size: 1.12rem; font-style: italic; line-height: 1.5; color: rgba(255,255,255,0.88); }
+    .personal cite { display: block; margin-top: 0.5rem; font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-warm); }
 
+    /* ─── Section skins ──────────────────────────────────────────── */
+    .family { background: var(--cream); }
+    .structuring { background: var(--cream-2); }
+    .inherited { background: var(--cream); }
+    .estate { background: var(--green-deep); padding: 6rem 2.5rem; }
+    .estate .eyebrow { color: var(--gold-warm); }
+    .estate .section-title { color: white; }
+    .estate .section-lead { color: rgba(255,255,255,0.72); }
+    .estate .prose p { color: rgba(255,255,255,0.72); }
+    .estate .prose h4 { color: white; }
+    .estate .prose sup { color: var(--gold-warm); }
+    .financing { background: var(--cream-2); }
+    .dhhl { background: var(--green-deep); padding: 6rem 2.5rem; }
+    .dhhl .eyebrow { color: var(--gold-warm); }
+    .dhhl .section-title { color: white; }
+    .dhhl .section-lead { color: rgba(255,255,255,0.72); }
+    .dhhl .prose p { color: rgba(255,255,255,0.72); }
+    .dhhl .prose h4 { color: white; }
+    .dhhl .prose sup { color: var(--gold-warm); }
 
+    /* Sub-topic divider inside a section (Trusts, then LLCs). */
+    .subsplit { margin-top: 3.5rem; padding-top: 3.5rem; border-top: 1px solid var(--cream-3); }
+    .sub-eyebrow { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .sub-title { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 500; color: var(--green-deep); margin-bottom: 1.5rem; }
 
-    /* ─── Hero ──────────────────────────────────────────────────── */
-    .hero { position: relative; min-height: 46vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 9rem 2rem 4rem; overflow: hidden; background-color: var(--green-deep); }
-    .hero-bg { position: absolute; inset: 0; background-image: url('photos/lava-wall-sky.jpg'); background-size: cover; background-position: center; opacity: 0.4; }
-    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(12,26,14,0.6) 0%, rgba(8,20,10,0.78) 100%); }
-    .hero-inner { position: relative; z-index: 2; max-width: 720px; }
-    .hero-eyebrow { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-warm); margin-bottom: 1.2rem; }
-    .hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 500; color: white; margin-bottom: 1.2rem; }
-    .hero-sub { font-size: 1.02rem; color: rgba(255,255,255,0.82); max-width: 580px; margin: 0 auto; line-height: 1.7; }
+    /* ─── Checklist / step blocks ────────────────────────────────── */
+    .checklist-box { background: white; border-radius: 8px; padding: 2rem; }
+    .checklist-box h3 { font-size: 1rem; font-weight: 600; color: var(--green-deep); margin-bottom: 1.1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--cream-3); }
+    .cl-row { display: flex; gap: 0.7rem; align-items: flex-start; margin-bottom: 0.85rem; }
+    .cl-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-sage); flex-shrink: 0; margin-top: 7px; }
+    .cl-row p { font-size: 0.87rem; color: var(--text-body); line-height: 1.6; }
 
+    .steps { margin-top: 2rem; }
+    .step { display: flex; gap: 1.25rem; align-items: flex-start; margin-bottom: 1.6rem; }
+    .step-num { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; color: var(--gold-warm); line-height: 1; flex-shrink: 0; min-width: 2rem; }
+    .step h4 { font-size: 1rem; font-weight: 600; color: white; margin-bottom: 0.3rem; }
+    .step p { font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.65; }
 
-    /* ─── Legacy page ───────────────────────────────────────────── */
-    .wrap-wide { max-width: 1100px; margin: 0 auto; }
-    section.chapters { padding: 5rem 2.5rem; }
-    .sec-head { max-width: 700px; margin-bottom: 3rem; }
-    .sec-eyebrow { display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
-    .sec-head h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 500; margin-bottom: 1.25rem; }
-    .sec-head p { font-size: 1.05rem; line-height: 1.75; }
-    section.home-notes { padding: 5rem 2.5rem; background: var(--cream-2); }
-    .notes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
-    .note-card { background: var(--white); border: 1px solid var(--cream-3); border-top: 3px solid var(--gold); padding: 1.6rem 1.6rem 1.75rem; }
-    .note-card h3 { font-size: 1.15rem; font-weight: 500; margin-bottom: 0.6rem; color: var(--green-deep); }
-    .note-card p { font-size: 0.9rem; line-height: 1.65; color: var(--text-body); }
-    .note-card a { color: var(--gold); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.02em; display: inline-block; margin-top: 0.7rem; }
-    .note-card a:hover { color: var(--gold-warm); }
-    .notes-cta { margin-top: 2.5rem; text-align: center; font-size: 0.98rem; color: var(--text-body); }
-    .notes-cta a { color: var(--gold); font-weight: 600; }
-    @media (max-width: 860px) { .notes-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 560px) { .notes-grid { grid-template-columns: 1fr; } }
-    .chapter-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
-    .chapter-card { background: var(--white); border: 1px solid var(--cream-3); overflow: hidden; display: flex; flex-direction: column; }
-    .chapter-img { aspect-ratio: 3/2; overflow: hidden; }
-    .chapter-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .chapter-card:hover .chapter-img img { transform: scale(1.05); }
-    .chapter-body { padding: 1.5rem 1.6rem 1.75rem; }
-    .chapter-body h3 { font-size: 1.3rem; font-weight: 500; margin-bottom: 0.5rem; }
-    .chapter-body p { font-size: 0.88rem; line-height: 1.65; }
-    @media (max-width: 960px) { .chapter-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 620px) { .chapter-grid { grid-template-columns: 1fr; } }
+    /* ─── Sources ────────────────────────────────────────────────── */
+    .sources { background: var(--cream); padding: 4rem 2.5rem 5rem; }
+    .sources-inner { max-width: 860px; margin: 0 auto; }
+    .sources h2 { font-size: 1.3rem; font-weight: 500; margin-bottom: 0.6rem; }
+    .sources-lead { font-size: 0.87rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+    .sources ol { margin: 0; padding-left: 1.25rem; }
+    .sources li { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 0.5rem; }
+    .sources a { color: var(--gold); border-bottom: 1px solid rgba(160,120,40,0.35); }
+    .sources a:hover { color: var(--gold-warm); }
+    .legal { margin-top: 2.5rem; padding: 1.25rem 1.5rem; background: var(--cream-2); border-radius: 6px; font-size: 0.82rem; line-height: 1.7; color: var(--text-muted); }
+    .legal strong { color: var(--text-body); }
 
-    /* selling band */
-    section.selling { background: var(--cream-2); padding: 5.5rem 2.5rem; }
-    .selling-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-    .selling-media { aspect-ratio: 4/3; overflow: hidden; }
-    .selling-media img { width: 100%; height: 100%; object-fit: cover; }
-    .selling-body h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 500; margin-bottom: 1.1rem; }
-    .selling-body p { font-size: 1rem; line-height: 1.8; }
-    @media (max-width: 860px) { .selling-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
+    .cta-bg { background-image: url('/photos/lei-heart-sunset.jpg'); }
 
-    /* cta band */
-    section.cta { position: relative; overflow: hidden; padding: 7rem 2.5rem; text-align: center; background-color: var(--green-mid); }
-    .cta-bg { position: absolute; inset: 0; background-image: url('photos/lei-heart-sunset.jpg'); background-size: cover; background-position: center 30%; opacity: 0.28; }
-    .cta-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(14,28,16,0.65) 0%, rgba(8,18,10,0.82) 100%); }
-    .cta-inner { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
-    .cta-inner .sec-eyebrow { color: var(--gold-warm); }
-    .cta-inner h2 { font-size: clamp(2rem, 5vw, 3rem); color: white; margin-bottom: 1rem; }
-    .cta-inner p { color: rgba(255,255,255,0.82); margin-bottom: 2.25rem; }
-    .cta-actions { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { display: inline-block; background: var(--gold); color: white; padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.2s; }
-    .btn-primary:hover { background: var(--gold-warm); }
-    .btn-ghost { display: inline-block; border: 1.5px solid rgba(255,255,255,0.55); color: rgba(255,255,255,0.9); padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; transition: border-color 0.2s, color 0.2s; }
-    .btn-ghost:hover { border-color: white; color: white; }
-    .btn-dark { display: inline-block; background: var(--green-deep); color: white; padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.2s; }
-    .btn-dark:hover { background: var(--green-mid); }
-
-    /* ─── Footer ─────────────────────────────────────────────────── */
-    footer {
-      background: #0c1a0e;
-      padding: 4.5rem 3rem 2.25rem;
+    @media (max-width: 900px) {
+      .split { grid-template-columns: 1fr; gap: 2.5rem; }
+      .estate, .dhhl { padding: 4rem 1.75rem; }
     }
-    .footer-top {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.25fr 1fr 1fr;
-      gap: 4rem;
-      padding-bottom: 3rem;
-    }
-    .footer-identity { display: flex; flex-direction: column; }
-    .footer-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 400;
-      letter-spacing: 0.02em;
-      color: rgba(255,255,255,0.92);
-    }
-    .footer-name {
-      font-size: 0.9rem;
-      letter-spacing: 0.03em;
-      color: rgba(255,255,255,0.6);
-      margin-top: 0.6rem;
-    }
-    .footer-role {
-      font-size: 0.68rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.32);
-      margin-top: 0.3rem;
-    }
-    .footer-heading {
-      display: block;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #c4982e;
-      margin-bottom: 1.1rem;
-    }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
-    .footer-col a {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.58);
-      transition: color 0.2s;
-    }
-    .footer-col a:hover { color: #e0b84a; }
-    .footer-bottom {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding-top: 2.25rem;
-      border-top: 1px solid rgba(255,255,255,0.09);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1.75rem;
-    }
-    .footer-logo { height: 56px; width: auto; flex-shrink: 0; }
-    .footer-legal {
-      display: flex;
-      flex-direction: column;
-      gap: 0.28rem;
-      text-align: right;
-      font-size: 0.7rem;
-      color: rgba(255,255,255,0.32);
-    }
-    .footer-legal p { font-size: 0.7rem; line-height: 1.6; color: inherit; }
-    .footer-copy { color: rgba(255,255,255,0.22); }
-    @media (max-width: 860px) {
-      .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
-      .footer-identity { grid-column: 1 / -1; }
-    }
-    @media (max-width: 640px) {
-      footer { padding: 3.5rem 1.5rem 2rem; }
-      .footer-top { grid-template-columns: 1fr; gap: 2.25rem; padding-bottom: 2.25rem; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-      .footer-legal { text-align: left; }
-      .footer-logo { height: 46px; }
-    }
-
-    .nav-links li { position: relative; }
-
-    .nav-burger { display: none; background: none; border: 0; cursor: pointer; padding: 6px 2px; flex-direction: column; gap: 5px; }
-    .nav-burger span { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 0.25s, opacity 0.2s; }
-    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-burger.open span:nth-child(2) { opacity: 0; }
-    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    @media (max-width: 1000px) { .nav-burger { display: flex; } }
-
-    .mobile-menu {
-      position: fixed; top: 68px; left: 0; right: 0; bottom: 0; z-index: 190;
-      background: var(--cream); padding: 2rem 1.75rem 3rem; overflow-y: auto;
-      opacity: 0; visibility: hidden; transform: translateY(-10px);
-      transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
-    }
-    .mobile-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
-    .mm-home { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--cream-3); }
-    .mm-group { margin-bottom: 1.4rem; }
-    .mm-group a { display: block; padding: 0.32rem 0; }
-    .mm-group a.mm-primary { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); margin-bottom: 0.15rem; }
-    .mm-group a:not(.mm-primary) { font-size: 0.92rem; color: var(--text-muted); }
-    .mm-foot { margin-top: 2.25rem; padding-top: 1.75rem; border-top: 1px solid var(--cream-3); display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
-    .mm-cta { display: inline-block; background: var(--gold); color: white; padding: 0.8rem 1.8rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-    .mm-phone { font-size: 0.95rem; color: var(--text-muted); }
-
-    .nav-burger { color: var(--green-deep); }
   </style>
 </head>
 <body>
+
   <nav id="nav">
-    <a class="nav-brand" href="index.html">Keala M. Wall</a>
+    <a class="nav-brand" href="/">Keala M. Wall</a>
     <ul class="nav-links">
-      <li><a href="land.html">Buy Land</a></li>
-      <li><a href="relocation.html">Relocate</a></li>
-      <li><a href="legacy.html" class="active">Homes</a></li>
-      <li><a href="guides.html">Guides</a></li>
+      <li><a class="pillar" href="/life">Life</a></li>
+      <li><a class="pillar" href="/land">Land</a></li>
+      <li><a class="pillar active" href="/legacy">Legacy</a></li>
+      <li><a href="/listings">Listings</a></li>
+      <li><a href="/guides">Guides</a></li>
     </ul>
     <div class="nav-right">
       <a href="tel:8085153081" class="nav-phone">808-515-3081</a>
-      <a href="index.html#contact" class="nav-cta">Talk Story</a>
+      <a href="#contact" class="nav-cta">Talk Story</a>
       <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a class="mm-home" href="index.html">Home</a>
+    <a class="mm-home" href="/">Home</a>
+    <div class="mm-group"><a class="mm-primary" href="/life">Life</a></div>
+    <div class="mm-group"><a class="mm-primary" href="/land">Land</a></div>
     <div class="mm-group">
-      <a class="mm-primary" href="land.html">Buy Land</a>
-      <a href="ranches.html">Ranches &amp; Farms</a>
-      <a href="off-grid.html">Off-Grid Living</a>
+      <a class="mm-primary" href="/legacy">Legacy</a>
+      <a href="#family-land">Family Land &amp; Kuleana</a>
+      <a href="#structuring">Trusts &amp; LLCs</a>
+      <a href="#inherited">Inherited Property</a>
+      <a href="#estate">Estate &amp; Probate Sales</a>
+      <a href="#financing">Financing Land &amp; Buyouts</a>
+      <a href="#dhhl">Hawaiian Home Lands</a>
     </div>
-    <div class="mm-group">
-      <a class="mm-primary" href="relocation.html">Relocate</a>
-      <a href="areas.html">Area Guides</a>
-    </div>
-    <div class="mm-group">
-      <a class="mm-primary" href="legacy.html">Homes</a>
-    </div>
-    <div class="mm-group">
-      <a class="mm-primary" href="guides.html">Guides &amp; Downloads</a>
-    </div>
+    <div class="mm-group"><a class="mm-primary" href="/listings">Listings</a></div>
+    <div class="mm-group"><a class="mm-primary" href="/guides">Guides</a></div>
     <div class="mm-foot">
-      <a href="index.html#contact" class="mm-cta">Talk Story</a>
+      <a href="#contact" class="mm-cta">Talk Story</a>
       <a href="tel:8085153081" class="mm-phone">808-515-3081</a>
     </div>
   </div>
@@ -294,121 +181,369 @@
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
-      <span class="hero-eyebrow">Legacy &middot; Homes &amp; Your Next Chapter</span>
-      <h1>Homes that become part of your story</h1>
-      <p class="hero-sub">Everything already built — the places where the next chapter happens. From a first home to a legacy estate, and the care that selling a family home deserves.</p>
+      <span class="hero-eyebrow">Legacy</span>
+      <h1>Land That Stays<br>in the Family</h1>
+      <p class="hero-sub">Land on the Big Island rarely moves through just one generation. Here's what every Hawai'i landowner should understand about protecting it, structuring it, and passing it on well.</p>
     </div>
   </section>
 
-  <section class="chapters">
-    <div class="wrap-wide">
-      <div class="sec-head">
-        <span class="sec-eyebrow">What You're Looking For</span>
-        <h2>A home for every chapter</h2>
-        <p>Whether you're arriving, upsizing for a growing family, or right-sizing for the next stage, the island has a place that fits — and each comes with its own considerations.</p>
-      </div>
-      <div class="chapter-grid">
-        <div class="chapter-card">
-          <div class="chapter-img"><img loading="lazy" decoding="async" src="photos/sunset-green-lawn.jpg" alt="Residential home setting, Hawai'i Island"></div>
-          <div class="chapter-body"><h3>Residential Homes</h3><p>Single-family homes across every side of the island — from Kona's sunny coast to Hilo's lush, attainable neighborhoods.</p></div>
-        </div>
-        <div class="chapter-card">
-          <div class="chapter-img"><img loading="lazy" decoding="async" src="photos/coral-beach.jpg" alt="Oceanfront estate setting on a coral beach"></div>
-          <div class="chapter-body"><h3>Luxury &amp; Oceanfront Estates</h3><p>Kohala Coast and beyond — architectural homes, view property, and estates where the setting is the point.</p></div>
-        </div>
-        <div class="chapter-card">
-          <div class="chapter-img"><img loading="lazy" decoding="async" src="photos/trees-canopy.jpg" alt="Tree canopy near a residential community"></div>
-          <div class="chapter-body"><h3>Condos &amp; Communities</h3><p>Lower-maintenance ownership and resort communities — a common first step, second home, or investment on the island.</p></div>
-        </div>
-        <div class="chapter-card">
-          <div class="chapter-img"><img loading="lazy" decoding="async" src="photos/anthurium-flowers.jpg" alt="Anthurium flowers, a Hawai'i garden tradition"></div>
-          <div class="chapter-body"><h3>Multi-Generational</h3><p>Homes with room for 'ohana — extended family under one roof or across an 'ohana dwelling, an island tradition.</p></div>
-        </div>
-        <div class="chapter-card">
-          <div class="chapter-img"><img loading="lazy" decoding="async" src="photos/aerial-coastline.jpg" alt="Aerial view of the Hawai'i Island coastline"></div>
-          <div class="chapter-body"><h3>Investment Property</h3><p>Long-term holds, rentals, and income property — evaluated with clear eyes on returns and the realities of island ownership.</p></div>
-        </div>
-        <div class="chapter-card">
-          <div class="chapter-img"><img loading="lazy" decoding="async" src="photos/fern-golden-hour.jpg" alt="Native fern at golden hour"></div>
-          <div class="chapter-body"><h3>Downsizing</h3><p>Right-sizing for the next stage — less house, less upkeep, and a home that fits the life you're living now.</p></div>
-        </div>
-      </div>
+  <div class="subnav">
+    <div class="subnav-inner">
+      <span class="subnav-label">Legacy</span>
+      <ul class="subnav-links">
+        <li><a href="#family-land">Family Land &amp; Kuleana</a></li>
+        <li><a href="#structuring">Trusts &amp; LLCs</a></li>
+        <li><a href="#inherited">Inherited Property</a></li>
+        <li><a href="#estate">Estate &amp; Probate Sales</a></li>
+        <li><a href="#financing">Financing &amp; Buyouts</a></li>
+        <li><a href="#dhhl">Hawaiian Home Lands</a></li>
+      </ul>
     </div>
-  </section>
+  </div>
 
-  <section class="home-notes">
-    <div class="wrap-wide">
-      <div class="sec-head">
-        <span class="sec-eyebrow">Before You Buy</span>
-        <h2>A home here comes with questions the mainland doesn't</h2>
-        <p>Buying a finished home skips the biggest unknowns of raw land — but the Big Island still shapes the decision in ways buyers from the mainland don't expect. These are the ones worth checking on any listing before you fall in love.</p>
-      </div>
-      <div class="notes-grid">
+  <!-- ─── Family Land & Kuleana ─────────────────────────────────── -->
+  <section class="family" id="family-land">
+    <div class="wrap">
+      <span class="eyebrow">Family Land</span>
+      <h2 class="section-title">Kuleana and Generational Land</h2>
+      <p class="section-lead">On this island the hardest property problem is often not buying — it's holding on. Assessed values rise with a market that has nothing to do with a family who has worked the same acres for four generations, and it is the tax bill that forces the sale.</p>
+      <div class="split">
+        <div class="prose">
+          <h4>What kuleana land actually is</h4>
+          <p>The Kuleana Act of 1850 let native tenants — makaʻāinana — claim fee simple title to land they were actively cultivating, plus a quarter-acre house lot. Those awards are kuleana lands, and parcels traceable to them still exist across the island, often held undivided by dozens of descendants of the original awardee.</p>
+          <p>Hawaiʻi County recognises this with a property tax dedication. Kuleana land owned in whole or in part by a lineal descendant of the original awardee can be assessed at the county minimum tax — currently $200 a year, rather than a market-rate bill.<sup>1</sup> Descent has to be proven, either by court order or through the Office of Hawaiian Affairs' genealogy verification service, and the county may ask for deeds, wills, trusts, court orders and birth and death certificates to establish the chain.<sup>2</sup></p>
 
-        <div class="note-card">
-          <h3>The lava zone still matters</h3>
-          <p>Even a finished home sits in a USGS lava hazard zone, 1 through 9, and that zone drives what insurance you can get and at what price. In Zones 1&ndash;2 the state fund is often the only insurer, capped at $450,000 of dwelling coverage. Check the zone before you write an offer.</p>
-          <a href="land.html">How lava zones work &rarr;</a>
+          <h4>If your family land isn't kuleana</h4>
+          <p>Plenty of generational land here has no 1850 award behind it — a homestead, a plantation-era purchase, acreage a great-grandparent bought in the 1920s. Until recently there was no equivalent relief for those families.</p>
+
+          <div class="note pending">
+            <strong>Pending — not yet law.</strong> A Hawaiʻi County measure known as ʻĀina Kūpuna would create a
+            generational-land dedication that is not tied to ancestry: parcels of 20 acres or less, family-owned
+            since before January 1, 1926, and carrying more than $10,000 in property taxes over the previous ten
+            years could be dedicated for ten years at the county minimum tax. It cleared committee in June 2026
+            and had not been enacted when this page was written.<sup>3</sup> If your family land might qualify it
+            is worth tracking — confirm its current status with the County before relying on it.
+          </div>
+
+          <h4>What to gather before you need it</h4>
+          <p>The families who keep their land are usually the ones whose paperwork was in order before there was a problem. That starts with knowing who is actually on title today — which is frequently not who everyone assumes.</p>
         </div>
-
-        <div class="note-card">
-          <h3>Where the water comes from</h3>
-          <p>Homes in Kona, Hilo, and Waimea are usually on county water, but across Puna and rural H&#257;m&#257;kua a house often runs on rainwater catchment. It's a fully functional system when maintained &mdash; just confirm which one you're buying, and budget for filtration.</p>
-          <a href="off-grid.html">Catchment, explained &rarr;</a>
+        <div>
+          <div class="panel">
+            <h3>Hawaiʻi County Kuleana Dedication</h3>
+            <div class="panel-row"><span class="panel-k">Basis</span><span class="panel-v">Kuleana Act of 1850 award</span></div>
+            <div class="panel-row"><span class="panel-k">Who qualifies</span><span class="panel-v">Lineal descendant of the original awardee, owning in whole or part</span></div>
+            <div class="panel-row"><span class="panel-k">Tax treatment</span><span class="panel-v">County minimum — $200/yr</span></div>
+            <div class="panel-row"><span class="panel-k">Proof of descent</span><span class="panel-v">Court order, or OHA genealogy verification</span></div>
+            <div class="panel-row"><span class="panel-k">Documents to expect</span><span class="panel-v">Deeds, wills, trusts, birth &amp; death certificates</span></div>
+            <div class="panel-row"><span class="panel-k">Where to apply</span><span class="panel-v">County Real Property Tax Division</span></div>
+          </div>
+          <div class="note">
+            <strong>Start with the title, not the tax bill.</strong> Before any of these programs matter, someone
+            has to establish who owns the parcel today. On land that has passed informally through three or four
+            generations that answer is usually more complicated than the family expects — and it determines what
+            is possible next.
+          </div>
         </div>
-
-        <div class="note-card">
-          <h3>Septic, or a cesspool on the clock</h3>
-          <p>Older homes may still be on a cesspool, and every cesspool in Hawai'i must be upgraded or converted by 2050 under Act 125 &mdash; a $30,000&ndash;$50,000 obligation that transfers to you at closing. A permitted septic system is the clean answer.</p>
-          <a href="off-grid.html">The 2050 deadline &rarr;</a>
-        </div>
-
-        <div class="note-card">
-          <h3>Solar is close to standard</h3>
-          <p>With the highest electricity rates in the country &mdash; about 43&cent;/kWh in 2026 &mdash; many homes already have solar. The federal residential credit ended after 2025, but Hawai'i's state credit (35%, up to $5,000) still applies as of 2026, so factor existing panels into value.</p>
-        </div>
-
-        <div class="note-card">
-          <h3>Confirm the tenure</h3>
-          <p>Most Big Island homes are fee simple, but some condos and homes on Hawaiian Home Lands carry leasehold terms or residency requirements. Always confirm the ownership type before you commit &mdash; it changes both your financing and your resale.</p>
-        </div>
-
-        <div class="note-card">
-          <h3>Financing is easier than land</h3>
-          <p>Unlike raw land, a standard mortgage usually works for a built home. Lenders still weigh the lava zone, and a home on catchment or a cesspool can narrow your options &mdash; so line up financing early with a lender who actually knows the island.</p>
-        </div>
-
-      </div>
-      <div class="notes-cta">Want a home-buying plan for a specific area or budget? <a href="index.html#contact">Talk it through with Keala &rarr;</a></div>
-    </div>
-  </section>
-
-  <section class="selling">
-    <div class="selling-inner">
-      <div class="selling-media"><img loading="lazy" decoding="async" src="photos/ranch-fallen-tree.jpg" alt="Family land on Hawai'i Island"></div>
-      <div class="selling-body">
-        <span class="sec-eyebrow">Selling a Home or Family Land</span>
-        <h2>Some sales carry more than a price</h2>
-        <p>Selling a family home or generational land is rarely just a transaction — there's history in it, and often several people who care about the outcome. Keala approaches these with patience: honest pricing, a clear plan, and respect for what the property means. If you're weighing whether or when to sell, that conversation doesn't come with pressure.</p>
-        <div style="margin-top:2rem"><a href="index.html#contact" class="btn-dark">Talk Through a Sale &rarr;</a></div>
       </div>
     </div>
   </section>
 
-  <section class="cta">
+  <!-- ─── Trusts & LLCs ─────────────────────────────────────────── -->
+  <section class="structuring" id="structuring">
+    <div class="wrap">
+      <span class="eyebrow">Ownership Structure</span>
+      <h2 class="section-title">Trusts &amp; LLCs</h2>
+      <p class="section-lead">Whose name the land is in decides what happens to it — how it's taxed, what it's exposed to, and whether your family goes to court to inherit it. Two structures do most of the work here, and they solve different problems.</p>
+
+      <!-- Trusts -->
+      <div class="split">
+        <div class="prose">
+          <span class="sub-eyebrow">Estate Planning</span>
+          <h3 class="sub-title">Should your property be in a trust?</h3>
+          <p>If your land is titled in your name alone when you pass, it almost always has to go through probate here — and Hawaiʻi probate can run a year or more, tie a property up from being sold or even maintained, and cost your heirs real money in court and attorney fees.<sup>4</sup></p>
+          <p>A revocable living trust sidesteps that. You transfer the property into the trust now, you keep full control while you're alive, and when you pass, your successor trustee can transfer or sell the property without ever going to court.<sup>5</sup></p>
+          <p>This matters more here than almost anywhere, because so much of our land passes between siblings, cousins and several generations at once. A trust lets you spell out exactly how the property is divided — instead of leaving that to a probate judge or, worse, to whichever heirs can agree fastest.</p>
+          <p>A trust doesn't replace a will — you'll still want a "pour-over" will alongside it — and it doesn't replace a conversation with an estate attorney who knows Hawaiʻi title law specifically. Generic mainland trust templates routinely miss things like DHHL restrictions or kuleana rights.</p>
+        </div>
+        <div>
+          <div class="panel light">
+            <h3>Trust — Rule of Thumb</h3>
+            <div class="panel-row"><span class="panel-k">Worth the conversation when</span><span class="panel-v">Property &gt; $100,000 and you want heirs to skip probate</span></div>
+            <div class="panel-row"><span class="panel-k">What it avoids</span><span class="panel-v">Hawaiʻi probate — often a year or more</span></div>
+            <div class="panel-row"><span class="panel-k">Control while living</span><span class="panel-v">Full — revocable</span></div>
+            <div class="panel-row"><span class="panel-k">Still need alongside it</span><span class="panel-v">A "pour-over" will</span></div>
+            <div class="panel-row"><span class="panel-k">Watch out for</span><span class="panel-v">Mainland templates miss DHHL &amp; kuleana</span></div>
+          </div>
+          <div class="note">
+            <strong>Rule of thumb.</strong> If the property is worth more than $100,000 and you want your family
+            to skip probate, a trust is worth the conversation — with an estate attorney who works in Hawaiʻi,
+            not an online template.
+          </div>
+        </div>
+      </div>
+
+      <!-- LLCs -->
+      <div class="subsplit split">
+        <div class="prose">
+          <span class="sub-eyebrow">Liability &amp; Shared Ownership</span>
+          <h3 class="sub-title">Why ranch &amp; ag land often goes into an LLC</h3>
+          <p>If your land has any activity on it — grazing, ag production, agritourism, even a rental cottage — holding it in an <strong>LLC</strong> rather than your own name puts a legal wall between that property and your personal assets. If something happens on the land, the exposure generally stops at the LLC.</p>
+          <p>It also solves a very Hawaiʻi problem: <strong>shared family ownership</strong>. When ranch land is split between siblings or cousins, an LLC lets each person hold a percentage membership interest instead of a physical piece of the land. That avoids the fractured "who owns which corner" situation that makes so many multigenerational Big Island parcels hard to sell, finance, or even maintain.</p>
+          <p>An LLC isn't automatically right for every property. For a single-family homestead with one clear heir, a trust alone is usually simpler and cheaper to maintain. LLCs tend to make the most sense once there's income, liability exposure, or more than one owner in the picture.</p>
+        </div>
+        <div>
+          <div class="checklist-box">
+            <h3>An LLC Tends to Fit When…</h3>
+            <div class="cl-row"><div class="cl-dot"></div><p>There's activity on the land — grazing, ag production, agritourism, or a rental cottage</p></div>
+            <div class="cl-row"><div class="cl-dot"></div><p>More than one family member owns it, and you want clean percentage shares instead of a divided parcel</p></div>
+            <div class="cl-row"><div class="cl-dot"></div><p>You want personal assets walled off from what happens on the property</p></div>
+            <div class="cl-row"><div class="cl-dot"></div><p>The plan is to keep it in the family and let shares change hands over time</p></div>
+          </div>
+          <div class="note">
+            <strong>Financing changes with the wrapper.</strong> Lenders view LLC-held land differently — financing
+            an LLC-owned property is not the same process as financing one in your personal name. Worth knowing
+            <a href="#financing">before you restructure</a>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Inherited Property ────────────────────────────────────── -->
+  <section class="inherited" id="inherited">
+    <div class="wrap">
+      <span class="eyebrow">Inherited Property</span>
+      <h2 class="section-title">When a Parcel Has Twenty Owners</h2>
+      <p class="section-lead">Land that passes down without probate or a deed at each step becomes heirs property: owned in undivided shares by everyone in the bloodline, with nobody holding a piece they can point to. It is extremely common here, and it is fragile in a specific way — exactly the situation a trust or an LLC is meant to prevent, discovered a generation too late.</p>
+      <div class="split">
+        <div class="prose">
+          <h4>Why heirs property is fragile</h4>
+          <p>Every cotenant, however small their share, holds rights in the whole parcel. Historically that meant a single heir — or an outside investor who had bought one heir's fractional interest — could file a partition action and force the entire property to be sold, often well below value, with the family's share of the proceeds split into fractions.</p>
+
+          <h4>What changed in 2017</h4>
+          <p>Hawaiʻi adopted the Uniform Partition of Heirs Property Act, effective January 1, 2017, as chapter 668A of the Revised Statutes.<sup>6</sup> Where a court finds that a parcel is heirs property, the statute changes the default: the court determines value, the other cotenants get the chance to buy out the interest of whoever wants to sell, and dividing the land in kind is preferred over a forced sale. Ordinary partition actions still run under chapter 668 — these protections only attach once the property is found to be heirs property.</p>
+          <p>That is genuinely good news for Hawaiʻi families, and it is also not automatic. It is litigation, with commissioners, appraisals and attorneys, and it goes far better when the family has already agreed on what it wants.</p>
+
+          <h4>The physical side</h4>
+          <p>Inherited houses here carry deferred maintenance particular to this island: a cesspool that has to be converted before 2050, a catchment tank that hasn't been cleaned in a decade, a roof that has taken thirty years of salt air, permits that were never pulled for an enclosed lanai or an added bedroom. None of it is fatal. All of it prices the property — and all of it is better found by you than by a buyer's inspector.</p>
+        </div>
+        <div>
+          <div class="checklist-box">
+            <h3>First Steps on an Inherited Parcel</h3>
+            <div class="cl-row"><div class="cl-dot"></div><p>Pull current title from the Bureau of Conveyances or Land Court and find out who is actually on it</p></div>
+            <div class="cl-row"><div class="cl-dot"></div><p>Establish whether any death in the chain still needs probate before title can move</p></div>
+            <div class="cl-row"><div class="cl-dot"></div><p>Check for a kuleana or agricultural dedication already on the parcel — and whether selling or subdividing would break it and trigger a rollback</p></div>
+            <div class="cl-row"><div class="cl-dot"></div><p>Confirm the wastewater system: septic, or a cesspool on the 2050 conversion clock</p></div>
+            <div class="cl-row"><div class="cl-dot"></div><p>Confirm the water source, and if county, whether the meter is still active</p></div>
+            <div class="cl-row"><div class="cl-dot"></div><p>Check permit history against what is physically standing on the lot</p></div>
+            <div class="cl-row"><div class="cl-dot"></div><p>Get the family's real intentions on the table early — keep, divide, rent, or sell</p></div>
+          </div>
+          <div class="note">
+            <strong>Talk to the family before the attorneys.</strong> Most heirs-property situations get expensive
+            because a decision was made by one branch and discovered by another. A conversation among cotenants
+            about what everyone actually wants costs nothing, and it changes which of the legal paths you need.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Estate & Probate Sales ────────────────────────────────── -->
+  <section class="estate" id="estate">
+    <div class="wrap">
+      <span class="eyebrow">Selling an Estate</span>
+      <h2 class="section-title">Trust, Probate &amp; Out-of-State Heirs</h2>
+      <p class="section-lead">Selling a family home after a death is not a normal listing. The seller may be a trustee or a personal representative rather than an owner, the decision-makers are often spread across time zones, and there are two withholding regimes waiting at closing that surprise nearly everyone.</p>
+      <div class="split">
+        <div class="prose">
+          <h4>How the sale is authorised</h4>
+          <p>Hawaiʻi probate runs under the Uniform Probate Code, chapter 560 of the Revised Statutes, which provides both informal and formal proceedings.<sup>7</sup> Every estate must stay open at least six months for creditors to bring claims, and formal or contested cases commonly run a year or more.<sup>4</sup> Who signs the listing and the deed depends entirely on which path the estate is on: a trustee under a trust instrument, a personal representative appointed by the court, or the heirs directly if title has already passed. Sorting that out is step one — a purchase contract signed by someone without authority to sell is not a contract.</p>
+          <p>Not every estate needs full probate. Where the gross value of the decedent's Hawaiʻi estate does not exceed $100,000, excluding motor vehicles, successors may collect personal property by affidavit under the small-estate procedure.<sup>8</sup> Whether that helps with real property specifically is a question for the estate's attorney — on this island the house is usually the reason the threshold is exceeded in the first place.</p>
+
+          <h4>A deed that avoids probate entirely</h4>
+          <p>Since 2011 Hawaiʻi has allowed transfer on death deeds under chapter 527.<sup>9</sup> The owner records a deed naming a beneficiary, keeps full control and the right to sell or revoke during life, and the interest passes at death without probate. It must be recorded with the Bureau of Conveyances, or filed with the Land Court registrar, <em>before</em> death — afterwards is too late. For a family whose main asset is one house, it is worth asking an estate attorney whether this fits.</p>
+        </div>
+        <div>
+          <div class="panel light">
+            <h3>Withholding at Closing</h3>
+            <div class="panel-row"><span class="panel-k">HARPTA — nonresident sellers</span><span class="panel-v">7.25% of gross sales price</span></div>
+            <div class="panel-row"><span class="panel-k">FIRPTA — foreign sellers</span><span class="panel-v">15% of gross proceeds</span></div>
+            <div class="panel-row"><span class="panel-k">Can both apply?</span><span class="panel-v">Yes — a foreign nonresident can face both</span></div>
+            <div class="panel-row"><span class="panel-k">Is it the tax owed?</span><span class="panel-v">No — withheld against actual liability, refundable</span></div>
+            <div class="panel-row"><span class="panel-k">Who it catches</span><span class="panel-v">Heirs living outside Hawaiʻi</span></div>
+          </div>
+          <div class="note dark">
+            <strong>This is the one that stings.</strong> When the heirs live on the mainland, HARPTA withholds
+            7.25% of the <em>gross</em> sale price at closing<sup>10</sup> — not of the profit. On an $800,000
+            sale that is $58,000 held back. It is recoverable later, but it is not available on closing day,
+            when the family expected to divide the proceeds. Plan for it before it is a surprise.
+          </div>
+          <div class="steps">
+            <div class="step">
+              <span class="step-num">1</span>
+              <div><h4>Confirm who has authority to sell</h4>
+              <p>Trustee, personal representative, or heirs on title — with the document that proves it.</p></div>
+            </div>
+            <div class="step">
+              <span class="step-num">2</span>
+              <div><h4>Get one decision-maker per branch</h4>
+              <p>Six heirs consulted individually on every question is how these sales fall apart.</p></div>
+            </div>
+            <div class="step">
+              <span class="step-num">3</span>
+              <div><h4>Price it on condition, honestly</h4>
+              <p>An empty house with a cesspool and a thirty-year roof is not a comp for a renovated one.</p></div>
+            </div>
+            <div class="step">
+              <span class="step-num">4</span>
+              <div><h4>Line up the withholding paperwork early</h4>
+              <p>With the estate's CPA, so nothing is waiting on the day of closing.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Financing Land & Buyouts ──────────────────────────────── -->
+  <section class="financing" id="financing">
+    <div class="wrap">
+      <span class="eyebrow">Financing</span>
+      <h2 class="section-title">Land Loans Aren't Regular Mortgages</h2>
+      <p class="section-lead">Raw land, ag-zoned parcels and off-grid properties don't finance the way a standard home does — and that turns into a legacy problem the moment land changes hands and an heir, or a sibling buying another out, discovers a bank won't lend on it.</p>
+      <div class="split">
+        <div class="prose">
+          <h4>Why land is different</h4>
+          <p>Many conventional lenders won't touch vacant or ag-exempt land at all. Buyers and heirs alike often need land-specific loan products, local credit unions, or seller financing instead of a standard mortgage. That's not a dead end — but it is a different process, and it takes longer.</p>
+
+          <h4>Where it becomes a legacy issue</h4>
+          <p>It shows up in two very common Big Island situations: heirs inherit land they can't easily borrow against to make improvements, and one sibling wants to buy out another's share but can't get a conventional loan to do it. Both are solvable — but far more easily if the family sees them coming before the land changes hands, rather than after.</p>
+
+          <h4>The ag-exemption trade-off</h4>
+          <p>Agricultural dedication can lower a property tax bill significantly — it's frequently the only reason a family can afford to keep large acreage — but it can also narrow your financing options, and breaking the dedication by subdividing or selling can trigger a rollback of the taxes it saved. It's worth weighing both sides rather than assuming the exemption is a pure win. The <a href="/land#zoning">zoning section on the Land page</a> covers how the ag districts and their minimums work.</p>
+        </div>
+        <div>
+          <div class="checklist-box">
+            <h3>Plan Financing Before Land Changes Hands</h3>
+            <div class="cl-row"><div class="cl-dot"></div><p>Assume raw, ag, and off-grid parcels will not qualify for a standard mortgage — line up a land-specific lender early</p></div>
+            <div class="cl-row"><div class="cl-dot"></div><p>Ask local credit unions and about seller financing, not just national banks</p></div>
+            <div class="cl-row"><div class="cl-dot"></div><p>If one heir may buy out others, price and finance that buyout before the transfer, not after</p></div>
+            <div class="cl-row"><div class="cl-dot"></div><p>Weigh the ag exemption's tax savings against the financing options it closes off</p></div>
+            <div class="cl-row"><div class="cl-dot"></div><p>Remember an LLC wrapper changes how — and whether — a lender will finance the land</p></div>
+          </div>
+          <div class="note">
+            <strong>Knowing this ahead of time is the whole point.</strong> Sorting out financing before land
+            changes hands lets a family plan for a buyout, for improvements, or for a sale with financing that
+            will actually go through — instead of finding out at the worst possible moment that it won't.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Hawaiian Home Lands (DHHL) ────────────────────────────── -->
+  <section class="dhhl" id="dhhl">
+    <div class="wrap">
+      <span class="eyebrow">Hawaiʻi-Specific</span>
+      <h2 class="section-title">Hawaiian Home Lands &amp; Lease Succession</h2>
+      <p class="section-lead">Hawaiian Home Lands parcels don't pass down like conventional property. Succession is governed by DHHL's own rules under the Hawaiian Homes Commission Act — not by a will or a trust — and this trips up more families than almost anything else on this page.</p>
+      <div class="split">
+        <div class="prose">
+          <h4>Who can actually inherit a homestead lease</h4>
+          <p>Only a qualified successor can take over a DHHL homestead lease, and the pool is narrow: a spouse, child, grandchild, or sibling with at least 25 percent Hawaiian ancestry, or a parent or an in-law of a deceased child or sibling at 50 percent.<sup>11</sup> A new-lease applicant must have 50 percent Hawaiian blood; the successor threshold is 25 percent.<sup>12</sup></p>
+
+          <h4>Why families get caught out</h4>
+          <p>This is exactly where a homestead that has been in the family for decades runs into trouble, because the next generation assumes it will pass the way other property does. It won't. The successor has to be designated <em>in writing with DHHL, in advance</em>, and approved by the Hawaiian Homes Commission. Without that designation on file, the law severely limits the department's options — and if no qualified successor exists, the lease is cancelled and the estate is paid the appraised value, less any debts owed, rather than the land passing to the family.<sup>11</sup></p>
+
+          <h4>What to do about it</h4>
+          <p>If your family holds a DHHL lease, the succession designation should be reviewed and updated directly with DHHL. This is separate from — and in addition to — any trust or will you have. A trust does not reach a homestead lease.</p>
+
+          <div class="personal">
+            <img src="/keala.jpg" alt="Keala M. Wall" width="52" height="52">
+            <p>"This is the kind of thing I grew up around — Wall Ranch, working land across Kona and Kealakekua for years. These aren't generic real-estate questions. They're local terrain, and they deserve someone who already understands it."
+              <cite>— Keala M. Wall</cite>
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="panel">
+            <h3>DHHL Lease Succession</h3>
+            <div class="panel-row"><span class="panel-k">Governed by</span><span class="panel-v">Hawaiian Homes Commission Act — not a will or trust</span></div>
+            <div class="panel-row"><span class="panel-k">New-lease applicant</span><span class="panel-v">50% Hawaiian ancestry</span></div>
+            <div class="panel-row"><span class="panel-k">Successor — spouse, child, grandchild, sibling</span><span class="panel-v">25% Hawaiian ancestry</span></div>
+            <div class="panel-row"><span class="panel-k">Successor — parent, in-law of deceased child/sibling</span><span class="panel-v">50% Hawaiian ancestry</span></div>
+            <div class="panel-row"><span class="panel-k">How to name one</span><span class="panel-v">Designate in writing with DHHL, in advance</span></div>
+            <div class="panel-row"><span class="panel-k">If none is designated/qualified</span><span class="panel-v">Lease cancelled; estate paid appraised value less debts</span></div>
+          </div>
+          <div class="note dark">
+            <strong>Check the designation on file — now.</strong> The single most common DHHL mistake is assuming
+            the lease will pass like other property and never filing a successor designation. It is a form with
+            DHHL, done while you're living. Don't leave it to a will.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ───────────────────────────────────────────────────── -->
+  <section class="cta" id="contact">
     <div class="cta-bg"></div>
     <div class="cta-overlay"></div>
     <div class="cta-inner">
-      <span class="sec-eyebrow">Next Steps</span>
-      <h2>Ready to write the next chapter?</h2>
-      <p>Buying or selling, first home or legacy estate — let's find the place that fits your story.</p>
-      <div class="cta-actions">
-        <a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener" class="btn-primary">Search Homes</a>
-        <a href="index.html#contact" class="btn-ghost">Contact Keala</a>
+      <span class="eyebrow">Talk Story</span>
+      <h2>Family Land Questions?</h2>
+      <p class="cta-sub">Whether it's land you're trying to hold onto, a house you've just inherited, a homestead lease, or an estate that needs to be sold well — start with a conversation. No obligation, and no pressure to list anything.</p>
+      <div class="cta-buttons">
+        <a href="tel:8085153081" class="btn-primary">Call 808-515-3081</a>
+        <a href="mailto:Keala@kealawall.com" class="btn-ghost">Send an Email</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-name">Keala M. Wall</div>
+        <div class="contact-title">Realtor &middot; Hawai'i Island</div>
+        <div class="contact-lines">
+          <a href="tel:8085153081" class="contact-line">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            808-515-3081
+          </a>
+          <a href="mailto:Keala@kealawall.com" class="contact-line">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Keala@kealawall.com
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- ─── Sources ───────────────────────────────────────────────── -->
+  <section class="sources">
+    <div class="sources-inner">
+      <h2>Sources</h2>
+      <p class="sources-lead">Every figure and statute on this page is cited. Tax programs and pending legislation change — confirm current status with the County, DHHL, or your attorney before acting on any of it.</p>
+      <ol>
+        <li>Hawaiʻi County kuleana land dedication, assessed at the county minimum tax — <a href="https://www.oha.org/economic-self-sufficiency/tax-relief-kuleana-land-holders/" target="_blank" rel="noopener">Office of Hawaiian Affairs, Tax Relief for Kuleana Land Holders</a>.</li>
+        <li>Proof of lineal descent by court order or OHA genealogy verification, and the documents the finance director may require — <a href="https://nativehawaiianlegalcorp.org/the-real-property-taxes-for-my-ohana-land-are-so-high-how-can-i-get-it-reduced/" target="_blank" rel="noopener">Native Hawaiian Legal Corporation</a>.</li>
+        <li>ʻĀina Kūpuna generational-land dedication — 20 acres or less, family-owned since before January 1, 1926, more than $10,000 in property taxes over ten years, ten-year dedication at the $200 county minimum; approved in committee June 2026 — <a href="https://www.hawaiitribune-herald.com/2026/06/17/hawaii-news/aina-kupuna-tax-relief-legislation-advances/" target="_blank" rel="noopener">Hawaii Tribune-Herald</a>; <a href="https://kawaiola.news/ea/aina-kupuna-tax-relief-bill-moves-forward/" target="_blank" rel="noopener">Ka Wai Ola</a>.</li>
+        <li>Hawaiʻi probate must stay open at least six months for creditor claims (HRS ch. 560); informal cases commonly run 6–12 months and formal cases 12–18 months or more — <a href="https://law.justia.com/codes/hawaii/title-30a/chapter-560/" target="_blank" rel="noopener">HRS ch. 560</a>; <a href="https://www.swiftprobate.com/probate/hawaii" target="_blank" rel="noopener">Hawaiʻi probate timelines</a>.</li>
+        <li>Property held in a revocable living trust is not titled in the decedent's name and so does not pass through probate — <a href="https://law.justia.com/codes/hawaii/title-30a/chapter-560/" target="_blank" rel="noopener">HRS ch. 560</a> (probate applies to property in the decedent's estate); <a href="https://www.swiftprobate.com/probate/hawaii" target="_blank" rel="noopener">Hawaiʻi probate &amp; trust overview</a>.</li>
+        <li>Uniform Partition of Heirs Property Act, effective January 1, 2017 — <a href="https://www.capitol.hawaii.gov/hrscurrent/Vol13_Ch0601-0676/HRS0668A/HRS_0668A-.htm" target="_blank" rel="noopener">Hawaiʻi Revised Statutes ch. 668A</a>.</li>
+        <li>Hawaiʻi Uniform Probate Code — <a href="https://law.justia.com/codes/hawaii/title-30a/chapter-560/" target="_blank" rel="noopener">HRS ch. 560</a>.</li>
+        <li>Small-estate collection by affidavit, $100,000 gross excluding motor vehicles — <a href="https://law.justia.com/codes/hawaii/title-30a/chapter-560/section-560-3-1203/" target="_blank" rel="noopener">HRS §560:3-1201 et seq.</a></li>
+        <li>Uniform Real Property Transfer on Death Act, enacted 2011; the deed must be recorded before the transferor's death — <a href="https://www.capitol.hawaii.gov/hrscurrent/Vol12_Ch0501-0588/HRS0527/HRS_0527-.htm" target="_blank" rel="noopener">HRS ch. 527</a>.</li>
+        <li>HARPTA withholding of 7.25% of gross sales price on nonresident sellers, and FIRPTA at 15% on foreign sellers — <a href="https://files.hawaii.gov/tax/legal/taxfacts/tf2025-2010-1.pdf" target="_blank" rel="noopener">Hawaiʻi Department of Taxation, Tax Facts</a>.</li>
+        <li>DHHL homestead lease succession — qualified successors (spouse, child, grandchild, sibling at 25%; parent or in-law of a deceased child/sibling at 50%), designation filed in writing and approved by the Hawaiian Homes Commission, and lease cancellation with payment of appraised value less debts if none qualifies — <a href="https://dhhl.hawaii.gov/lessee-information/designating-successors-qa/" target="_blank" rel="noopener">DHHL, Designating Successors Q&amp;A</a> (Hawaiian Homes Commission Act §209).</li>
+        <li>New-lease applicants require 50% Hawaiian ancestry; successor threshold is 25% — <a href="https://dhhl.hawaii.gov/lessee-information/designating-successors-qa/" target="_blank" rel="noopener">DHHL</a>; <a href="https://www.hawaiitribune-herald.com/2022/12/22/hawaii-news/kahele-bill-seeks-to-lower-blood-quantum-requirement-for-dhhl-lease-successors/" target="_blank" rel="noopener">Hawaii Tribune-Herald</a>.</li>
+      </ol>
+      <div class="legal">
+        <strong>Not legal, tax or financial advice.</strong> This page explains how these situations generally work
+        on Hawaiʻi Island, so you know which questions to ask. It is not a substitute for an estate attorney, a
+        CPA, DHHL, or the County. Keala is a licensed real estate agent (RS-82797), not an attorney, and does not
+        provide legal or tax advice, genealogy verification, or lending.
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
   <footer>
     <div class="footer-top">
 
@@ -421,14 +556,12 @@
       <div class="footer-col">
         <span class="footer-heading">Explore</span>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="land.html">Buy Land</a></li>
-          <li><a href="ranches.html">Ranches</a></li>
-          <li><a href="off-grid.html">Off-Grid</a></li>
-          <li><a href="relocation.html">Relocate</a></li>
-          <li><a href="areas.html">Areas</a></li>
-          <li><a href="legacy.html">Legacy</a></li>
-          <li><a href="guides.html">Guides</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/life">Life</a></li>
+          <li><a href="/land">Land</a></li>
+          <li><a href="/legacy">Legacy</a></li>
+          <li><a href="/listings">Listings</a></li>
+          <li><a href="/guides">Guides</a></li>
         </ul>
       </div>
 
@@ -445,39 +578,17 @@
     </div>
 
     <div class="footer-bottom">
-      <img src="logo-agency-exp-light.png" width="1200" height="200" loading="lazy" decoding="async"
+      <img src="/logo-agency-exp-light.png" width="1200" height="200" loading="lazy" decoding="async"
            alt="The Agency Team Hawai'i, brokered by eXp Realty" class="footer-logo">
       <div class="footer-legal">
         <p>6600 Kalaniana'ole Hwy #114, Honolulu, HI 96825</p>
         <p>License RS-82797 &middot; Brokerage License RB-21841</p>
         <p class="footer-copy">&copy; 2026 Keala M. Wall. All rights reserved.</p>
+        <p class="footer-credit">Powered by <a href="https://www.touchpointai.co/" target="_blank" rel="noopener">Touchpoint AI</a></p>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Mobile hamburger menu.
-    (function () {
-      var nav = document.getElementById('nav');
-      var burger = document.querySelector('.nav-burger');
-      var menu = document.getElementById('mobileMenu');
-      if (!burger || !menu) return;
-      burger.addEventListener('click', function () {
-        var open = menu.classList.toggle('open');
-        burger.classList.toggle('open', open);
-        if (nav) nav.classList.toggle('menu-open', open);
-        burger.setAttribute('aria-expanded', open);
-        document.body.style.overflow = open ? 'hidden' : '';
-      });
-      menu.querySelectorAll('a').forEach(function (a) {
-        a.addEventListener('click', function () {
-          menu.classList.remove('open'); burger.classList.remove('open');
-          if (nav) nav.classList.remove('menu-open');
-          burger.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
-        });
-      });
-    })();
-  </script>
+  <script src="/js/site.js"></script>
 </body>
 </html>

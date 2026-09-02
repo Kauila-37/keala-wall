@@ -2,71 +2,62 @@
 <!--
   Hand-maintained. This site has no build step (netlify.toml pins publish = "."),
   so when a page is added or removed, update this file in the same commit.
+  URLs are extensionless — netlify.toml 301s the .html form to these.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lifelandlegacyhi.com/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lifelandlegacyhi.com/land.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://lifelandlegacyhi.com/life</loc>
+    <lastmod>2026-07-24</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://lifelandlegacyhi.com/ranches.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://lifelandlegacyhi.com/land</loc>
+    <lastmod>2026-07-24</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lifelandlegacyhi.com/legacy</loc>
+    <lastmod>2026-07-24</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lifelandlegacyhi.com/listings</loc>
+    <lastmod>2026-07-24</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lifelandlegacyhi.com/guides</loc>
+    <lastmod>2026-07-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lifelandlegacyhi.com/off-grid.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lifelandlegacyhi.com/relocation.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lifelandlegacyhi.com/areas.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lifelandlegacyhi.com/legacy.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lifelandlegacyhi.com/guides.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lifelandlegacyhi.com/checklist-land-due-diligence.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://lifelandlegacyhi.com/checklist-land-due-diligence</loc>
+    <lastmod>2026-07-24</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifelandlegacyhi.com/factsheet-kona.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://lifelandlegacyhi.com/factsheet-north-kona</loc>
+    <lastmod>2026-07-24</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifelandlegacyhi.com/factsheet-hilo.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://lifelandlegacyhi.com/factsheet-south-hilo</loc>
+    <lastmod>2026-07-24</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifelandlegacyhi.com/factsheet-puna.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://lifelandlegacyhi.com/factsheet-puna</loc>
+    <lastmod>2026-07-24</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lifelandlegacyhi.com/factsheet-waimea.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://lifelandlegacyhi.com/factsheet-south-kohala</loc>
+    <lastmod>2026-07-24</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>

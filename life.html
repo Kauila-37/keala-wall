@@ -3,95 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Big Island Area Guides | Keala M. Wall — Realtor</title>
-  <meta name="description" content="Community guides for every major area on Hawai'i Island — Kona, Waimea, Kohala, Hāmākua, Hilo, Puna, Ka'ū, and Volcano. Find the right fit for your lifestyle and budget.">
-  <link rel="canonical" href="https://lifelandlegacyhi.com/areas.html">
+  <title>Life on Hawai'i Island — Relocating, Districts &amp; Cost of Living | Keala M. Wall</title>
+  <meta name="description" content="What it is actually like to live on the Big Island: an honest guide to relocating, all nine districts compared, real cost-of-living numbers, and a move checklist.">
+  <link rel="canonical" href="https://lifelandlegacyhi.com/life">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Life, Land &amp; Legacy — Keala M. Wall">
   <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://lifelandlegacyhi.com/areas.html">
-  <meta property="og:title" content="Big Island Area Guides | Keala M. Wall — Realtor">
-  <meta property="og:description" content="Community guides for every major area on Hawai'i Island — Kona, Waimea, Kohala, Hāmākua, Hilo, Puna, Ka'ū, and Volcano. Find the right fit for your lifestyle and budget.">
+  <meta property="og:url" content="https://lifelandlegacyhi.com/life">
+  <meta property="og:title" content="Life on Hawai'i Island — Relocating, Districts &amp; Cost of Living">
+  <meta property="og:description" content="What it is actually like to live on the Big Island: an honest guide to relocating, all nine districts compared, real cost-of-living numbers, and a move checklist.">
   <meta property="og:image" content="https://lifelandlegacyhi.com/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Aerial view of the Hawai'i Island coastline, where green upland meets lava rock and open ocean">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Big Island Area Guides | Keala M. Wall — Realtor">
-  <meta name="twitter:description" content="Community guides for every major area on Hawai'i Island — Kona, Waimea, Kohala, Hāmākua, Hilo, Puna, Ka'ū, and Volcano. Find the right fit for your lifestyle and budget.">
+  <meta name="twitter:title" content="Life on Hawai'i Island — Relocating, Districts &amp; Cost of Living">
+  <meta name="twitter:description" content="What it is actually like to live on the Big Island: an honest guide to relocating, all nine districts compared, real cost-of-living numbers, and a move checklist.">
   <meta name="twitter:image" content="https://lifelandlegacyhi.com/og-image.jpg">
 
-  <link rel="preload" as="image" href="photos/aerial-coastline.jpg">
+  <link rel="preload" as="image" href="/photos/lei-heart-sunset.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    img { display: block; max-width: 100%; }
+    /* Page-specific sections. Everything shared (tokens, nav, sub-nav,
+       CTA, footer) comes from /css/site.css. */
 
-    :root {
-      --cream:       #faf7f2;
-      --cream-2:     #f0e9d8;
-      --cream-3:     #e5dbc8;
-      --green-deep:  #1a2e20;
-      --green-mid:   #2d5235;
-      --green-sage:  #5a7e5d;
-      --green-light: #8aad8d;
-      --gold:        #a07828;
-      --gold-warm:   #c4982e;
-      --gold-light:  #e0b84a;
-      --text-dark:   #1c2b1e;
-      --text-body:   #3d4e3f;
-      --text-muted:  #6b7d6d;
-      --white:       #ffffff;
-    }
+    .hero-bg { background-image: url('/photos/lei-heart-sunset.jpg'); background-position: center 20%; }
 
-    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text-dark); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; line-height: 1.15; color: var(--green-deep); }
-    a { color: inherit; text-decoration: none; }
-    p { line-height: 1.75; color: var(--text-body); }
+    /* ─── Relocating ─────────────────────────────────────────────── */
+    .intro { background: var(--cream); }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .intro-grid p + p { margin-top: 1rem; }
+    .reality-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0.9rem; }
+    .reality-row { display: flex; gap: 0.9rem; align-items: flex-start; }
+    .reality-check { width: 20px; height: 20px; border-radius: 50%; background: var(--green-sage); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .reality-check svg { width: 11px; height: 11px; stroke: white; stroke-width: 2.5; fill: none; }
+    .reality-row p { font-size: 0.9rem; color: var(--text-body); line-height: 1.6; }
+    .big-island-stat { background: var(--green-deep); border-radius: 8px; padding: 2rem; color: white; position: sticky; top: calc(var(--nav-h) + var(--subnav-h) + 1.5rem); }
+    .big-island-stat h3 { font-size: 1.2rem; font-weight: 500; color: white; margin-bottom: 1.25rem; }
+    .stat-item { display: flex; justify-content: space-between; align-items: flex-start; padding: 0.65rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); gap: 1rem; }
+    .stat-item:last-child { border-bottom: none; }
+    .stat-label { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.4; }
+    .stat-val { font-size: 0.9rem; color: white; font-weight: 500; text-align: right; }
 
-    /* ─── Nav ────────────────────────────────────────────────────── */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 68px; padding: 0 3rem; display: flex; align-items: center; justify-content: space-between; background: rgba(250, 247, 242, 0.97); border-bottom: 1px solid rgba(0,0,0,0.07); backdrop-filter: blur(8px); }
-    .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400; color: var(--green-deep); letter-spacing: 0.04em; }
-    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
-    .nav-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); transition: color 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--green-deep); }
-    .nav-right { display: flex; align-items: center; gap: 2rem; }
-    .nav-phone { font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.02em; }
-    .nav-cta { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid currentColor; padding-bottom: 1px; transition: color 0.2s; }
-    .nav-cta:hover { color: var(--gold-warm); }
-    @media (max-width: 1000px) { .nav-links { display: none; } }
-    @media (max-width: 640px) { .nav-phone { display: none; } nav { padding: 0 1.5rem; } }
-
-    /* ─── Hero ───────────────────────────────────────────────────── */
-    .hero { position: relative; min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 9rem 2rem 5rem; overflow: hidden; background-color: var(--green-deep); }
-    .hero-bg { position: absolute; inset: 0; background-image: url('photos/aerial-coastline.jpg'); background-size: cover; background-position: center 55%; opacity: 0.45; }
-    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(12,26,14,0.55) 0%, rgba(8,20,10,0.76) 100%); }
-    .hero-inner { position: relative; z-index: 2; max-width: 720px; }
-    .hero-eyebrow { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-warm); margin-bottom: 1.2rem; }
-    .hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 500; color: white; margin-bottom: 1.2rem; }
-    .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.82); max-width: 580px; margin: 0 auto; line-height: 1.7; }
-
-    /* ─── Shared ─────────────────────────────────────────────────── */
-    .wrap { max-width: 1100px; margin: 0 auto; }
-    section { padding: 6rem 2.5rem; }
-    .eyebrow { display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
-    .section-title { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 500; margin-bottom: 1.25rem; }
-    .section-lead { font-size: 1.05rem; color: var(--text-body); line-height: 1.75; max-width: 700px; margin-bottom: 3rem; }
-    .btn-primary { display: inline-block; background: var(--gold); color: white; padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.2s; }
-    .btn-primary:hover { background: var(--gold-warm); }
-    .btn-ghost { display: inline-block; border: 1.5px solid rgba(255,255,255,0.55); color: rgba(255,255,255,0.9); padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; transition: border-color 0.2s, color 0.2s; }
-    .btn-ghost:hover { border-color: white; color: white; }
-
-    /* ─── Map Nav Tiles ─────────────────────────────────────────── */
+    /* ─── The Districts ──────────────────────────────────────────── */
     .area-nav { background: var(--green-deep); padding: 4rem 2.5rem; }
+    .area-nav .eyebrow { color: var(--gold-warm); text-align: center; }
+    .area-nav h2 { text-align: center; color: white; font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 500; margin-bottom: 1rem; }
+    .area-nav-lead { max-width: 660px; margin: 0 auto 2.5rem; text-align: center; color: rgba(255,255,255,0.72); line-height: 1.7; }
     .area-nav-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 1.5rem; text-align: center; }
-    .area-nav-grid {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem;
-    }
+    .area-nav-note { max-width: 640px; margin: 1.75rem auto 0; text-align: center; font-size: 0.78rem; line-height: 1.6; color: rgba(255,255,255,0.5); }
+    .area-nav-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
     .area-nav-tile {
       background: rgba(255,255,255,0.07);
       border: 1px solid rgba(255,255,255,0.1);
@@ -105,10 +70,11 @@
     }
     .area-nav-tile:hover { background: rgba(255,255,255,0.13); color: white; }
 
-    /* ─── Area Section Template ─────────────────────────────────── */
-    .area-section { padding: 6rem 2.5rem; }
-    .area-section:nth-child(odd) { background: var(--cream); }
-    .area-section:nth-child(even) { background: var(--cream-2); }
+    /* Alternating backgrounds are scoped to the districts wrapper so they
+       stay correct now that these sections share a page with others. */
+    .districts .area-section { padding: 6rem 2.5rem; }
+    .districts .area-section:nth-of-type(odd)  { background: var(--cream); }
+    .districts .area-section:nth-of-type(even) { background: var(--cream-2); }
     .area-header { margin-bottom: 3rem; }
     .area-district { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
     .area-name { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 500; color: var(--green-deep); margin-bottom: 0.4rem; }
@@ -124,10 +90,19 @@
     .s-value { font-size: 0.85rem; color: var(--text-dark); font-weight: 500; text-align: right; line-height: 1.3; }
     .who-tags { display: flex; flex-direction: column; gap: 0.35rem; margin-top: 1.25rem; }
     .who-tag { font-size: 0.78rem; color: var(--text-body); padding: 0.35rem 0.75rem; background: var(--cream-2); border-radius: 4px; line-height: 1.4; }
-    .who-tag::before { content: "→  "; color: var(--green-sage); font-weight: 700; }
+    .who-tag::before { content: "\2192  "; color: var(--green-sage); font-weight: 700; }
+    .area-listing-link {
+      display: inline-block;
+      margin-top: 1.25rem;
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 1px;
+    }
+    .area-listing-link:hover { color: var(--gold-warm); }
 
-    /* ─── Dark area section (for Volcano/off-beat) ───────────────── */
-    .area-section.dark { background: var(--green-deep); }
+    .districts .area-section.dark { background: var(--green-deep); }
     .area-section.dark .area-district { color: var(--gold-warm); }
     .area-section.dark .area-name { color: white; }
     .area-section.dark .area-tagline { color: rgba(255,255,255,0.55); }
@@ -139,284 +114,218 @@
     .area-section.dark .s-value { color: white; }
     .area-section.dark .sidebar-row { border-bottom-color: rgba(255,255,255,0.06); }
     .area-section.dark .who-tag { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.7); }
+    .area-section.dark .area-listing-link { color: var(--gold-light); }
 
-    /* ─── CTA ────────────────────────────────────────────────────── */
-    .cta { position: relative; overflow: hidden; padding: 7rem 2.5rem; text-align: center; background-color: var(--green-mid); }
-    .cta-bg { position: absolute; inset: 0; background-image: url('photos/coffee-cherries.jpg'); background-size: cover; background-position: center; opacity: 0.3; }
-    .cta-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(14,28,16,0.65) 0%, rgba(8,18,10,0.82) 100%); }
-    .cta-inner { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
-    .cta .eyebrow { color: var(--gold-warm); margin-bottom: 1rem; }
-    .cta h2 { font-size: clamp(2rem, 5vw, 3rem); color: white; margin-bottom: 1rem; }
-    .cta-sub { font-size: 1rem; color: rgba(255,255,255,0.72); line-height: 1.7; margin-bottom: 2.5rem; }
-    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .contact-card { margin-top: 3rem; display: inline-block; border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; padding: 1.5rem 2.5rem; text-align: left; }
-    .contact-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; color: white; margin-bottom: 0.15rem; }
-    .contact-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-warm); margin-bottom: 1.25rem; }
-    .contact-lines { display: flex; flex-direction: column; gap: 0.5rem; }
-    .contact-line { display: flex; align-items: center; gap: 0.65rem; color: rgba(255,255,255,0.75); font-size: 0.88rem; transition: color 0.2s; }
-    .contact-line:hover { color: var(--gold-light); }
-    .contact-line svg { width: 13px; height: 13px; stroke: var(--gold-warm); fill: none; stroke-width: 2; stroke-linecap: round; flex-shrink: 0; }
+    /* ─── Cost of Living ─────────────────────────────────────────── */
+    .col { background: var(--green-deep); padding: 6rem 2.5rem; }
+    .col .eyebrow { color: var(--gold-warm); }
+    .col .section-title { color: white; }
+    .col .section-lead { color: rgba(255,255,255,0.72); }
+    .col-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .col-grid p { color: rgba(255,255,255,0.72); line-height: 1.75; }
+    .col-grid p + p { margin-top: 1rem; }
+    .col-table { background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
+    .col-row { display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .col-row:last-child { border-bottom: none; }
+    .col-item { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+    .col-amount { font-size: 0.9rem; color: white; font-weight: 500; }
+    .col-row.header .col-item, .col-row.header .col-amount { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
 
-    @media (max-width: 900px) {
-      .area-body { grid-template-columns: 1fr; gap: 2.5rem; }
-      .area-sidebar-card { max-width: 480px; }
-    }
-    @media (max-width: 600px) {
-      section { padding: 4rem 1.5rem; }
-      .cta-buttons { flex-direction: column; align-items: center; }
-    }
+    /* ─── What Buyers Get Wrong ──────────────────────────────────── */
+    .myths { background: var(--cream); }
+    .myths-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 0.5rem; }
+    .myth-card { background: var(--cream-2); border-radius: 8px; padding: 2rem; }
+    .myth-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .myth-label.wrong { color: #9b2335; }
+    .myth-card h3 { font-size: 1rem; font-weight: 600; color: var(--green-deep); margin-bottom: 0.75rem; }
+    .myth-card p { font-size: 0.88rem; color: var(--text-body); line-height: 1.65; }
 
-    /* ─── Footer ─────────────────────────────────────────────────── */
-    footer {
-      background: #0c1a0e;
-      padding: 4.5rem 3rem 2.25rem;
-    }
-    .footer-top {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.25fr 1fr 1fr;
-      gap: 4rem;
-      padding-bottom: 3rem;
-    }
-    .footer-identity { display: flex; flex-direction: column; }
-    .footer-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 400;
-      letter-spacing: 0.02em;
-      color: rgba(255,255,255,0.92);
-    }
-    .footer-name {
-      font-size: 0.9rem;
-      letter-spacing: 0.03em;
-      color: rgba(255,255,255,0.6);
-      margin-top: 0.6rem;
-    }
-    .footer-role {
-      font-size: 0.68rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.32);
-      margin-top: 0.3rem;
-    }
-    .footer-heading {
-      display: block;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #c4982e;
-      margin-bottom: 1.1rem;
-    }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
-    .footer-col a {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.58);
-      transition: color 0.2s;
-    }
-    .footer-col a:hover { color: #e0b84a; }
-    .footer-bottom {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding-top: 2.25rem;
-      border-top: 1px solid rgba(255,255,255,0.09);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1.75rem;
-    }
-    .footer-logo { height: 56px; width: auto; flex-shrink: 0; }
-    .footer-legal {
-      display: flex;
-      flex-direction: column;
-      gap: 0.28rem;
-      text-align: right;
-      font-size: 0.7rem;
-      color: rgba(255,255,255,0.32);
-    }
-    .footer-legal p { font-size: 0.7rem; line-height: 1.6; color: inherit; }
-    .footer-copy { color: rgba(255,255,255,0.22); }
-    @media (max-width: 860px) {
-      .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
-      .footer-identity { grid-column: 1 / -1; }
-    }
-    @media (max-width: 640px) {
-      footer { padding: 3.5rem 1.5rem 2rem; }
-      .footer-top { grid-template-columns: 1fr; gap: 2.25rem; padding-bottom: 2.25rem; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-      .footer-legal { text-align: left; }
-      .footer-logo { height: 46px; }
-    }
+    /* ─── Checklist ──────────────────────────────────────────────── */
+    .relo-checklist { background: var(--cream-2); }
+    .checklist-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-top: 0.5rem; }
+    .checklist-col h3 { font-size: 1rem; font-weight: 600; color: var(--green-deep); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--cream-3); }
+    .checklist-row { display: flex; gap: 0.65rem; align-items: flex-start; margin-bottom: 0.85rem; }
+    .cl-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-sage); flex-shrink: 0; margin-top: 7px; }
+    .checklist-row p { font-size: 0.87rem; color: var(--text-body); line-height: 1.6; }
 
-    .nav-links li { position: relative; }
+    .cta-bg { background-image: url('/photos/sunset-green-lawn.jpg'); }
 
-    .nav-burger { display: none; background: none; border: 0; cursor: pointer; padding: 6px 2px; flex-direction: column; gap: 5px; }
-    .nav-burger span { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 0.25s, opacity 0.2s; }
-    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-burger.open span:nth-child(2) { opacity: 0; }
-    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    @media (max-width: 1000px) { .nav-burger { display: flex; } }
-
-    .mobile-menu {
-      position: fixed; top: 68px; left: 0; right: 0; bottom: 0; z-index: 190;
-      background: var(--cream); padding: 2rem 1.75rem 3rem; overflow-y: auto;
-      opacity: 0; visibility: hidden; transform: translateY(-10px);
-      transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
-    }
-    .mobile-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
-    .mm-home { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--cream-3); }
-    .mm-group { margin-bottom: 1.4rem; }
-    .mm-group a { display: block; padding: 0.32rem 0; }
-    .mm-group a.mm-primary { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--green-deep); margin-bottom: 0.15rem; }
-    .mm-group a:not(.mm-primary) { font-size: 0.92rem; color: var(--text-muted); }
-    .mm-foot { margin-top: 2.25rem; padding-top: 1.75rem; border-top: 1px solid var(--cream-3); display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
-    .mm-cta { display: inline-block; background: var(--gold); color: white; padding: 0.8rem 1.8rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-    .mm-phone { font-size: 0.95rem; color: var(--text-muted); }
-
-    .nav-burger { color: var(--green-deep); }
-
-    /* ─── Photo strip ───────────────────────────────────────────── */
-    /* Desktop keeps each page's own column template and height, passed in
-       as --cols / --h. On narrow screens a fixed 3-4 column row turns each
-       photo into a ~94px sliver, so below 900px the strip becomes two
-       columns of 4:3 cells and drops the fixed height entirely; an odd
-       last photo spans the full width. */
-    .photo-strip {
-      display: grid;
-      grid-template-columns: var(--cols);
-      height: var(--h);
-      overflow: hidden;
-    }
+    /* ─── Photo strip ────────────────────────────────────────────── */
+    .photo-strip { display: grid; grid-template-columns: var(--cols); height: var(--h); overflow: hidden; }
     .photo-strip > div { overflow: hidden; }
-    .photo-strip img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.6s;
-    }
+    .photo-strip img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s; }
     @media (hover: hover) { .photo-strip img:hover { transform: scale(1.06); } }
     @media (max-width: 900px) {
-      .photo-strip {
-        grid-template-columns: 1fr 1fr;
-        height: auto;
-      }
+      .photo-strip { grid-template-columns: 1fr 1fr; height: auto; }
       .photo-strip > div { aspect-ratio: 4 / 3; }
-      .photo-strip.strip-odd > div:last-child {
-        grid-column: span 2;
-        aspect-ratio: 16 / 9;
-      }
+      .photo-strip.strip-odd > div:last-child { grid-column: span 2; aspect-ratio: 16 / 9; }
     }
 
-    /* ─── Section sub-nav ───────────────────────────────────────── */
-    .subnav { background: var(--cream-2); border-bottom: 1px solid var(--cream-3); }
-    .subnav-inner { max-width: 1100px; margin: 0 auto; padding: 0.85rem 2rem; display: flex; align-items: center; gap: 0.9rem 1.6rem; flex-wrap: wrap; }
-    .subnav-label { font-size: 0.66rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
-    .subnav a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.02em; color: var(--text-muted); transition: color 0.2s; padding-bottom: 2px; }
-    .subnav a:hover { color: var(--green-deep); }
-    .subnav a.active { color: var(--green-deep); border-bottom: 1.5px solid var(--gold); }
+    @media (max-width: 900px) {
+      .intro-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .big-island-stat { position: static; }
+      .area-body { grid-template-columns: 1fr; gap: 2.5rem; }
+      .area-sidebar-card { max-width: 480px; }
+      .districts .area-section { padding: 4rem 1.75rem; }
+      .col-grid { grid-template-columns: 1fr; }
+      .myths-grid { grid-template-columns: 1fr; }
+      .checklist-cols { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .checklist-cols { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- ─── Nav ──────────────────────────────────────────────────── -->
   <nav id="nav">
-    <a class="nav-brand" href="index.html">Keala M. Wall</a>
+    <a class="nav-brand" href="/">Keala M. Wall</a>
     <ul class="nav-links">
-      <li><a href="land.html">Buy Land</a></li>
-      <li><a href="relocation.html" class="active">Relocate</a></li>
-      <li><a href="legacy.html">Homes</a></li>
-      <li><a href="guides.html">Guides</a></li>
+      <li><a class="pillar active" href="/life">Life</a></li>
+      <li><a class="pillar" href="/land">Land</a></li>
+      <li><a class="pillar" href="/legacy">Legacy</a></li>
+      <li><a href="/listings">Listings</a></li>
+      <li><a href="/guides">Guides</a></li>
     </ul>
     <div class="nav-right">
       <a href="tel:8085153081" class="nav-phone">808-515-3081</a>
-      <a href="index.html#contact" class="nav-cta">Talk Story</a>
+      <a href="#contact" class="nav-cta">Talk Story</a>
       <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a class="mm-home" href="index.html">Home</a>
+    <a class="mm-home" href="/">Home</a>
     <div class="mm-group">
-      <a class="mm-primary" href="land.html">Buy Land</a>
-      <a href="ranches.html">Ranches &amp; Farms</a>
-      <a href="off-grid.html">Off-Grid Living</a>
+      <a class="mm-primary" href="/life">Life</a>
+      <a href="#relocating">Relocating Here</a>
+      <a href="#districts">The Districts</a>
+      <a href="#cost">Cost of Living</a>
+      <a href="#mistakes">What Buyers Get Wrong</a>
+      <a href="#checklist">Move Checklist</a>
     </div>
-    <div class="mm-group">
-      <a class="mm-primary" href="relocation.html">Relocate</a>
-      <a href="areas.html">Area Guides</a>
-    </div>
-    <div class="mm-group">
-      <a class="mm-primary" href="legacy.html">Homes</a>
-    </div>
-    <div class="mm-group">
-      <a class="mm-primary" href="guides.html">Guides &amp; Downloads</a>
-    </div>
+    <div class="mm-group"><a class="mm-primary" href="/land">Land</a></div>
+    <div class="mm-group"><a class="mm-primary" href="/legacy">Legacy</a></div>
+    <div class="mm-group"><a class="mm-primary" href="/listings">Listings</a></div>
+    <div class="mm-group"><a class="mm-primary" href="/guides">Guides</a></div>
     <div class="mm-foot">
-      <a href="index.html#contact" class="mm-cta">Talk Story</a>
+      <a href="#contact" class="mm-cta">Talk Story</a>
       <a href="tel:8085153081" class="mm-phone">808-515-3081</a>
     </div>
   </div>
 
-  <!-- ─── Hero ──────────────────────────────────────────────────── -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
-      <span class="hero-eyebrow">Community Guides</span>
-      <h1>Find Your Place<br>on Hawai'i Island</h1>
-      <p class="hero-sub">Every corner of the Big Island has its own climate, character, and cost. This guide covers the communities people actually move to — and what life is really like in each one.</p>
+      <span class="hero-eyebrow">Life</span>
+      <h1>Living on<br>Hawai'i Island</h1>
+      <p class="hero-sub">The Big Island is not Oahu. Not Maui. It is the largest, most diverse, and most genuinely rural island in the state — and choosing where to land here matters more than anywhere else in Hawai'i.</p>
     </div>
   </section>
 
   <div class="subnav">
     <div class="subnav-inner">
-      <span class="subnav-label">Relocate</span>
-      <a href="relocation.html">Relocating</a>
-      <a href="areas.html" class="active">Area Guides</a>
+      <span class="subnav-label">Life</span>
+      <ul class="subnav-links">
+        <li><a href="#relocating">Relocating Here</a></li>
+        <li><a href="#districts">The Districts</a></li>
+        <li><a href="#cost">Cost of Living</a></li>
+        <li><a href="#mistakes">What Buyers Get Wrong</a></li>
+        <li><a href="#checklist">Move Checklist</a></li>
+      </ul>
     </div>
   </div>
 
-  <!-- ─── Quick Nav ─────────────────────────────────────────────── -->
-  <section class="area-nav">
+  <!-- ─── Relocating Here ───────────────────────────────────────── -->
+  <section class="intro" id="relocating">
     <div class="wrap">
-      <div class="area-nav-title">Jump to an Area</div>
-      <div class="area-nav-grid">
-        <a href="#kona" class="area-nav-tile">Kailua-Kona &amp; Keauhou</a>
-        <a href="#south-kona" class="area-nav-tile">Holualoa &amp; South Kona</a>
-        <a href="#waimea" class="area-nav-tile">Waimea / Kamuela</a>
-        <a href="#kohala" class="area-nav-tile">Kohala Coast &amp; North Kohala</a>
-        <a href="#hamakua" class="area-nav-tile">Hāmākua Coast</a>
-        <a href="#hilo" class="area-nav-tile">Hilo</a>
-        <a href="#puna" class="area-nav-tile">Puna District</a>
-        <a href="#kau" class="area-nav-tile">Ka'ū &amp; Ocean View</a>
-        <a href="#volcano" class="area-nav-tile">Volcano Village</a>
+      <div class="intro-grid">
+        <div>
+          <span class="eyebrow">The Big Island Difference</span>
+          <h2 class="section-title">Hawai'i Island Is Its Own World</h2>
+          <p>The Big Island — officially Hawai'i Island, called "the Big Island" to distinguish it from the state — is larger than all the other Hawaiian islands combined. It holds 11 of the world's 14 climate zones. Active volcanoes, alpine terrain, tropical rainforest, and bone-dry desert all sit within a few hours' drive of each other.</p>
+          <p>That diversity is what draws people here, and it is also why relocation planning has to be deeply location-specific. Choosing the "wrong side" of the island isn't just inconvenient: where it takes two hours to cross from one coast to the other, the district you pick decides your commute, your weather, your insurance, and how far you are from a grocery store.</p>
+          <p>There is no one Big Island experience. There is Kona, sunny and busy and resort-adjacent. Hilo, rainy and affordable and authentic. Waimea, cool ranch country. Puna, lush and off-grid and frontier. And a dozen micro-communities in between. Knowing which one fits your life before you buy is the single most important decision you will make here.</p>
+          <div class="reality-list">
+            <div class="reality-row">
+              <div class="reality-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+              <p>The island is 4,028 square miles — commuting from Hilo to Kona takes 2+ hours, not 20 minutes</p>
+            </div>
+            <div class="reality-row">
+              <div class="reality-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+              <p>Groceries, gas, and consumer goods cost 30–50% more than the continental U.S. average</p>
+            </div>
+            <div class="reality-row">
+              <div class="reality-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+              <p>You will need a car — public transit is limited and distances are large</p>
+            </div>
+            <div class="reality-row">
+              <div class="reality-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+              <p>Electricity rates are the highest in the nation — solar is not optional for most households</p>
+            </div>
+            <div class="reality-row">
+              <div class="reality-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+              <p>Many rural areas have limited or no cell coverage, and internet speeds vary significantly by location</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="big-island-stat">
+            <h3>Big Island at a Glance</h3>
+            <div class="stat-item"><span class="stat-label">Island size</span><span class="stat-val">4,028 sq miles</span></div>
+            <div class="stat-item"><span class="stat-label">Population</span><span class="stat-val">~200,000 residents</span></div>
+            <div class="stat-item"><span class="stat-label">Median home price</span><span class="stat-val">$550K–$800K+ (varies by area)</span></div>
+            <div class="stat-item"><span class="stat-label">Avg electricity rate</span><span class="stat-val">~43¢/kWh (2026)</span></div>
+            <div class="stat-item"><span class="stat-label">Drive: Kona to Hilo</span><span class="stat-val">~2 hours via Saddle Road</span></div>
+            <div class="stat-item"><span class="stat-label">Direct flights to mainland</span><span class="stat-val">Kona (KOA) &amp; Hilo (ITO)</span></div>
+            <div class="stat-item"><span class="stat-label">Cost of living vs. U.S. avg</span><span class="stat-val">~40–53% higher</span></div>
+            <div class="stat-item"><span class="stat-label">Climate zones on island</span><span class="stat-val">11 of the world's 14</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- ─── The Districts ─────────────────────────────────────────── -->
+  <section class="area-nav" id="districts">
+    <div class="wrap">
+      <span class="eyebrow">Find Your Place</span>
+      <h2>The Island&rsquo;s Districts</h2>
+      <p class="area-nav-lead">Every corner of this island has its own climate, cost, and character. These are the areas people actually move to, grouped by the island&rsquo;s nine districts — what each one is really like, who it suits, and what it costs.</p>
+      <div class="area-nav-grid">
+        <a href="#north-kona" class="area-nav-tile">Kailua-Kona &amp; Keauhou</a>
+        <a href="#south-kona" class="area-nav-tile">Holualoa &amp; South Kona</a>
+        <a href="#south-kohala" class="area-nav-tile">Waimea / Kamuela</a>
+        <a href="#north-kohala" class="area-nav-tile">Kohala Coast &amp; North Kohala</a>
+        <a href="#hamakua" class="area-nav-tile">Hāmākua Coast</a>
+        <a href="#south-hilo" class="area-nav-tile">Hilo</a>
+        <a href="#puna" class="area-nav-tile">Puna District</a>
+        <a href="#kau" class="area-nav-tile">Ka'ū &amp; Ocean View</a>
+        <a href="#volcano" class="area-nav-tile">Volcano Village</a>
+      </div>
+      <p class="area-nav-note">Prices and rents shown are approximate mid-2026 ranges and move with the market — ask Keala for current comps.</p>
+    </div>
+  </section>
+
+  <div class="districts">
   <!-- ─── Photo Strip ──────────────────────────────────────────── -->
   <div class="photo-strip strip-odd" style="--cols:2fr 1fr 1fr;--h:300px">
-    <div><img loading="lazy" decoding="async" src="photos/aerial-coastline.jpg" alt="Big Island coastline from above"></div>
-    <div><img loading="lazy" decoding="async" src="photos/coffee-cherries.jpg" alt="Kona coffee cherries"></div>
-    <div><img loading="lazy" decoding="async" src="photos/ohia-lehua.jpg" alt="ʻŌhiʻa lehua, native Hawaiian tree"></div>
+    <div><img loading="lazy" decoding="async" src="/photos/aerial-coastline.jpg" alt="Big Island coastline from above"></div>
+    <div><img loading="lazy" decoding="async" src="/photos/coffee-cherries.jpg" alt="Kona coffee cherries"></div>
+    <div><img loading="lazy" decoding="async" src="/photos/ohia-lehua.jpg" alt="ʻŌhiʻa lehua, native Hawaiian tree"></div>
   </div>
-
   <!-- ─── KONA ──────────────────────────────────────────────────── -->
-  <section class="area-section" id="kona">
+  <section class="area-section" id="north-kona">
     <div class="wrap">
       <div class="area-header">
-        <div class="area-district">West Side · Lava Zone 5–6</div>
+        <div class="area-district">North Kona · West Side · Lava Zone 5–6</div>
         <h2 class="area-name">Kailua-Kona &amp; Keauhou</h2>
         <div class="area-tagline">The island's sunny, social, resort-facing hub</div>
       </div>
       <div class="area-body">
         <div class="area-content">
           <p>Kailua-Kona — or just "Kona" — is what most people picture when they imagine moving to Hawaii. Sun almost every day, world-class snorkeling and diving, Alii Drive running along the waterfront, and the greatest concentration of restaurants, shops, and services on the island. It is the most accessible and most recognizable place to live on the Big Island.</p>
-      <p class="price-note" style="font-size:0.78rem;color:var(--text-muted);max-width:700px;margin-top:-1.5rem;margin-bottom:3rem;">Price and rent figures are approximate ranges as of mid-2026 and move with the market — ask Keala for current comps before making decisions.</p>
           <p>Kailua-Kona proper is a small town of around 22,000 people. It has everything you need day-to-day: KTA and Safeway grocery stores, Home Depot, medical facilities, a farmers market, and direct flights to the mainland via Kona International Airport (KOA). What it does not have is the density or anonymity of a mainland city — for many people, that's exactly the point.</p>
           <h4>Keauhou</h4>
           <p>Just south of Kailua-Kona, Keauhou is a quieter, more residential neighborhood with its own shopping center, boat harbor, and beach access. It attracts families and retirees who want to be close to Kona's amenities without being in the middle of the tourist corridor. Property prices are slightly lower than prime Kailua-Kona real estate, and the community feel is noticeably calmer.</p>
@@ -439,6 +348,7 @@
               <div class="who-tag">Families who need good services</div>
               <div class="who-tag">Buyers who want a social community</div>
             </div>
+            <a class="area-listing-link" href="/listings#north-kona">Featured listing in this district &rarr;</a>
           </div>
         </div>
       </div>
@@ -455,7 +365,7 @@
       </div>
       <div class="area-body">
         <div class="area-content">
-          <p>South Kona is the coffee country corridor that runs from Holualoa south through Kealakekua, Captain Cook, Honaunau, and Hōnaunau. At elevations of 1,500–3,000 feet, the climate here is cooler than the Kona coast — afternoons bring clouds and occasional rain, which is exactly what Kona coffee trees need to produce their famous beans.</p>
+          <p>South Kona is the coffee country corridor that runs from Holualoa south through Kealakekua, Captain Cook, and Honaunau. At elevations of 1,500–3,000 feet, the climate here is cooler than the Kona coast — afternoons bring clouds and occasional rain, which is exactly what Kona coffee trees need to produce their famous beans.</p>
           <p>Holualoa is an artisan village perched above Kona town. It's known for its galleries, small farms, a laid-back community vibe, and some of the most beautiful coffee farm real estate on the island. Captain Cook and Kealakekua — just south — are more practical: affordable by Kona standards, close to the Kona coast (20–30 min), and home to a mix of local families and transplants seeking the farm lifestyle without full isolation.</p>
           <h4>Kealakekua Bay</h4>
           <p>South Kona is also home to Kealakekua Bay — one of the most pristine marine reserves in Hawaii, known for excellent snorkeling and the Captain Cook monument. Living near the bay means access to a world-class natural resource almost no tourists know about. This is where locals swim.</p>
@@ -476,6 +386,7 @@
               <div class="who-tag">Artists and creative types</div>
               <div class="who-tag">Families wanting more land and calm</div>
             </div>
+            <a class="area-listing-link" href="/listings#south-kona">Featured listing in this district &rarr;</a>
           </div>
         </div>
       </div>
@@ -483,10 +394,10 @@
   </section>
 
   <!-- ─── WAIMEA ────────────────────────────────────────────────── -->
-  <section class="area-section" id="waimea">
+  <section class="area-section" id="south-kohala">
     <div class="wrap">
       <div class="area-header">
-        <div class="area-district">North · Elevation 2,500 ft · Lava Zone 7–8</div>
+        <div class="area-district">South Kohala · Upcountry · Elevation 2,500 ft · Lava Zone 7–8</div>
         <h2 class="area-name">Waimea / Kamuela</h2>
         <div class="area-tagline">Cool ranch country, excellent schools, strong community</div>
       </div>
@@ -513,6 +424,7 @@
               <div class="who-tag">Ranchers and agricultural buyers</div>
               <div class="who-tag">Professionals who want small-town life</div>
             </div>
+            <a class="area-listing-link" href="/listings#south-kohala">Featured listing in this district &rarr;</a>
           </div>
         </div>
       </div>
@@ -520,10 +432,10 @@
   </section>
 
   <!-- ─── KOHALA ────────────────────────────────────────────────── -->
-  <section class="area-section" id="kohala">
+  <section class="area-section" id="north-kohala">
     <div class="wrap">
       <div class="area-header">
-        <div class="area-district">North · Lava Zone 9 · Lowest Volcanic Risk</div>
+        <div class="area-district">North Kohala · Lava Zone 9 · Lowest Volcanic Risk</div>
         <h2 class="area-name">Kohala Coast &amp; North Kohala</h2>
         <div class="area-tagline">Resort luxury meets rural heritage on ancient volcanic land</div>
       </div>
@@ -550,6 +462,7 @@
               <div class="who-tag">Resort community / luxury lifestyle buyers</div>
               <div class="who-tag">Heritage ranch land buyers</div>
             </div>
+            <a class="area-listing-link" href="/listings#north-kohala">Featured listing in this district &rarr;</a>
           </div>
         </div>
       </div>
@@ -560,7 +473,7 @@
   <section class="area-section" id="hamakua">
     <div class="wrap">
       <div class="area-header">
-        <div class="area-district">Windward · Lava Zone 7–8 · Hāmākua District</div>
+        <div class="area-district">Hāmākua · Windward · Lava Zone 7–8</div>
         <h2 class="area-name">Hāmākua Coast</h2>
         <div class="area-tagline">Dramatic sea cliffs, lush valleys, and extraordinary fertility</div>
       </div>
@@ -587,6 +500,7 @@
               <div class="who-tag">Buyers seeking scenic rural life</div>
               <div class="who-tag">Nature lovers who embrace rain</div>
             </div>
+            <a class="area-listing-link" href="/listings#hamakua">Featured listing in this district &rarr;</a>
           </div>
         </div>
       </div>
@@ -594,10 +508,10 @@
   </section>
 
   <!-- ─── HILO ───────────────────────────────────────────────────── -->
-  <section class="area-section" id="hilo">
+  <section class="area-section" id="south-hilo"><span id="north-hilo" aria-hidden="true"></span>
     <div class="wrap">
       <div class="area-header">
-        <div class="area-district">East Side · County Seat · Lava Zone 5–7</div>
+        <div class="area-district">South Hilo · East Side · County Seat · Lava Zone 5–7</div>
         <h2 class="area-name">Hilo</h2>
         <div class="area-tagline">Authentic, affordable, deeply local — and yes, very rainy</div>
       </div>
@@ -625,6 +539,7 @@
               <div class="who-tag">Buyers tied to east side employment</div>
               <div class="who-tag">People who appreciate authentic local culture</div>
             </div>
+            <a class="area-listing-link" href="/listings#south-hilo">Featured listing in this district &rarr;</a>
           </div>
         </div>
       </div>
@@ -635,7 +550,7 @@
   <section class="area-section" id="puna">
     <div class="wrap">
       <div class="area-header">
-        <div class="area-district">East Side · Lava Zones 1–4 · Fast-Growing</div>
+        <div class="area-district">Puna · East Side · Lava Zones 1–4 · Fast-Growing</div>
         <h2 class="area-name">Puna District</h2>
         <div class="area-tagline">Frontier living, off-grid community, and the island's lowest prices — with real volcanic risk</div>
       </div>
@@ -663,6 +578,7 @@
               <div class="who-tag">Buyers with lower budget and higher risk tolerance</div>
               <div class="who-tag">Self-reliant, community-oriented people</div>
             </div>
+            <a class="area-listing-link" href="/listings#puna">Featured listing in this district &rarr;</a>
           </div>
         </div>
       </div>
@@ -673,7 +589,7 @@
   <section class="area-section" id="kau">
     <div class="wrap">
       <div class="area-header">
-        <div class="area-district">Southernmost District · Most Remote</div>
+        <div class="area-district">Ka'ū · Southernmost District · Most Remote</div>
         <h2 class="area-name">Ka'ū &amp; Ocean View</h2>
         <div class="area-tagline">The Big Island's most remote frontier — raw, affordable, and self-reliant</div>
       </div>
@@ -701,6 +617,7 @@
               <div class="who-tag">Truly self-reliant off-grid lifestylers</div>
               <div class="who-tag">Ka'ū coffee farm buyers</div>
             </div>
+            <a class="area-listing-link" href="/listings#kau">Featured listing in this district &rarr;</a>
           </div>
         </div>
       </div>
@@ -708,10 +625,10 @@
   </section>
 
   <!-- ─── VOLCANO ────────────────────────────────────────────────── -->
-  <section class="area-section dark" id="volcano">
+  <section class="area-section" id="volcano">
     <div class="wrap">
       <div class="area-header">
-        <div class="area-district">Upland South · Elevation 3,700–4,000 ft</div>
+        <div class="area-district">Puna District · Volcano Village · Elevation 3,700–4,000 ft</div>
         <h2 class="area-name">Volcano Village</h2>
         <div class="area-tagline">Rainforest, art, and the edge of the world's most active volcano</div>
       </div>
@@ -740,41 +657,178 @@
               <div class="who-tag">Nature lovers who embrace cool and mist</div>
               <div class="who-tag">Buyers who want unique, not typical</div>
             </div>
+            <a class="area-listing-link" href="/listings#puna">Featured listing in this district &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- ─── Cost of Living ────────────────────────────────────────── -->
+  <section class="col" id="cost">
+    <div class="wrap">
+      <span class="eyebrow">Cost of Living</span>
+      <h2 class="section-title">What It Actually Costs to Live Here</h2>
+      <p class="section-lead" style="color:rgba(255,255,255,0.72)">Hawai'i is expensive — but exactly how expensive depends heavily on which island, which area, and which lifestyle you choose. Here's an honest snapshot of what to budget on the Big Island.</p>
+      <div class="col-grid">
+        <div>
+          <p>The Big Island is significantly more affordable than Oahu and Maui — median home prices in Hilo and Puna are a fraction of what you'd pay in Honolulu. But compared to most mainland cities, Hawai'i Island is still expensive, and some costs catch newcomers completely off-guard.</p>
+          <p><strong style="color:rgba(255,255,255,0.85)">Groceries</strong> cost 30–50% more than the mainland average. The island imports most of its food, and the shipping cost is passed to consumers. Local farmers markets help, but even staples like milk, eggs, and meat carry a significant premium.</p>
+          <p><strong style="color:rgba(255,255,255,0.85)">Electricity</strong> is the other shock. At roughly 43¢/kWh (as of 2026), a household running a central AC unit and standard appliances can easily see $300–$600/month in electric bills. Solar is not a luxury here — it pays for itself within 5–8 years on most properties.</p>
+          <p><strong style="color:rgba(255,255,255,0.85)">The trade-off</strong> is that many costs common on the mainland disappear: heavy winter clothing, heating bills, annual car registration (lower in Hawaii), and the grinding commutes that add hours and vehicle wear to mainland life. Quality of life — measured in proximity to the ocean, the land, and a genuine community — is difficult to price.</p>
+        </div>
+        <div>
+          <div class="col-table">
+            <div class="col-row header">
+              <span class="col-item">Monthly Expense</span>
+              <span class="col-amount">Estimated Range</span>
+            </div>
+            <div class="col-row">
+              <span class="col-item">Rent, 1BR (Kona area)</span>
+              <span class="col-amount">$1,600–$2,100</span>
+            </div>
+            <div class="col-row">
+              <span class="col-item">Rent, 1BR (Hilo area)</span>
+              <span class="col-amount">$1,200–$1,600</span>
+            </div>
+            <div class="col-row">
+              <span class="col-item">Groceries (single person)</span>
+              <span class="col-amount">$500–$800</span>
+            </div>
+            <div class="col-row">
+              <span class="col-item">Electricity (no solar)</span>
+              <span class="col-amount">$200–$500+</span>
+            </div>
+            <div class="col-row">
+              <span class="col-item">Vehicle (gas + insurance)</span>
+              <span class="col-amount">$300–$600</span>
+            </div>
+            <div class="col-row">
+              <span class="col-item">Internet (varies by area)</span>
+              <span class="col-amount">$70–$150</span>
+            </div>
+            <div class="col-row">
+              <span class="col-item">Single person, moderate</span>
+              <span class="col-amount">$3,000–$4,500/mo</span>
+            </div>
+            <div class="col-row">
+              <span class="col-item">Family of four</span>
+              <span class="col-amount">$6,000–$9,000/mo</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ─── What Mainlanders Get Wrong ──────────────────────────── -->
+  <section class="myths" id="mistakes">
+    <div class="wrap">
+      <span class="eyebrow">Common Mistakes</span>
+      <h2 class="section-title">What Buyers Get Wrong</h2>
+      <p class="section-lead">After years of helping people relocate to Hawai'i Island, these are the assumptions that cause the most expensive and most avoidable mistakes.</p>
+      <div class="myths-grid">
+        <div class="myth-card">
+          <div class="myth-label wrong">Mistake #1</div>
+          <h3>"I'll buy in Puna because it's affordable and just drive to Kona for work."</h3>
+          <p>Hilo to Kona is 90+ miles and 2–2.5 hours each way. People underestimate how dramatically island geography shrinks the practical options. Before buying in a district, drive the daily route you'd actually be doing — not just once, but at rush hour, in rain, and at night.</p>
+        </div>
+        <div class="myth-card">
+          <div class="myth-label wrong">Mistake #2</div>
+          <h3>"Lava zones are just a technicality — people have lived there for decades."</h3>
+          <p>The 2018 Kīlauea eruption destroyed 716 homes and 13.7 square miles of land in Zone 1 and 2 areas in a matter of weeks. Volcanic risk is not hypothetical on the Big Island. Understand what zone you're buying in, what insurance covers (and doesn't), and what financing options you actually have before committing.</p>
+        </div>
+        <div class="myth-card">
+          <div class="myth-label wrong">Mistake #3</div>
+          <h3>"I can ship my household goods and it'll be fine."</h3>
+          <p>Shipping a full household from the mainland to Hawai'i costs $5,000–$15,000 via container. Arrival takes 2–4 weeks, longer from the East Coast. Many mainland appliances, cars, and furniture arrive in poor condition from salt air exposure. Some buyers find it more economical to sell and buy locally — local used furniture markets are active and prices are reasonable.</p>
+        </div>
+        <div class="myth-card">
+          <div class="myth-label wrong">Mistake #4</div>
+          <h3>"I'll rent first and then decide where to buy."</h3>
+          <p>This is actually the right approach — but the market moves fast and rentals are competitive. People who rent for 6–12 months before buying consistently make better location decisions. The mistake is renting on one side of the island, falling in love with a commute-able area, and then buying without actually driving it in the rainy season or on a foggy Saddle Road morning.</p>
+        </div>
+        <div class="myth-card">
+          <div class="myth-label wrong">Mistake #5</div>
+          <h3>"I see county water on the listing — that means I'm on city water."</h3>
+          <p>County water access and an active, metered connection are different things. Some listings note county water lines run near or through a property without a connected meter. Always verify with the County Department of Water Supply that the parcel has an active meter — or whether one must be applied for (which can involve waiting lists).</p>
+        </div>
+        <div class="myth-card">
+          <div class="myth-label wrong">Mistake #6</div>
+          <h3>"The Kona side is just Honolulu but with better weather."</h3>
+          <p>Kona is not a dense urban center. It's a small town (population ~22,000) with limited medical specialists, one movie theater, and no major department stores. What it has is exceptional — the ocean, the community, the climate — but buyers expecting mainland suburban infrastructure will be surprised by the gaps. Research specifically what services you depend on before committing to any area.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Relocation Checklist ─────────────────────────────────── -->
+  <section class="relo-checklist" id="checklist">
+    <div class="wrap">
+      <span class="eyebrow">Your Move Plan</span>
+      <h2 class="section-title">Relocation Checklist</h2>
+      <p class="section-lead">A practical list of what to handle before, during, and after your move to Hawai'i Island — organized by timing.</p>
+      <div class="checklist-cols">
+        <div class="checklist-col">
+          <h3>Before You Move</h3>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Visit at least twice before buying — different seasons reveal different realities (trade winds, vog, tourism traffic)</p></div>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Drive your intended daily commute at actual commute hours, not midday</p></div>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Research cell coverage in any specific neighborhoods you're considering — gaps are significant in rural areas</p></div>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Confirm internet provider availability at the specific address — fiber is not available everywhere</p></div>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Get quotes from at least two container shipping companies; plan for 3–5 weeks transit time</p></div>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Research Hawaii state income tax (up to 11%) and understand the full tax picture</p></div>
+        </div>
+        <div class="checklist-col">
+          <h3>Vehicle &amp; Registration</h3>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Vehicle must be inspected and registered in Hawaii within 30 days of establishing residency</p></div>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Hawaii safety inspection required ($17–$25) — different from mainland emissions tests</p></div>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Consider shipping your vehicle vs. buying locally — shipping costs $1,000–$2,500 from West Coast</p></div>
+          <div class="checklist-row"><div class="cl-dot"></div><p>4WD is helpful but not required for most island roads; needed for Saddle Road in winter conditions and some rural properties</p></div>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Insurance: get quotes from carriers licensed in Hawaii — not all mainland carriers operate here</p></div>
+        </div>
+        <div class="checklist-col">
+          <h3>First 90 Days</h3>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Establish Hawaii driver's license (required within 90 days of establishing domicile)</p></div>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Register to vote and update all addresses with USPS, financial institutions, IRS</p></div>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Find a local primary care physician — specialists have long wait lists, so start early</p></div>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Connect with your local community — neighborhood associations, farmers markets, and church communities are how the Big Island actually works</p></div>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Learn what vog is (volcanic smog from Kīlauea) and how it affects your area — some days are worse than others</p></div>
+          <div class="checklist-row"><div class="cl-dot"></div><p>Visit the island's farmers markets: Hilo and Kona both have excellent weekly markets with local produce, fish, and community</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- ─── CTA ───────────────────────────────────────────────────── -->
   <section class="cta" id="contact">
     <div class="cta-bg"></div>
     <div class="cta-overlay"></div>
     <div class="cta-inner">
-      <span class="eyebrow">Let's Find Your Area</span>
-      <h2>Not Sure Which Area<br>Is Right for You?</h2>
-      <p class="cta-sub">Every buyer's situation is different — and the "right" area depends on your work, your lifestyle, your budget, and your long-term vision. Let's have a real conversation about it before you start your search.</p>
+      <span class="eyebrow">Talk Story</span>
+      <h2>Planning Your Move?</h2>
+      <p class="cta-sub">Tell me what your life looks like day to day — work, school, weather you can live with, how far you're willing to drive — and I'll tell you honestly which districts fit and which ones won't.</p>
       <div class="cta-buttons">
-        <a href="mailto:Keala@kealawall.com?subject=Area%20Guidance%20%E2%80%94%20Hawai%27i%20Island" class="btn-primary">Email Keala</a>
-        <a href="https://keala.theagencyteamhawaii.com" target="_blank" rel="noopener" class="btn-ghost">Search All Listings</a>
+        <a href="tel:8085153081" class="btn-primary">Call 808-515-3081</a>
+        <a href="mailto:Keala@kealawall.com" class="btn-ghost">Send an Email</a>
       </div>
       <div class="contact-card">
         <div class="contact-name">Keala M. Wall</div>
-        <div class="contact-title">Hawai'i Island Realtor &nbsp;·&nbsp; eXp Realty</div>
+        <div class="contact-title">Realtor &middot; Hawai'i Island</div>
         <div class="contact-lines">
-          <a href="mailto:Keala@kealawall.com" class="contact-line">
-            <svg viewBox="0 0 16 16"><rect x="1" y="3" width="14" height="10" rx="1.5"/><polyline points="1,3 8,9.5 15,3"/></svg>
-            Keala@kealawall.com
-          </a>
           <a href="tel:8085153081" class="contact-line">
-            <svg viewBox="0 0 16 16"><path d="M3.5 1.5c-.8 0-1.5.7-1.5 1.5 0 5.8 4.7 10.5 10.5 10.5.8 0 1.5-.7 1.5-1.5V10l-3-1-1 1.5C8 10 6 8 5.5 6L7 5l-1-3H3.5z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             808-515-3081
+          </a>
+          <a href="mailto:Keala@kealawall.com" class="contact-line">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Keala@kealawall.com
           </a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ─── Footer ────────────────────────────────────────────────── -->
   <footer>
     <div class="footer-top">
 
@@ -787,14 +841,12 @@
       <div class="footer-col">
         <span class="footer-heading">Explore</span>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="land.html">Buy Land</a></li>
-          <li><a href="ranches.html">Ranches</a></li>
-          <li><a href="off-grid.html">Off-Grid</a></li>
-          <li><a href="relocation.html">Relocate</a></li>
-          <li><a href="areas.html">Areas</a></li>
-          <li><a href="legacy.html">Legacy</a></li>
-          <li><a href="guides.html">Guides</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/life">Life</a></li>
+          <li><a href="/land">Land</a></li>
+          <li><a href="/legacy">Legacy</a></li>
+          <li><a href="/listings">Listings</a></li>
+          <li><a href="/guides">Guides</a></li>
         </ul>
       </div>
 
@@ -811,52 +863,17 @@
     </div>
 
     <div class="footer-bottom">
-      <img src="logo-agency-exp-light.png" width="1200" height="200" loading="lazy" decoding="async"
+      <img src="/logo-agency-exp-light.png" width="1200" height="200" loading="lazy" decoding="async"
            alt="The Agency Team Hawai'i, brokered by eXp Realty" class="footer-logo">
       <div class="footer-legal">
         <p>6600 Kalaniana'ole Hwy #114, Honolulu, HI 96825</p>
         <p>License RS-82797 &middot; Brokerage License RB-21841</p>
         <p class="footer-copy">&copy; 2026 Keala M. Wall. All rights reserved.</p>
+        <p class="footer-credit">Powered by <a href="https://www.touchpointai.co/" target="_blank" rel="noopener">Touchpoint AI</a></p>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Smooth scroll for area-nav tiles
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', e => {
-        const target = document.querySelector(link.getAttribute('href'));
-        if (!target) return;
-        e.preventDefault();
-        const top = target.getBoundingClientRect().top + window.scrollY - 80;
-        window.scrollTo({ top, behavior: 'smooth' });
-      });
-    });
-  </script>
-
-  <script>
-    // Mobile hamburger menu.
-    (function () {
-      var nav = document.getElementById('nav');
-      var burger = document.querySelector('.nav-burger');
-      var menu = document.getElementById('mobileMenu');
-      if (!burger || !menu) return;
-      burger.addEventListener('click', function () {
-        var open = menu.classList.toggle('open');
-        burger.classList.toggle('open', open);
-        if (nav) nav.classList.toggle('menu-open', open);
-        burger.setAttribute('aria-expanded', open);
-        document.body.style.overflow = open ? 'hidden' : '';
-      });
-      menu.querySelectorAll('a').forEach(function (a) {
-        a.addEventListener('click', function () {
-          menu.classList.remove('open'); burger.classList.remove('open');
-          if (nav) nav.classList.remove('menu-open');
-          burger.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
-        });
-      });
-    })();
-  </script>
+  <script src="/js/site.js"></script>
 </body>
 </html>
