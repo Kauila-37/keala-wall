@@ -460,6 +460,9 @@ footer { background: #0c1a0e; padding: 4.5rem 3rem 2.25rem; }
 }
 .footer-legal p { font-size: 0.7rem; line-height: 1.6; color: inherit; }
 .footer-copy { color: rgba(255,255,255,0.22); }
+.footer-credit { color: rgba(255,255,255,0.3); margin-top: 0.1rem; }
+.footer-credit a { color: rgba(255,255,255,0.5); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.18); transition: color 0.2s ease, border-color 0.2s ease; }
+.footer-credit a:hover, .footer-credit a:focus-visible { color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.45); }
 @media (max-width: 860px) {
   .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
   .footer-identity { grid-column: 1 / -1; }
