@@ -14,6 +14,16 @@
 [context.deploy-preview]
   command = "printf '/*\\n  X-Robots-Tag: noindex\\n' > _headers"
 
+# ─── Private working files ──────────────────────────────────────────
+# The content/ folder holds each post's canonical source (source.md) and
+# is tracked so the monthly workflow travels with the repo — but it must
+# never be fetchable on the live domain. 404 it (and the pipeline doc).
+[[redirects]]
+  from = "/content/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
 # ─── Retired pages ──────────────────────────────────────────────────
 # 2026-07-24: the site was restructured onto the brand's three pillars.
 # Six content pages became three, and the deep-dives that used to have
@@ -86,6 +96,18 @@
 [[redirects]]
   from = "/guides.html"
   to = "/guides"
+  status = 301
+
+[[redirects]]
+  from = "/journal.html"
+  to = "/journal"
+  status = 301
+
+# Journal posts live at journal/YYYY-MM-slug.html; send the .html form to
+# the clean URL so no post has two indexable addresses.
+[[redirects]]
+  from = "/journal/2026-09-a-year-of-storms.html"
+  to = "/journal/2026-09-a-year-of-storms"
   status = 301
 
 [[redirects]]
